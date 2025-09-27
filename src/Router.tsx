@@ -1,17 +1,37 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { HomePage } from './pages/Home.page';
-import { ErrorBoundary } from './components/ErrorBoundary/ErrorBoundary';
 import { ErrorComponent } from './components/ErrorBoundary/components/ErrorComponent';
+import { ErrorBoundary } from './components/ErrorBoundary/ErrorBoundary';
+import AboutPage from './pages/About/About.page';
+import { HomePage } from './pages/Home/Home.page';
+import ScannerPage from './pages/Scanner/Scanner.page';
+import StatisticsPage from './pages/Statistics/Statistics.page';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <HomePage />,
     errorElement: (
-        <ErrorBoundary>
-            <ErrorComponent />
-        </ErrorBoundary>
-    )
+      <ErrorBoundary>
+        <ErrorComponent />
+      </ErrorBoundary>
+    ),
+    children: [
+      {
+        index: true,
+        element: <HomePage />,
+      },
+      {
+        path: 'about',
+        element: <AboutPage />,
+      },
+      {
+        path: 'scanner',
+        element: <ScannerPage />,
+      },
+      {
+        path: 'statistics',
+        element: <StatisticsPage />,
+      },
+    ],
   },
 ]);
 
