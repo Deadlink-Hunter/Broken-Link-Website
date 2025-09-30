@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "🚀 Running pre-commit checks..."
+
+# Build production version and storybook
+echo "🏗️  Building production bundle and storybook..."
+pnpm run build && pnpm run storybook:build
+
+echo "✅ All pre-commit checks passed!"
