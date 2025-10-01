@@ -1,8 +1,9 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import enTranslations from '../public/locals/en.json';
-import esTranslations from '../public/locals/es.json';
-import ptBrTranslations from '../public/locals/ptbr.json';
+import enTranslations from './locals/en.json';
+import esTranslations from './locals/es.json';
+import ptBrTranslations from './locals/ptbr.json';
+import hiTranslations from './locals/hi.json';
 
 i18n
     .use(initReactI18next)
@@ -17,8 +18,8 @@ i18n
         'pt-BR': {
             translation: ptBrTranslations,
         },
-        de: {
-            translation: deTranslations,
+        hi: {
+            translation: hiTranslations,
         },
     },
         lng: 'en',
