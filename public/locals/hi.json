@@ -1,0 +1,7 @@
+{
+    "welcome_title": "स्वागत है ",
+    "welcome_highlight": "Mantine",
+    "welcome_description_before_link": "यह स्टार्टर Vite प्रोजेक्ट में एक न्यूनतम सेटअप शामिल है। यदि आप Mantine + Vite एकीकरण के बारे में और जानना चाहते हैं तो",
+    "welcome_link_text": "इस गाइड",
+    "welcome_description_after_link": "का पालन करें। शुरुआत करने के लिए pages/Home.page.tsx फ़ाइल को संपादित करें।"
+}

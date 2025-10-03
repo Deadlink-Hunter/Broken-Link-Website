@@ -1,0 +1,7 @@
+{
+  "welcome_title": "Сардэчна запрашаем у ",
+  "welcome_highlight": "Mantine",
+  "welcome_description_before_link": "Гэты стартавы праект Vite ўключае мінімальную наладу. Калі вы хочаце даведацца больш пра інтэграцыю Mantine + Vite, азнаёмцеся з",
+  "welcome_link_text": "гэтай інструкцыяй",
+  "welcome_description_after_link": ". Каб пачаць, адрэдагуйце файл pages/Home.page.tsx."
+}
