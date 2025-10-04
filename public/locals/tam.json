@@ -1,0 +1,7 @@
+{
+  "welcome_title": "வரவேற்பு ",
+  "welcome_highlight": "Mantine",
+  "welcome_description_before_link": "இந்த Vite திட்டத்தில் குறைந்தபட்ச கட்டமைப்பு உள்ளது. Mantine மற்றும் Vite ஒருங்கிணைப்பைப் பற்றி மேலும் அறிய விரும்பினால்,",
+  "welcome_link_text": "இந்த வழிகாட்டியை",
+  "welcome_description_after_link": "பின்பற்றவும். தொடங்க pages/Home.page.tsx கோப்பை திருத்தவும்."
+}

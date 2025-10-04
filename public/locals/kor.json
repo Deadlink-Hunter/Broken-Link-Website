@@ -1,0 +1,7 @@
+{
+  "welcome_title": "환영합니다 ",
+  "welcome_highlight": "Mantine",
+  "welcome_description_before_link": "이 Vite 프로젝트에는 최소 설정이 포함되어 있습니다. Mantine과 Vite 통합에 대해 더 배우려면",
+  "welcome_link_text": "이 가이드",
+  "welcome_description_after_link": "를 따르세요. 시작하려면 pages/Home.page.tsx 파일을 수정하세요."
+}

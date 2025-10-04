@@ -1,0 +1,7 @@
+{
+  "welcome_title": "Hoş geldiniz ",
+  "welcome_highlight": "Mantine",
+  "welcome_description_before_link": "Bu Vite projesi minimal bir yapılandırma içerir. Mantine ve Vite entegrasyonu hakkında daha fazla bilgi edinmek istiyorsanız,",
+  "welcome_link_text": "bu kılavuzu",
+  "welcome_description_after_link": "takip edin. Başlamak için pages/Home.page.tsx dosyasını düzenleyin."
+}

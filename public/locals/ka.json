@@ -1,0 +1,7 @@
+{
+  "welcome_title": "ಸ್ವಾಗತ ",
+  "welcome_highlight": "Mantine",
+  "welcome_description_before_link": "ಈ Vite ಯೋಜನೆಯಲ್ಲಿ ಕನಿಷ್ಠ ಸಂರಚನೆ ಸೇರಿಸಲಾಗಿದೆ. Mantine ಮತ್ತು Vite ಏಕೀಕರಣದ ಬಗ್ಗೆ ಇನ್ನಷ್ಟು ತಿಳಿಯಲು,",
+  "welcome_link_text": "ಈ ಮಾರ್ಗದರ್ಶಿ",
+  "welcome_description_after_link": "ಅನುಸರಿಸಿ. ಪ್ರಾರಂಭಿಸಲು pages/Home.page.tsx ಫೈಲ್ ಸಂಪಾದಿಸಿ."
+}
