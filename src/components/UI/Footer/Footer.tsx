@@ -1,125 +1,85 @@
-import React, { CSSProperties, ReactNode } from 'react';
-import { Box } from '@mantine/core';
-import { IconStar } from '@tabler/icons-react';
-import { footerStyles } from './styles';
+import React from "react";
+import { IconStar } from "@tabler/icons-react";
+import "./Footer.css";
+
+
+interface LinkItem {
+    label: string;
+    href: string;
+}
 
 interface FooterProps {
-    style?: CSSProperties;
-    children?: ReactNode;
     brandName?: string;
     brandDescription?: string;
     githubUrl?: string;
-    quickLinks?: Array<{ label: string; href: string }>;
-    communityLinks?: Array<{ label: string; href: string }>;
+    quickLinks?: LinkItem[];
+    communityLinks?: LinkItem[];
     madeWithText?: string;
     copyrightText?: string;
 }
 
-export const Footer = ({
-    style = {},
-    children,
-    brandName = 'Deadlink-Hunter',
-    brandDescription = 'Open-source tool for finding and eliminating broken links in GitHub repositories. Built with ❤️ for the developer community.',
-    githubUrl = 'https://github.com',
+export const Footer: React.FC<FooterProps> = ({
+    brandName = "Deadlink-Hunter",
+    brandDescription = "Open-source tool for finding and eliminating broken links in GitHub repositories. Built with ❤️ for the developer community.",
+    githubUrl = "https://github.com",
     quickLinks = [
-        { label: 'About', href: '/about' },
-        { label: 'Scanner', href: '/scanner' },
-        { label: 'Statistics', href: '/statistics' },
-        { label: 'Documentation', href: '/docs' },
+        { label: "About", href: "/about" },
+        { label: "Scanner", href: "/scanner" },
+        { label: "Statistics", href: "/statistics" },
+        { label: "Documentation", href: "/docs" },
     ],
     communityLinks = [
-        { label: 'Contribute', href: '/contribute' },
-        { label: 'Issues', href: '/issues' },
-        { label: 'Feature Requests', href: '/feature-requests' },
-        { label: 'Discord', href: '/discord' },
+        { label: "Contribute", href: "/contribute" },
+        { label: "Issues", href: "/issues" },
+        { label: "Feature Requests", href: "/feature-requests" },
+        { label: "Discord", href: "/discord" },
     ],
-    madeWithText = 'Made with ❤️ by the open source community',
-    copyrightText = `© ${new Date().getFullYear()} Deadlink-Hunter. Licensed under MIT.`
-}: FooterProps) => {
-    const defaultStyle = footerStyles.default;
-
-    const LinkComponent = ({ label, href }: { label: string; href: string }) => (
-        <a
-            href={href}
-            style={footerStyles.linkItem}
-            onMouseEnter={(e) => e.currentTarget.style.color = '#06b6d4'}
-            onMouseLeave={(e) => e.currentTarget.style.color = '#e0e0e0'}
-        >
-            {label}
-        </a>
-    );
-
+    madeWithText = "Made with ❤️ by the open source community",
+    copyrightText = `© ${new Date().getFullYear()} Deadlink-Hunter. Licensed under MIT.`,
+}) => {
     return (
-        <Box
-            component="footer"
-            style={{ ...defaultStyle, ...style }}
-        >
-            {children ? (
-                children
-            ) : (
-                <>
-                    {}
-                    <div style={footerStyles.mainContainer}>
-                        {}
-                        <div style={footerStyles.brandSection}>
-                            <h3 style={footerStyles.brandTitle}>{brandName}</h3>
-                            <p style={footerStyles.brandDescription}>{brandDescription}</p>
-                            <a
-                                href={githubUrl}
-                                style={footerStyles.githubButton}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.backgroundColor = '#374151';
-                                    e.currentTarget.style.borderColor = '#6b7280';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.backgroundColor = 'transparent';
-                                    e.currentTarget.style.borderColor = '#475569';
-                                }}
-                            >
-                                <IconStar size={16} />
-                                Star on GitHub
-                            </a>
-                        </div>
+        <footer className="footer">
+            <div className="footer-container">
+                {/* Brand Section */}
+                <div className="footer-brand">
+                    <h3>{brandName}</h3>
+                    <p>{brandDescription}</p>
+                    <a href={githubUrl} className="footer-github-btn">
+                        <IconStar size={16} /> Star on GitHub
+                    </a>
+                </div>
 
-                        {}
-                        <div style={footerStyles.section}>
-                            <h4 style={footerStyles.sectionTitle}>Quick Links</h4>
-                            <ul style={footerStyles.linkList}>
-                                {quickLinks.map((link, index) => (
-                                    <li key={index}>
-                                        <LinkComponent {...link} />
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
+                {/* Quick Links */}
+                <div className="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        {quickLinks.map((link) => (
+                            <li key={link.label}>
+                                <a href={link.href}>{link.label}</a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
 
-                        {}
-                        <div style={footerStyles.section}>
-                            <h4 style={footerStyles.sectionTitle}>Community</h4>
-                            <ul style={footerStyles.linkList}>
-                                {communityLinks.map((link, index) => (
-                                    <li key={index}>
-                                        <LinkComponent {...link} />
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
+                {/* Community Links */}
+                <div className="footer-section">
+                    <h4>Community</h4>
+                    <ul>
+                        {communityLinks.map((link) => (
+                            <li key={link.label}>
+                                <a href={link.href}>{link.label}</a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
 
-                    {}
-                    <hr style={footerStyles.separator} />
+            <hr />
 
-                    {}
-                    <div style={footerStyles.bottomSection}>
-                        <p style={footerStyles.bottomText}>
-                            {'<> '}{madeWithText}
-                        </p>
-                        <p style={footerStyles.bottomText}>
-                            {copyrightText}
-                        </p>
-                    </div>
-                </>
-            )}
-        </Box>
+            <div className="footer-bottom">
+                <p>{madeWithText}</p>
+                <p>{copyrightText}</p>
+            </div>
+        </footer>
     );
 };
