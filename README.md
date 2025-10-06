@@ -26,6 +26,7 @@ In order to see the ui log in.
 ## Table of Contents
 - [The why](#the-why)
 - [Contributing](#contributing)
+- [Contributors](#contributors)
 - [Docker Setup](#docker-setup)
 - [Mantine Vite template](#mantine-vite-template)
 - [Features](#features)
@@ -79,6 +80,15 @@ Its total ok for us to use llm to generate code, and even recommended but lets k
 
 ---
 
+## Contributors
+
+Thanks to all the amazing contributors who have helped make this project better! 🎉
+
+<a href="https://github.com/Deadlink-Hunter/Broken-Link-Website/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Deadlink-Hunter/Broken-Link-Website" alt="Contributors" />
+</a>
+
+---
 
 Install dependencies using pnpm (please do not use npm or yarn):
 
