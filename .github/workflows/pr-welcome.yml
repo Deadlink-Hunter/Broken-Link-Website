@@ -1,8 +1,12 @@
 name: PR Welcome Message
 
 on:
-  pull_request:
+  pull_request_target:
     types: [opened]
+
+permissions:
+  issues: write
+  pull-requests: write
 
 jobs:
   comment:
@@ -28,7 +32,7 @@ jobs:
             `;
 
             await github.rest.issues.createComment({
-              issue_number: context.issue.number,
+              issue_number: context.payload.pull_request.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
               body: message
