@@ -1,23 +1,23 @@
-'use client';
+import React from "react";
+import FeaturesCards from "./components/FeaturesCards/FeaturesCards";
+import { Typography } from "@/components/UI/Typography/Typography";
+import { Container } from "@mantine/core";
 
-import React from 'react';
-import FeaturesCards from './components/FeaturesCards/FeaturesCards';
-
-const AboutUs: React.FC = () => {
+const AboutPage = () => {
   return (
-    <div style={{ padding: '2.5rem 1.25rem', maxWidth: '1200px', margin: '0 auto' }}>
-      <section style={{ textAlign: 'center', marginBottom: '3rem' }}>
-        <h1 style={{ fontSize: '2.5rem', fontWeight: '700', marginBottom: '1rem' }}>About Us</h1>
-        <p style={{ fontSize: '1.125rem', color: '#555' }}>
-          We are committed to delivering excellence and innovation in every project we undertake.
-        </p>
+    <Container size="lg" py="xl">
+      <section style={{ textAlign: "center", marginBottom: "2rem" }}>
+        <Typography variant="primary" size="extraLarge">
+          About Us
+        </Typography>
+        <Typography size="medium" style={{ opacity: 0.8 }}>
+          Discover what makes our platform unique and powerful.
+        </Typography>
       </section>
 
-      <section>
-        <FeaturesCards />
-      </section>
-    </div>
+      <FeaturesCards />
+    </Container>
   );
 };
 
-export default AboutUs;
+export default AboutPage;

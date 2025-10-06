@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "types": ["node", "@testing-library/jest-dom", "vitest/globals"],
+    "types": ["node"],
     "target": "ESNext",
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
@@ -15,16 +15,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",       
-    "target": "es6",
+    "jsx": "react-jsx",
     "paths": {
-      "@/*": ["./src/*"],
-      "@test-utils": ["./test-utils"]
+      "@/*": ["./src/*"]
     }
   },
-  "include": ["src", "test-utils", "About", "Typography.tsx", "next-env.d.ts"],
+  "include": ["src", "next-env.d.ts"],
   "exclude": ["node_modules"]
-  
-  
 }
-
