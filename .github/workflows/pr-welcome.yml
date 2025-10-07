@@ -1,0 +1,39 @@
+name: PR Welcome Message
+
+on:
+  pull_request:
+    types: [opened]
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post welcome message
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const message = `
+            👋 **Thanks for opening this Pull Request!** 🎉
+
+            We'll review it as soon as possible.
+
+            Before we proceed, please double check:
+            - The PR title & description clearly explain the changes.
+            - All checks/tests pass.
+            - You've linked it to an issue (if applicable).
+            - Also check that build and storybook:build both runs.
+
+            **Happy contributing! 🚀**
+            `;
+
+            await github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: message
+            });
