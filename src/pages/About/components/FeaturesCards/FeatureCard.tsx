@@ -1,18 +1,29 @@
 import React from "react";
-import "./FeatureCard.css";
+import { Card, Text, Title, Stack, useMantineTheme } from "@mantine/core";
 
 interface FeatureCardProps {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
+title: string;
+icon: React.ElementType;
+description: string;
 }
 
-export const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description }) => (
-  <div className="feature-card">
-    <div className="feature-icon">{icon}</div>
-    <div className="feature-content">
-      <h3>{title}</h3>
-      <p>{description}</p>
-    </div>
-  </div>
+const FeatureCard: React.FC<FeatureCardProps> = ({ title, icon: Icon, description }) => {
+const theme = useMantineTheme();
+
+return (
+<Card
+shadow="sm"
+radius="md"
+p="lg"
+withBorder
+bg={theme.colorScheme === "dark" ? "dark.6" : "gray.0"}
+> <Stack align="center" gap="sm"> <Icon size={32} color={theme.colors.blue[5]} /> <Title order={4} fw={600}>
+{title} </Title> <Text c="dimmed" size="sm" ta="center">
+{description} 
+</Text> 
+</Stack> 
+</Card>
 );
+};
+
+export default FeatureCard;

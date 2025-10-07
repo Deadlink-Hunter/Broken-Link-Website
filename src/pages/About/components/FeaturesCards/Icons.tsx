@@ -1,13 +1,14 @@
 import {
-  IconTarget,
-  IconReportAnalytics,
-  IconBrandGithub,
-  IconCode,
+IconTarget,
+IconReportAnalytics,
+IconBrandGithub,
+IconCode,
 } from "@tabler/icons-react";
 
+// ✅ Export icon *components*, not elements — for full flexibility
 export const icons = {
-  target: <IconTarget size={28} />,
-  report: <IconReportAnalytics size={28} />,
-  github: <IconBrandGithub size={28} />,
-  code: <IconCode size={28} />,
+target: IconTarget,
+report: IconReportAnalytics,
+github: IconBrandGithub,
+code: IconCode,
 };
