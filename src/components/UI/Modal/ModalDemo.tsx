@@ -50,12 +50,8 @@ export const ModalDemo = () => {
         opened={centeredOpened}
         onClose={() => setCenteredOpened(false)}
         title="Centered Modal"
-        variant="secondary"
+        variant="centered"
         centered
-        style={{ 
-          backgroundColor: '#f8f9fa',
-          border: '2px solid #6c5ce7'
-        }}
       >
         <Text>
           This modal is centered vertically and has custom styling applied through the style prop.

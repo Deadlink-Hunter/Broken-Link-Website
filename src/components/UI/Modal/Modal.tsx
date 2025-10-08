@@ -19,17 +19,14 @@ export const Modal = ({
   ...props 
 }: SharedModalProps) => {
   const variantStyle = modalVariants[variant];
-  
-  // Mobile responsiveness - make modal fullscreen on small screens
   const isMobile = useMediaQuery('(max-width: 50em)');
   
-  // Responsive props
   const responsiveProps = {
     fullScreen: isMobile,
     size: isMobile ? 'full' : size,
     transitionProps: { 
       transition: (isMobile ? 'fade' : 'scale') as MantineTransition, 
-      duration: 200 
+      duration: 200
     },
   };
 

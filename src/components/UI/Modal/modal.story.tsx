@@ -15,7 +15,6 @@ const meta: Meta<typeof Modal> = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-// Wrapper component to manage modal state
 const ModalWrapper = (args: any) => {
   const [opened, setOpened] = useState(false);
 
@@ -93,11 +92,7 @@ export const WithCustomStyle: Story = {
   render: (args) => <ModalWrapper {...args} />,
   args: {
     title: 'Custom Styled Modal',
-    style: {
-      backgroundColor: '#f0f8ff',
-      border: '2px solid #4dabf7',
-      borderRadius: '12px',
-    },
+    variant: 'custom',
     children: 'This modal has custom styling applied.',
   },
 };
