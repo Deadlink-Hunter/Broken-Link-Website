@@ -1,0 +1,7 @@
+{
+  "welcome_title": "Selamat datang ke ",
+  "welcome_highlight": "Mantine",
+  "welcome_description_before_link": "Projek Vite ini termasuk konfigurasi minimal. Jika anda ingin belajar lebih lanjut mengenai integrasi Mantine dan Vite, ikuti",
+  "welcome_link_text": "panduan ini",
+  "welcome_description_after_link": ". Untuk memulakan, sunting fail pages/Home.page.tsx."
+}

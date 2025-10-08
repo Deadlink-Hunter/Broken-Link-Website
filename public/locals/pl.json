@@ -1,0 +1,7 @@
+{
+  "welcome_title": "Witamy w ",
+  "welcome_highlight": "Mantine",
+  "welcome_description_before_link": "Ten początkowy projekt Vite zawiera minimalną konfigurację. Jeśli chcesz dowiedzieć się więcej o integracji Mantine + Vite, zapoznaj się z",
+  "welcome_link_text": "tym przewodnikiem",
+  "welcome_description_after_link": ". Aby rozpocząć, edytuj plik pages/Home.page.tsx."
+}

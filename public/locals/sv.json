@@ -1,0 +1,7 @@
+{
+  "welcome_title": "Välkommen till ",
+  "welcome_highlight": "Mantine",
+  "welcome_description_before_link": "Detta Vite-projekt inkluderar en minimal konfiguration. Om du vill lära dig mer om integrationen av Mantine och Vite, följ",
+  "welcome_link_text": "denna guide",
+  "welcome_description_after_link": ". För att börja, redigera filen pages/Home.page.tsx."
+}

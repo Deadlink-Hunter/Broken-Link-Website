@@ -1,0 +1,7 @@
+{
+  "welcome_title": "స్వాగతం ",
+  "welcome_highlight": "Mantine",
+  "welcome_description_before_link": "ఈ Vite ప్రాజెక్ట్ కనీస కాన్ఫిగరేషన్‌ను కలిగి ఉంది. మీరు Mantine మరియు Vite యొక్క సమీకరణం గురించి మరింత తెలుసుకోవాలనుకుంటే,",
+  "welcome_link_text": "ఈ మార్గదర్శకాన్ని",
+  "welcome_description_after_link": "అనుసరించండి. ప్రారంభించడానికి pages/Home.page.tsx ఫైల్‌ను సవరించండి."
+}

@@ -42,3 +42,29 @@ export const buttonWithIcon: Story = {
   },
 };
 
+export const buttonVariantsShowcase: Story = {
+  render: () => (
+    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
+      {['primary', 'secondary', 'success', 'warning', 'error', 'outline', 'ghost'].map(
+        (variant) => (
+          <Button key={variant} variant={variant as any}>
+            {variant.charAt(0).toUpperCase() + variant.slice(1)} Button
+          </Button>
+        )
+      )}
+    </div>
+  ),
+};
+
+export const disabledButtons: Story = {
+  render: () => (
+    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
+      {['primary', 'secondary', 'success', 'outline', 'ghost'].map((variant) => (
+        <Button key={variant} variant={variant as any} disabled>
+          Disabled {variant}
+        </Button>
+      ))}
+    </div>
+  ),
+};
+

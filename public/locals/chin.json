@@ -1,0 +1,7 @@
+{
+  "welcome_title": "歡迎來到 ",
+  "welcome_highlight": "Mantine",
+  "welcome_description_before_link": "這個 Vite 專案包含最小設定。如果您想進一步了解 Mantine 和 Vite 的整合，請參閱",
+  "welcome_link_text": "本指南",
+  "welcome_description_after_link": "。要開始，請編輯 pages/Home.page.tsx 檔案。"
+}

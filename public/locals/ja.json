@@ -1,0 +1,7 @@
+{
+  "welcome_title": "ようこそ ",
+  "welcome_highlight": "Mantine",
+  "welcome_description_before_link": "このプロジェクトには Vite の基本的な設定が含まれています。Mantine と Vite の統合について詳しく知りたい場合は、",
+  "welcome_link_text": "このガイド",
+  "welcome_description_after_link": "を参照してください。始めるには、pages/Home.page.tsx ファイルを編集してください。"
+}

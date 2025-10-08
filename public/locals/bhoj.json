@@ -1,0 +1,7 @@
+{
+  "welcome_title": "स्वागत बा ",
+  "welcome_highlight": "Mantine",
+  "welcome_description_before_link": "ई Vite प्रोजेक्ट में न्यूनतम सेटअप बा। अगर रउरा Mantine आ Vite के इंटीग्रेशन के बारे में जादे जनना चाहतानी, त",
+  "welcome_link_text": "एह गाइड",
+  "welcome_description_after_link": "के देखीं। सुरुआत खातिर pages/Home.page.tsx फाइल एडिट करीं।"
+}
