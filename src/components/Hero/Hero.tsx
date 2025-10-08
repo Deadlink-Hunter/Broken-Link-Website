@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/UI/Button/Button';
 import { Typography } from '@/components/UI/Typography/Typography';
 import { ROUTES } from '@/constants/routes.consts';
+import { HERO_CONSTANTS, HERO_COLORS } from './constants';
+import { heroStyles } from './styles';
 
 export const Hero = () => {
   const navigate = useNavigate();
@@ -14,120 +16,77 @@ export const Hero = () => {
   };
 
   const handleViewOnGithub = () => {
-    window.open('https://github.com/Deadlink-Hunter/Broken-Link-Website', '_blank');
+    window.open(HERO_CONSTANTS.URLS.GITHUB_REPO, '_blank');
   };
 
   return (
-    <Box
-      style={{
-        minHeight: '100vh',
-        background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #0f172a 50%, #1e1b3a 75%, #0f172a 100%)',
-        display: 'flex',
-        alignItems: 'center'
-      }}
-    >
+    <Box style={heroStyles.container}>
       <Container 
         size="xl" 
-        style={{ 
-          display: 'flex', 
-          alignItems: 'center',
-          paddingTop: '2rem',
-          paddingBottom: '2rem'
-        }}
+        style={heroStyles.innerContainer}
       >
-      <Stack align="center" justify="center" gap={0} style={{ width: '100%', textAlign: 'center' }}>
+      <Stack align="center" justify="center" gap={0} style={heroStyles.mainStack}>
         
-        {/* Main Title */}
-        <Stack align="center" gap={0} style={{ marginBottom: '1.5rem' }}>
+        <Stack align="center" gap={0} style={heroStyles.titleStack}>
           <Text
             size="5rem"
             fw={700}
             variant="gradient"
-            gradient={{ from: '#22d3ee', to: '#8b5cf6', deg: 45 }}
-            style={{ 
-              fontSize: 'clamp(3rem, 10vw, 5rem)',
-              lineHeight: 0.9,
-              fontFamily: 'inherit',
-              marginBottom: '-0.5rem'
-            }}
+            gradient={{ from: HERO_COLORS.GRADIENT.PRIMARY.FROM, to: HERO_COLORS.GRADIENT.PRIMARY.TO, deg: 45 }}
+            style={heroStyles.titleText}
           >
-            Deadlink
+            {HERO_CONSTANTS.TITLE.FIRST_PART}
           </Text>
           <Text
             size="5rem"
             fw={700}
-            c="white"
-            style={{ 
-              fontSize: 'clamp(3rem, 10vw, 5rem)',
-              lineHeight: 0.9,
-              fontFamily: 'inherit'
-            }}
+            c={HERO_COLORS.TEXT.WHITE}
+            style={heroStyles.subtitleText}
           >
-            Hunter
+            {HERO_CONSTANTS.TITLE.SECOND_PART}
           </Text>
         </Stack>
 
-        {/* Features badges */}
-        <Group justify="center" gap="lg" style={{ marginBottom: '2rem' }}>
+        <Group justify="center" gap="lg" style={heroStyles.featuresGroup}>
           <Group gap="xs" align="center">
-            <IconCircle size={14} color="#22d3ee" fill="#22d3ee" />
-            <Typography size="small" style={{ color: '#94a3b8', fontSize: '0.875rem', fontWeight: 500 }}>
-              Open Source
+            <IconCircle size={14} color={HERO_COLORS.ACCENT.CYAN} fill={HERO_COLORS.ACCENT.CYAN} />
+            <Typography size="small" style={heroStyles.featureText}>
+              {HERO_CONSTANTS.FEATURES.OPEN_SOURCE}
             </Typography>
           </Group>
           
-          <Box 
-            style={{ 
-              width: '4px', 
-              height: '4px', 
-              borderRadius: '50%',
-              backgroundColor: '#475569' 
-            }} 
-          />
+          <Box style={heroStyles.dividerDot} />
           
           <Group gap="xs" align="center">
-            <IconBolt size={14} color="#8b5cf6" />
-            <Typography size="small" style={{ color: '#94a3b8', fontSize: '0.875rem', fontWeight: 500 }}>
-              Lightning Fast
+            <IconBolt size={14} color={HERO_COLORS.ACCENT.PURPLE} />
+            <Typography size="small" style={heroStyles.featureText}>
+              {HERO_CONSTANTS.FEATURES.LIGHTNING_FAST}
             </Typography>
           </Group>
         </Group>
 
-        {/* Description */}
-        <Box style={{ maxWidth: '650px', margin: '0 auto', marginBottom: '3rem' }}>
+        <Box style={heroStyles.descriptionContainer}>
           <Text 
             size="xl"
-            style={{ 
-              color: '#94a3b8', 
-              fontSize: 'clamp(1rem, 2.5vw, 1.2rem)',
-              lineHeight: 1.6,
-              fontWeight: 400
-            }}
+            style={heroStyles.descriptionText}
           >
-            Eliminate broken links from your GitHub repositories with{' '}
+            {HERO_CONSTANTS.DESCRIPTION.MAIN}{' '}
             <Text 
               component="span" 
-              c="#22d3ee" 
+              c={HERO_COLORS.ACCENT.CYAN} 
               fw={600}
-              style={{ fontSize: 'inherit' }}
+              style={heroStyles.highlightText}
             >
-              precision scanning
+              {HERO_CONSTANTS.DESCRIPTION.HIGHLIGHT}
             </Text>{' '}
-            and comprehensive reporting
+            {HERO_CONSTANTS.DESCRIPTION.CONTINUATION}
           </Text>
         </Box>
 
-        {/* Action Buttons */}
-        <Box style={{ marginBottom: '4rem' }}>
-          {/* Desktop Layout */}
+        <Box style={heroStyles.buttonsContainer}>
           <Group 
             justify="center" 
             gap="md" 
-            style={{
-              '@media (max-width: 768px)': {
-                display: 'none'
-              }
-            }}
             visibleFrom="md"
           >
             <Button
@@ -135,19 +94,9 @@ export const Hero = () => {
               size="lg"
               leftSection={<IconSearch size={18} />}
               onClick={handleStartScanning}
-              style={{
-                background: 'linear-gradient(90deg, #06b6d4, #8b5cf6)',
-                border: 'none',
-                borderRadius: '8px',
-                padding: '12px 24px',
-                fontSize: '1rem',
-                fontWeight: 600,
-                minWidth: '160px',
-                height: '44px',
-                color: 'white'
-              }}
+              style={heroStyles.primaryButton}
             >
-              Start Scanning
+              {HERO_CONSTANTS.BUTTONS.START_SCANNING}
             </Button>
             
             <Button
@@ -155,23 +104,12 @@ export const Hero = () => {
               size="lg"
               leftSection={<IconBrandGithub size={18} />}
               onClick={handleViewOnGithub}
-              style={{
-                background: 'transparent',
-                border: '1px solid rgba(148, 163, 184, 0.3)',
-                borderRadius: '8px',
-                padding: '12px 24px',
-                fontSize: '1rem',
-                fontWeight: 600,
-                minWidth: '160px',
-                height: '44px',
-                color: '#94a3b8'
-              }}
+              style={heroStyles.outlineButton}
             >
-              View on GitHub
+              {HERO_CONSTANTS.BUTTONS.VIEW_ON_GITHUB}
             </Button>
           </Group>
 
-          {/* Mobile Layout */}
           <Stack
             align="center"
             gap="sm"
@@ -182,19 +120,9 @@ export const Hero = () => {
               size="lg"
               leftSection={<IconSearch size={18} />}
               onClick={handleStartScanning}
-              style={{
-                background: 'linear-gradient(90deg, #06b6d4, #8b5cf6)',
-                border: 'none',
-                borderRadius: '8px',
-                padding: '12px 24px',
-                fontSize: '1rem',
-                fontWeight: 600,
-                minWidth: '160px',
-                height: '44px',
-                color: 'white'
-              }}
+              style={heroStyles.primaryButton}
             >
-              Start Scanning
+              {HERO_CONSTANTS.BUTTONS.START_SCANNING}
             </Button>
             
             <Button
@@ -202,26 +130,14 @@ export const Hero = () => {
               size="lg"
               leftSection={<IconBrandGithub size={18} />}
               onClick={handleViewOnGithub}
-              style={{
-                background: 'transparent',
-                border: '1px solid rgba(148, 163, 184, 0.3)',
-                borderRadius: '8px',
-                padding: '12px 24px',
-                fontSize: '1rem',
-                fontWeight: 600,
-                minWidth: '160px',
-                height: '44px',
-                color: '#94a3b8'
-              }}
+              style={heroStyles.outlineButton}
             >
-              View on GitHub
+              {HERO_CONSTANTS.BUTTONS.VIEW_ON_GITHUB}
             </Button>
           </Stack>
         </Box>
 
-        {/* Statistics */}
-        <Box style={{ width: '100%' }}>
-          {/* Desktop Layout */}
+        <Box style={heroStyles.statisticsContainer}>
           <Group 
             justify="center" 
             gap="4rem"
@@ -231,25 +147,16 @@ export const Hero = () => {
               <Text
                 size="3rem"
                 fw={700}
-                c="#22d3ee"
-                style={{ 
-                  fontSize: 'clamp(2rem, 5vw, 3rem)',
-                  lineHeight: 1,
-                  marginBottom: '0.25rem'
-                }}
+                c={HERO_COLORS.ACCENT.CYAN}
+                style={heroStyles.statisticNumber}
               >
-                10,000+
+                {HERO_CONSTANTS.STATISTICS.LINKS_SCANNED.VALUE}
               </Text>
               <Text 
                 size="sm"
-                style={{ 
-                  color: '#64748b',
-                  fontSize: '0.875rem',
-                  fontWeight: 400,
-                  textAlign: 'center'
-                }}
+                style={heroStyles.statisticLabel}
               >
-                Links Scanned
+                {HERO_CONSTANTS.STATISTICS.LINKS_SCANNED.LABEL}
               </Text>
             </Stack>
 
@@ -257,25 +164,16 @@ export const Hero = () => {
               <Text
                 size="3rem"
                 fw={700}
-                c="#8b5cf6"
-                style={{ 
-                  fontSize: 'clamp(2rem, 5vw, 3rem)',
-                  lineHeight: 1,
-                  marginBottom: '0.25rem'
-                }}
+                c={HERO_COLORS.ACCENT.PURPLE}
+                style={heroStyles.statisticNumber}
               >
-                500+
+                {HERO_CONSTANTS.STATISTICS.REPOS_ANALYZED.VALUE}
               </Text>
               <Text 
                 size="sm"
-                style={{ 
-                  color: '#64748b',
-                  fontSize: '0.875rem',
-                  fontWeight: 400,
-                  textAlign: 'center'
-                }}
+                style={heroStyles.statisticLabel}
               >
-                Repos Analyzed
+                {HERO_CONSTANTS.STATISTICS.REPOS_ANALYZED.LABEL}
               </Text>
             </Stack>
 
@@ -283,54 +181,35 @@ export const Hero = () => {
               <Text
                 size="3rem"
                 fw={700}
-                c="#10b981"
-                style={{ 
-                  fontSize: 'clamp(2rem, 5vw, 3rem)',
-                  lineHeight: 1,
-                  marginBottom: '0.25rem'
-                }}
+                c={HERO_COLORS.ACCENT.GREEN}
+                style={heroStyles.statisticNumber}
               >
-                99.9%
+                {HERO_CONSTANTS.STATISTICS.ACCURACY_RATE.VALUE}
               </Text>
               <Text 
                 size="sm"
-                style={{ 
-                  color: '#64748b',
-                  fontSize: '0.875rem',
-                  fontWeight: 400,
-                  textAlign: 'center'
-                }}
+                style={heroStyles.statisticLabel}
               >
-                Accuracy Rate
+                {HERO_CONSTANTS.STATISTICS.ACCURACY_RATE.LABEL}
               </Text>
             </Stack>
           </Group>
 
-          {/* Mobile Layout */}
           <Stack align="center" gap="2rem" hiddenFrom="md">
             <Stack align="center" gap={4}>
               <Text
                 size="2.5rem"
                 fw={700}
-                c="#22d3ee"
-                style={{ 
-                  fontSize: 'clamp(2rem, 8vw, 2.5rem)',
-                  lineHeight: 1,
-                  marginBottom: '0.25rem'
-                }}
+                c={HERO_COLORS.ACCENT.CYAN}
+                style={heroStyles.statisticNumberMobile}
               >
-                10,000+
+                {HERO_CONSTANTS.STATISTICS.LINKS_SCANNED.VALUE}
               </Text>
               <Text 
                 size="sm"
-                style={{ 
-                  color: '#64748b',
-                  fontSize: '0.875rem',
-                  fontWeight: 400,
-                  textAlign: 'center'
-                }}
+                style={heroStyles.statisticLabel}
               >
-                Links Scanned
+                {HERO_CONSTANTS.STATISTICS.LINKS_SCANNED.LABEL}
               </Text>
             </Stack>
 
@@ -338,25 +217,16 @@ export const Hero = () => {
               <Text
                 size="2.5rem"
                 fw={700}
-                c="#8b5cf6"
-                style={{ 
-                  fontSize: 'clamp(2rem, 8vw, 2.5rem)',
-                  lineHeight: 1,
-                  marginBottom: '0.25rem'
-                }}
+                c={HERO_COLORS.ACCENT.PURPLE}
+                style={heroStyles.statisticNumberMobile}
               >
-                500+
+                {HERO_CONSTANTS.STATISTICS.REPOS_ANALYZED.VALUE}
               </Text>
               <Text 
                 size="sm"
-                style={{ 
-                  color: '#64748b',
-                  fontSize: '0.875rem',
-                  fontWeight: 400,
-                  textAlign: 'center'
-                }}
+                style={heroStyles.statisticLabel}
               >
-                Repos Analyzed
+                {HERO_CONSTANTS.STATISTICS.REPOS_ANALYZED.LABEL}
               </Text>
             </Stack>
           </Stack>

@@ -6,7 +6,7 @@ import { Welcome } from '@/components/Welcome/Welcome';
 export function HomePage() {
   return (
     <>
-      <Welcome />
+      <Hero />
       <ColorSchemeToggle />
     </>
   );
