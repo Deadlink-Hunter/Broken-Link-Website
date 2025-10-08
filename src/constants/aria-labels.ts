@@ -1,0 +1,1 @@
+export const TOGGLE_COLOR_SCHEME = 'Toggle color scheme';
