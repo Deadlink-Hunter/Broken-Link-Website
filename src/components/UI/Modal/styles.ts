@@ -1,8 +1,8 @@
+import { rem } from '@mantine/core';
 import { theme } from '@/theme';
 
 const colors = theme.colors as Record<string, readonly string[]>;
 
-// Modal constants
 export const MODAL_CONSTANTS = {
   BREAKPOINTS: {
     MOBILE: '(max-width: 50em)',
@@ -17,10 +17,10 @@ export const MODAL_CONSTANTS = {
     MEDIUM: 'md',
   },
   BORDERS: {
-    WIDTH: '2px',
-    RADIUS: '12px',
+    WIDTH: rem(2),
+    RADIUS: rem(12),
   },
-} as const;
+};
 
 export const modalVariants = {
   primary: {
