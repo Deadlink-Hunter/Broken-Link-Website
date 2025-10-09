@@ -1,9 +1,9 @@
-import { HERO_COLORS } from './constants';
+import { rem } from '@mantine/core';
 
 export const heroStyles = {
   container: {
     minHeight: '100vh',
-    background: HERO_COLORS.GRADIENT.BACKGROUND,
+    background: 'linear-gradient(135deg, var(--mantine-color-primary-7) 0%, var(--mantine-color-primary-6) 25%, var(--mantine-color-primary-7) 50%, var(--mantine-color-purple-8) 75%, var(--mantine-color-primary-7) 100%)',
     display: 'flex',
     alignItems: 'center',
   },
@@ -11,58 +11,70 @@ export const heroStyles = {
   innerContainer: {
     display: 'flex',
     alignItems: 'center',
-    paddingTop: '2rem',
-    paddingBottom: '2rem',
+    paddingTop: rem(32),
+    paddingBottom: rem(32),
   },
 
   mainStack: {
     width: '100%',
-    textAlign: 'center',
+    textAlign: 'center' as const,
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 0,
   },
 
   titleStack: {
-    marginBottom: '1.5rem',
+    marginBottom: rem(24),
+    alignItems: 'center',
+    gap: 0,
   },
 
   titleText: {
-    fontSize: 'clamp(3rem, 10vw, 5rem)',
+    fontSize: `clamp(${rem(48)}, 10vw, ${rem(80)})`,
     lineHeight: 0.9,
     fontFamily: 'inherit',
-    marginBottom: '-0.5rem',
+    marginBottom: rem(-8),
   },
 
   subtitleText: {
-    fontSize: 'clamp(3rem, 10vw, 5rem)',
+    fontSize: `clamp(${rem(48)}, 10vw, ${rem(80)})`,
     lineHeight: 0.9,
     fontFamily: 'inherit',
   },
 
   featuresGroup: {
-    marginBottom: '2rem',
+    marginBottom: rem(32),
+    justifyContent: 'center',
+    gap: rem(16),
+  },
+
+  featureItem: {
+    alignItems: 'center',
+    gap: rem(4),
   },
 
   featureText: {
-    color: HERO_COLORS.TEXT.LIGHT_GRAY,
-    fontSize: '0.875rem',
+    color: 'var(--mantine-color-primary-2)',
+    fontSize: rem(14),
     fontWeight: 500,
   },
 
   dividerDot: {
-    width: '4px',
-    height: '4px',
+    width: rem(4),
+    height: rem(4),
     borderRadius: '50%',
-    backgroundColor: HERO_COLORS.TEXT.DIVIDER,
+    backgroundColor: 'var(--mantine-color-primary-4)',
   },
 
   descriptionContainer: {
-    maxWidth: '650px',
+    maxWidth: rem(650),
     margin: '0 auto',
-    marginBottom: '3rem',
+    marginBottom: rem(48),
   },
 
   descriptionText: {
-    color: HERO_COLORS.TEXT.LIGHT_GRAY,
-    fontSize: 'clamp(1rem, 2.5vw, 1.2rem)',
+    color: 'var(--mantine-color-primary-2)',
+    fontSize: `clamp(${rem(16)}, 2.5vw, ${rem(20)})`,
     lineHeight: 1.6,
     fontWeight: 400,
   },
@@ -72,53 +84,96 @@ export const heroStyles = {
   },
 
   buttonsContainer: {
-    marginBottom: '4rem',
+    marginBottom: rem(64),
+  },
+
+  buttonsDesktop: {
+    justifyContent: 'center',
+    gap: rem(16),
+    display: 'flex',
+    '@media (max-width: 768px)': {
+      display: 'none',
+    },
+  },
+
+  buttonsMobile: {
+    alignItems: 'center',
+    gap: rem(8),
+    display: 'none',
+    '@media (max-width: 768px)': {
+      display: 'flex',
+      flexDirection: 'column',
+    },
   },
 
   primaryButton: {
-    background: HERO_COLORS.GRADIENT.BUTTON,
+    background: 'linear-gradient(90deg, var(--mantine-color-cyan-5), var(--mantine-color-purple-5))',
     border: 'none',
-    borderRadius: '8px',
-    padding: '12px 24px',
-    fontSize: '1rem',
+    borderRadius: rem(8),
+    padding: `${rem(12)} ${rem(24)}`,
+    fontSize: rem(16),
     fontWeight: 600,
-    minWidth: '160px',
-    height: '44px',
-    color: HERO_COLORS.TEXT.WHITE,
+    minWidth: rem(160),
+    height: rem(44),
+    color: 'var(--mantine-color-white)',
   },
 
   outlineButton: {
     background: 'transparent',
-    border: `1px solid ${HERO_COLORS.BORDER}`,
-    borderRadius: '8px',
-    padding: '12px 24px',
-    fontSize: '1rem',
+    border: '1px solid rgba(148, 163, 184, 0.3)',
+    borderRadius: rem(8),
+    padding: `${rem(12)} ${rem(24)}`,
+    fontSize: rem(16),
     fontWeight: 600,
-    minWidth: '160px',
-    height: '44px',
-    color: HERO_COLORS.TEXT.LIGHT_GRAY,
+    minWidth: rem(160),
+    height: rem(44),
+    color: 'var(--mantine-color-primary-2)',
   },
 
   statisticsContainer: {
     width: '100%',
   },
 
+  statisticsDesktop: {
+    justifyContent: 'center',
+    gap: rem(64),
+    display: 'flex',
+    '@media (max-width: 768px)': {
+      display: 'none',
+    },
+  },
+
+  statisticsMobile: {
+    alignItems: 'center',
+    gap: rem(32),
+    display: 'none',
+    '@media (max-width: 768px)': {
+      display: 'flex',
+      flexDirection: 'column',
+    },
+  },
+
+  statisticItem: {
+    alignItems: 'center',
+    gap: rem(4),
+  },
+
   statisticNumber: {
-    fontSize: 'clamp(2rem, 5vw, 3rem)',
+    fontSize: `clamp(${rem(32)}, 5vw, ${rem(48)})`,
     lineHeight: 1,
-    marginBottom: '0.25rem',
+    marginBottom: rem(4),
   },
 
   statisticNumberMobile: {
-    fontSize: 'clamp(2rem, 8vw, 2.5rem)',
+    fontSize: `clamp(${rem(32)}, 8vw, ${rem(40)})`,
     lineHeight: 1,
-    marginBottom: '0.25rem',
+    marginBottom: rem(4),
   },
 
   statisticLabel: {
-    color: HERO_COLORS.TEXT.DARK_GRAY,
-    fontSize: '0.875rem',
+    color: 'var(--mantine-color-primary-3)',
+    fontSize: rem(14),
     fontWeight: 400,
-    textAlign: 'center',
+    textAlign: 'center' as const,
   },
-} as const;
+};
