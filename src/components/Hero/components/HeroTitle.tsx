@@ -1,6 +1,6 @@
 import { Stack } from '@mantine/core';
 import { Typography } from '@/components/UI/Typography/Typography';
-import { HERO_CONSTANTS } from '@/constants/hero.consts';
+import { CONSTANTS } from '@/constants';
 import { heroStyles } from '../styles';
 
 export const HeroTitle = () => {
@@ -10,13 +10,13 @@ export const HeroTitle = () => {
         variant="h1"
         style={heroStyles.gradientTitle}
       >
-        {HERO_CONSTANTS.TITLE}
+  {CONSTANTS.HERO.TITLE}
       </Typography>
       <Typography
         variant="h1"
         style={heroStyles.whiteTitle}
       >
-        {HERO_CONSTANTS.SUBTITLE}
+  {CONSTANTS.HERO.SUBTITLE}
       </Typography>
     </Stack>
   );

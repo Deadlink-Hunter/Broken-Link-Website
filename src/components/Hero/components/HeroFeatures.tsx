@@ -1,7 +1,7 @@
 import { Group, Box } from '@mantine/core';
 import { IconCircle, IconBolt } from '@tabler/icons-react';
 import { Typography } from '@/components/UI/Typography/Typography';
-import { HERO_CONSTANTS } from '@/constants/hero.consts';
+import { CONSTANTS } from '@/constants';
 import { heroStyles } from '../styles';
 
 export const HeroFeatures = () => {
@@ -13,7 +13,7 @@ export const HeroFeatures = () => {
           style={heroStyles.cyanIcon}
         />
         <Typography size="small" style={heroStyles.featureText}>
-          {HERO_CONSTANTS.FEATURES.OPEN_SOURCE}
+          {CONSTANTS.HERO.FEATURES.OPEN_SOURCE}
         </Typography>
       </Group>
       
@@ -22,7 +22,7 @@ export const HeroFeatures = () => {
       <Group style={heroStyles.featureItem}>
         <IconBolt size={14} style={heroStyles.purpleIcon} />
         <Typography size="small" style={heroStyles.featureText}>
-          {HERO_CONSTANTS.FEATURES.LIGHTNING_FAST}
+          {CONSTANTS.HERO.FEATURES.LIGHTNING_FAST}
         </Typography>
       </Group>
     </Group>

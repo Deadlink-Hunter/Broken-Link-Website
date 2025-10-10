@@ -1,5 +1,9 @@
 import { rem } from '@mantine/core';
 
+const TITLE_FONT_SIZE = `clamp(${rem(48)}, 10vw, ${rem(80)})`;
+const DESCRIPTION_FONT_SIZE = `clamp(${rem(16)}, 2.5vw, ${rem(20)})`;
+const GRADIENT_BG = 'linear-gradient(45deg, var(--mantine-color-cyan-5), var(--mantine-color-purple-5))';
+
 export const heroStyles = {
   container: {
     minHeight: '100vh',
@@ -25,7 +29,7 @@ export const heroStyles = {
 
   mainStack: {
     width: '100%',
-    textAlign: 'center' as const,
+  textAlign: 'center' as const,
     alignItems: 'center',
     justifyContent: 'center',
     gap: 0,
@@ -38,31 +42,31 @@ export const heroStyles = {
   },
 
   titleText: {
-    fontSize: `clamp(${rem(48)}, 10vw, ${rem(80)})`,
+    fontSize: TITLE_FONT_SIZE,
     lineHeight: 0.9,
     fontFamily: 'inherit',
     marginBottom: rem(-8),
   },
 
   subtitleText: {
-    fontSize: `clamp(${rem(48)}, 10vw, ${rem(80)})`,
+    fontSize: TITLE_FONT_SIZE,
     lineHeight: 0.9,
     fontFamily: 'inherit',
   },
 
   gradientTitle: {
-    fontSize: `clamp(${rem(48)}, 10vw, ${rem(80)})`,
+    fontSize: TITLE_FONT_SIZE,
     lineHeight: 0.9,
     fontFamily: 'inherit',
     marginBottom: rem(-8),
-    background: 'linear-gradient(45deg, var(--mantine-color-cyan-5), var(--mantine-color-purple-5))',
+    background: GRADIENT_BG,
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
     backgroundClip: 'text',
   },
 
   whiteTitle: {
-    fontSize: `clamp(${rem(48)}, 10vw, ${rem(80)})`,
+    fontSize: TITLE_FONT_SIZE,
     lineHeight: 0.9,
     fontFamily: 'inherit',
     color: 'var(--mantine-color-white)',
@@ -109,13 +113,12 @@ export const heroStyles = {
 
   descriptionText: {
     color: 'var(--mantine-color-primary-2)',
-    fontSize: `clamp(${rem(16)}, 2.5vw, ${rem(20)})`,
+    fontSize: DESCRIPTION_FONT_SIZE,
     lineHeight: 1.6,
     fontWeight: 400,
   },
 
   highlightText: {
-    fontSize: 'inherit',
   },
 
   highlightSpan: {
@@ -215,7 +218,7 @@ export const heroStyles = {
     color: 'var(--mantine-color-primary-3)',
     fontSize: rem(14),
     fontWeight: 400,
-    textAlign: 'center' as const,
+  textAlign: 'center' as const,
   },
 
   cyanText: {

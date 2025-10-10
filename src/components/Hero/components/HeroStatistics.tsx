@@ -1,6 +1,6 @@
 import { Box, Group, Stack } from '@mantine/core';
 import { Typography } from '@/components/UI/Typography/Typography';
-import { HERO_CONSTANTS } from '@/constants/hero.consts';
+import { CONSTANTS } from '@/constants';
 import { heroStyles } from '../styles';
 
 interface StatisticItemProps {
@@ -47,32 +47,32 @@ export const HeroStatistics = () => {
     <Box style={heroStyles.statisticsContainer}>
       <Group style={heroStyles.statisticsDesktop}>
         <StatisticItem
-          value={HERO_CONSTANTS.STATISTICS.LINKS_SCANNED.VALUE}
-          label={HERO_CONSTANTS.STATISTICS.LINKS_SCANNED.LABEL}
+          value={CONSTANTS.HERO.STATISTICS.LINKS_SCANNED.VALUE}
+          label={CONSTANTS.HERO.STATISTICS.LINKS_SCANNED.LABEL}
           colorType="cyan"
         />
         <StatisticItem
-          value={HERO_CONSTANTS.STATISTICS.REPOS_ANALYZED.VALUE}
-          label={HERO_CONSTANTS.STATISTICS.REPOS_ANALYZED.LABEL}
+          value={CONSTANTS.HERO.STATISTICS.REPOS_ANALYZED.VALUE}
+          label={CONSTANTS.HERO.STATISTICS.REPOS_ANALYZED.LABEL}
           colorType="purple"
         />
         <StatisticItem
-          value={HERO_CONSTANTS.STATISTICS.ACCURACY_RATE.VALUE}
-          label={HERO_CONSTANTS.STATISTICS.ACCURACY_RATE.LABEL}
+          value={CONSTANTS.HERO.STATISTICS.ACCURACY_RATE.VALUE}
+          label={CONSTANTS.HERO.STATISTICS.ACCURACY_RATE.LABEL}
           colorType="success"
         />
       </Group>
 
       <Stack style={heroStyles.statisticsMobile}>
         <StatisticItem
-          value={HERO_CONSTANTS.STATISTICS.LINKS_SCANNED.VALUE}
-          label={HERO_CONSTANTS.STATISTICS.LINKS_SCANNED.LABEL}
+          value={CONSTANTS.HERO.STATISTICS.LINKS_SCANNED.VALUE}
+          label={CONSTANTS.HERO.STATISTICS.LINKS_SCANNED.LABEL}
           colorType="cyan"
           isMobile
         />
         <StatisticItem
-          value={HERO_CONSTANTS.STATISTICS.REPOS_ANALYZED.VALUE}
-          label={HERO_CONSTANTS.STATISTICS.REPOS_ANALYZED.LABEL}
+          value={CONSTANTS.HERO.STATISTICS.REPOS_ANALYZED.VALUE}
+          label={CONSTANTS.HERO.STATISTICS.REPOS_ANALYZED.LABEL}
           colorType="purple"
           isMobile
         />

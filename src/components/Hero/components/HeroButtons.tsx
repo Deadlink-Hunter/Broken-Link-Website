@@ -3,7 +3,7 @@ import { IconSearch, IconBrandGithub } from '@tabler/icons-react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/UI/Button/Button';
 import { ROUTES } from '@/constants/routes.consts';
-import { HERO_CONSTANTS } from '@/constants/hero.consts';
+import { CONSTANTS } from '@/constants';
 import { heroStyles } from '../styles';
 
 export const HeroButtons = () => {
@@ -14,7 +14,7 @@ export const HeroButtons = () => {
   };
 
   const handleViewOnGithub = () => {
-    window.open(HERO_CONSTANTS.URLS.GITHUB_REPO, '_blank');
+  window.open(CONSTANTS.HERO.URLS.GITHUB_REPO, '_blank');
   };
 
   return (
@@ -27,7 +27,7 @@ export const HeroButtons = () => {
           onClick={handleStartScanning}
           style={heroStyles.primaryButton}
         >
-          {HERO_CONSTANTS.BUTTONS.START_SCANNING}
+          {CONSTANTS.HERO.BUTTONS.START_SCANNING}
         </Button>
         
         <Button
@@ -37,7 +37,7 @@ export const HeroButtons = () => {
           onClick={handleViewOnGithub}
           style={heroStyles.outlineButton}
         >
-          {HERO_CONSTANTS.BUTTONS.VIEW_ON_GITHUB}
+          {CONSTANTS.HERO.BUTTONS.VIEW_ON_GITHUB}
         </Button>
       </Group>
 
@@ -49,7 +49,7 @@ export const HeroButtons = () => {
           onClick={handleStartScanning}
           style={heroStyles.primaryButton}
         >
-          {HERO_CONSTANTS.BUTTONS.START_SCANNING}
+          {CONSTANTS.HERO.BUTTONS.START_SCANNING}
         </Button>
         
         <Button
@@ -59,7 +59,7 @@ export const HeroButtons = () => {
           onClick={handleViewOnGithub}
           style={heroStyles.outlineButton}
         >
-          {HERO_CONSTANTS.BUTTONS.VIEW_ON_GITHUB}
+          {CONSTANTS.HERO.BUTTONS.VIEW_ON_GITHUB}
         </Button>
       </Stack>
     </Box>

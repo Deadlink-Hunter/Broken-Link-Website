@@ -1,6 +1,6 @@
 import { Box } from '@mantine/core';
 import { Typography } from '@/components/UI/Typography/Typography';
-import { HERO_CONSTANTS } from '@/constants/hero.consts';
+import { CONSTANTS } from '@/constants';
 import { heroStyles } from '../styles';
 
 export const HeroDescription = () => {
@@ -10,11 +10,11 @@ export const HeroDescription = () => {
         variant="body"
         style={heroStyles.descriptionText}
       >
-        {HERO_CONSTANTS.DESCRIPTION.MAIN} 
+          {CONSTANTS.HERO.DESCRIPTION.MAIN} 
         <span style={heroStyles.highlightSpan}>
-          {HERO_CONSTANTS.DESCRIPTION.HIGHLIGHT}
+            {CONSTANTS.HERO.DESCRIPTION.HIGHLIGHT}
         </span> 
-        {HERO_CONSTANTS.DESCRIPTION.CONTINUATION}
+          {CONSTANTS.HERO.DESCRIPTION.CONTINUATION}
       </Typography>
     </Box>
   );
