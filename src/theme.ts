@@ -77,6 +77,8 @@ const error: MantineColorsTuple = [
   '#7f1d1d',
   '#6b1414',
 ];
+
+// TODO: Check if this is the correct way to create a theme
 const breakpoints = {
   xs: '30em',
   sm: '48em',
