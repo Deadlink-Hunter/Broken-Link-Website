@@ -6,18 +6,29 @@ import { heroStyles } from '../styles';
 interface StatisticItemProps {
   value: string;
   label: string;
-  color: string;
+  colorType: 'cyan' | 'purple' | 'success';
   isMobile?: boolean;
 }
 
-const StatisticItem = ({ value, label, color, isMobile }: StatisticItemProps) => {
+const StatisticItem = ({ value, label, colorType, isMobile }: StatisticItemProps) => {
+  const getColorStyle = () => {
+    const baseStyle = isMobile ? heroStyles.statisticNumberMobile : heroStyles.statisticNumber;
+    switch (colorType) {
+      case 'cyan':
+        return { ...baseStyle, ...heroStyles.cyanText };
+      case 'purple':
+        return { ...baseStyle, ...heroStyles.purpleText };
+      case 'success':
+        return { ...baseStyle, ...heroStyles.successText };
+      default:
+        return baseStyle;
+    }
+  };
+
   return (
     <Stack style={heroStyles.statisticItem}>
       <Typography
-        style={{
-          ...(isMobile ? heroStyles.statisticNumberMobile : heroStyles.statisticNumber),
-          color,
-        }}
+        style={getColorStyle()}
       >
         {value}
       </Typography>
@@ -38,17 +49,17 @@ export const HeroStatistics = () => {
         <StatisticItem
           value={HERO_CONSTANTS.STATISTICS.LINKS_SCANNED.VALUE}
           label={HERO_CONSTANTS.STATISTICS.LINKS_SCANNED.LABEL}
-          color="var(--mantine-color-cyan-5)"
+          colorType="cyan"
         />
         <StatisticItem
           value={HERO_CONSTANTS.STATISTICS.REPOS_ANALYZED.VALUE}
           label={HERO_CONSTANTS.STATISTICS.REPOS_ANALYZED.LABEL}
-          color="var(--mantine-color-purple-5)"
+          colorType="purple"
         />
         <StatisticItem
           value={HERO_CONSTANTS.STATISTICS.ACCURACY_RATE.VALUE}
           label={HERO_CONSTANTS.STATISTICS.ACCURACY_RATE.LABEL}
-          color="var(--mantine-color-success-5)"
+          colorType="success"
         />
       </Group>
 
@@ -56,13 +67,13 @@ export const HeroStatistics = () => {
         <StatisticItem
           value={HERO_CONSTANTS.STATISTICS.LINKS_SCANNED.VALUE}
           label={HERO_CONSTANTS.STATISTICS.LINKS_SCANNED.LABEL}
-          color="var(--mantine-color-cyan-5)"
+          colorType="cyan"
           isMobile
         />
         <StatisticItem
           value={HERO_CONSTANTS.STATISTICS.REPOS_ANALYZED.VALUE}
           label={HERO_CONSTANTS.STATISTICS.REPOS_ANALYZED.LABEL}
-          color="var(--mantine-color-purple-5)"
+          colorType="purple"
           isMobile
         />
       </Stack>

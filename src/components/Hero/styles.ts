@@ -15,6 +15,14 @@ export const heroStyles = {
     paddingBottom: rem(32),
   },
 
+  containerWithMaxWidth: {
+    display: 'flex',
+    alignItems: 'center',
+    paddingTop: rem(32),
+    paddingBottom: rem(32),
+    maxWidth: rem(1200),
+  },
+
   mainStack: {
     width: '100%',
     textAlign: 'center' as const,
@@ -42,6 +50,24 @@ export const heroStyles = {
     fontFamily: 'inherit',
   },
 
+  gradientTitle: {
+    fontSize: `clamp(${rem(48)}, 10vw, ${rem(80)})`,
+    lineHeight: 0.9,
+    fontFamily: 'inherit',
+    marginBottom: rem(-8),
+    background: 'linear-gradient(45deg, var(--mantine-color-cyan-5), var(--mantine-color-purple-5))',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    backgroundClip: 'text',
+  },
+
+  whiteTitle: {
+    fontSize: `clamp(${rem(48)}, 10vw, ${rem(80)})`,
+    lineHeight: 0.9,
+    fontFamily: 'inherit',
+    color: 'var(--mantine-color-white)',
+  },
+
   featuresGroup: {
     marginBottom: rem(32),
     justifyContent: 'center',
@@ -66,6 +92,15 @@ export const heroStyles = {
     backgroundColor: 'var(--mantine-color-primary-4)',
   },
 
+  cyanIcon: {
+    color: 'var(--mantine-color-cyan-5)',
+    fill: 'var(--mantine-color-cyan-5)',
+  },
+
+  purpleIcon: {
+    color: 'var(--mantine-color-purple-5)',
+  },
+
   descriptionContainer: {
     maxWidth: rem(650),
     margin: '0 auto',
@@ -80,6 +115,12 @@ export const heroStyles = {
   },
 
   highlightText: {
+    fontSize: 'inherit',
+  },
+
+  highlightSpan: {
+    color: 'var(--mantine-color-cyan-5)',
+    fontWeight: 600,
     fontSize: 'inherit',
   },
 
@@ -175,5 +216,17 @@ export const heroStyles = {
     fontSize: rem(14),
     fontWeight: 400,
     textAlign: 'center' as const,
+  },
+
+  cyanText: {
+    color: 'var(--mantine-color-cyan-5)',
+  },
+
+  purpleText: {
+    color: 'var(--mantine-color-purple-5)',
+  },
+
+  successText: {
+    color: 'var(--mantine-color-success-5)',
   },
 };

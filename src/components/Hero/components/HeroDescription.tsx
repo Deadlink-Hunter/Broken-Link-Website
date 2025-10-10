@@ -11,13 +11,7 @@ export const HeroDescription = () => {
         style={heroStyles.descriptionText}
       >
         {HERO_CONSTANTS.DESCRIPTION.MAIN} 
-        <span 
-          style={{
-            ...heroStyles.highlightText,
-            color: 'var(--mantine-color-cyan-5)',
-            fontWeight: 600,
-          }}
-        >
+        <span style={heroStyles.highlightSpan}>
           {HERO_CONSTANTS.DESCRIPTION.HIGHLIGHT}
         </span> 
         {HERO_CONSTANTS.DESCRIPTION.CONTINUATION}

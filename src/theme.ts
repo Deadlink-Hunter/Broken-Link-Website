@@ -78,8 +78,6 @@ const error: MantineColorsTuple = [
   '#6b1414',
 ];
 
-// TODO: Check if this is the correct way to create a theme
-
 export const theme = createTheme({
   colors: {
     primary,

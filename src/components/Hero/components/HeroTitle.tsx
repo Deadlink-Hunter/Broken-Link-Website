@@ -8,22 +8,13 @@ export const HeroTitle = () => {
     <Stack style={heroStyles.titleStack}>
       <Typography
         variant="h1"
-        style={{
-          ...heroStyles.titleText,
-          background: 'linear-gradient(45deg, var(--mantine-color-cyan-5), var(--mantine-color-purple-5))',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text',
-        }}
+        style={heroStyles.gradientTitle}
       >
         {HERO_CONSTANTS.TITLE}
       </Typography>
       <Typography
         variant="h1"
-        style={{
-          ...heroStyles.subtitleText,
-          color: 'var(--mantine-color-white)',
-        }}
+        style={heroStyles.whiteTitle}
       >
         {HERO_CONSTANTS.SUBTITLE}
       </Typography>

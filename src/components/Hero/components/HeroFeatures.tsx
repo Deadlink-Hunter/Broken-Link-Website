@@ -10,8 +10,7 @@ export const HeroFeatures = () => {
       <Group style={heroStyles.featureItem}>
         <IconCircle 
           size={14} 
-          color="var(--mantine-color-cyan-5)" 
-          fill="var(--mantine-color-cyan-5)" 
+          style={heroStyles.cyanIcon}
         />
         <Typography size="small" style={heroStyles.featureText}>
           {HERO_CONSTANTS.FEATURES.OPEN_SOURCE}
@@ -21,7 +20,7 @@ export const HeroFeatures = () => {
       <Box style={heroStyles.dividerDot} />
       
       <Group style={heroStyles.featureItem}>
-        <IconBolt size={14} color="var(--mantine-color-purple-5)" />
+        <IconBolt size={14} style={heroStyles.purpleIcon} />
         <Typography size="small" style={heroStyles.featureText}>
           {HERO_CONSTANTS.FEATURES.LIGHTNING_FAST}
         </Typography>
