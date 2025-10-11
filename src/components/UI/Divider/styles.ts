@@ -6,7 +6,7 @@ const defaultDividerStyle = {
   height: '1px',
 };
 
-const colors = theme.colors as Record<string, readonly string[]>;
+const colors = theme.colors;
 
 export const dividerVariants = {
   primary: {

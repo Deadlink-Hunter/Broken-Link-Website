@@ -1,4 +1,4 @@
-import { createTheme, MantineColorsTuple } from '@mantine/core';
+import { createTheme, DEFAULT_THEME, MantineColorsTuple, mergeMantineTheme } from '@mantine/core';
 
 const primary: MantineColorsTuple = [
   '#f1f5f9',
@@ -82,22 +82,24 @@ const error: MantineColorsTuple = [
 // TODO: Check if this is the correct way to create a theme
 
 const breakpoints = {
-  xs: '30em',  
-  sm: '48em',  
-  md: '64em',  
-  lg: '74em', 
-  xl: '90em', 
+  xs: '30em',
+  sm: '48em',
+  md: '64em',
+  lg: '74em',
+  xl: '90em',
 };
 
-export const theme = createTheme({
-  colors: {
-    primary,
-    cyan: accentCyan,
-    purple: accentPurple,
-    success,
-    warning,
-    error,
-  },
+const appColors = {
+  primary,
+  cyan: accentCyan,
+  purple: accentPurple,
+  success,
+  warning,
+  error,
+};
+
+const themeOverride = createTheme({
+  colors: appColors,
   primaryColor: 'cyan',
   primaryShade: 5,
   fontFamily: 'Open Sans, sans-serif',
@@ -117,7 +119,16 @@ export const theme = createTheme({
     lg: '16px',
     xl: '32px',
     '2xl': '64px',
-  }, 
-  
+  },
   breakpoints,
 });
+
+export const theme = mergeMantineTheme(DEFAULT_THEME, themeOverride);
+
+type ExtendedThemeColors = keyof typeof appColors;
+
+declare module '@mantine/core' {
+  export interface MantineThemeColorsOverride {
+    colors: Record<ExtendedThemeColors, MantineColorsTuple>;
+  }
+}

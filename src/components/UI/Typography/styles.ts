@@ -1,7 +1,7 @@
 import { theme } from '@/theme';
 import { CUSTOM_SIZES, TypographyVariant } from './types';
 
-const colors = theme.colors as Record<string, readonly string[]>;
+const colors = theme.colors;
 
 export const typographyVariants: Record<string, TypographyVariant> = {
   primary: { color: colors.primary[5] },
