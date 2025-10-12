@@ -16,8 +16,9 @@
     "vitest": "vitest run",
     "vitest:watch": "vitest",
     "test": "pnpm run typecheck && pnpm run prettier && pnpm run lint && pnpm run vitest && pnpm run build",
-    "storybook": "storybook dev -p 6006",
-    "storybook:build": "storybook build"
+    "storybook": "npx storybook dev -p 6006",
+    "storybook:build": "npx storybook build",
+    "serve-storybook": "npx serve storybook-static -p 8080"
   },
   "dependencies": {
     "@mantine/core": "8.2.1",
