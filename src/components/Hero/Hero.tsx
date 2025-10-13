@@ -1,4 +1,4 @@
-import { Container, Stack, Box } from '@mantine/core';
+import { Container, Box } from '@mantine/core';
 import { 
   HeroTitle, 
   HeroFeatures, 
@@ -12,13 +12,13 @@ export const Hero = () => {
   return (
     <Box style={heroStyles.container}>
       <Container style={heroStyles.containerWithMaxWidth}>
-        <Stack style={heroStyles.mainStack}>
+        <div style={heroStyles.mainStack}>
           <HeroTitle />
           <HeroFeatures />
           <HeroDescription />
           <HeroButtons />
           <HeroStatistics />
-        </Stack>
+        </div>
       </Container>
     </Box>
   );

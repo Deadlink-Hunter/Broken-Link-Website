@@ -1,4 +1,4 @@
-import { Box, Group, Stack } from '@mantine/core';
+import { Box } from '@mantine/core';
 import { IconSearch, IconBrandGithub } from '@tabler/icons-react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/UI/Button/Button';
@@ -14,12 +14,12 @@ export const HeroButtons = () => {
   };
 
   const handleViewOnGithub = () => {
-  window.open(CONSTANTS.HERO.URLS.GITHUB_REPO, '_blank');
+    window.open(CONSTANTS.HERO.URLS.GITHUB_REPO, '_blank');
   };
 
   return (
     <Box style={heroStyles.buttonsContainer}>
-      <Group style={heroStyles.buttonsDesktop}>
+      <div style={heroStyles.buttonsDesktop}>
         <Button
           variant="primary"
           size="lg"
@@ -39,9 +39,9 @@ export const HeroButtons = () => {
         >
           {CONSTANTS.HERO.BUTTONS.VIEW_ON_GITHUB}
         </Button>
-      </Group>
+      </div>
 
-      <Stack style={heroStyles.buttonsMobile}>
+      <div style={heroStyles.buttonsMobile}>
         <Button
           variant="primary"
           size="lg"
@@ -61,7 +61,7 @@ export const HeroButtons = () => {
         >
           {CONSTANTS.HERO.BUTTONS.VIEW_ON_GITHUB}
         </Button>
-      </Stack>
+      </div>
     </Box>
   );
 };

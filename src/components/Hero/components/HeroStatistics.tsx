@@ -1,4 +1,4 @@
-import { Box, Group, Stack } from '@mantine/core';
+import { Box } from '@mantine/core';
 import { Typography } from '@/components/UI/Typography/Typography';
 import { CONSTANTS } from '@/constants';
 import { heroStyles } from '../styles';
@@ -26,7 +26,7 @@ const StatisticItem = ({ value, label, colorType, isMobile }: StatisticItemProps
   };
 
   return (
-    <Stack style={heroStyles.statisticItem}>
+    <div style={heroStyles.statisticItem}>
       <Typography
         style={getColorStyle()}
       >
@@ -38,14 +38,14 @@ const StatisticItem = ({ value, label, colorType, isMobile }: StatisticItemProps
       >
         {label}
       </Typography>
-    </Stack>
+    </div>
   );
 };
 
 export const HeroStatistics = () => {
   return (
     <Box style={heroStyles.statisticsContainer}>
-      <Group style={heroStyles.statisticsDesktop}>
+      <div style={heroStyles.statisticsDesktop}>
         <StatisticItem
           value={CONSTANTS.HERO.STATISTICS.LINKS_SCANNED.VALUE}
           label={CONSTANTS.HERO.STATISTICS.LINKS_SCANNED.LABEL}
@@ -61,9 +61,9 @@ export const HeroStatistics = () => {
           label={CONSTANTS.HERO.STATISTICS.ACCURACY_RATE.LABEL}
           colorType="success"
         />
-      </Group>
+      </div>
 
-      <Stack style={heroStyles.statisticsMobile}>
+      <div style={heroStyles.statisticsMobile}>
         <StatisticItem
           value={CONSTANTS.HERO.STATISTICS.LINKS_SCANNED.VALUE}
           label={CONSTANTS.HERO.STATISTICS.LINKS_SCANNED.LABEL}
@@ -76,7 +76,7 @@ export const HeroStatistics = () => {
           colorType="purple"
           isMobile
         />
-      </Stack>
+      </div>
     </Box>
   );
 };

@@ -1,13 +1,15 @@
 import { rem } from '@mantine/core';
+import { gradients } from '@/theme';
 
 const TITLE_FONT_SIZE = `clamp(${rem(48)}, 10vw, ${rem(80)})`;
 const DESCRIPTION_FONT_SIZE = `clamp(${rem(16)}, 2.5vw, ${rem(20)})`;
-const GRADIENT_BG = 'linear-gradient(45deg, var(--mantine-color-cyan-5), var(--mantine-color-purple-5))';
+const STATISTIC_FONT_SIZE = `clamp(${rem(32)}, 5vw, ${rem(48)})`;
+const STATISTIC_FONT_SIZE_MOBILE = `clamp(${rem(32)}, 8vw, ${rem(40)})`;
 
 export const heroStyles = {
   container: {
     minHeight: '100vh',
-    background: 'linear-gradient(135deg, var(--mantine-color-primary-7) 0%, var(--mantine-color-primary-6) 25%, var(--mantine-color-primary-7) 50%, var(--mantine-color-purple-8) 75%, var(--mantine-color-primary-7) 100%)',
+    background: gradients.hero.background,
     display: 'flex',
     alignItems: 'center',
   },
@@ -28,57 +30,48 @@ export const heroStyles = {
   },
 
   mainStack: {
+    display: 'flex',
+    flexDirection: 'column' as const,
     width: '100%',
-  textAlign: 'center' as const,
+    textAlign: 'center' as const,
     alignItems: 'center',
     justifyContent: 'center',
     gap: 0,
   },
 
   titleStack: {
+    display: 'flex',
+    flexDirection: 'column' as const,
     marginBottom: rem(24),
     alignItems: 'center',
     gap: 0,
   },
 
-  titleText: {
-    fontSize: TITLE_FONT_SIZE,
-    lineHeight: 0.9,
-    fontFamily: 'inherit',
-    marginBottom: rem(-8),
-  },
-
-  subtitleText: {
-    fontSize: TITLE_FONT_SIZE,
-    lineHeight: 0.9,
-    fontFamily: 'inherit',
-  },
-
   gradientTitle: {
     fontSize: TITLE_FONT_SIZE,
     lineHeight: 0.9,
-    fontFamily: 'inherit',
     marginBottom: rem(-8),
-    background: GRADIENT_BG,
+    background: gradients.hero.title,
+    backgroundClip: 'text',
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
-    backgroundClip: 'text',
   },
 
   whiteTitle: {
     fontSize: TITLE_FONT_SIZE,
     lineHeight: 0.9,
-    fontFamily: 'inherit',
     color: 'var(--mantine-color-white)',
   },
 
   featuresGroup: {
+    display: 'flex',
     marginBottom: rem(32),
     justifyContent: 'center',
     gap: rem(16),
   },
 
   featureItem: {
+    display: 'flex',
     alignItems: 'center',
     gap: rem(4),
   },
@@ -118,19 +111,16 @@ export const heroStyles = {
     fontWeight: 400,
   },
 
-  highlightText: {
-  },
-
   highlightSpan: {
     color: 'var(--mantine-color-cyan-5)',
     fontWeight: 600,
-    fontSize: 'inherit',
   },
 
   buttonsContainer: {
     marginBottom: rem(64),
   },
 
+  // TODO: Replace this media query with future Mantine breakpoints that will come from the theme
   buttonsDesktop: {
     justifyContent: 'center',
     gap: rem(16),
@@ -140,18 +130,19 @@ export const heroStyles = {
     },
   },
 
+  // TODO: Replace this media query with future Mantine breakpoints that will come from the theme
   buttonsMobile: {
     alignItems: 'center',
     gap: rem(8),
     display: 'none',
     '@media (max-width: 768px)': {
       display: 'flex',
-      flexDirection: 'column',
+      flexDirection: 'column' as const,
     },
   },
 
   primaryButton: {
-    background: 'linear-gradient(90deg, var(--mantine-color-cyan-5), var(--mantine-color-purple-5))',
+    background: gradients.hero.button,
     border: 'none',
     borderRadius: rem(8),
     padding: `${rem(12)} ${rem(24)}`,
@@ -164,7 +155,7 @@ export const heroStyles = {
 
   outlineButton: {
     background: 'transparent',
-    border: '1px solid rgba(148, 163, 184, 0.3)',
+    border: `${rem(1)} solid rgba(148, 163, 184, 0.3)`,
     borderRadius: rem(8),
     padding: `${rem(12)} ${rem(24)}`,
     fontSize: rem(16),
@@ -187,29 +178,32 @@ export const heroStyles = {
     },
   },
 
+  // TODO: Replace this media query with future Mantine breakpoints that will come from the theme
   statisticsMobile: {
     alignItems: 'center',
     gap: rem(32),
     display: 'none',
     '@media (max-width: 768px)': {
       display: 'flex',
-      flexDirection: 'column',
+      flexDirection: 'column' as const,
     },
   },
 
   statisticItem: {
+    display: 'flex',
+    flexDirection: 'column' as const,
     alignItems: 'center',
     gap: rem(4),
   },
 
   statisticNumber: {
-    fontSize: `clamp(${rem(32)}, 5vw, ${rem(48)})`,
+    fontSize: STATISTIC_FONT_SIZE,
     lineHeight: 1,
     marginBottom: rem(4),
   },
 
   statisticNumberMobile: {
-    fontSize: `clamp(${rem(32)}, 8vw, ${rem(40)})`,
+    fontSize: STATISTIC_FONT_SIZE_MOBILE,
     lineHeight: 1,
     marginBottom: rem(4),
   },
@@ -218,7 +212,7 @@ export const heroStyles = {
     color: 'var(--mantine-color-primary-3)',
     fontSize: rem(14),
     fontWeight: 400,
-  textAlign: 'center' as const,
+    textAlign: 'center' as const,
   },
 
   cyanText: {
