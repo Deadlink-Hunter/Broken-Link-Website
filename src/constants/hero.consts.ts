@@ -1,4 +1,3 @@
-// TODO: Get all of the text from translations files
 export const HERO_CONSTANTS = {
   TITLE: 'Deadlink',
   SUBTITLE: 'Hunter',

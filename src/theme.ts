@@ -86,7 +86,7 @@ const breakpoints = {
   xl: '90em',
 };
 
-export const gradients = {
+const gradients = {
   hero: {
     background: 'linear-gradient(135deg, var(--mantine-color-primary-7) 0%, var(--mantine-color-primary-6) 25%, var(--mantine-color-primary-7) 50%, var(--mantine-color-purple-8) 75%, var(--mantine-color-primary-7) 100%)',
     title: 'linear-gradient(45deg, var(--mantine-color-cyan-5), var(--mantine-color-purple-5))',
@@ -126,6 +126,9 @@ const themeOverride = createTheme({
     '2xl': '64px',
   },
   breakpoints,
+  other: {
+    gradients,
+  },
 });
 
 export const theme = mergeMantineTheme(DEFAULT_THEME, themeOverride);

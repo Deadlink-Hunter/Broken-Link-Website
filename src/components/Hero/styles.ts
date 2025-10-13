@@ -1,5 +1,5 @@
 import { rem } from '@mantine/core';
-import { gradients } from '@/theme';
+import { theme } from '@/theme';
 
 const TITLE_FONT_SIZE = `clamp(${rem(48)}, 10vw, ${rem(80)})`;
 const DESCRIPTION_FONT_SIZE = `clamp(${rem(16)}, 2.5vw, ${rem(20)})`;
@@ -9,7 +9,7 @@ const STATISTIC_FONT_SIZE_MOBILE = `clamp(${rem(32)}, 8vw, ${rem(40)})`;
 export const heroStyles = {
   container: {
     minHeight: '100vh',
-    background: gradients.hero.background,
+    background: theme.other.gradients.hero.background,
     display: 'flex',
     alignItems: 'center',
   },
@@ -31,9 +31,9 @@ export const heroStyles = {
 
   mainStack: {
     display: 'flex',
-    flexDirection: 'column' as const,
+    flexDirection: 'column' as 'column',
     width: '100%',
-    textAlign: 'center' as const,
+    textAlign: 'center' as 'center',
     alignItems: 'center',
     justifyContent: 'center',
     gap: 0,
@@ -41,7 +41,7 @@ export const heroStyles = {
 
   titleStack: {
     display: 'flex',
-    flexDirection: 'column' as const,
+    flexDirection: 'column' as 'column',
     marginBottom: rem(24),
     alignItems: 'center',
     gap: 0,
@@ -51,7 +51,7 @@ export const heroStyles = {
     fontSize: TITLE_FONT_SIZE,
     lineHeight: 0.9,
     marginBottom: rem(-8),
-    background: gradients.hero.title,
+    background: theme.other.gradients.hero.title,
     backgroundClip: 'text',
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
@@ -120,7 +120,6 @@ export const heroStyles = {
     marginBottom: rem(64),
   },
 
-  // TODO: Replace this media query with future Mantine breakpoints that will come from the theme
   buttonsDesktop: {
     justifyContent: 'center',
     gap: rem(16),
@@ -130,19 +129,18 @@ export const heroStyles = {
     },
   },
 
-  // TODO: Replace this media query with future Mantine breakpoints that will come from the theme
   buttonsMobile: {
     alignItems: 'center',
     gap: rem(8),
     display: 'none',
     '@media (max-width: 768px)': {
       display: 'flex',
-      flexDirection: 'column' as const,
+      flexDirection: 'column' as 'column',
     },
   },
 
   primaryButton: {
-    background: gradients.hero.button,
+    background: theme.other.gradients.hero.button,
     border: 'none',
     borderRadius: rem(8),
     padding: `${rem(12)} ${rem(24)}`,
@@ -178,20 +176,19 @@ export const heroStyles = {
     },
   },
 
-  // TODO: Replace this media query with future Mantine breakpoints that will come from the theme
   statisticsMobile: {
     alignItems: 'center',
     gap: rem(32),
     display: 'none',
     '@media (max-width: 768px)': {
       display: 'flex',
-      flexDirection: 'column' as const,
+      flexDirection: 'column' as 'column',
     },
   },
 
   statisticItem: {
     display: 'flex',
-    flexDirection: 'column' as const,
+    flexDirection: 'column' as 'column',
     alignItems: 'center',
     gap: rem(4),
   },
@@ -212,7 +209,7 @@ export const heroStyles = {
     color: 'var(--mantine-color-primary-3)',
     fontSize: rem(14),
     fontWeight: 400,
-    textAlign: 'center' as const,
+    textAlign: 'center' as 'center',
   },
 
   cyanText: {

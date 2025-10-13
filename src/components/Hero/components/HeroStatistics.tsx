@@ -11,8 +11,9 @@ interface StatisticItemProps {
 }
 
 const StatisticItem = ({ value, label, colorType, isMobile }: StatisticItemProps) => {
-  const getColorStyle = () => {
-    const baseStyle = isMobile ? heroStyles.statisticNumberMobile : heroStyles.statisticNumber;
+  const baseStyle = isMobile ? heroStyles.statisticNumberMobile : heroStyles.statisticNumber;
+  
+  const colorStyle = (() => {
     switch (colorType) {
       case 'cyan':
         return { ...baseStyle, ...heroStyles.cyanText };
@@ -23,13 +24,11 @@ const StatisticItem = ({ value, label, colorType, isMobile }: StatisticItemProps
       default:
         return baseStyle;
     }
-  };
+  })();
 
   return (
     <div style={heroStyles.statisticItem}>
-      <Typography
-        style={getColorStyle()}
-      >
+      <Typography style={colorStyle}>
         {value}
       </Typography>
       <Typography 
