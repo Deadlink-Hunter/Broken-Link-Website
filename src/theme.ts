@@ -1,4 +1,4 @@
-import { createTheme, MantineColorsTuple } from '@mantine/core';
+import { createTheme, DEFAULT_THEME, MantineColorsTuple, mergeMantineTheme } from '@mantine/core';
 
 const primary: MantineColorsTuple = [
   '#f1f5f9',
@@ -94,15 +94,17 @@ export const gradients = {
   },
 };
 
-export const theme = createTheme({
-  colors: {
-    primary,
-    cyan: accentCyan,
-    purple: accentPurple,
-    success,
-    warning,
-    error,
-  },
+const appColors = {
+  primary,
+  cyan: accentCyan,
+  purple: accentPurple,
+  success,
+  warning,
+  error,
+};
+
+const themeOverride = createTheme({
+  colors: appColors,
   primaryColor: 'cyan',
   primaryShade: 5,
   fontFamily: 'Open Sans, sans-serif',
@@ -125,3 +127,5 @@ export const theme = createTheme({
   },
   breakpoints,
 });
+
+export const theme = mergeMantineTheme(DEFAULT_THEME, themeOverride);

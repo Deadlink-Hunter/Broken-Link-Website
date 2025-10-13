@@ -1,5 +1,6 @@
 import { theme } from '@/theme';
-const colors = theme.colors as Record<string, readonly string[]>;
+
+const colors = theme.colors;
 
 export const cardStyles = {
   default: {
