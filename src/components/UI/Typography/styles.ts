@@ -1,14 +1,15 @@
-import { theme } from '@/theme';
+import { MantineTheme } from '@mantine/core';
 import { CUSTOM_SIZES, TypographyVariant } from './types';
 
-const colors = theme.colors;
-
-export const typographyVariants: Record<string, TypographyVariant> = {
-  primary: { color: colors.primary[5] },
-  secondary: { color: colors.purple[5] },
-  success: { color: colors.success[5] },
-  warning: { color: colors.warning[5] },
-  error: { color: colors.error[5] },
-  title: { color: colors.primary[7], size: CUSTOM_SIZES.EXTRA_LARGE },
-  subtitle: { color: colors.primary[6], size: CUSTOM_SIZES.LARGE },
+export const getTypographyVariants = (theme: MantineTheme, colorScheme: 'light' | 'dark'): Record<string, TypographyVariant> => {
+  const isDarkMode = colorScheme === 'dark';
+  return {
+    primary: { color: isDarkMode ? theme.colors.gray[4] : theme.colors.dark[5] },
+    secondary: { color: isDarkMode ? theme.colors.purple[4] : theme.colors.purple[6] },
+    success: { color: isDarkMode ? theme.colors.green[4] : theme.colors.green[6] },
+    warning: { color: isDarkMode ? theme.colors.yellow[4] : theme.colors.yellow[6] },
+    error: { color: isDarkMode ? theme.colors.red[4] : theme.colors.red[6] },
+    title: { color: isDarkMode ? theme.white : theme.black, size: CUSTOM_SIZES.EXTRA_LARGE },
+    subtitle: { color: isDarkMode ? theme.colors.gray[5] : theme.colors.dark[3], size: CUSTOM_SIZES.LARGE },
+  };
 };

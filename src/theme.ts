@@ -1,42 +1,55 @@
 import { createTheme, DEFAULT_THEME, MantineColorsTuple, mergeMantineTheme } from '@mantine/core';
 
-const primary: MantineColorsTuple = [
-  '#f1f5f9',
-  '#cbd5e1',
-  '#94a3b8',
-  '#64748b',
-  '#475569',
-  '#334155',
-  '#1e293b',
-  '#0f172a',
-  '#0f172a',
-  '#0f172a',
+const blue: MantineColorsTuple = [
+  '#e7f5ff',
+  '#d0ebff',
+  '#a5d8ff',
+  '#74c0fc',
+  '#4dabf7',
+  '#339af0',
+  '#228be6',
+  '#1c7ed6',
+  '#1971c2',
+  '#1864ab',
 ];
 
-const accentCyan: MantineColorsTuple = [
-  '#e0faff',
-  '#b3f0ff',
-  '#80e6ff',
-  '#4ddbff',
-  '#22d3ee',
-  '#06b6d4',
-  '#0891b2',
-  '#036c87',
-  '#025b71',
-  '#02475b',
-];
-
-const accentPurple: MantineColorsTuple = [
-  '#f5f3ff',
-  '#ede9fe',
-  '#ddd6fe',
-  '#c4b5fd',
-  '#a78bfa',
-  '#8b5cf6',
-  '#7c3aed',
-  '#6d28d9',
-  '#5b21b6',
+const purple: MantineColorsTuple = [
+  '#f3e8ff',
+  '#e9d5ff',
+  '#d8b4fe',
+  '#c084fc',
+  '#a855f7',
+  '#9333ea',
+  '#7e22ce',
+  '#6b21a8',
+  '#581c87',
   '#4c1d95',
+];
+
+const skyblue: MantineColorsTuple = [
+  '#e0f2fe',
+  '#bae6fd',
+  '#7dd3fc',
+  '#38bdf8',
+  '#0ea5e9',
+  '#0284c7',
+  '#0369a1',
+  '#075985',
+  '#0c4a6e',
+  '#082f49',
+];
+
+const pink: MantineColorsTuple = [
+  '#fff0f6',
+  '#ffdeeb',
+  '#fcc2d7',
+  '#faa2c1',
+  '#f783ac',
+  '#f06595',
+  '#e64980',
+  '#d6336c',
+  '#c2255c',
+  '#a61e4d',
 ];
 
 const success: MantineColorsTuple = [
@@ -78,9 +91,6 @@ const error: MantineColorsTuple = [
   '#6b1414',
 ];
 
-
-// TODO: Check if this is the correct way to create a theme
-
 const breakpoints = {
   xs: '30em',
   sm: '48em',
@@ -90,9 +100,10 @@ const breakpoints = {
 };
 
 const appColors = {
-  primary,
-  cyan: accentCyan,
-  purple: accentPurple,
+  blue,
+  purple,
+  skyblue,
+  pink,
   success,
   warning,
   error,
@@ -100,8 +111,8 @@ const appColors = {
 
 const themeOverride = createTheme({
   colors: appColors,
-  primaryColor: 'cyan',
-  primaryShade: 5,
+  primaryColor: 'blue',
+  primaryShade: 6,
   fontFamily: 'Open Sans, sans-serif',
   fontSizes: {
     xs: '0.75rem',

@@ -1,30 +1,37 @@
-import { theme } from '@/theme';
+import { MantineTheme } from '@mantine/core';
 
-const colors = theme.colors;
+export const getButtonVariants = (theme: MantineTheme, colorScheme: 'light' | 'dark') => {
+  const isDarkMode = colorScheme === 'dark';
 
-export const buttonVariants = {
-  primary: {
-    backgroundColor: colors.primary[5],
-  },
-  secondary: {
-    backgroundColor: colors.purple[5],
-  },
-  success: {
-    backgroundColor: colors.success[5],
-  },
-  warning: {
-    backgroundColor: colors.warning[5],
-  },
-  error: {
-    backgroundColor: colors.error[5],
-  },
-  outline: {
-    backgroundColor: 'transparent',
-    color: colors.cyan[5],
-    border: `2px solid ${colors.cyan[5]}`,
-  },
-  ghost: {
-    backgroundColor: 'transparent',
-    color: colors.cyan[5],
-  },
+  return {
+    primary: {
+      backgroundColor: isDarkMode ? theme.colors.blue[7] : theme.colors.blue[5],
+      color: theme.white,
+    },
+    secondary: {
+      backgroundColor: isDarkMode ? theme.colors.purple[7] : theme.colors.purple[5],
+      color: theme.white,
+    },
+    success: {
+      backgroundColor: isDarkMode ? theme.colors.green[7] : theme.colors.green[5],
+      color: theme.white,
+    },
+    warning: {
+      backgroundColor: isDarkMode ? theme.colors.yellow[7] : theme.colors.yellow[5],
+      color: theme.white,
+    },
+    error: {
+      backgroundColor: isDarkMode ? theme.colors.red[7] : theme.colors.red[5],
+      color: theme.white,
+    },
+    outline: {
+      backgroundColor: 'transparent',
+      color: isDarkMode ? theme.colors.blue[5] : theme.colors.blue[7],
+      border: `2px solid ${isDarkMode ? theme.colors.blue[5] : theme.colors.blue[7]}`,
+    },
+    ghost: {
+      backgroundColor: 'transparent',
+      color: isDarkMode ? theme.colors.blue[5] : theme.colors.blue[7],
+    },
+  };
 };

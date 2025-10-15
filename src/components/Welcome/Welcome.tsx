@@ -1,5 +1,4 @@
-
-import { Anchor, Text, Title } from '@mantine/core';
+import { Text, Title } from '@mantine/core';
 import classes from './Welcome.module.css';
 import { useTranslation } from 'react-i18next';
 
@@ -14,20 +13,14 @@ export function Welcome() {
           inherit
           variant="gradient"
           component="span"
-          gradient={{ from: 'pink', to: 'yellow' }}
+          gradient={{ from: 'blue', to: 'purple' }}
         >
           {t('welcome_highlight')}
         </Text>
       </Title>
 
       <Text c="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">
-        {t('welcome_description_before_link')} {' '}
-        <Anchor
-          href="https://mantine.dev/guides/vite/"
-        >
-          {t('welcome_link_text')}
-        </Anchor>
-        {t('welcome_description_after_link')}
+        {t('welcome_description_before_link')}
       </Text>
     </>
   );
