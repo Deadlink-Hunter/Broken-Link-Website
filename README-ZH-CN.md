@@ -1,4 +1,5 @@
 # Deadlink-Hunter-Website🕵️
+[![GitHub Stars](https://img.shields.io/github/stars/Deadlink-Hunter/Broken-Link-Website?style=social&label=星标)](https://github.com/Deadlink-Hunter/Broken-Link-Website/stargazers)
 [![许可证: MIT](https://img.shields.io/badge/许可证-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Deadlink-Hunter 是一个开源项目，旨在查找 GitHub 仓库中的失效链接（未来将支持其他平台）。
