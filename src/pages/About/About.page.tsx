@@ -1,5 +1,11 @@
+import { FeaturesCards } from './components/FeaturesCards';
+
 const AboutPage = () => {
-  return <div>AboutPage</div>;
+  return (
+    <>
+      <FeaturesCards />
+    </>
+  );
 };
 
 export default AboutPage;
