@@ -1,0 +1,17 @@
+echo "Running pre-commit hook"
+
+commands=("pnpm build"
+          "pnpm storybook:build"     
+          )
+
+for cmd in "${commands[@]}"; do
+    echo "Running: $cmd"
+    $cmd || {
+        echo "Command failed: $cmd"
+        exit 1
+    }
+done
+
+echo "All pre-commmit checks passed!"
+
+
