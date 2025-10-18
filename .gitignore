@@ -131,4 +131,6 @@ dist
 
 .DS_Store
 
-/storybook-static
+# build output
+dist
+storybook-static

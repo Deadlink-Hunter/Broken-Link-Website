@@ -1,35 +1,37 @@
-import { theme } from '@/theme';
+import { MantineTheme } from '@mantine/core';
 
-const defaultDividerStyle = {
-  margin: theme.spacing?.md,
-  height: '1px',
-};
+export const getDividerVariants = (theme: MantineTheme, colorScheme: 'light' | 'dark') => {
+  const isDarkMode = colorScheme === 'dark';
 
-const colors = theme.colors;
+  const defaultDividerStyle = {
+    margin: theme.spacing?.md,
+    height: '1px',
+  };
 
-export const dividerVariants = {
-  primary: {
-    ...defaultDividerStyle,
-    backgroundColor: colors.cyan[5],
-  },
-  secondary: {
-    ...defaultDividerStyle,
-    backgroundColor: colors.success[5],
-  },
-  muted: {
-    ...defaultDividerStyle,
-    backgroundColor: colors.primary[5],
-  },
-  border: {
-    ...defaultDividerStyle,
-    backgroundColor: colors.purple[5],
-  },
-  accent: {
-    ...defaultDividerStyle,
-    backgroundColor: colors.primary[5],
-  },
-  error: {
-    ...defaultDividerStyle,
-    backgroundColor: colors.error[5],
-  },
+  return {
+    primary: {
+      ...defaultDividerStyle,
+      backgroundColor: isDarkMode ? theme.colors.cyan[7] : theme.colors.cyan[5],
+    },
+    secondary: {
+      ...defaultDividerStyle,
+      backgroundColor: isDarkMode ? theme.colors.success[7] : theme.colors.success[5],
+    },
+    muted: {
+      ...defaultDividerStyle,
+      backgroundColor: isDarkMode ? theme.colors.gray[5] : theme.colors.gray[3],
+    },
+    border: {
+      ...defaultDividerStyle,
+      backgroundColor: isDarkMode ? theme.colors.purple[7] : theme.colors.purple[5],
+    },
+    accent: {
+      ...defaultDividerStyle,
+      backgroundColor: isDarkMode ? theme.colors.blue[7] : theme.colors.blue[5],
+    },
+    error: {
+      ...defaultDividerStyle,
+      backgroundColor: isDarkMode ? theme.colors.red[7] : theme.colors.red[5],
+    },
+  };
 };

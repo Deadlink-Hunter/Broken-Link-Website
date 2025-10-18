@@ -1,13 +1,11 @@
-import { theme } from '@/theme';
+import { MantineTheme } from '@mantine/core';
 
-const colors = theme.colors;
-
-export const cardStyles = {
+export const getCardStyles = (theme: MantineTheme, colorScheme: 'light' | 'dark') => ({
   default: {
-    padding: '1rem',
+    padding: '3rem',
     borderRadius: '0.5rem',
-    backgroundColor: colors.primary[5],
-    boxShadow: `0 1px 3px ${colors.primary[1]}`,
-    color: colors.cyan[0],
+    backgroundColor: colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0],
+    boxShadow: theme.shadows.sm,
+    color: colorScheme === 'dark' ? theme.white : theme.black,
   },
-};
+});
