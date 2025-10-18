@@ -5,7 +5,7 @@ export const getTypographyVariants = (theme: MantineTheme, colorScheme: 'light' 
   const isDarkMode = colorScheme === 'dark';
   return {
     primary: { color: isDarkMode ? theme.colors.gray[4] : theme.colors.dark[5] },
-    secondary: { color: isDarkMode ? theme.colors.purple[4] : theme.colors.purple[6] },
+    secondary: { color: isDarkMode ? theme.colors.blue[4] : theme.colors.blue[6] },
     success: { color: isDarkMode ? theme.colors.green[4] : theme.colors.green[6] },
     warning: { color: isDarkMode ? theme.colors.yellow[4] : theme.colors.yellow[6] },
     error: { color: isDarkMode ? theme.colors.red[4] : theme.colors.red[6] },

@@ -26,7 +26,7 @@ export const ToolkitCard = ({ title, description, buttonText, link, icon: Icon }
       }}
     >
       <Group align="flex-start" mb="md">
-        <Icon size={36} color={theme.colors.skyblue[5]} />
+        <Icon size={36} color={theme.colors.blue[5]} />
         <div>
           <Typography variant="subtitle" mb="md" style={{ fontWeight: 'bold' }}>
             {title}
@@ -41,10 +41,10 @@ export const ToolkitCard = ({ title, description, buttonText, link, icon: Icon }
             rightSection={<IconArrowRight size={14} />}
             style={{
               paddingLeft: 0,
-              color: theme.colors.skyblue[5],
+              color: theme.colors.blue[5],
               '&:hover': {
-                backgroundColor: theme.colors.skyblue[1],
-                color: theme.colors.skyblue[8],
+                backgroundColor: theme.colors.blue[1],
+                color: theme.colors.blue[8],
               },
             }}
           >

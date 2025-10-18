@@ -1,7 +1,29 @@
 {
-    "welcome_title": "Explore the ",
-    "welcome_highlight": "Toolkit",
-    "welcome_description_before_link": "Everything you need to keep your repositories healthy and your links alive.",
-    "welcome_link_text": "",
-    "welcome_description_after_link": ""
+    "welcome_title": "Welcome to ",
+    "welcome_description_before_link": "This starter Vite project includes a minimal setup. If you want to learn more on Mantine + Vite integration follow",
+    "welcome_highlight": "Mantine",
+    "welcome_link_text": "this guide",
+    "welcome_description_after_link": ". To get started edit pages/Home.page.tsx file.",
+    "explore_toolkit_title": "Explore the ",
+    "explore_toolkit_highlight": "Toolkit",
+    "explore_toolkit_description": "Everything you need to keep your repositories healthy and your links alive.",
+    "explore_toolkit": {
+        "cards": {
+            "scanner": {
+                "title": "Instant Link Scanner",
+                "description": "Quickly check a single URL or scan an entire repository for broken links with our powerful, easy-to-use scanner.",
+                "button": "Start Scanning"
+            },
+            "analytics": {
+                "title": "Performance Analytics",
+                "description": "Dive into detailed statistics and visualizations about scan history, link health, and project performance over time.",
+                "button": "View Statistics"
+            },
+            "about": {
+                "title": "About the Project",
+                "description": "Learn more about the mission behind Deadlink-Hunter, its open-source nature, and how you can contribute.",
+                "button": "Learn More"
+            }
+        }
+    }
 }
