@@ -1,5 +1,9 @@
+import AboutCard from '../../components/about/About.component'; 
+
 const AboutPage = () => {
-  return <div>AboutPage</div>;
+  return (
+    <AboutCard />
+  )
 };
 
 export default AboutPage;
