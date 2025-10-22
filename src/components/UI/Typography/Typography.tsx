@@ -15,7 +15,6 @@ interface SharedTypographyProps extends Omit<TextProps, 'variant' | 'style' | 's
   children?: React.ReactNode;
   style?: CSSProperties;
   size?: CustomSize;
-  
 }
 
 export const Typography = ({
@@ -23,7 +22,7 @@ export const Typography = ({
   variant = 'primary',
   size = 'medium',
   children,
-  
+
   ...props
 }: SharedTypographyProps) => {
   const variantStyle = typographyVariants[variant] ?? {};
@@ -34,7 +33,7 @@ export const Typography = ({
     <MantineText
       size={mappedSize}
       style={{ ...variantStyle, ...style }}
-      data-testid="typography-component" 
+      data-testid="typography-component"
       {...props}
     >
       {children}

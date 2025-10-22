@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from './Button';
+import { expect, fn, userEvent, within } from '@storybook/test';
 import { IconArrowRight, IconPhoto } from '@tabler/icons-react';
-import { fn, userEvent, expect, within } from '@storybook/test';
+import { Button } from './Button';
 
 const BUTTON_VARIANTS = [
   'primary',
@@ -13,13 +13,7 @@ const BUTTON_VARIANTS = [
   'ghost',
 ] as const;
 
-const DISABLE_BUTTON_VARIANTS = [
-  'primary',
-  'secondary',
-  'success',
-  'outline',
-  'ghost',
-] as const;
+const DISABLE_BUTTON_VARIANTS = ['primary', 'secondary', 'success', 'outline', 'ghost'] as const;
 
 const meta: Meta<typeof Button> = {
   title: 'Components/UI/Button',
@@ -90,11 +84,7 @@ export const buttonVariantsShowcase: Story = {
   render: (args) => (
     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
       {BUTTON_VARIANTS.map((variant) => (
-        <Button
-          key={variant}
-          variant={variant}
-          onClick={args.onClick}
-        >
+        <Button key={variant} variant={variant} onClick={args.onClick}>
           {variant.charAt(0).toUpperCase() + variant.slice(1)} Button
         </Button>
       ))}
