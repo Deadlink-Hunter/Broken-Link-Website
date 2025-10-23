@@ -2,21 +2,31 @@ import { IconArrowGuide, IconBracketsAngle, IconFile, IconTarget } from '@tabler
 import { theme } from '@/theme';
 import { iconStyle } from './styles';
 
+
+
+export enum IconType {
+    Target = "iconTarget",
+    File = "iconFile",
+    ArrowGuide = "iconArrowGuide",
+    BracketsAngle = "iconBracketsAngle",
+  }
+  
+
 export const Icon = (
     {icon}:
-    {icon: string}
+    {icon: IconType}
 ) => {
     const color = theme.colors.cyan[4];
     const size = 50;
 
     switch(icon) {
-        case "iconTarget":
+        case IconType.Target:
             return <IconTarget color={color} style={iconStyle} size={size} />;
-        case "iconFile":
+        case IconType.File:
             return <IconFile color={color} style={iconStyle} size={size} />;
-        case "iconArrowGuide":
+        case IconType.ArrowGuide:
             return <IconArrowGuide color={color} style={iconStyle} size={size} />;
-        case "iconBracketsAngle":
+        case IconType.BracketsAngle:
             return <IconBracketsAngle color={color} style={iconStyle} size={size} />;
         default:
             return <IconTarget color={color} style={iconStyle} size={size} />;
