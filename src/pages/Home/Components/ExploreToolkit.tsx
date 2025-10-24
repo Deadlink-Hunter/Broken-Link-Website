@@ -1,10 +1,10 @@
 import React from 'react';
+import { IconArrowRight, IconChartLine, IconInfoCircle, IconScan } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
-import { SimpleGrid, Title, Text } from '@mantine/core';
+import { SimpleGrid, Text, Title } from '@mantine/core';
+import { Button } from '@/components/UI/Button/Button';
 import { Card } from '@/components/UI/Card/Card';
 import { Typography } from '@/components/UI/Typography/Typography';
-import { Button } from '@/components/UI/Button/Button';
-import { IconArrowRight, IconScan, IconChartLine, IconInfoCircle } from '@tabler/icons-react';
 import classes from './ExploreToolkit.module.css';
 
 export const ExploreToolkit = () => {
@@ -43,7 +43,15 @@ export const ExploreToolkit = () => {
         </Text>
         {t('explore_toolkit_title_part2')}
       </Title>
-      <Text c="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl" className={classes.description}>
+      <Text
+        c="dimmed"
+        ta="center"
+        size="lg"
+        maw={580}
+        mx="auto"
+        mt="xl"
+        className={classes.description}
+      >
         {t('explore_toolkit_description')}
       </Text>
       <SimpleGrid cols={{ base: 1, sm: 2, md: 3 }} spacing="xl">
@@ -53,7 +61,9 @@ export const ExploreToolkit = () => {
             <div className={classes.cardHeader}>
               <Typography variant="h3">{t(card.titleKey)}</Typography>
             </div>
-            <Typography variant="body" className={classes.cardDescription}>{t(card.descriptionKey)}</Typography>
+            <Typography variant="body" className={classes.cardDescription}>
+              {t(card.descriptionKey)}
+            </Typography>
             {card.buttonTextKey && (
               <Button variant="primary" className={classes.cardButton}>
                 {t(card.buttonTextKey)} <IconArrowRight size={18} />
