@@ -1,0 +1,71 @@
+.title {
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+  font-size: rem(100px);
+  font-weight: 900;
+  letter-spacing: calc(-0.125rem * var(--mantine-scale));
+  text-align: center;
+  margin-bottom: var(--mantine-spacing-xl);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    font-size: rem(50px);
+  }
+}
+
+.description {
+  max-width: calc(31.25rem * var(--mantine-scale));
+  margin: auto;
+  margin-top: var(--mantine-spacing-xl);
+  margin-bottom: calc(3.125rem * var(--mantine-scale));
+}
+
+.highlight {
+  background-image: linear-gradient(45deg, var(--mantine-color-pink-filled) 0%, var(--mantine-color-yellow-filled) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container {
+  padding-top: var(--mantine-spacing-xl);
+  padding-bottom: var(--mantine-spacing-xl);
+  padding-left: var(--mantine-spacing-xl);
+  padding-right: var(--mantine-spacing-xl);
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  padding: var(--mantine-spacing-md);
+  background-color: rgba(255, 255, 255, 0.05); /* More translucent white */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cardHeader {
+  display: flex;
+  /* Removed align-items: center; as icon is no longer inside */
+  margin-bottom: var(--mantine-spacing-md);
+}
+
+.cardIcon {
+  /* Removed margin-right as icon is no longer inside cardHeader */
+  margin-bottom: var(--mantine-spacing-lg); /* Increased spacing below the icon */
+  padding: var(--mantine-spacing-xs); /* Add padding around the icon */
+  background-color: var(--mantine-color-blue-light);
+  border-radius: var(--mantine-radius-sm);
+  display: inline-flex; /* To make padding and background work correctly */
+  align-items: center;
+  justify-content: center;
+}
+
+.cardDescription {
+  margin-bottom: var(--mantine-spacing-lg);
+}
+
+.cardButton {
+  margin-top: auto; /* Pushes the button to the bottom */
+  align-self: flex-start; /* Aligns the button to the left */
+  text-align: left; /* Align text inside the button to the left */
+}

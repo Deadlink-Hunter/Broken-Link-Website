@@ -21,5 +21,18 @@
             "title": "Open Source",
             "description": "Completely open source and community-driven. Contribute, customize, and extend to fit your project's needs."
         }
-    }
+    },
+    "explore_toolkit_title_part1": "Explore the ",
+    "explore_toolkit_title_highlight": "Toolkit",
+    "explore_toolkit_title_part2": "",
+    "explore_toolkit_description": "Everything you need to keep your repositories healthy and your links alive.",
+    "explore_toolkit_card1_title": "Instant Link Scanner",
+    "explore_toolkit_card1_description": "Quickly check a single URL or scan an entire repository for broken links with our powerful, easy-to-use scanner.",
+    "explore_toolkit_card1_button": "Start Scanning",
+    "explore_toolkit_card2_title": "Performance Analytics",
+    "explore_toolkit_card2_description": "Dive into detailed statistics and visualizations about scan history, link health, and project performance over time.",
+    "explore_toolkit_card2_button": "View Statistics",
+    "explore_toolkit_card3_title": "About The Project",
+    "explore_toolkit_card3_description": "Learn more about the mission behind Deadlink-Hunter, its open-source nature, and how you can contribute.",
+    "explore_toolkit_card3_button": "Learn More"
 }
