@@ -45,7 +45,7 @@ In order to see the ui log in.
   - [Testing scripts](#testing-scripts)
   - [Other scripts](#other-scripts)
 
- 
+
 <p align="left"><a href="#top-btn">Go back to the top of page</a></p>
 
 
@@ -57,7 +57,7 @@ Yet, README files and docs often contain outdated or broken links – even in la
 But aren’t there already broken link checkers?
 There are — but most of them don’t look very good, their UIs are not user-friendly, and their broken link detection doesn’t cover all cases (for example, localhost:4000 is not actually broken).
 
-<p align="left"><a href="#top=btn">Go back to the top of the page</a></p>
+<p align="left"><a href="#top-btn">Go back to the top of the page</a></p>
 
 
 ## Contributing
