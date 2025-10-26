@@ -1,11 +1,9 @@
-import React from 'react';
 import { IconArrowRight, IconChartLine, IconInfoCircle, IconScan } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
-import { SimpleGrid, Text, Title } from '@mantine/core';
 import { Button } from '@/components/UI/Button/Button';
 import { Card } from '@/components/UI/Card/Card';
 import { Typography } from '@/components/UI/Typography/Typography';
-import classes from './ExploreToolkit.module.css';
+import classes from '@/pages/Home/Components/ExploreToolkit.module.css';
 
 export const ExploreToolkit = () => {
   const { t } = useTranslation();
@@ -36,34 +34,26 @@ export const ExploreToolkit = () => {
 
   return (
     <div className={classes.container}>
-      <Title className={classes.title} ta='center' mt={100}>
+      <Typography variant='h1' className={classes.title}>
         {t('explore_toolkit_title_part1')}
-        <Text inherit variant='gradient' component='span' gradient={{ from: 'pink', to: 'yellow' }}>
-          {t('explore_toolkit_title_highlight')}
-        </Text>
+        <span className={classes.highlight}>{t('explore_toolkit_title_highlight')}</span>
         {t('explore_toolkit_title_part2')}
-      </Title>
-      <Text
-        c='dimmed'
-        ta='center'
-        size='lg'
-        maw={580}
-        mx='auto'
-        mt='xl'
-        className={classes.description}
-      >
+      </Typography>
+      <Typography variant='body' className={classes.description}>
         {t('explore_toolkit_description')}
-      </Text>
-      <SimpleGrid cols={{ base: 1, sm: 2, md: 3 }} spacing='xl'>
+      </Typography>
+      <div className={classes.grid}>
         {cardsData.map((card) => (
           <Card key={card.id} className={classes.card}>
-            {card.icon && <card.icon size={36} className={classes.cardIcon} />}
-            <div className={classes.cardHeader}>
-              <Typography variant='h3'>{t(card.titleKey)}</Typography>
+            <div>
+              {card.icon && <card.icon size={36} className={classes.cardIcon} />}
+              <div className={classes.cardHeader}>
+                <Typography variant='h3'>{t(card.titleKey)}</Typography>
+              </div>
+              <Typography variant='body' className={classes.cardDescription}>
+                {t(card.descriptionKey)}
+              </Typography>
             </div>
-            <Typography variant='body' className={classes.cardDescription}>
-              {t(card.descriptionKey)}
-            </Typography>
             {card.buttonTextKey && (
               <Button variant='primary' className={classes.cardButton}>
                 {t(card.buttonTextKey)} <IconArrowRight size={18} />
@@ -71,7 +61,7 @@ export const ExploreToolkit = () => {
             )}
           </Card>
         ))}
-      </SimpleGrid>
+      </div>
     </div>
   );
 };

@@ -16,6 +16,7 @@
   margin: auto;
   margin-top: var(--mantine-spacing-xl);
   margin-bottom: calc(3.125rem * var(--mantine-scale));
+  color: var(--mantine-color-dimmed);
 }
 
 .highlight {
@@ -38,24 +39,22 @@
   justify-content: space-between;
   position: relative;
   padding: var(--mantine-spacing-md);
-  background-color: rgba(255, 255, 255, 0.05); /* More translucent white */
-  backdrop-filter: blur(10px); /* Frosted glass effect */
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: rgb(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgb(255, 255, 255, 0.05);
 }
 
 .cardHeader {
   display: flex;
-  /* Removed align-items: center; as icon is no longer inside */
   margin-bottom: var(--mantine-spacing-md);
 }
 
 .cardIcon {
-  /* Removed margin-right as icon is no longer inside cardHeader */
-  margin-bottom: var(--mantine-spacing-lg); /* Increased spacing below the icon */
-  padding: var(--mantine-spacing-xs); /* Add padding around the icon */
+  margin-bottom: var(--mantine-spacing-lg);
+  padding: var(--mantine-spacing-xs);
   background-color: var(--mantine-color-blue-light);
   border-radius: var(--mantine-radius-sm);
-  display: inline-flex; /* To make padding and background work correctly */
+  display: inline-flex;
   align-items: center;
   justify-content: center;
 }
@@ -65,7 +64,13 @@
 }
 
 .cardButton {
-  margin-top: auto; /* Pushes the button to the bottom */
-  align-self: flex-start; /* Aligns the button to the left */
-  text-align: left; /* Align text inside the button to the left */
+  margin-top: auto;
+  align-self: flex-start;
+  text-align: left;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--mantine-spacing-xl);
 }
