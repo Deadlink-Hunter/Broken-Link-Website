@@ -3,7 +3,10 @@ import { centerGrid } from './components/styles';
 
 const AboutPage = () => {
   return (
-    <div style={centerGrid}>
+    <div style={centerGrid}
+      >
+
+      
       <FeaturesCards />
     </div>
   );
