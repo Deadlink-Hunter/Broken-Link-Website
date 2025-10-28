@@ -3,7 +3,6 @@ import { i18n } from 'i18next';
 import { vi } from 'vitest';
 import { ExploreToolkit } from '@/pages/Home/Components/ExploreToolkit';
 
-// Mock the useTranslation hook
 vi.mock('react-i18next', () => ({
   useTranslation: () => ({
     t: (key: string) => key,
