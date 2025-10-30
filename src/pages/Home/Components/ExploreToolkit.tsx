@@ -5,9 +5,11 @@ import { Card } from '@/components/UI/Card/Card';
 import { Typography } from '@/components/UI/Typography/Typography';
 import classes from '@/pages/Home/Components/ExploreToolkit.module.css';
 
+// TODO - Make this more according to the design inside base44
 export const ExploreToolkit = () => {
   const { t } = useTranslation();
 
+  // TODO: Extract the card data to another file and no hardcoded strings, bring it from the translation file
   const cardsData = [
     {
       id: 'card1',
