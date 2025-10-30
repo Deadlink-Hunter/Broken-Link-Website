@@ -22,6 +22,7 @@
     "serve-storybook": "npx serve storybook-static -p 8080"
   },
   "dependencies": {
+    "@mantine/charts": "^8.3.6",
     "@mantine/core": "8.2.1",
     "@mantine/hooks": "8.2.1",
     "@tabler/icons-react": "^3.35.0",
@@ -30,7 +31,8 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-i18next": "^16.0.0",
-    "react-router-dom": "^7.6.2"
+    "react-router-dom": "^7.6.2",
+    "recharts": "^3.3.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",

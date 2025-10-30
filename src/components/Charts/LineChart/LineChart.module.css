@@ -1,0 +1,13 @@
+﻿.chartContainer {
+  padding: 1.5rem;
+  background-color: var(--mantine-color-dark-6);
+  border-radius: var(--mantine-radius-md);
+  border: 1px solid var(--mantine-color-dark-4);
+}
+
+.chartTitle {
+  margin-bottom: 1rem;
+  color: var(--mantine-color-white);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
