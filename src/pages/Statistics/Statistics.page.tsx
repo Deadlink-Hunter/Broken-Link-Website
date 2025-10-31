@@ -1,4 +1,4 @@
-﻿import { LineChart } from '@/components/Charts/LineChart';
+import { LineChart } from '@/components/Charts/LineChart';
 
 const sampleData = [
   { month: 'Jan', scans: 45, broken: 12 },

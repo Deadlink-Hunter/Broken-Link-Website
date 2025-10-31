@@ -1,4 +1,4 @@
-﻿import { LineChart as MantineLineChart, LineChartProps } from '@mantine/charts';
+import { LineChart as MantineLineChart, LineChartProps } from '@mantine/charts';
 import { styles } from './LineChart.styles';
 
 interface ChartSeries {
