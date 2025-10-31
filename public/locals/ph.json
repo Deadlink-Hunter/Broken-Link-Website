@@ -1,7 +1,7 @@
 {
-    "welcome_title": "Maligayang pagdating sa ",
-    "welcome_highlight": "Mantine",
-    "welcome_description_before_link": "Ito ay isang pang baguhan na proyekto gamit ang Vite na may minimal na setup. Kung nais mong matuto nang higit pa tungkol sa integrasyon ng Mantine + Vite sundan mo ang proyektong ito",
-    "welcome_link_text": "itong gabay",
-    "welcome_description_after_link": ". Upang makapagsimula, baguhin ang pages/Home.page.tsx file."
+  "welcome_title": "Maligayang pagdating sa ",
+  "welcome_highlight": "Mantine",
+  "welcome_description_before_link": "Ito ay isang pang baguhan na proyekto gamit ang Vite na may minimal na setup. Kung nais mong matuto nang higit pa tungkol sa integrasyon ng Mantine + Vite sundan mo ang proyektong ito",
+  "welcome_link_text": "itong gabay",
+  "welcome_description_after_link": ". Upang makapagsimula, baguhin ang pages/Home.page.tsx file."
 }

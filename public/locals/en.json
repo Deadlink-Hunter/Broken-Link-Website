@@ -1,25 +1,35 @@
 {
-    "welcome_title": "Welcome to ",
-    "welcome_highlight": "Mantine",
-    "welcome_description_before_link": "This starter Vite project includes a minimal setup. If you want to learn more on Mantine + Vite integration follow",
-    "welcome_link_text": "this guide",
-    "welcome_description_after_link": ". To get started edit pages/Home.page.tsx file.",
-    "about_feature_card": {
-        "card_one": {
-            "title": "Precision Scanning",
-            "description": "Advanced algorithms detect broken links across markdown files, documentation, and code comments with pinpoint accuracy."
-        },
-        "card_two": {
-            "title": "Automated Reports",
-            "description": "Generate comprehensive reports with detailed breakdowns, fix suggestions, and priority rankings for efficient maintenance."
-        },
-        "card_three": {
-            "title": "GitHub Integration",
-            "description": "Seamlessly integrate with your GitHub workflow through Actions, webhooks, and automated pull request creation."
-        },
-        "card_four": {
-            "title": "Open Source",
-            "description": "Completely open source and community-driven. Contribute, customize, and extend to fit your project's needs."
-        }
+  "welcome_title": "Welcome to ",
+  "welcome_highlight": "Mantine",
+  "welcome_description_before_link": "This starter Vite project includes a minimal setup. If you want to learn more on Mantine + Vite integration follow",
+  "welcome_link_text": "this guide",
+  "welcome_description_after_link": ". To get started edit pages/Home.page.tsx file.",
+  "about_feature_card": {
+    "card_one": {
+      "title": "Precision Scanning",
+      "description": "Advanced algorithms detect broken links across markdown files, documentation, and code comments with pinpoint accuracy."
+    },
+    "card_two": {
+      "title": "Automated Reports",
+      "description": "Generate comprehensive reports with detailed breakdowns, fix suggestions, and priority rankings for efficient maintenance."
+    },
+    "card_three": {
+      "title": "GitHub Integration",
+      "description": "Seamlessly integrate with your GitHub workflow through Actions, webhooks, and automated pull request creation."
+    },
+    "card_four": {
+      "title": "Open Source",
+      "description": "Completely open source and community-driven. Contribute, customize, and extend to fit your project's needs."
     }
+  },
+  "links": {
+    "about": "About",
+    "scanner": "Scanner",
+    "statistics": "Statistics",
+    "documentation": "Documentation",
+    "contribute": "Contribute",
+    "issues": "Issues",
+    "featureRequests": "Feature Requests",
+    "discord": "Discord"
+  }
 }

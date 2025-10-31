@@ -1,9 +1,8 @@
 name: Auto Comment on New Issue
 
-on :
-   issues: 
-     types: [opened]
-
+on:
+  issues:
+    types: [opened]
 
 jobs:
   comment:

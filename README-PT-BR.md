@@ -1,4 +1,5 @@
 # Deadlink-Hunter🕵️
+
 [![GitHub Stars](https://img.shields.io/github/stars/Deadlink-Hunter/Broken-Link-Website?style=social&label=estrelas)](https://github.com/Deadlink-Hunter/Broken-Link-Website/stargazers)
 [![Licença: MIT](https://img.shields.io/badge/Licença-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
