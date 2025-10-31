@@ -1,12 +1,17 @@
 import '@mantine/core/styles.css';
-import { Footer } from './components/Footer/Footer';
+
+import { DirectionProvider, MantineProvider } from '@mantine/core';
 import { Router } from './Router';
+import { theme } from './theme';
+import { Footer } from './components/Footer/Footer';
 
 export default function App() {
   return (
-    <>
-      <Router />
-      <Footer />
-    </>
+    <DirectionProvider detectDirection>
+      <MantineProvider theme={theme}>
+        <Router />
+        <Footer />
+      </MantineProvider>
+    </DirectionProvider>
   );
 }

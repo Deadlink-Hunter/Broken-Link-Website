@@ -13,7 +13,6 @@
     subtitle: { color: colors.primary[6], size: CUSTOM_SIZES.LARGE },
   };
 
-  // Added footer styles here for reuse in Footer.tsx
   export const footerStyles = {
     footer: {
       backgroundColor: colors.dark[7],
