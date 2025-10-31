@@ -1,5 +1,6 @@
 import { LineChart } from '@/components/Charts/LineChart';
 
+// TODO: Replace sampleData with dynamic data fetched from the server
 const sampleData = [
   { month: 'Jan', scans: 45, broken: 12 },
   { month: 'Feb', scans: 67, broken: 8 },
