@@ -70,8 +70,9 @@ To contribute:
 1.  **Fork** this repository to your own GitHub account.
 2.  **Clone** your fork locally:
     ```bash
-    git clone https://github.com/<your-username>/Deadlink-Hunter.git
-    cd Deadlink-Hunter
+    git clone https://github.com/<your-username>/Broken-Link-Website.git
+    cd Broken-Link-Website
+
     ```
 3. (Optional) Install pnpm package manager from this [link](https://pnpm.io/installation).
 4.  Install dependencies using **pnpm** (please do not use npm or yarn):
