@@ -1,5 +1,4 @@
-﻿import { Container } from '@mantine/core';
-import { LineChart } from '@/components/Charts/LineChart';
+﻿import { LineChart } from '@/components/Charts/LineChart';
 
 const sampleData = [
   { month: 'Jan', scans: 45, broken: 12 },
@@ -10,9 +9,17 @@ const sampleData = [
   { month: 'Jun', scans: 201, broken: 9 },
 ];
 
+const statisticsPageStyles = {
+  container: {
+    maxWidth: '1200px',
+    margin: '0 auto',
+    padding: '2rem',
+  },
+};
+
 export default function StatisticsPage() {
   return (
-    <Container size="xl" py="xl">
+    <div style={statisticsPageStyles.container}>
       <LineChart
         title="Scan Activity Over Time"
         data={sampleData}
@@ -23,6 +30,6 @@ export default function StatisticsPage() {
         ]}
         height={400}
       />
-    </Container>
+    </div>
   );
 }
