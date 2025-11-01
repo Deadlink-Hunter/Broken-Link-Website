@@ -1,12 +1,13 @@
 import { LineChart as MantineLineChart, LineChartProps } from '@mantine/charts';
 import { styles } from './LineChart.styles';
+import { Typography } from '@/components/UI/Typography/Typography';
 
 interface ChartSeries {
   name: string;
   color: string;
 }
 
-export interface CustomLineChartProps extends Omit<LineChartProps, 'data'> {
+interface CustomLineChartProps extends Omit<LineChartProps, 'data'> {
   data: Array<Record<string, any>>;
   title?: string;
   height?: number;
@@ -24,7 +25,11 @@ export function LineChart({
 }: CustomLineChartProps) {
   return (
     <div style={styles.chartContainer}>
-      {title && <h3 style={styles.chartTitle}>{title}</h3>}
+      {title && (
+        <Typography variant="h3" style={styles.chartTitle}>
+          {title}
+        </Typography>
+      )}
       <MantineLineChart
         h={height}
         data={data}

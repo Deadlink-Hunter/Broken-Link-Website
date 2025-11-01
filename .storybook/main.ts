@@ -8,7 +8,7 @@ const config: StorybookConfig = {
   },
   stories: [
     "../src/**/*.mdx",
-    "../src/**/*.stories.@(js|jsx|ts|tsx)"
+    "../src/**/*.stories.@(js|jsx|ts|tsx)" // 👈 plural 'stories' added here
   ],
   addons: [
     "@storybook/addon-a11y",
