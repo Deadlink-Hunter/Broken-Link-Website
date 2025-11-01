@@ -1,7 +1,7 @@
 {
-"welcome_title": "ସ୍ୱାଗତ",
-"welcome_highlight": "Mantine",
-"welcome_description_before_link": "ଏହି ଷ୍ଟାର୍ଟର୍ Vite ପ୍ରୋଜେକ୍ଟରେ ଏକ ସର୍ବନିମ୍ନ ସେଟଅପ୍ ଅନ୍ତର୍ଭୁକ୍ତ। ଯଦି ଆପଣ Mantine + Vite ଇଣ୍ଟିଗ୍ରେସନ୍ ବିଷୟରେ ଅଧିକ ଜାଣିବାକୁ ଚାହାଁନ୍ତି ତେବେ ଅନୁସରଣ କରନ୍ତୁ",
-"welcome_link_text": "ଏହି ମାର୍ଗଦର୍ଶିକା",
-"welcome_description_after_link": "। ଆରମ୍ଭ କରିବାକୁ pages/Home.page.tsx ଫାଇଲ୍ ସମ୍ପାଦନ କରନ୍ତୁ।"
+  "welcome_title": "ସ୍ୱାଗତ",
+  "welcome_highlight": "Mantine",
+  "welcome_description_before_link": "ଏହି ଷ୍ଟାର୍ଟର୍ Vite ପ୍ରୋଜେକ୍ଟରେ ଏକ ସର୍ବନିମ୍ନ ସେଟଅପ୍ ଅନ୍ତର୍ଭୁକ୍ତ। ଯଦି ଆପଣ Mantine + Vite ଇଣ୍ଟିଗ୍ରେସନ୍ ବିଷୟରେ ଅଧିକ ଜାଣିବାକୁ ଚାହାଁନ୍ତି ତେବେ ଅନୁସରଣ କରନ୍ତୁ",
+  "welcome_link_text": "ଏହି ମାର୍ଗଦର୍ଶିକା",
+  "welcome_description_after_link": "। ଆରମ୍ଭ କରିବାକୁ pages/Home.page.tsx ଫାଇଲ୍ ସମ୍ପାଦନ କରନ୍ତୁ।"
 }

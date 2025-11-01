@@ -1,7 +1,7 @@
 {
-    "welcome_title": "Vítejte v ",
-    "welcome_highlight": "Mantine",
-    "welcome_description_before_link": "Tento startovací projekt Vite obsahuje minimální nastavení. Pokud se chcete dozvědět více o integraci Mantine s Vite, následujte",
-    "welcome_link_text": "tento návod",
-    "welcome_description_after_link": ". Pro začátek upravte soubor pages/Home.page.tsx."
+  "welcome_title": "Vítejte v ",
+  "welcome_highlight": "Mantine",
+  "welcome_description_before_link": "Tento startovací projekt Vite obsahuje minimální nastavení. Pokud se chcete dozvědět více o integraci Mantine s Vite, následujte",
+  "welcome_link_text": "tento návod",
+  "welcome_description_after_link": ". Pro začátek upravte soubor pages/Home.page.tsx."
 }

@@ -1,7 +1,7 @@
 {
-    "welcome_title": "Benvenuto su ",
-    "welcome_highlight": "Mantine",
-    "welcome_description_before_link": "Questo progetto iniziale con Vite include una configurazione minima. Se desideri saperne di più sull’integrazione Mantine + Vite, consulta",
-    "welcome_link_text": "questa guida",
-    "welcome_description_after_link": ". Per iniziare, modifica il file pages/Home.page.tsx."
+  "welcome_title": "Benvenuto su ",
+  "welcome_highlight": "Mantine",
+  "welcome_description_before_link": "Questo progetto iniziale con Vite include una configurazione minima. Se desideri saperne di più sull’integrazione Mantine + Vite, consulta",
+  "welcome_link_text": "questa guida",
+  "welcome_description_after_link": ". Per iniziare, modifica il file pages/Home.page.tsx."
 }

@@ -1,7 +1,7 @@
 {
-    "welcome_title": "Bienvenue sur ",
-    "welcome_highlight": "Mantine",
-    "welcome_description_before_link": "Ce projet de démarrage avec Vite inclut une configuration minimale. Si vous souhaitez en savoir plus sur l’intégration Mantine + Vite, consultez",
-    "welcome_link_text": "ce guide",
-    "welcome_description_after_link": ". Pour commencer, modifiez le fichier pages/Home.page.tsx."
+  "welcome_title": "Bienvenue sur ",
+  "welcome_highlight": "Mantine",
+  "welcome_description_before_link": "Ce projet de démarrage avec Vite inclut une configuration minimale. Si vous souhaitez en savoir plus sur l’intégration Mantine + Vite, consultez",
+  "welcome_link_text": "ce guide",
+  "welcome_description_after_link": ". Pour commencer, modifiez le fichier pages/Home.page.tsx."
 }
