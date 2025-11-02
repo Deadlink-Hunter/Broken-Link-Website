@@ -1,17 +1,16 @@
-import { CSSProperties } from 'react';
+import { MantineTheme } from '@mantine/core';
 
-export const styles = {
+export const getStyles = (theme: MantineTheme) => ({
   chartContainer: {
-    padding: '1.5rem',
-    backgroundColor: '#1a1b1e',
-    borderRadius: '8px',
-    border: '1px solid #373a40',
-  } as CSSProperties,
-
+    padding: theme.spacing.xl,
+    backgroundColor: theme.colors.dark[6],
+    borderRadius: theme.radius.md,
+    border: `1px solid ${theme.colors.dark[4]}`,
+  },
   chartTitle: {
-    marginBottom: '1rem',
-    color: '#ffffff',
-    fontSize: '1.25rem',
+    marginBottom: theme.spacing.md,
+    color: theme.white,
+    fontSize: theme.fontSizes.xl,
     fontWeight: 600,
-  } as CSSProperties,
-};
+  },
+});

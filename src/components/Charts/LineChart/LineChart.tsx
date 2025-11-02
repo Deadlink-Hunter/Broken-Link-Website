@@ -1,6 +1,6 @@
 import { LineChart as MantineLineChart, LineChartProps } from '@mantine/charts';
-import { styles } from './LineChart.styles';
-import { Typography } from '@/components/UI/Typography/Typography';
+import { useMantineTheme } from '@mantine/core';
+import { getStyles } from './LineChart.styles';
 
 interface ChartSeries {
   name: string;
@@ -23,13 +23,12 @@ export function LineChart({
   series,
   ...otherProps
 }: CustomLineChartProps) {
+  const theme = useMantineTheme();
+  const styles = getStyles(theme);
+
   return (
     <div style={styles.chartContainer}>
-      {title && (
-        <Typography variant="h3" style={styles.chartTitle}>
-          {title}
-        </Typography>
-      )}
+      {title && <div style={styles.chartTitle}>{title}</div>}
       <MantineLineChart
         h={height}
         data={data}
