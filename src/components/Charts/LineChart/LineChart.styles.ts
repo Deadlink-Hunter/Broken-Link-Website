@@ -1,6 +1,6 @@
-import { MantineTheme } from '@mantine/core';
+import { theme } from '@/theme';
 
-export const getStyles = (theme: MantineTheme) => ({
+export const styles = {
   chartContainer: {
     padding: theme.spacing.xl,
     backgroundColor: theme.colors.dark[6],
@@ -9,8 +9,8 @@ export const getStyles = (theme: MantineTheme) => ({
   },
   chartTitle: {
     marginBottom: theme.spacing.md,
-    color: theme.white,
+    color: theme.colors.gray[0],
     fontSize: theme.fontSizes.xl,
     fontWeight: 600,
   },
-});
+};
