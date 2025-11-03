@@ -6,7 +6,6 @@ import AboutPage from './pages/About/About.page';
 import { HomePage } from './pages/Home/Home.page';
 import ScannerPage from './pages/Scanner/Scanner.page';
 import StatisticsPage from './pages/Statistics/Statistics.page';
-import React from 'react';
 
 const withErrorBoundary = (element: React.ReactNode) => <ErrorBoundary>{element}</ErrorBoundary>;
 
