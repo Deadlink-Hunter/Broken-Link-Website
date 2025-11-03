@@ -202,6 +202,7 @@ This template comes with the following features:
 - `prettier:write` – formats all files with Prettier
 
 <p align="left"><a href="#top-btn">Go back to the top of the page</a></p>
+
 ## Contributors
 
 Thanks to all the amazing contributors who have helped make this project better! 🎉
