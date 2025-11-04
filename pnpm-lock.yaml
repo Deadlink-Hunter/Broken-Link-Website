@@ -82,10 +82,10 @@ importers:
         specifier: ^22.15.11
         version: 22.18.12
       '@types/react':
-        specifier: ^19.1.8
+        specifier: ^19.2.2
         version: 19.2.2
       '@types/react-dom':
-        specifier: ^19.1.6
+        specifier: ^19.2.2
         version: 19.2.2(@types/react@19.2.2)
       '@types/react-i18next':
         specifier: ^8.1.0
