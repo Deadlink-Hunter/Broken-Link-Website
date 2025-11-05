@@ -4,6 +4,7 @@ import React from 'react';
 import type { Preview } from '@storybook/react';
 import { MantineProvider, useMantineColorScheme } from '@mantine/core';
 import { theme } from '../src/theme';
+import type { Globals } from '@storybook/addons';
 
 const preview: Preview = {
   parameters: {
@@ -29,7 +30,7 @@ const preview: Preview = {
   },
 };
 
-function ColorSchemeWrapper({ children, globals }: { children: React.ReactNode; globals: any }) {
+function ColorSchemeWrapper({ children, globals }: { children: React.ReactNode; globals: Globals }) {
   const { setColorScheme } = useMantineColorScheme();
 
   React.useEffect(() => {
