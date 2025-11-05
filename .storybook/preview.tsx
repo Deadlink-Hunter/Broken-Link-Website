@@ -1,10 +1,10 @@
 import '@mantine/core/styles.css';
 
 import React from 'react';
+import type { Globals } from '@storybook/addons';
 import type { Preview } from '@storybook/react';
 import { MantineProvider, useMantineColorScheme } from '@mantine/core';
 import { theme } from '../src/theme';
-import type { Globals } from '@storybook/addons';
 
 const preview: Preview = {
   parameters: {
@@ -30,7 +30,13 @@ const preview: Preview = {
   },
 };
 
-function ColorSchemeWrapper({ children, globals }: { children: React.ReactNode; globals: Globals }) {
+function ColorSchemeWrapper({
+  children,
+  globals,
+}: {
+  children: React.ReactNode;
+  globals: Globals;
+}) {
   const { setColorScheme } = useMantineColorScheme();
 
   React.useEffect(() => {
