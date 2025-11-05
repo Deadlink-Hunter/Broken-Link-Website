@@ -160,6 +160,33 @@ The application will be available at `http://localhost`
 
 <p align="left"><a href="#top-btn">Go back to the top of the page</a></p>
 
+## API & Postman Collection
+
+Once the backend is running locally, the Swagger documentation is available at:
+
+[http://localhost:3000/api-docs](http://localhost:3000/api-docs)
+
+We generated a Postman collection based on this Swagger spec, which you can use to test the API locally.
+
+### 🔗 How to Use the Postman Collection
+
+1. Open [Postman](https://www.postman.com/)
+2. Click **Import**
+3. Select **File** and upload:
+
+    `./postman/broken-link-checker.postman_collection.json`
+
+> Alternatively, [click here to download the file directly](./postman/brokenlink-checker.postman_collection.json)
+
+Make sure your backend server is running at `http://localhost:3000` (or adjust the base URL in Postman if needed).
+
+---
+
+For advanced testing or CI integration, you can run the collection using [Newman](https://www.npmjs.com/package/newman):
+
+```bash
+npx newman run ./postman/broken-link-checker.postman_collection.json
+```
 
 ## Mantine Vite template
 

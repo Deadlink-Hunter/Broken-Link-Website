@@ -1,0 +1,437 @@
+{
+	"info": {
+		"_postman_id": "5e833036-dde5-49f0-8195-74213ee271e8",
+		"name": "Broken Link Checker API",
+		"description": "A TypeScript Express API for checking if URLs are broken or not\n\nContact Support:\n Name: API Support\n Email: support@example.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38521255"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "check-url",
+					"item": [
+						{
+							"name": "Check if a single URL is broken",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"url\": \"https://example.com\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/check-url",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"check-url"
+									]
+								},
+								"description": "Check if a single URL is accessible and working"
+							},
+							"response": [
+								{
+									"name": "URL check completed successfully",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"url\": \"https://example.com\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/check-url",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"check-url"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"success\": true,\n  \"data\": {\n    \"url\": \"string\",\n    \"isBroken\": true,\n    \"statusCode\": 245.16143474563103,\n    \"error\": \"string\",\n    \"responseTime\": 7126.781732856031\n  }\n}"
+								},
+								{
+									"name": "Bad request - URL is required",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"url\": \"https://example.com\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/check-url",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"check-url"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"success\": false,\n  \"error\": \"URL is required\"\n}"
+								},
+								{
+									"name": "Internal server error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"url\": \"https://example.com\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/check-url",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"check-url"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "check-urls",
+					"item": [
+						{
+							"name": "Check multiple URLs at once",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"urls\": [\n    \"https://example.com\",\n    \"https://google.com\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/check-urls",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"check-urls"
+									]
+								},
+								"description": "Check if multiple URLs are accessible and working (max 10 URLs)"
+							},
+							"response": [
+								{
+									"name": "URLs check completed successfully",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"urls\": [\n    \"https://example.com\",\n    \"https://google.com\"\n  ]\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/check-urls",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"check-urls"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"success\": true,\n  \"data\": {\n    \"results\": [\n      {\n        \"url\": \"string\",\n        \"isBroken\": false,\n        \"statusCode\": 3376.8439336387337,\n        \"error\": \"string\",\n        \"responseTime\": 5576.829624274711\n      },\n      {\n        \"url\": \"string\",\n        \"isBroken\": true,\n        \"statusCode\": 9135.04353200574,\n        \"error\": \"string\",\n        \"responseTime\": 9030.516864386802\n      }\n    ],\n    \"summary\": {\n      \"total\": 3621.8601441462183,\n      \"broken\": 2118.8854253523905,\n      \"working\": 2874.738486594457\n    }\n  }\n}"
+								},
+								{
+									"name": "Bad request - Invalid input",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"urls\": [\n    \"https://example.com\",\n    \"https://google.com\"\n  ]\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/check-urls",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"check-urls"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"success\": false,\n  \"error\": \"URLs array is required\"\n}"
+								},
+								{
+									"name": "Internal server error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"urls\": [\n    \"https://example.com\",\n    \"https://google.com\"\n  ]\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/check-urls",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"check-urls"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "health",
+					"item": [
+						{
+							"name": "Health check endpoint",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/health",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"health"
+									]
+								},
+								"description": "Check if the API is running and healthy"
+							},
+							"response": [
+								{
+									"name": "API is healthy",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/health",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"health"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"success\": false,\n  \"message\": \"string\",\n  \"timestamp\": \"1992-09-21T07:34:29.607Z\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:3000"
+		}
+	]
+}
