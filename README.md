@@ -174,7 +174,7 @@ We generated a Postman collection based on the internal Swagger documentation to
 
     `./postman/broken-link-checker.postman_collection.json`
 
-> [Click here to download the file directly](./postman/broken-link-checker.postman_collection.json)
+> [Click here to download the file directly](./postman/brokenlink-checker.postman_collection.json)
 
 Make sure your backend server is running at `http://localhost:3000` (or adjust the base URL in Postman if needed).
 
