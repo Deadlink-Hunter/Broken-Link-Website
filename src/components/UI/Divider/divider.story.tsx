@@ -1,4 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { expect, within } from '@storybook/test';
+import { theme } from '@/theme';
 import { Divider } from './Divider';
 
 const meta: Meta<typeof Divider> = {
@@ -8,6 +10,13 @@ const meta: Meta<typeof Divider> = {
 
 export default meta;
 type Story = StoryObj<typeof meta>;
+
+const basicDividerTest = (canvasElement: HTMLElement) => {
+  const canvas = within(canvasElement);
+  const divider = canvas.getByTestId('divider');
+  expect(divider).toBeInTheDocument();
+  return divider;
+};
 
 export const DividerDefault: Story = {
   args: {
@@ -28,7 +37,6 @@ export const HorizontalDivider: Story = {
         style={{
           backgroundColor: 'blue',
           height: '3px',
-          margin: '1rem 0',
         }}
         {...args}
       />
@@ -37,6 +45,13 @@ export const HorizontalDivider: Story = {
       </div>
     </div>
   ),
+  play: async ({ canvasElement }) => {
+    const divider = basicDividerTest(canvasElement);
+    expect(divider).toHaveAttribute('data-orientation', 'horizontal');
+    const computed = getComputedStyle(divider);
+    expect(computed.backgroundColor).toBe('rgb(0, 0, 255)');
+    expect(computed.margin).toBe(theme.spacing.md);
+  },
 };
 
 export const VerticalDivider: Story = {
@@ -45,7 +60,6 @@ export const VerticalDivider: Story = {
       style={{
         display: 'flex',
         alignItems: 'center',
-        gap: '2rem',
         height: '100px',
         padding: '1rem',
       }}
@@ -58,11 +72,17 @@ export const VerticalDivider: Story = {
           backgroundColor: 'red',
           width: '3px',
           height: '80px',
-          margin: '0 1rem',
         }}
         {...args}
       />
       <div style={{ padding: '1rem', backgroundColor: '#e0e0e0' }}>Right Content</div>
     </div>
   ),
+  play: async ({ canvasElement }) => {
+    const divider = basicDividerTest(canvasElement);
+    expect(divider).toHaveAttribute('data-orientation', 'vertical');
+    const computed = getComputedStyle(divider);
+    expect(computed.backgroundColor).toBe('rgb(255, 0, 0)');
+    expect(computed.margin).toBe(theme.spacing.md);
+  },
 };

@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { expect, fn, userEvent, within } from '@storybook/test';
 import { IconArrowRight, IconPhoto } from '@tabler/icons-react';
+import { theme } from '@/theme';
 import { Button } from './Button';
 
 const BUTTON_VARIANTS = [
@@ -99,6 +100,10 @@ export const buttonVariantsShowcase: Story = {
 };
 
 export const disabledButtons: Story = {
+  args: {
+    onClick: fn(),
+  },
+
   render: () => (
     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
       {DISABLE_BUTTON_VARIANTS.map((variant) => (
@@ -108,4 +113,11 @@ export const disabledButtons: Story = {
       ))}
     </div>
   ),
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement);
+    const buttons = canvas.getAllByRole('button');
+    expect(buttons[0]).toBeInTheDocument();
+    expect(buttons[0]).toBeDisabled();
+    expect(args.onClick).not.toHaveBeenCalled();
+  },
 };

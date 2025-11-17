@@ -18,6 +18,11 @@ export const Divider = ({
   const variantStyle = dividerVariants[variant];
 
   return (
-    <MantineDivider orientation={orientation} style={{ ...variantStyle, ...style }} {...props} />
+    <MantineDivider
+      data-testid='divider'
+      orientation={orientation}
+      style={{ ...variantStyle, ...style }}
+      {...props}
+    />
   );
 };

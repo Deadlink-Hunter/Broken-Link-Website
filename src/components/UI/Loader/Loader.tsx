@@ -1,10 +1,10 @@
 import React from 'react';
-import { Loader as MantineLoader } from '@mantine/core';
+import { Loader as MantineLoader, type LoaderProps as MantineLoaderProps } from '@mantine/core';
 import { loaderStyles } from './styles';
 
 type LoaderSize = 'small' | 'medium' | 'large' | 'extraLarge';
 
-interface LoaderProps {
+interface LoaderProps extends Omit<MantineLoaderProps, 'size' | 'className'> {
   size?: LoaderSize;
   className?: string;
 }
@@ -15,10 +15,14 @@ const sizeMapper: Record<LoaderSize, 'xs' | 'sm' | 'md' | 'lg' | 'xl'> = {
   extraLarge: 'xl',
 };
 
-export const Loader: React.FC<LoaderProps> = ({ size = 'medium', className, ...props }) => {
+export const Loader = ({ size = 'medium', className, ...props }: LoaderProps) => {
   return (
-    <div style={loaderStyles.default} className={className}>
-      <MantineLoader size={sizeMapper[size as LoaderSize]} {...props} />
+    <div data-testid='loader' style={loaderStyles.default} className={className}>
+      <MantineLoader
+        data-testid='mantine-loader'
+        size={sizeMapper[size as LoaderSize]}
+        {...props}
+      />
     </div>
   );
 };

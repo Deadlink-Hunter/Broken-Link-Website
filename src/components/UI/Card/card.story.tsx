@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { expect, fn, userEvent, within } from '@storybook/test';
+import { theme } from '@/theme';
 import { Button } from '../Button/Button';
 import { Card } from './Card';
 
@@ -13,6 +14,13 @@ const meta: Meta<typeof Card> = {
 
 export default meta;
 type Story = StoryObj<typeof meta>;
+
+const basicCardTest = (canvasElement: HTMLElement) => {
+  const canvas = within(canvasElement);
+  const card = canvas.getByTestId('card');
+  expect(card).toBeInTheDocument();
+  return card;
+};
 
 export const DefaultCard: Story = {
   args: {
@@ -31,6 +39,9 @@ export const CardWithImage: Story = {
       </div>
     ),
   },
+  play: async ({ canvasElement }) => {
+    basicCardTest(canvasElement);
+  },
 };
 
 export const CardWithCustomStyle: Story = {
@@ -44,10 +55,14 @@ export const CardWithCustomStyle: Story = {
     style: {
       backgroundColor: '#e0f7fa',
       border: '2px solid #00acc1',
-      color: '#006064',
+      color: 'rgb(0, 96, 100)',
       borderRadius: '1rem',
       width: '20rem',
     },
+  },
+  play: async ({ canvasElement }) => {
+    const card = basicCardTest(canvasElement);
+    expect(card).toHaveStyle({ color: 'rgb(0, 96, 100)' });
   },
 };
 
@@ -55,8 +70,7 @@ export const CardWithNestedElements: Story = {
   render: () => (
     <Card
       style={{
-        width: '22rem',
-        padding: '1.5rem',
+        width: '352px',
         backgroundColor: '#ffffff',
         color: '#333',
         boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
@@ -70,22 +84,31 @@ export const CardWithNestedElements: Story = {
       <Button variant='primary'>Learn More</Button>
     </Card>
   ),
+  play: async ({ canvasElement }) => {
+    const card = basicCardTest(canvasElement);
+    Array.from(card.childNodes).forEach((child) => {
+      expect(child).toBeInstanceOf(HTMLElement);
+    });
+    expect(card).toHaveStyle({ width: '352px' });
+    expect(card).toHaveStyle({ padding: '16px' });
+  },
 };
 
 const mockOnClick = fn();
 export const InteractionTest: Story = {
   args: {
-    children: <Button onClick={mockOnClick}>Clickable Child</Button>,
+    children: (
+      <Button variant='success' onClick={mockOnClick}>
+        Clickable Child
+      </Button>
+    ),
   },
   play: async ({ canvasElement }) => {
+    basicCardTest(canvasElement);
     const canvas = within(canvasElement);
-
     const childButton = canvas.getByRole('button', { name: /Clickable Child/i });
-
     await expect(childButton).toBeInTheDocument();
-
     await userEvent.click(childButton);
-
     await expect(mockOnClick).toHaveBeenCalledTimes(1);
   },
 };
