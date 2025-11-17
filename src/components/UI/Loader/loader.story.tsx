@@ -24,7 +24,7 @@ export const Default: Story = {
   args: {
     size: 'medium',
   },
-  play: async ({ canvasElement, args }) => {
+  play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const loader = canvas.getByTestId('loader');
     expect(loader).toBeInTheDocument();

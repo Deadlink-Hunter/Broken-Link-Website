@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { expect, fn, userEvent, within } from '@storybook/test';
-import { theme } from '@/theme';
 import { Button } from '../Button/Button';
 import { Card } from './Card';
 
