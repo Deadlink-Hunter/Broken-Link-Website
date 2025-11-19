@@ -1,0 +1,23 @@
+.grid {
+  justify-items: center;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+.text {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+@media (min-width: 48em) {
+  .grid {
+    justify-items: stretch;
+    justify-content: space-between;
+    padding: 0.8rem;
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+  }
+  .grid > :last-child {
+    text-align: end;
+  }
+}
+

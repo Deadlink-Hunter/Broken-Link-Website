@@ -37,6 +37,7 @@
     "@ianvs/prettier-plugin-sort-imports": "^4.4.2",
     "storybook": "^9.1.10",
     "@storybook/test": "^8.6.14",
+    "@storybook/addons": "^7.6.17",
     "@storybook/addon-a11y": "9.0.18",
     "@storybook/addon-storysource": "^8.6.14",
     "@storybook/addon-viewport": "^9.0.8",
@@ -55,6 +56,7 @@
     "@vitejs/plugin-react": "^4.5.2",
     "eslint": "^9.29.0",
     "eslint-config-mantine": "^4.0.3",
+    "eslint-define-config": "^2.1.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
     "husky": "^9.1.7",
@@ -75,3 +77,4 @@
   },
   "packageManager": "pnpm@9.0.0"
 }
+
