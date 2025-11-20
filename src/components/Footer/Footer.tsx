@@ -1,17 +1,18 @@
 import { IconCode, IconHeart, IconStar } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
 import { Box, Container, SimpleGrid, Text } from '@mantine/core';
+import { useViewportSize } from '@mantine/hooks';
 import { theme } from '@/theme';
 import { Link } from '../Link/Link';
 import { Button } from '../UI/Button/Button';
 import { Divider } from '../UI/Divider/Divider';
 import { Typography } from '../UI/Typography/Typography';
 import { footerStyles } from './styles';
-import styles from './styles.module.css';
 
 export default function Footer() {
   const { t } = useTranslation();
-
+  const { width } = useViewportSize();
+  const isMobileView = width < 1024;
   const QUICK_LINKS = [
     {
       href: '#',
@@ -52,47 +53,43 @@ export default function Footer() {
   return (
     <>
       <Divider />
-      <Container style={{ ...footerStyles.container }}>
+      <Container style={footerStyles.container}>
+        {/* TODO: Replace mantine grid with styling from styles.ts or create a new grid component thats based on simple grid */}
         <SimpleGrid
-          spacing='xl'
-          cols={{ base: 1, sm: 1, md: 3 }}
-          style={{ ...footerStyles.linkBoxWrapper }}
+          spacing={theme.spacing.xl}
+          cols={footerStyles.topGridColLayout}
+          style={footerStyles.linkBoxWrapper}
         >
           <Box>
             <Text
               inherit
               variant='gradient'
               component='span'
-              gradient={{ from: theme.colors.cyan[4], to: theme.colors.blue[6] }}
-              style={{ fontWeight: 'bold', fontSize: '1.4em' }}
+              gradient={footerStyles.gradientConfig}
+              style={footerStyles.gradientText}
             >
               {t('footer.header')}
             </Text>
-
-            <Typography py={theme.spacing.lg} c={theme.white}>
-              {t('footer.about')}
-            </Typography>
-
+            <Typography style={footerStyles.text}>{t('footer.about')}</Typography>
             <Button
-              leftSection={<IconStar style={{ marginRight: theme.spacing.lg }} size={16} />}
+              leftSection={
+                <IconStar style={{ marginRight: theme.spacing.lg }} size={footerStyles.iconSize} />
+              }
               variant='primary'
             >
               {t('footer.gitBtnTxt')}
             </Button>
           </Box>
+
           <Box>
-            <Typography c={theme.white} style={{ fontWeight: 'bold' }}>
-              {t('footer.QuickLinks')}
-            </Typography>
+            <Typography style={footerStyles.header}>{t('footer.QuickLinks')}</Typography>
             {QUICK_LINKS.map((link, i) => (
               <Link key={i + link.label} href={link.href} label={link.label} />
             ))}
           </Box>
+
           <Box>
-            ``
-            <Typography c={theme.white} style={{ fontWeight: 'bold' }}>
-              {t('footer.Community')}
-            </Typography>
+            <Typography style={footerStyles.header}>{t('footer.Community')}</Typography>
             {COMMUNITY_LINKS.map((link, i) => (
               <Link key={i + link.label} href={link.href} label={link.label} />
             ))}
@@ -101,12 +98,19 @@ export default function Footer() {
 
         <Divider />
 
-        <SimpleGrid cols={{ base: 1, sm: 2 }} classNames={{ root: styles.grid }}>
-          <Typography c={theme.colors.gray[5]} style={{ ...footerStyles.openSrcTxt }}>
-            <IconCode size={16} /> {t('footer.madeWith')}
-            <IconHeart color={theme.colors.red[8]} size={16} /> {t('footer.byOpenSrc')}
+        <SimpleGrid style={footerStyles.bottomGrid} cols={footerStyles.bottomGridColLayout}>
+          <Typography style={{ ...footerStyles.openSrcTxt(isMobileView) }}>
+            <IconCode size={footerStyles.iconSize} /> {t('footer.madeWith')}
+            <IconHeart color={theme.colors.red[8]} size={footerStyles.iconSize} />
+            {t('footer.byOpenSrc')}
           </Typography>
-          <Typography c={theme.colors.gray[5]}>{t('footer.rights')}</Typography>
+          <Typography
+            style={{
+              ...footerStyles.rightsTxt(isMobileView),
+            }}
+          >
+            {t('footer.rights')}
+          </Typography>
         </SimpleGrid>
       </Container>
     </>
