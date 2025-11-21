@@ -99,18 +99,12 @@ export default function Footer() {
         <Divider />
 
         <SimpleGrid style={footerStyles.bottomGrid} cols={footerStyles.bottomGridColLayout}>
-          <Typography style={{ ...footerStyles.openSrcTxt(isMobileView) }}>
+          <Typography style={footerStyles.openSrcTxt(isMobileView)}>
             <IconCode size={footerStyles.iconSize} /> {t('footer.madeWith')}
             <IconHeart color={theme.colors.red[8]} size={footerStyles.iconSize} />
             {t('footer.byOpenSrc')}
           </Typography>
-          <Typography
-            style={{
-              ...footerStyles.rightsTxt(isMobileView),
-            }}
-          >
-            {t('footer.rights')}
-          </Typography>
+          <Typography style={footerStyles.rightsTxt(isMobileView)}>{t('footer.rights')}</Typography>
         </SimpleGrid>
       </Container>
     </>

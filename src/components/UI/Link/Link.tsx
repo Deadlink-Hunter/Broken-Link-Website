@@ -15,12 +15,8 @@ export const Link = ({ label, href, ...props }: LinkProps) => {
       label={label}
       href={href}
       styles={{
-        root: {
-          ...linkStyles.root,
-        },
-        label: {
-          ...linkStyles.label(hovered),
-        },
+        root: linkStyles.root,
+        label: linkStyles.label(hovered),
       }}
       {...props}
     />

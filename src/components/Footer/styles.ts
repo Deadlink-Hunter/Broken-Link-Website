@@ -1,4 +1,4 @@
-import { type MantineTheme } from '@mantine/core';
+import { CSSProperties } from 'react';
 import { theme } from '@/theme';
 
 const colors = theme.colors;
@@ -10,7 +10,6 @@ export const footerStyles = {
   },
 
   container: {
-    minWidth: '62%',
     marginTop: '3rem',
     padding: '0 1.4rem',
   },
@@ -31,24 +30,22 @@ export const footerStyles = {
     paddingBottom: '2rem',
   },
 
-  openSrcTxt: (isMobileView: boolean) => ({
+  openSrcTxt: (isMobileView: boolean): CSSProperties => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: isMobileView ? 'center' : 'flex-start',
     gap: '.4rem',
-    color: theme.colors.gray[5],
+    color: colors.gray[5],
   }),
 
-  rightsTxt: (isMobileView: boolean) => ({
-    color: theme.colors.gray[5],
-    textAlign: isMobileView
-      ? ('center' as React.CSSProperties['textAlign'])
-      : ('end' as React.CSSProperties['textAlign']),
+  rightsTxt: (isMobileView: boolean): CSSProperties => ({
+    color: colors.gray[5],
+    textAlign: isMobileView ? 'center' : 'end',
   }),
 
   gradientConfig: {
-    from: theme.colors.cyan[4],
-    to: theme.colors.blue[6],
+    from: colors.cyan[4],
+    to: colors.blue[6],
   },
 
   iconSize: 16,
