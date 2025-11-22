@@ -3,9 +3,9 @@ import { useTranslation } from 'react-i18next';
 import { Box, Container, SimpleGrid, Text } from '@mantine/core';
 import { useViewportSize } from '@mantine/hooks';
 import { theme } from '@/theme';
-import { Link } from '../Link/Link';
 import { Button } from '../UI/Button/Button';
 import { Divider } from '../UI/Divider/Divider';
+import { Link } from '../UI/Link/Link';
 import { Typography } from '../UI/Typography/Typography';
 import { footerStyles } from './styles';
 
