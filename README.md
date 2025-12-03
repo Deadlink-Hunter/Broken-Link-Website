@@ -35,6 +35,18 @@ In order to see the ui log in.
 
 <p align="left"><a href="#top-btn">Back to the top of page</a></p>
 
+---
+
+## ⚠️ Important Prerequisites
+
+**Please Note:** This repository contains the **Frontend** (User Interface) of the Deadlink-Hunter project.
+
+To fully use the scanner features, you **MUST** run the Backend server locally (or connect to a deployed instance). The frontend communicates with the backend to perform the actual link checking.
+
+👉 **Get the Backend here:** [Broken-Link-Checker Repository](https://github.com/Deadlink-Hunter/Broken-Link-Checker)
+
+---
+
 ## Table of Contents
 
 - [The why](#the-why)
@@ -113,6 +125,15 @@ cp .env.example .env
 # PowerShell
 Copy-Item .env.example .env
 ```
+
+### Configure Backend Connection
+
+The `.env` file includes the variable:
+
+- **VITE_API_BASE_URL** — the base URL for the backend API.  
+  **Default:** `http://localhost:3000`
+
+Ensure your backend server is running on this port, or update the value to match your backend configuration.
 
 ## Docker Setup
 
