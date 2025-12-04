@@ -7,48 +7,14 @@ import { Button } from '../UI/Button/Button';
 import { Divider } from '../UI/Divider/Divider';
 import { Link } from '../UI/Link/Link';
 import { Typography } from '../UI/Typography/Typography';
+import { useFooterData } from './useFooterData';
 import { footerStyles } from './styles';
 
 export default function Footer() {
   const { t } = useTranslation();
   const { width } = useViewportSize();
   const isMobileView = width < 1024;
-  const QUICK_LINKS = [
-    {
-      href: '#',
-      label: t('footer.About'),
-    },
-    {
-      href: '#',
-      label: t('footer.Scanner'),
-    },
-    {
-      href: '#',
-      label: t('footer.Statistics'),
-    },
-    {
-      href: '#',
-      label: t('footer.Documentation'),
-    },
-  ];
-  const COMMUNITY_LINKS = [
-    {
-      href: '#',
-      label: t('footer.Contribute'),
-    },
-    {
-      href: '#',
-      label: t('footer.Issues'),
-    },
-    {
-      href: '#',
-      label: t('footer.FeatureRequests'),
-    },
-    {
-      href: '#',
-      label: t('footer.Discord'),
-    },
-  ];
+  const { QUICK_LINKS, COMMUNITY_LINKS } = useFooterData();
 
   return (
     <>
