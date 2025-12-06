@@ -1,4 +1,5 @@
 import '@mantine/core/styles.css';
+import '@mantine/charts/styles.css';
 
 import { DirectionProvider, MantineProvider } from '@mantine/core';
 import Footer from './components/Footer/Footer';
