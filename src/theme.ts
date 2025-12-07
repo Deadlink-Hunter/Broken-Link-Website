@@ -122,11 +122,11 @@ const themeOverride = createTheme({
   breakpoints,
 });
 export const CHART_COLORS = [
-  '#4dabf7',
-  '#ffa94d',
-  '#69db7c',
-  '#b197fc',
-  '#ff6b6b',
-  '#adb5bd',
+  accentCyan[4],
+  warning[2],
+  success[3],
+  accentPurple[3],
+  error[3],
+  primary[2],
 ] as const;
 export const theme = mergeMantineTheme(DEFAULT_THEME, themeOverride);

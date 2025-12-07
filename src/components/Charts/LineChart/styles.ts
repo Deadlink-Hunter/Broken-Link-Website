@@ -1,7 +1,11 @@
+import { CSSProperties } from 'react';
+import { rem } from '@mantine/core';
+
 type TextAnchor = 'middle' | 'inherit' | 'end' | 'start' | undefined;
 
 export const chartStyles = {
-  size: '90%',
+  width: '90%',
+  height: (isMobileView: boolean) => (isMobileView ? rem(240) : rem(300)),
   gridProps: {
     horizontal: false,
     vertical: false,

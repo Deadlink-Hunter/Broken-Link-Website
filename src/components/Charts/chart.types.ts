@@ -15,15 +15,15 @@ export interface DonutChartData {
   value: number;
 }
 
-export type ChartDataMap = {
+export interface ChartDataMap {
   line: CustomLineData;
   donut: DonutChartData[];
-};
+}
 
-export type ChartProps<T extends ChartType> = {
+export interface ChartProps<T extends ChartType> {
   type: T;
   data: ChartDataMap[T];
-};
+}
 
 export interface DonutChartPropTypes {
   data: DonutChartData[];

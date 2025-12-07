@@ -1,5 +1,12 @@
+import Charts from './components/Charts';
+import { pageContainer } from './components/styles';
+
 const StatisticsPage = () => {
-  return <div>StatisticsPage</div>;
+  return (
+    <div style={pageContainer}>
+      <Charts />
+    </div>
+  );
 };
 
 export default StatisticsPage;
