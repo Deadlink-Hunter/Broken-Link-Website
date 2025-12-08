@@ -1,5 +1,4 @@
-import { useMantineColorScheme } from '@mantine/core';
-import { NavLink } from '@mantine/core';
+import { NavLink, useMantineColorScheme } from '@mantine/core';
 import { useHover } from '@mantine/hooks';
 import { linkStyles } from './styles';
 
