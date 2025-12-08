@@ -1,6 +1,6 @@
 import { IconCode, IconHeart, IconStar } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
-import { Box, Container, SimpleGrid, Text } from '@mantine/core';
+import { Box, Container, SimpleGrid, Text, useMantineColorScheme } from '@mantine/core';
 import { useViewportSize } from '@mantine/hooks';
 import { theme } from '@/theme';
 import { Button } from '../UI/Button/Button';
@@ -15,31 +15,34 @@ export default function Footer() {
   const { width } = useViewportSize();
   const isMobileView = width < 1024;
   const { QUICK_LINKS, COMMUNITY_LINKS } = useFooterData();
+  const { colorScheme } = useMantineColorScheme();
+  const isDark = colorScheme === 'dark';
+  const styles = footerStyles(isDark);
 
   return (
     <>
       <Divider />
-      <Container style={footerStyles.container}>
+      <Container style={styles.container}>
         {/* TODO: Replace mantine grid with styling from styles.ts or create a new grid component thats based on simple grid */}
         <SimpleGrid
           spacing={theme.spacing.xl}
-          cols={footerStyles.topGridColLayout}
-          style={footerStyles.linkBoxWrapper}
+          cols={styles.topGridColLayout}
+          style={styles.linkBoxWrapper}
         >
           <Box>
             <Text
               inherit
               variant='gradient'
               component='span'
-              gradient={footerStyles.gradientConfig}
-              style={footerStyles.gradientText}
+              gradient={styles.gradientConfig}
+              style={styles.gradientText}
             >
               {t('footer.header')}
             </Text>
-            <Typography style={footerStyles.text}>{t('footer.about')}</Typography>
+            <Typography style={styles.text}>{t('footer.about')}</Typography>
             <Button
               leftSection={
-                <IconStar style={{ marginRight: theme.spacing.lg }} size={footerStyles.iconSize} />
+                <IconStar style={{ marginRight: theme.spacing.lg }} size={styles.iconSize} />
               }
               variant='primary'
             >
@@ -48,14 +51,14 @@ export default function Footer() {
           </Box>
 
           <Box>
-            <Typography style={footerStyles.header}>{t('footer.QuickLinks')}</Typography>
+            <Typography style={styles.header}>{t('footer.QuickLinks')}</Typography>
             {QUICK_LINKS.map((link, i) => (
               <Link key={i + link.label} href={link.href} label={link.label} />
             ))}
           </Box>
 
           <Box>
-            <Typography style={footerStyles.header}>{t('footer.Community')}</Typography>
+            <Typography style={styles.header}>{t('footer.Community')}</Typography>
             {COMMUNITY_LINKS.map((link, i) => (
               <Link key={i + link.label} href={link.href} label={link.label} />
             ))}
@@ -64,13 +67,13 @@ export default function Footer() {
 
         <Divider />
 
-        <SimpleGrid style={footerStyles.bottomGrid} cols={footerStyles.bottomGridColLayout}>
-          <Typography style={footerStyles.openSrcTxt(isMobileView)}>
-            <IconCode size={footerStyles.iconSize} /> {t('footer.madeWith')}
-            <IconHeart color={theme.colors.red[8]} size={footerStyles.iconSize} />
+        <SimpleGrid style={styles.bottomGrid} cols={styles.bottomGridColLayout}>
+          <Typography style={styles.openSrcTxt(isMobileView)}>
+            <IconCode size={styles.iconSize} /> {t('footer.madeWith')}
+            <IconHeart color={theme.colors.red[8]} size={styles.iconSize} />
             {t('footer.byOpenSrc')}
           </Typography>
-          <Typography style={footerStyles.rightsTxt(isMobileView)}>{t('footer.rights')}</Typography>
+          <Typography style={styles.rightsTxt(isMobileView)}>{t('footer.rights')}</Typography>
         </SimpleGrid>
       </Container>
     </>

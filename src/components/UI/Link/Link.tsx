@@ -1,3 +1,4 @@
+import { useMantineColorScheme } from '@mantine/core';
 import { NavLink } from '@mantine/core';
 import { useHover } from '@mantine/hooks';
 import { linkStyles } from './styles';
@@ -9,14 +10,17 @@ interface LinkProps {
 
 export const Link = ({ label, href, ...props }: LinkProps) => {
   const { hovered, ref } = useHover();
+  const { colorScheme } = useMantineColorScheme();
+  const isDark = colorScheme === 'dark';
+  const styles = linkStyles(isDark);
   return (
     <NavLink
       ref={ref}
       label={label}
       href={href}
       styles={{
-        root: linkStyles.root,
-        label: linkStyles.label(hovered),
+        root: styles.root,
+        label: styles.label(hovered),
       }}
       {...props}
     />

@@ -3,7 +3,10 @@ import { theme } from '@/theme';
 
 const colors = theme.colors;
 
-export const footerStyles = {
+export const footerStyles = (isDark: boolean) => {
+  const textColor = isDark ? theme.white : colors.gray[7]; 
+  const subTextColor = isDark ? colors.gray[2] : colors.gray[7];
+  return {
   wrapper: {
     color: colors.gray[2],
     height: '41vh',
@@ -17,13 +20,13 @@ export const footerStyles = {
   gradientText: { fontWeight: 'bold', fontSize: '1.4em' },
 
   text: {
-    color: theme.white,
+    color: textColor,
     paddingBlock: theme.spacing.lg,
   },
 
   header: {
     fontWeight: 'bold',
-    color: theme.white,
+    color:isDark ? theme.white : theme.black,
   },
 
   linkBoxWrapper: {
@@ -35,11 +38,11 @@ export const footerStyles = {
     alignItems: 'center',
     justifyContent: isMobileView ? 'center' : 'flex-start',
     gap: '.4rem',
-    color: colors.gray[5],
+    color: subTextColor,
   }),
 
   rightsTxt: (isMobileView: boolean): CSSProperties => ({
-    color: colors.gray[5],
+    color: subTextColor,
     textAlign: isMobileView ? 'center' : 'end',
   }),
 
@@ -55,4 +58,5 @@ export const footerStyles = {
     paddingTop: '1rem',
     paddingBottom: '4rem',
   },
+ };
 };
