@@ -11,5 +11,5 @@ export const linkStyles = (isDark: boolean) => {
       fontWeight: '500',
       color: hovered ? theme.colors.cyan[4] : colortext,
     }),
- };
+  };
 };

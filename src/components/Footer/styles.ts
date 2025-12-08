@@ -4,7 +4,7 @@ import { theme } from '@/theme';
 const colors = theme.colors;
 
 export const footerStyles = (isDark: boolean) => {
-  const textColor = isDark ? theme.white : colors.gray[7]; 
+  const textColor = isDark ? theme.white : colors.gray[7];
   const subTextColor = isDark ? colors.gray[2] : colors.gray[7];
   return {
     wrapper: {
@@ -58,5 +58,5 @@ export const footerStyles = (isDark: boolean) => {
       paddingTop: '1rem',
       paddingBottom: '4rem',
     },
- };
+  };
 };
