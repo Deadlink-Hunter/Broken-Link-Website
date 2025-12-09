@@ -3,13 +3,13 @@ import { AxiosError } from 'axios';
 import {
   AllowedApiData,
   ApiErrorTypes,
-  HealthResponse,
   MultipleUrlsResponse,
   ServiceResponse,
   UrlCheckResult,
   ServerErrorData,
 } from '../Types/apiTypes';
 import api from './api';
+import { API_CHECH_URL, API_CHECH_URLS } from '@/constants/api';
 
 const handleApiError = <T extends AllowedApiData>(err: unknown): ServiceResponse<T> => {
   const error = err as AxiosError<ServerErrorData>;
@@ -19,17 +19,9 @@ const handleApiError = <T extends AllowedApiData>(err: unknown): ServiceResponse
 };
 
 const linkCheckerService = {
-  healthCheck: async (): Promise<ServiceResponse<HealthResponse>> => {
-    try {
-      const response = await api.get('/api/health');
-      return { status: response.status, data: response.data };
-    } catch (err) {
-      return handleApiError(err);
-    }
-  },
   checkLink: async (url: string): Promise<ServiceResponse<UrlCheckResult>> => {
     try {
-      const response = await api.post('/api/check-url', { url });
+      const response = await api.post(API_CHECH_URL, { url });
       return { status: response.status, data: response.data.data };
     } catch (err) {
       return handleApiError(err);
@@ -37,7 +29,7 @@ const linkCheckerService = {
   },
   checkLinks: async (urls: string[]): Promise<ServiceResponse<MultipleUrlsResponse>> => {
     try {
-      const response = await api.post('/api/check-urls', { urls });
+      const response = await api.post(API_CHECH_URLS, { urls });
       return { status: response.status, data: response.data.data };
     } catch (err) {
       return handleApiError(err);

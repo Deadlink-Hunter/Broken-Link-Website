@@ -13,7 +13,7 @@ export interface ServerErrorData {
     message?: string;
 }
 
-export type AllowedApiData = UrlCheckResult | MultipleUrlsResponse | HealthResponse;
+export type AllowedApiData = UrlCheckResult | MultipleUrlsResponse ;
 
 export interface ServiceResponse<T extends AllowedApiData = AllowedApiData> {
   status: number;
@@ -34,9 +34,4 @@ export interface MultipleUrlsResponse {
     broken: number;
     working: number;
   };
-}
-export interface HealthResponse {
-  success: boolean;
-  message: string;
-  timestamp: string;
 }
