@@ -12,26 +12,26 @@ export interface ServerErrorData {
   error: string;
   message?: string;
 }
-
-export type AllowedApiData = UrlCheckResult | MultipleUrlsResponse;
-
-export interface ServiceResponse<T extends AllowedApiData = AllowedApiData> {
+export interface UrlCheckResult {
   status: number;
-  data?: T;
+  data?:{
+    url: string;
+    isBroken: boolean;
+    statusCode?: number;
+    error?: string;
+    responseTime?: number;
+  }
   error?: ApiErrorTypes;
 }
-export interface UrlCheckResult {
-  url: string;
-  isBroken: boolean;
-  statusCode?: number;
-  error?: string;
-  responseTime?: number;
-}
 export interface MultipleUrlsResponse {
-  results: UrlCheckResult[];
-  summary: {
-    total: number;
-    broken: number;
-    working: number;
-  };
+  status: number;
+  data?:{
+    results: UrlCheckResult[];
+    summary: {
+      total: number;
+      broken: number;
+      working: number;
+    }
+  }
+   error?: ApiErrorTypes;
 }
