@@ -14,24 +14,24 @@ export interface ServerErrorData {
 }
 export interface UrlCheckResult {
   status: number;
-  data?:{
+  data?: {
     url: string;
     isBroken: boolean;
     statusCode?: number;
     error?: string;
     responseTime?: number;
-  }
+  };
   error?: ApiErrorTypes;
 }
 export interface MultipleUrlsResponse {
   status: number;
-  data?:{
+  data?: {
     results: UrlCheckResult[];
     summary: {
       total: number;
       broken: number;
       working: number;
-    }
-  }
-   error?: ApiErrorTypes;
+    };
+  };
+  error?: ApiErrorTypes;
 }

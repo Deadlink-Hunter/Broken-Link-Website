@@ -9,7 +9,7 @@ import {
 } from '../Types/apiTypes';
 import api from './api';
 
-const handleApiError = (err: unknown)  => {
+const handleApiError = (err: unknown) => {
   const error = err as AxiosError<ServerErrorData>;
   const status = error.response?.status || StatusCodes.INTERNAL_SERVER_ERROR;
   const errorMsg =
