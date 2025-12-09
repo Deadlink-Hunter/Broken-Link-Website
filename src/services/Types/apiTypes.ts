@@ -8,12 +8,12 @@ export enum ApiErrorTypes {
   MAXIMUM_URLS_ALLOWED = `Maximum ${MAX_URLS_PER_REQUEST} URLs allowed per request`,
 }
 export interface ServerErrorData {
-    success: boolean;
-    error: string;   
-    message?: string;
+  success: boolean;
+  error: string;
+  message?: string;
 }
 
-export type AllowedApiData = UrlCheckResult | MultipleUrlsResponse ;
+export type AllowedApiData = UrlCheckResult | MultipleUrlsResponse;
 
 export interface ServiceResponse<T extends AllowedApiData = AllowedApiData> {
   status: number;
