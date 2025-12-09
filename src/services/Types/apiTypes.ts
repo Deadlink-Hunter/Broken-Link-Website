@@ -1,5 +1,6 @@
-import { MAX_URLS_PER_REQUEST } from '../../constants/api';
+import { MAX_URLS_PER_REQUEST } from '../apiConstants';
 
+// TODO: Refactor this to use status codes after the server implementation is ready
 export enum ApiErrorTypes {
   URL_REQUIRED = 'URL is required',
   INTERNAL_SERVER_ERROR = 'Internal server error',

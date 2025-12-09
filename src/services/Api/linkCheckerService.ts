@@ -1,6 +1,6 @@
 import { AxiosError } from 'axios';
 import { StatusCodes } from 'http-status-codes';
-import { API_CHECH_URL, API_CHECH_URLS } from '@/constants/api';
+import { API_CHECH_URL, API_CHECH_URLS } from '../apiConstants';
 import {
   ApiErrorTypes,
   MultipleUrlsResponse,
