@@ -2,7 +2,7 @@ import { theme } from '@/theme';
 
 const getTextColor = (isDark: boolean) => (isDark ? theme.white : theme.colors.gray[7]);
 
-export const linkStyles =  {
+export const linkStyles = {
   root: {
     backgroundColor: 'transparent',
   },

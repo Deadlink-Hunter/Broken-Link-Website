@@ -3,13 +3,13 @@ import { useTranslation } from 'react-i18next';
 import { Box, Container, SimpleGrid, Text } from '@mantine/core';
 import { useViewportSize } from '@mantine/hooks';
 import { theme } from '@/theme';
+import { useIsDark } from '../Hooks/useIsDark';
 import { Button } from '../UI/Button/Button';
 import { Divider } from '../UI/Divider/Divider';
 import { Link } from '../UI/Link/Link';
 import { Typography } from '../UI/Typography/Typography';
 import { footerStyles } from './styles';
 import { useFooterData } from './useFooterData';
-import { useIsDark } from '../Hooks/useIsDark';
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -72,7 +72,9 @@ export default function Footer() {
             <IconHeart color={theme.colors.red[8]} size={footerStyles.iconSize} />
             {t('footer.byOpenSrc')}
           </Typography>
-          <Typography style={footerStyles.rightsTxt(isMobileView, isDark)}>{t('footer.rights')}</Typography>
+          <Typography style={footerStyles.rightsTxt(isMobileView, isDark)}>
+            {t('footer.rights')}
+          </Typography>
         </SimpleGrid>
       </Container>
     </>

@@ -1,7 +1,7 @@
 import { NavLink } from '@mantine/core';
 import { useHover } from '@mantine/hooks';
-import { linkStyles } from './styles';
 import { useIsDark } from '@/components/Hooks/useIsDark';
+import { linkStyles } from './styles';
 
 interface LinkProps {
   label: string;
@@ -10,7 +10,7 @@ interface LinkProps {
 
 export const Link = ({ label, href, ...props }: LinkProps) => {
   const { hovered, ref } = useHover();
-  const isDark =useIsDark(); ;
+  const isDark = useIsDark();
   return (
     <NavLink
       ref={ref}

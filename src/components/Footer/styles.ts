@@ -18,12 +18,12 @@ export const footerStyles = {
 
   gradientText: { fontWeight: 'bold', fontSize: '1.4em' },
 
-  text:(isDark: boolean): CSSProperties => ({
+  text: (isDark: boolean): CSSProperties => ({
     color: getTextColor(isDark),
     paddingBlock: theme.spacing.lg,
   }),
 
-  header:(isDark: boolean): CSSProperties => ({
+  header: (isDark: boolean): CSSProperties => ({
     fontWeight: 'bold',
     color: isDark ? theme.white : theme.black,
   }),
