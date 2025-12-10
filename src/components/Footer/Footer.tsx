@@ -7,8 +7,8 @@ import { Button } from '../UI/Button/Button';
 import { Divider } from '../UI/Divider/Divider';
 import { Link } from '../UI/Link/Link';
 import { Typography } from '../UI/Typography/Typography';
-import { useFooterData } from './useFooterData';
 import { footerStyles } from './styles';
+import { useFooterData } from './useFooterData';
 
 export default function Footer() {
   const { t } = useTranslation();

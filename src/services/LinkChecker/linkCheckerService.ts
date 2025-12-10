@@ -1,13 +1,8 @@
 import { AxiosError } from 'axios';
 import { StatusCodes } from 'http-status-codes';
-import { API_CHECH_URL, API_CHECH_URLS } from './constants';
-import {
-  ApiErrorTypes,
-  MultipleUrlsResponse,
-  ServerErrorData,
-  UrlCheckResult,
-} from './types';
 import api from '../Api/api';
+import { API_CHECH_URL, API_CHECH_URLS } from './constants';
+import { ApiErrorTypes, MultipleUrlsResponse, ServerErrorData, UrlCheckResult } from './types';
 
 const handleApiError = (err: unknown) => {
   const error = err as AxiosError<ServerErrorData>;
