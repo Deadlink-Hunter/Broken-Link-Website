@@ -1,5 +1,5 @@
-import { CSSProperties } from 'react';
 import { rem } from '@mantine/core';
+import { theme } from '@/theme';
 
 type TextAnchor = 'middle' | 'inherit' | 'end' | 'start' | undefined;
 
@@ -12,24 +12,23 @@ export const chartStyles = {
   },
   xAxisProps: {
     tick: {
-      fill: '#424D61',
+      fill: theme.colors.cyan[9],
       fontSize: 16,
     },
     axisLine: {
-      stroke: '#424D61',
+      stroke: theme.colors.cyan[9],
       strokeWidth: 2,
     },
     textAnchor: 'middle' as TextAnchor,
-    tickLine: { stroke: '#424D61', strokeWidth: 1 },
+    tickLine: { stroke: theme.colors.cyan[9], strokeWidth: 1 },
   },
   yAxisProps: {
     tick: {
-      fill: '#424D61',
+      fill: theme.colors.cyan[9],
       fontSize: 16,
     },
     textAnchor: 'end' as TextAnchor,
-    axisLine: { stroke: '#424D61', strokeWidth: 2 },
-    tickLine: { stroke: '#424D61', strokeWidth: 1 },
+    axisLine: { stroke: theme.colors.cyan[9], strokeWidth: 2 },
+    tickLine: { stroke: theme.colors.cyan[9], strokeWidth: 1 },
   },
 };
-

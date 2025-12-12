@@ -1,11 +1,10 @@
 import { DonutChart as MantineDonutChart } from '@mantine/charts';
-import { Box, Group } from '@mantine/core';
+import { Box } from '@mantine/core';
 import { Typography } from '@/components/UI/Typography/Typography';
-import { CHART_COLORS } from '@/theme';
-import { DonutChartPropTypes } from '../chart.types';
+import { CHART_COLORS, DonutProps } from '../chart.types';
 import { chartStyles } from './styles';
 
-export default function DountChart({ data }: DonutChartPropTypes) {
+export default function DountChart({ data, withToolTip = false }: DonutProps) {
   const graphData = data.map((item, i) => ({
     ...item,
     color: CHART_COLORS[i % CHART_COLORS.length],
@@ -13,7 +12,7 @@ export default function DountChart({ data }: DonutChartPropTypes) {
   return (
     <Box style={chartStyles.container}>
       <MantineDonutChart
-        withTooltip={false}
+        withTooltip={withToolTip}
         data={graphData}
         paddingAngle={chartStyles.paddingAngle}
         thickness={chartStyles.thickness}
@@ -21,14 +20,14 @@ export default function DountChart({ data }: DonutChartPropTypes) {
         strokeWidth={chartStyles.strokeWidth}
         strokeColor={chartStyles.strokeColor}
       />
-      <Box style={chartStyles.labelsContainer} mt='md'>
+      <div style={chartStyles.labelsContainer}>
         {graphData.map((item, i) => (
-          <Group key={item.name} gap={chartStyles.labelsGap}>
-            <Box w={10} h={10} style={chartStyles.labelColor(i)} />
+          <div key={item.name + i} style={chartStyles.labelsGap}>
+            <div style={chartStyles.labelColor(i)} />
             <Typography style={chartStyles.labelText}>{item.name}</Typography>
-          </Group>
+          </div>
         ))}
-      </Box>
+      </div>
     </Box>
   );
 }
