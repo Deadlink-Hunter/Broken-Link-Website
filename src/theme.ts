@@ -1,10 +1,4 @@
-import {
-  createTheme,
-  DEFAULT_THEME,
-  MantineColorsTuple,
-  MantineThemeOverride,
-  mergeMantineTheme,
-} from '@mantine/core';
+import { createTheme, DEFAULT_THEME, MantineColorsTuple, mergeMantineTheme } from '@mantine/core';
 
 const primary: MantineColorsTuple = [
   '#f1f5f9',
@@ -115,7 +109,7 @@ const themeOverride = createTheme({
     lg: '1.125rem',
     xl: '1.25rem',
     '2xl': '1.5rem',
-  } as const,
+  },
   defaultRadius: 'md',
   spacing: {
     xs: '2px',
@@ -126,6 +120,6 @@ const themeOverride = createTheme({
     '2xl': '64px',
   },
   breakpoints,
-}) satisfies MantineThemeOverride;
+});
 
 export const theme = mergeMantineTheme(DEFAULT_THEME, themeOverride);

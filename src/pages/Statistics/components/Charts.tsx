@@ -1,4 +1,3 @@
-import { Box } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import Chart from '@/components/Charts/Chart';
 import { ChartType, LineData } from '@/components/Charts/chart.types';
@@ -7,6 +6,7 @@ import { Typography } from '@/components/UI/Typography/Typography';
 import { theme } from '@/theme';
 import { graphsStyles } from './styles';
 
+// TODO - get the data from the server
 const donutData = [
   { name: 'Chrome', value: 68 },
   { name: 'Firefox', value: 10 },
@@ -29,7 +29,7 @@ const lineData = {
 export default function Charts() {
   const isMobileView = useMediaQuery(`(max-width: ${theme.breakpoints.lg})`);
   return (
-    <Box style={graphsStyles.containerDisplay(isMobileView)}>
+    <div style={graphsStyles.containerDisplay(isMobileView)}>
       <Card style={graphsStyles.cardStyles(isMobileView)}>
         <Typography style={graphsStyles.cardHeader}>Scan Activity Over Time</Typography>
         <Chart type={ChartType.Line} data={lineData} />
@@ -39,6 +39,6 @@ export default function Charts() {
         <Typography style={graphsStyles.cardHeader}>Link Types Distribution</Typography>
         <Chart type={ChartType.Donut} data={donutData} />
       </Card>
-    </Box>
+    </div>
   );
 }

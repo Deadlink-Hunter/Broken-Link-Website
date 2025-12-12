@@ -6,7 +6,7 @@ export const cardStyles = {
   default: {
     padding: '1rem',
     borderRadius: '0.5rem',
-    backgroundColor: colors.primary[5],
+    backgroundColor: colors.primary[7], // TODO - change back to 5
     boxShadow: `0 1px 3px ${colors.primary[1]}`,
     color: colors.cyan[0],
   },

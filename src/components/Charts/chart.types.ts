@@ -37,6 +37,7 @@ export interface DonutProps {
 }
 export interface LineProps {
   data: LineData;
+  withTooltip?: boolean;
 }
 export const CHART_COLORS = [
   theme.colors.accentCyan[4],

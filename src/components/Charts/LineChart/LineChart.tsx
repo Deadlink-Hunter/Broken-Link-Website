@@ -4,7 +4,7 @@ import { theme } from '@/theme';
 import { CHART_COLORS, CurveType, LineProps } from '../chart.types';
 import { chartStyles } from './styles';
 
-export default function LineChart({ data }: LineProps) {
+export default function LineChart({ data, withTooltip = false }: LineProps) {
   const isMobileView = useMediaQuery(`(max-width: ${theme.breakpoints.lg})`);
   const { xAxisKeys, lineValues } = data;
 
@@ -20,7 +20,7 @@ export default function LineChart({ data }: LineProps) {
   }));
   return (
     <MantineLineChart
-      h={chartStyles.height(isMobileView)}
+      h={isMobileView ? chartStyles.mobileView : chartStyles.desktopView}
       w={chartStyles.width}
       data={graphData}
       dataKey='xAxisKey'
@@ -28,7 +28,7 @@ export default function LineChart({ data }: LineProps) {
       gridProps={chartStyles.gridProps}
       xAxisProps={chartStyles.xAxisProps}
       yAxisProps={chartStyles.yAxisProps}
-      withTooltip={false}
+      withTooltip={withTooltip}
     />
   );
 }
