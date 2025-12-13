@@ -6,7 +6,7 @@ import { Typography } from '@/components/UI/Typography/Typography';
 import { theme } from '@/theme';
 import { graphsStyles } from './styles';
 
-// TODO - get the data from the server
+// TODO - replace hardcoded data with data from the server
 const donutData = [
   { name: 'Chrome', value: 68 },
   { name: 'Firefox', value: 10 },
