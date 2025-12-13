@@ -1,7 +1,6 @@
 import '@mantine/core/styles.css';
 
 import React from 'react';
-import type { Globals } from '@storybook/addons';
 import type { Preview } from '@storybook/react';
 import { MantineProvider, useMantineColorScheme } from '@mantine/core';
 import { theme } from '../src/theme';
@@ -11,9 +10,7 @@ const preview: Preview = {
     layout: 'fullscreen',
     options: {
       showPanel: false,
-      storySort: (a, b) => {
-        return a.title.localeCompare(b.title, undefined, { numeric: true });
-      },
+      storySort: (a, b) => a.title.localeCompare(b.title, undefined, { numeric: true }),
     },
   },
   globalTypes: {
@@ -32,16 +29,16 @@ const preview: Preview = {
 
 function ColorSchemeWrapper({
   children,
-  globals,
+  colorScheme,
 }: {
   children: React.ReactNode;
-  globals: Globals;
+  colorScheme: 'light' | 'dark';
 }) {
   const { setColorScheme } = useMantineColorScheme();
 
   React.useEffect(() => {
-    setColorScheme(globals.colorScheme);
-  }, [globals.colorScheme, setColorScheme]);
+    setColorScheme(colorScheme);
+  }, [colorScheme, setColorScheme]);
 
   return <>{children}</>;
 }
@@ -49,7 +46,7 @@ function ColorSchemeWrapper({
 export const decorators = [
   (Story, context) => (
     <MantineProvider theme={theme}>
-      <ColorSchemeWrapper globals={context.globals}>
+      <ColorSchemeWrapper colorScheme={context.globals.colorScheme}>
         <Story />
       </ColorSchemeWrapper>
     </MantineProvider>
