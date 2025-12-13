@@ -1,7 +1,8 @@
 import { DonutChart as MantineDonutChart } from '@mantine/charts';
 import { Box } from '@mantine/core';
 import { Typography } from '@/components/UI/Typography/Typography';
-import { CHART_COLORS, DonutProps } from '../chart.types';
+import { DonutProps } from '../chart.types';
+import { CHART_COLORS } from '../data';
 import { chartStyles } from './styles';
 
 export default function DountChart({ data, withToolTip = false }: DonutProps) {

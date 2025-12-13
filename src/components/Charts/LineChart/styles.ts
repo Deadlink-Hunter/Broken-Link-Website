@@ -5,7 +5,6 @@ type TextAnchor = 'middle' | 'inherit' | 'end' | 'start' | undefined;
 
 export const chartStyles = {
   width: '90%',
-  // height: (isMobileView: boolean) => (isMobileView ? rem(240) : rem(300)),
   mobileView: rem(240),
   desktopView: rem(300),
   gridProps: {

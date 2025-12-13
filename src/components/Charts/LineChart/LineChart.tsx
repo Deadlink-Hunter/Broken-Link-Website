@@ -1,7 +1,8 @@
 import { LineChart as MantineLineChart } from '@mantine/charts';
 import { useMediaQuery } from '@mantine/hooks';
 import { theme } from '@/theme';
-import { CHART_COLORS, CurveType, LineProps } from '../chart.types';
+import { CurveType, LineProps } from '../chart.types';
+import { CHART_COLORS } from '../data';
 import { chartStyles } from './styles';
 
 export default function LineChart({ data, withTooltip = false }: LineProps) {

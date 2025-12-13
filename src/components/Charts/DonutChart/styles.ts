@@ -1,6 +1,6 @@
 import { CSSProperties } from 'react';
 import { theme } from '@/theme';
-import { CHART_COLORS } from '../chart.types';
+import { CHART_COLORS } from '../data';
 
 type StyleFunction =
   | ((...args: number[]) => CSSProperties)
