@@ -2,11 +2,11 @@ import { IconBolt, IconBrandGithub, IconSearch, IconShield } from '@tabler/icons
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { useHover } from '@mantine/hooks';
+import { useViewportBreakpoints } from '@/components/Hooks/useViewportBreakpoints';
 import { Button } from '@/components/UI/Button/Button';
 import { Typography } from '@/components/UI/Typography/Typography';
 import { HERO_CONSTANTS } from '@/constants/hero.consts';
 import { ROUTES } from '@/constants/routes.consts';
-import { useViewportBreakpoints } from '@/components/Hooks/useViewportBreakpoints';
 import { heroStyles } from './styles';
 
 export const Hero = () => {
