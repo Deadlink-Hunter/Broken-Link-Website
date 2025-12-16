@@ -239,9 +239,9 @@ export const heroStyles = {
     color: theme.white,
   } as CSSProperties,
 
-  statistics: (isMobileView: boolean, isTabletView: boolean): CSSProperties => ({
+  statistics: (isMobileView: boolean): CSSProperties => ({
     display: 'flex',
-    flexDirection: isMobileView || isTabletView ? ('column' as const) : ('row' as const),
+    flexDirection: isMobileView ? ('column' as const) : ('row' as const),
     gap: isMobileView ? `calc(${theme.spacing.xl} * 2)` : `calc(${theme.spacing['2xl']} * 3)`,
     marginTop: isMobileView ? theme.spacing.md : `calc(${theme.spacing['2xl']} * 1.5)`,
     flexWrap: 'nowrap' as const,

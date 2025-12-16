@@ -1,19 +1,18 @@
 import { IconBolt, IconBrandGithub, IconSearch, IconShield } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-import { useHover, useViewportSize } from '@mantine/hooks';
+import { useHover } from '@mantine/hooks';
 import { Button } from '@/components/UI/Button/Button';
 import { Typography } from '@/components/UI/Typography/Typography';
 import { HERO_CONSTANTS } from '@/constants/hero.consts';
 import { ROUTES } from '@/constants/routes.consts';
+import { useViewportBreakpoints } from '@/components/Hooks/useViewportBreakpoints';
 import { heroStyles } from './styles';
 
 export const Hero = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const { width } = useViewportSize();
-  const isMobileView = width < HERO_CONSTANTS.BREAKPOINTS.MOBILE;
-  const isTabletView = width < HERO_CONSTANTS.BREAKPOINTS.TABLET;
+  const { isMobileView } = useViewportBreakpoints();
   const { hovered: githubHovered, ref: githubRef } = useHover();
   const { hovered: startHovered, ref: startRef } = useHover();
 
@@ -88,7 +87,7 @@ export const Hero = () => {
           </a>
         </div>
 
-        <div style={heroStyles.statistics(isMobileView, isTabletView)}>
+        <div style={heroStyles.statistics(isMobileView)}>
           <div style={heroStyles.statItem(isMobileView)}>
             <Typography variant='primary' style={heroStyles.statNumberCyan(isMobileView)}>
               {HERO_CONSTANTS.STATISTICS.LINKS_SCANNED}
