@@ -10,13 +10,17 @@ const hexToRgba = (hex: string, alpha: number): string => {
   return `rgba(${r}, ${g}, ${b}, ${alpha})`;
 };
 
+const iconMinSizeMobile = theme.spacing.lg; 
+const iconMinSizeDesktop = '24px'; 
+const iconMaxSize = '48px'; 
+
 const getTaglineIconBase = (isMobileView: boolean): CSSProperties => ({
   width: isMobileView
-    ? `clamp(${theme.spacing.lg}, 4vw, calc(${theme.spacing.xl} * 1.5))`
-    : `clamp(calc(${theme.spacing.xl} * 0.75), 2.5vw, calc(${theme.spacing.xl} * 1.5))`,
+    ? `clamp(${iconMinSizeMobile}, 4vw, ${iconMaxSize})`
+    : `clamp(${iconMinSizeDesktop}, 2.5vw, ${iconMaxSize})`,
   height: isMobileView
-    ? `clamp(${theme.spacing.lg}, 4vw, calc(${theme.spacing.xl} * 1.5))`
-    : `clamp(calc(${theme.spacing.xl} * 0.75), 2.5vw, calc(${theme.spacing.xl} * 1.5))`,
+    ? `clamp(${iconMinSizeMobile}, 4vw, ${iconMaxSize})`
+    : `clamp(${iconMinSizeDesktop}, 2.5vw, ${iconMaxSize})`,
   flexShrink: 0,
 });
 
