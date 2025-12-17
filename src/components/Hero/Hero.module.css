@@ -1,0 +1,19 @@
+.startButton {
+  background: linear-gradient(90deg, #22d3ee 0%, #8b5cf6 100%);
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.startButton:hover {
+  background: linear-gradient(90deg, #06b6d4 0%, #6d28d9 100%);
+}
+
+.githubButton {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+.githubButton:hover {
+  background: #0f172a;
+  color: #ffffff;
+}
