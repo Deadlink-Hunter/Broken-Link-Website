@@ -10,9 +10,9 @@ const hexToRgba = (hex: string, alpha: number): string => {
   return `rgba(${r}, ${g}, ${b}, ${alpha})`;
 };
 
-const iconMinSizeMobile = theme.spacing.lg; 
-const iconMinSizeDesktop = '24px'; 
-const iconMaxSize = '48px'; 
+const iconMinSizeMobile = theme.spacing.lg;
+const iconMinSizeDesktop = '24px';
+const iconMaxSize = '48px';
 
 const getTaglineIconBase = (isMobileView: boolean): CSSProperties => ({
   width: isMobileView
