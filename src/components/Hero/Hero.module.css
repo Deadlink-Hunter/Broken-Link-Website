@@ -7,7 +7,7 @@
   background: linear-gradient(135deg, var(--mantine-color-primary-9) 0%, var(--mantine-color-primary-8) 50%, var(--mantine-color-primary-7) 100%);
   overflow: hidden;
   font-family: var(--mantine-font-family);
-  padding: clamp(var(--mantine-spacing-md), 5vw, calc(var(--mantine-spacing-xl) * 2));
+  padding: calc(var(--mantine-spacing-xl) * 2);
 }
 
 .glowTopLeft {
@@ -52,24 +52,24 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  max-width: clamp(90%, 80vw, 1400px);
-  gap: clamp(var(--mantine-spacing-md), 4vw, calc(var(--mantine-spacing-xl) * 2));
-  padding: 0 clamp(var(--mantine-spacing-xs), 2vw, var(--mantine-spacing-xl));
+  width: 1400px;
+  gap: calc(var(--mantine-spacing-xl) * 2);
+  padding: 0 var(--mantine-spacing-xl);
 }
 
 .titleContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: clamp(var(--mantine-spacing-xs), 1vw, var(--mantine-spacing-md));
+  gap: var(--mantine-spacing-md);
 }
 
 .title {
   font-weight: 900;
   line-height: 1.1;
   margin: 0;
-  font-size: clamp(4rem, 10vw, 7rem);
-  letter-spacing: clamp(-0.02em, -0.1vw, -0.05em);
+  font-size: 7rem;
+  letter-spacing: -0.02em;
 }
 
 .titleGradient {
@@ -88,19 +88,19 @@
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
-  gap: clamp(var(--mantine-spacing-sm), 2vw, var(--mantine-spacing-xl));
+  gap: var(--mantine-spacing-xl);
 }
 
 .taglineItem {
   display: flex;
   align-items: center;
-  gap: clamp(var(--mantine-spacing-xs), 1.5vw, var(--mantine-spacing-lg));
+  gap: var(--mantine-spacing-lg);
 }
 
 .taglineIconCyan,
 .taglineIconPurple {
-  width: clamp(var(--mantine-spacing-iconDesktop), 2.5vw, var(--mantine-spacing-iconMax));
-  height: clamp(var(--mantine-spacing-iconDesktop), 2.5vw, var(--mantine-spacing-iconMax));
+  width: var(--mantine-spacing-xl);
+  height: var(--mantine-spacing-xl);
   flex-shrink: 0;
 }
 
@@ -114,15 +114,15 @@
 
 .taglineText {
   font-family: var(--mantine-font-family);
-  font-size: clamp(var(--mantine-font-size-md), 3vw, calc(var(--mantine-font-size-2xl) * 1.5));
-  padding: 0 clamp(var(--mantine-spacing-xs), 1.5vw, var(--mantine-spacing-md));
+  font-size: calc(var(--mantine-font-size-2xl) * 1.5);
+  padding: 0 var(--mantine-spacing-md);
   font-weight: 500;
 }
 
 .taglineSeparator {
   color: var(--mantine-color-cyan-4);
   font-weight: 900;
-  font-size: clamp(var(--mantine-font-size-lg), 2.5vw, var(--mantine-font-size-2xl));
+  font-size: var(--mantine-font-size-2xl);
 }
 
 .description {
@@ -130,11 +130,11 @@
   margin: 0;
   font-weight: 500;
   text-align: center;
-  max-width: clamp(90%, 60vw, 900px);
-  font-size: clamp(var(--mantine-font-size-lg), 2.5vw, calc(var(--mantine-font-size-2xl) * 1.25));
-  line-height: clamp(1.6, 0.1vw + 1.5, 2);
-  letter-spacing: clamp(0.01em, 0.1vw, 0.03em);
-  padding: 0 clamp(var(--mantine-spacing-sm), 2vw, var(--mantine-spacing-xl));
+  max-width: 900px;
+  font-size: calc(var(--mantine-font-size-2xl) * 1.25);
+  line-height: 2;
+  letter-spacing: 0.03em;
+  padding: 0 var(--mantine-spacing-xl);
 }
 
 .highlight {
@@ -148,9 +148,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  gap: clamp(var(--mantine-spacing-lg), 4vw, calc(var(--mantine-spacing-xl) * 2));
-  margin-top: clamp(var(--mantine-spacing-xl), 2vw, var(--mantine-spacing-xl));
-  margin-bottom: clamp(var(--mantine-spacing-xl), 2vw, var(--mantine-spacing-xl));
+  gap: calc(var(--mantine-spacing-xl) * 2);
 }
 
 .startButton,
@@ -165,6 +163,8 @@
   box-sizing: border-box;
   font-size: var(--mantine-font-size-xl);
   cursor: pointer;
+  width: calc(var(--mantine-spacing-3xl) * 4.5);
+  height: calc(var(--mantine-spacing-xl) * 1.7);
 }
 
 .startButton {
@@ -177,18 +177,14 @@
 .startButton:hover {
   background: linear-gradient(90deg, var(--mantine-color-cyan-5) 0%, var(--mantine-color-purple-7) 100%);
 }
-a {
+.githubButton a {
   color: var(--mantine-color-black); 
   text-decoration: none;    
 }
 
-a:hover {
-    color: var(--mantine-color-white);
-}
 .githubButton {
   background: var(--mantine-color-white);
   color: var(--mantine-color-primary-7);
-  gap: var(--mantine-spacing-md);
   text-decoration: none;
   box-shadow: 0 var(--mantine-spacing-sm) var(--mantine-spacing-lg) color-mix(in srgb, var(--mantine-color-primary-8) 20%, transparent);
 }
@@ -198,10 +194,13 @@ a:hover {
   color: var(--mantine-color-white);
 }
 
+.githubButton:hover a {
+  color: var(--mantine-color-white);
+}
+
 .buttonIcon {
-  width: clamp(var(--mantine-spacing-iconDesktop), 2.5vw, var(--mantine-spacing-iconMax));
-  height: clamp(var(--mantine-spacing-iconDesktop), 2.5vw, var(--mantine-spacing-iconMax));
-  flex-shrink: 0;
+  width: var(--mantine-fontSizes-xl);
+  height: var(--mantine-fontSizes-xl);
 }
 
 .statistics {
@@ -213,8 +212,8 @@ a:hover {
   flex-direction: row;
   flex-wrap: nowrap;
   gap: calc(var(--mantine-spacing-2xl) * 3);
-  margin-top: calc(var(--mantine-spacing-2xl) * 1.5);
-  max-width: clamp(90%, 60vw, 900px);
+  margin-top: var(--mantine-spacing-2xl);
+  max-width: 900px;
 }
 
 .statItem {
@@ -223,20 +222,20 @@ a:hover {
   align-items: center;
   flex-shrink: 0;
   min-width: fit-content;
-  gap: clamp(var(--mantine-spacing-sm), 1.5vw, var(--mantine-spacing-lg));
+  gap: var(--mantine-spacing-lg);
 }
 
 .statNumber {
   font-weight: 700;
   line-height: 1;
   margin: 0;
-  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-size: 3.5rem;
 }
 
 .statLabel {
   color: var(--mantine-color-primary-2);
   margin: 0;
-  font-size: clamp(var(--mantine-font-size-md), 2vw, var(--mantine-font-size-xl));
+  font-size: var(--mantine-font-size-xl);
 }
 
 @media (max-width: $mantine-breakpoint-md) {
@@ -255,7 +254,7 @@ a:hover {
   }
 
   .title {
-    font-size: clamp(4rem, 12vw, 7rem);
+    font-size: 4rem;
     letter-spacing: -0.02em;
   }
 
@@ -269,23 +268,23 @@ a:hover {
 
   .taglineIconCyan,
   .taglineIconPurple {
-    width: clamp(var(--mantine-spacing-lg), 2.5vw, var(--mantine-spacing-iconMax));
-    height: clamp(var(--mantine-spacing-lg), 2.5vw, var(--mantine-spacing-iconMax));
+    width: var(--mantine-fontSizes-xl);
+    height: var(--mantine-fontSizes-xl);
   }
 
   .taglineText {
-    font-size: clamp(var(--mantine-font-size-lg), 2.5vw, var(--mantine-font-size-2xl));
+    font-size: var(--mantine-font-size-lg);
     padding: 0 var(--mantine-spacing-lg);
     font-weight: 600;
   }
 
   .taglineSeparator {
-    font-size: clamp(var(--mantine-font-size-lg), 2vw, var(--mantine-font-size-xl));
+    font-size: var(--mantine-font-size-lg);
   }
 
   .description {
     max-width: 90%;
-    font-size: clamp(var(--mantine-font-size-xl), 2.5vw, var(--mantine-font-size-2xl));
+    font-size: var(--mantine-font-size-xl);
     line-height: 1.8;
     letter-spacing: 0.02em;
     padding: 0 var(--mantine-spacing-md);
@@ -305,10 +304,6 @@ a:hover {
     font-size: var(--mantine-font-size-lg);
   }
 
-  .buttonIcon {
-    width: clamp(var(--mantine-spacing-lg), 2.5vw, var(--mantine-spacing-iconMax));
-    height: clamp(var(--mantine-spacing-lg), 2.5vw, var(--mantine-spacing-iconMax));
-  }
 
   .statistics {
     flex-direction: column;
@@ -323,7 +318,7 @@ a:hover {
   }
 
   .statNumber {
-    font-size: clamp(2.25rem, 6vw, 3rem);
+    font-size: calc(var(--mantine-font-size-2xl) * 1.5);
     display: block;
   }
 
