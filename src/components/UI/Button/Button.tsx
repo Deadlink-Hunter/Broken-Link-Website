@@ -1,5 +1,5 @@
 import React, { CSSProperties } from 'react';
-import { ButtonProps, Button as MantineButton } from '@mantine/core';
+import { ButtonProps, Button as MantineButton, MantineStyleProp } from '@mantine/core';
 import { buttonVariants } from './styles';
 
 interface SharedButtonProps extends Omit<ButtonProps, 'style'> {
@@ -10,6 +10,8 @@ interface SharedButtonProps extends Omit<ButtonProps, 'style'> {
 
 export const Button = ({ style = {}, variant = 'primary', ...props }: SharedButtonProps) => {
   const variantStyle = buttonVariants[variant];
+  // TODO: Check why need this line?(add color withe in styles.ts)
+  const mergedStyle: MantineStyleProp = { ...variantStyle, ...style } as MantineStyleProp;
 
-  return <MantineButton style={{ ...variantStyle, ...style }} {...props} />;
+  return <MantineButton style={mergedStyle} {...props} />;
 };

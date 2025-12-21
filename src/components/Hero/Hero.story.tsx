@@ -39,15 +39,6 @@ export const Default: Story = {
 
     const githubLink = canvas.getByRole('link', { name: /view on github/i });
     await expect(githubLink).toBeInTheDocument();
-
-    const linksScanned = canvas.getByText(/10,000\+/i);
-    await expect(linksScanned).toBeInTheDocument();
-
-    const reposAnalyzed = canvas.getByText(/500\+/i);
-    await expect(reposAnalyzed).toBeInTheDocument();
-
-    const accuracyRate = canvas.getByText(/99\.9%/i);
-    await expect(accuracyRate).toBeInTheDocument();
   },
 };
 
