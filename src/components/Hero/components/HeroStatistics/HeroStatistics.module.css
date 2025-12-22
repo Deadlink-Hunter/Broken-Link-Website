@@ -1,0 +1,57 @@
+.statistics {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: calc(var(--mantine-spacing-2xl) * 2);
+  margin-top: var(--mantine-spacing-xl);
+  width: 700px;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--mantine-spacing-md);
+}
+
+.statNumber,
+.statLabel {
+  margin: 0;
+}
+
+.statNumber {
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.statLabel {
+  color: var(--mantine-color-primary-2);
+  font-size: var(--mantine-font-size-lg);
+}
+
+@media (max-width: $mantine-breakpoint-md) {
+  .statistics {
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: var(--mantine-spacing-xl);
+    margin-top: var(--mantine-spacing-md);
+    width: 100%;
+  }
+
+  .statItem {
+    gap: var(--mantine-spacing-xs);
+  }
+
+  .statNumber {
+    font-size: calc(var(--mantine-font-size-2xl) * 1.5);
+    display: block;
+  }
+
+  .statLabel {
+    font-size: var(--mantine-font-size-lg);
+  }
+}
+
