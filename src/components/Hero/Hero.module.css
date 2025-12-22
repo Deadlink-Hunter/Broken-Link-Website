@@ -7,53 +7,46 @@
   background: linear-gradient(135deg, var(--mantine-color-primary-9) 0%, var(--mantine-color-primary-8) 50%, var(--mantine-color-primary-7) 100%);
   overflow: hidden;
   font-family: var(--mantine-font-family);
-  padding: calc(var(--mantine-spacing-xl) * 2);
+  padding: var(--mantine-spacing-2xl);
+}
+
+.glowTopLeft,
+.glowBottomRight {
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(64px);
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--glow-color) 20%, transparent) 0%,
+    color-mix(in srgb, var(--glow-color) 10%, transparent) 40%,
+    transparent 70%
+  );
 }
 
 .glowTopLeft {
-  position: absolute;
   top: -20%;
   left: -20%;
-  width: 60%;
-  height: 60%;
-  background: radial-gradient(
-    circle,
-    color-mix(in srgb, var(--mantine-color-cyan-4) 20%, transparent) 0%,
-    color-mix(in srgb, var(--mantine-color-cyan-4) 10%, transparent) 40%,
-    transparent 70%
-  );
-  pointer-events: none;
-  z-index: 0;
-  filter: blur(var(--mantine-spacing-2xl));
+  --glow-color: var(--mantine-color-cyan-4);
 }
 
 .glowBottomRight {
-  position: absolute;
   bottom: -20%;
   right: -20%;
-  width: 60%;
-  height: 60%;
-  background: radial-gradient(
-    circle,
-    color-mix(in srgb, var(--mantine-color-purple-5) 20%, transparent) 0%,
-    color-mix(in srgb, var(--mantine-color-purple-5) 10%, transparent) 40%,
-    transparent 70%
-  );
-  pointer-events: none;
-  z-index: 0;
-  filter: blur(var(--mantine-spacing-2xl));
+  --glow-color: var(--mantine-color-purple-5);
 }
 
 .content {
   position: relative;
   z-index: 1;
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   width: 1400px;
-  gap: calc(var(--mantine-spacing-xl) * 2);
+  gap: var(--mantine-spacing-2xl);
   padding: 0 var(--mantine-spacing-xl);
 }
 
@@ -99,9 +92,8 @@
 
 .taglineIconCyan,
 .taglineIconPurple {
-  width: var(--mantine-spacing-xl);
-  height: var(--mantine-spacing-xl);
-  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
 }
 
 .taglineIconCyan {
@@ -129,8 +121,8 @@
   font-family: var(--mantine-font-family);
   margin: 0;
   font-weight: 500;
-  text-align: center;
-  max-width: 900px;
+  /* text-align: center; */
+  width: 900px;
   font-size: calc(var(--mantine-font-size-2xl) * 1.25);
   line-height: 2;
   letter-spacing: 0.03em;
@@ -148,7 +140,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  gap: calc(var(--mantine-spacing-xl) * 2);
+  gap: var(--mantine-spacing-2xl);
 }
 
 .startButton,
@@ -156,22 +148,26 @@
   align-items: center;
   border: none;
   font-weight: 600;
+  font-size: var(--mantine-font-size-xl);
+  width: 288px;
+  height: 54px;
+  /* TODO: Check why we are using 2 different spacing variables here? */
   padding: var(--mantine-spacing-md) var(--mantine-spacing-xl);
-  border-radius: var(--mantine-spacing-md);
+  border-radius: 8px;
   transition: all 0.2s ease;
   white-space: nowrap;
   box-sizing: border-box;
-  font-size: var(--mantine-font-size-xl);
   cursor: pointer;
-  width: calc(var(--mantine-spacing-3xl) * 4.5);
-  height: calc(var(--mantine-spacing-xl) * 1.7);
 }
 
 .startButton {
   background: linear-gradient(90deg, var(--mantine-color-cyan-4) 0%, var(--mantine-color-purple-5) 100%);
   background-color: transparent;
   color: var(--mantine-color-white);
-  box-shadow: 0 var(--mantine-spacing-sm) var(--mantine-spacing-lg) color-mix(in srgb, var(--mantine-color-cyan-4) 30%, transparent);
+  /* TODO: Check if spacing is correct here*/
+  box-shadow: 0 var(--mantine-spacing-sm)
+                var(--mantine-spacing-lg) 
+                color-mix(in srgb, var(--mantine-color-cyan-4) 30%, transparent);
 }
 
 .startButton:hover {
@@ -186,7 +182,10 @@
   background: var(--mantine-color-white);
   color: var(--mantine-color-primary-7);
   text-decoration: none;
-  box-shadow: 0 var(--mantine-spacing-sm) var(--mantine-spacing-lg) color-mix(in srgb, var(--mantine-color-primary-8) 20%, transparent);
+  /* TODO: Check if spacing is correct here*/
+  box-shadow: 0 var(--mantine-spacing-sm)
+                var(--mantine-spacing-lg) 
+                color-mix(in srgb, var(--mantine-color-primary-8) 20%, transparent);
 }
 
 .githubButton:hover {
@@ -199,42 +198,41 @@
 }
 
 .buttonIcon {
-  width: var(--mantine-fontSizes-xl);
-  height: var(--mantine-fontSizes-xl);
+  width: 24px;
+  height: 24px;
 }
 
 .statistics {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   overflow: visible;
   flex-direction: row;
   flex-wrap: nowrap;
   gap: calc(var(--mantine-spacing-2xl) * 3);
   margin-top: var(--mantine-spacing-2xl);
-  max-width: 900px;
+  width: 900px;
 }
 
 .statItem {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-shrink: 0;
-  min-width: fit-content;
   gap: var(--mantine-spacing-lg);
+}
+
+.statNumber,
+.statLabel {
+  margin: 0;
 }
 
 .statNumber {
   font-weight: 700;
-  line-height: 1;
-  margin: 0;
   font-size: 3.5rem;
 }
 
 .statLabel {
   color: var(--mantine-color-primary-2);
-  margin: 0;
   font-size: var(--mantine-font-size-xl);
 }
 
@@ -244,7 +242,7 @@
   }
 
   .content {
-    max-width: 100%;
+    width: 100%;
     gap: var(--mantine-spacing-xl);
     padding: 0 var(--mantine-spacing-sm);
   }
@@ -255,7 +253,6 @@
 
   .title {
     font-size: 4rem;
-    letter-spacing: -0.02em;
   }
 
   .tagline {
@@ -268,8 +265,8 @@
 
   .taglineIconCyan,
   .taglineIconPurple {
-    width: var(--mantine-fontSizes-xl);
-    height: var(--mantine-fontSizes-xl);
+    width: 24px;
+    height: 24px;
   }
 
   .taglineText {
@@ -283,34 +280,32 @@
   }
 
   .description {
-    max-width: 90%;
+    width: 95%;
     font-size: var(--mantine-font-size-xl);
-    line-height: 1.8;
-    letter-spacing: 0.02em;
-    padding: 0 var(--mantine-spacing-md);
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    padding: 0 var(--mantine-spacing-sm);
   }
 
   .buttons {
-    gap: var(--mantine-spacing-xl);
-    margin-top: var(--mantine-spacing-xl);
-    margin-bottom: var(--mantine-spacing-xl);
+    gap: var(--mantine-spacing-lg);
+    margin-top: var(--mantine-spacing-lg);
+    margin-bottom: var(--mantine-spacing-md);
   }
 
-  .startButton {
-    font-size: var(--mantine-font-size-lg);
-  }
-
+  .startButton,
   .githubButton {
+    width: 224px;
+    height: 40px;
     font-size: var(--mantine-font-size-lg);
   }
-
 
   .statistics {
     flex-direction: column;
     flex-wrap: wrap;
-    gap: calc(var(--mantine-spacing-xl) * 2);
+    gap: var(--mantine-spacing-xl);
     margin-top: var(--mantine-spacing-md);
-    max-width: 100%;
+    width: 100%;
   }
 
   .statItem {
