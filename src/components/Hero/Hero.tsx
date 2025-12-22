@@ -1,7 +1,7 @@
-import { HeroTitle } from './components/HeroTitle/HeroTitle';
-import { HeroDescription } from './components/HeroDescription/HeroDescription';
 import { HeroButtons } from './components/HeroButtons/HeroButtons';
+import { HeroDescription } from './components/HeroDescription/HeroDescription';
 import { HeroStatistics } from './components/HeroStatistics/HeroStatistics';
+import { HeroTitle } from './components/HeroTitle/HeroTitle';
 import classes from './Hero.module.css';
 
 export const Hero = () => {
