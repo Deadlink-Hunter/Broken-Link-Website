@@ -1,6 +1,5 @@
 .container {
   position: relative;
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,8 +15,7 @@
   width: 60%;
   height: 60%;
   pointer-events: none;
-  z-index: 0;
-  filter: blur(64px);
+  filter: blur(4rem);
   background: radial-gradient(
     circle,
     color-mix(in srgb, var(--glow-color) 20%, transparent) 0%,
@@ -43,12 +41,10 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 900px;
   gap: var(--mantine-spacing-xl);
-  padding-inline: var(--mantine-spacing-lg);
 }
 
-@media (max-width: $mantine-breakpoint-md) {
+@media (max-width: 64em) {
   .container {
     padding: var(--mantine-spacing-md);
   }

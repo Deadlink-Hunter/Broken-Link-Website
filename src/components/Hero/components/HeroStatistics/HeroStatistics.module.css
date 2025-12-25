@@ -5,7 +5,6 @@
   flex-wrap: nowrap;
   gap: calc(var(--mantine-spacing-2xl) * 2);
   margin-top: var(--mantine-spacing-xl);
-  width: 700px;
 }
 
 .statItem {
@@ -17,15 +16,15 @@
 
 .statNumber {
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 .statLabel {
   color: var(--mantine-color-primary-2);
-  font-size: var(--mantine-font-size-lg);
+  font-size: var(--mantine-font-size-md);
 }
 
-@media (max-width: $mantine-breakpoint-md) {
+@media (max-width: 64em) {
   .statistics {
     flex-direction: column;
     gap: var(--mantine-spacing-xl);
@@ -38,7 +37,6 @@
 
   .statNumber {
     font-size: calc(var(--mantine-font-size-2xl) * 1.5);
-    display: block;
   }
 
   .statLabel {

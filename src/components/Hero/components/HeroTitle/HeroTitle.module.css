@@ -2,20 +2,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--mantine-spacing-xs);
 }
 
 .title {
   font-weight: 900;
   line-height: 1.1;
-  margin: 0;
-  font-size: 7rem;
-  letter-spacing: -0.02em;
+  font-size: 5.5rem;
+  letter-spacing: -0.04em;
 }
 
 .titleGradient {
   background: linear-gradient(90deg, var(--mantine-color-cyan-4) 0%, var(--mantine-color-purple-5) 100%);
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
@@ -28,7 +25,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: nowrap;
   gap: var(--mantine-spacing-lg);
   margin-top: var(--mantine-spacing-md);
 }
@@ -41,8 +37,8 @@
 
 .taglineIconCyan,
 .taglineIconPurple {
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .taglineIconCyan {
@@ -55,7 +51,7 @@
 
 .taglineText {
   font-family: var(--mantine-font-family);
-  font-size: var(--mantine-font-size-xl);
+  font-size: var(--mantine-font-size-lg);
   padding-inline: var(--mantine-spacing-sm);
   font-weight: 600;
 }
@@ -63,10 +59,10 @@
 .taglineSeparator {
   color: var(--mantine-color-cyan-4);
   font-weight: 900;
-  font-size: var(--mantine-font-size-xl);
+  font-size: var(--mantine-font-size-lg);
 }
 
-@media (max-width: $mantine-breakpoint-md) {
+@media (max-width: 64em) {
   .titleContainer {
     gap: var(--mantine-spacing-xs);
   }

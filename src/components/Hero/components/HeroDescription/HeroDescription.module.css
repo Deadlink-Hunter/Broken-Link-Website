@@ -1,9 +1,7 @@
 .description {
   font-family: var(--mantine-font-family);
-  margin: 0;
   font-weight: 500;
-  width: 850px;
-  font-size: var(--mantine-font-size-2xl);
+  font-size: var(--mantine-font-size-xl);
   line-height: 1.75;
   letter-spacing: 0.02em;
   padding-inline: var(--mantine-spacing-xl);
@@ -14,9 +12,8 @@
   font-weight: 600;
 }
 
-@media (max-width: $mantine-breakpoint-md) {
+@media (max-width: 64em) {
   .description {
-    width: 95%;
     font-size: var(--mantine-font-size-xl);
     line-height: 1.5;
     letter-spacing: 0.01em;

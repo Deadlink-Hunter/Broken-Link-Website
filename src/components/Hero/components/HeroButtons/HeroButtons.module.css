@@ -3,7 +3,6 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 100%;
   gap: var(--mantine-spacing-xl);
   margin-top: var(--mantine-spacing-md);
 }
@@ -13,11 +12,11 @@
   align-items: center;
   border: none;
   font-weight: 600;
-  font-size: var(--mantine-font-size-lg);
-  width: 240px;
-  height: 48px;
+  font-size: var(--mantine-font-size-md);
+  width: 13.75rem;
+  height: 2.5rem;
   padding: var(--mantine-spacing-md) var(--mantine-spacing-lg);
-  border-radius: 12px;
+  border-radius: 0.75rem;
 }
 
 .startButton {
@@ -62,22 +61,20 @@
 }
 
 .buttonIcon {
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
-@media (max-width: $mantine-breakpoint-md) {
+@media (max-width: 64em) {
   .buttons {
     flex-direction: column;
-    gap: var(--mantine-spacing-xl);
+    gap: var(--mantine-spacing-lg);
     margin-top: var(--mantine-spacing-lg);
     margin-bottom: var(--mantine-spacing-md);
   }
 
   .startButton,
   .githubButton {
-    width: 270px;
-    height: 48px;
     font-size: var(--mantine-font-size-lg);
   }
   .githubButton {
