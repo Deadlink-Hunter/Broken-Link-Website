@@ -22,6 +22,30 @@
       "description": "Completely open source and community-driven. Contribute, customize, and extend to fit your project's needs."
     }
   },
+  "hero": {
+    "title": {
+      "deadlink": "Deadlink",
+      "hunter": "Hunter"
+    },
+    "tagline": {
+      "openSource": "Open Source",
+      "lightningFast": "Lightning Fast"
+    },
+    "description": {
+      "part1": "Eliminate broken links from your GitHub repositories with",
+      "highlight": "precision scanning",
+      "part2": "and comprehensive reporting."
+    },
+    "buttons": {
+      "startScanning": "Start Scanning",
+      "viewOnGitHub": "View on GitHub"
+    },
+    "statistics": {
+      "linksScanned": "Links Scanned",
+      "reposAnalyzed": "Repos Analyzed",
+      "accuracyRate": "Accuracy Rate"
+    }
+  },
   "footer": {
     "header": "Deadlink-Hunter",
     "about": "Open-source tool for finding and eliminating broken links in GitHub repositories. Built with ❤️ for the developer community.",

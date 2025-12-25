@@ -6,6 +6,9 @@ export const buttonVariants = {
   primary: {
     backgroundColor: colors.primary[5],
   },
+  white: {
+    backgroundColor: colors.white,
+  },
   secondary: {
     backgroundColor: colors.purple[5],
   },

@@ -1,0 +1,23 @@
+.description {
+  font-family: var(--mantine-font-family);
+  font-weight: 500;
+  font-size: var(--mantine-font-size-xl);
+  line-height: 1.75;
+  letter-spacing: 0.02em;
+  padding-inline: var(--mantine-spacing-xl);
+}
+
+.highlight {
+  color: var(--mantine-color-cyan-4);
+  font-weight: 600;
+}
+
+@media (max-width: 64em) {
+  .description {
+    font-size: var(--mantine-font-size-xl);
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    padding-inline: var(--mantine-spacing-sm);
+  }
+}
+
