@@ -18,10 +18,6 @@
   height: 48px;
   padding: var(--mantine-spacing-md) var(--mantine-spacing-lg);
   border-radius: 12px;
-  transition: all 0.2s ease;
-  white-space: nowrap;
-  box-sizing: border-box;
-  cursor: pointer;
 }
 
 .startButton {

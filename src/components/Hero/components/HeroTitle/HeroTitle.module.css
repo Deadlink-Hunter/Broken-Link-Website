@@ -56,7 +56,7 @@
 .taglineText {
   font-family: var(--mantine-font-family);
   font-size: var(--mantine-font-size-xl);
-  padding: 0 var(--mantine-spacing-sm);
+  padding-inline: var(--mantine-spacing-sm);
   font-weight: 600;
 }
 
@@ -83,15 +83,9 @@
     gap: var(--mantine-spacing-md);
   }
 
-  .taglineIconCyan,
-  .taglineIconPurple {
-    width: 24px;
-    height: 24px;
-  }
-
   .taglineText {
     font-size: var(--mantine-font-size-lg);
-    padding: 0 var(--mantine-spacing-lg);
+    padding-inline: var(--mantine-spacing-lg);
     font-weight: 600;
   }
 

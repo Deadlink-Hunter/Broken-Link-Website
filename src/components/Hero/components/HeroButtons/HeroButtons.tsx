@@ -10,15 +10,14 @@ export const HeroButtons = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
-  const handleStartScanning = () => {
+  const handleScanButtonPressed = () => {
     navigate(ROUTES.SCANNER);
   };
 
   return (
     <div className={classes.buttons}>
       <Button
-        variant='primary'
-        onClick={handleStartScanning}
+        onClick={handleScanButtonPressed}
         className={classes.startButton}
         leftSection={<IconSearch className={classes.buttonIcon} />}
       >

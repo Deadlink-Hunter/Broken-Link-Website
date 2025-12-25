@@ -6,7 +6,7 @@
   font-size: var(--mantine-font-size-2xl);
   line-height: 1.75;
   letter-spacing: 0.02em;
-  padding: 0 var(--mantine-spacing-xl);
+  padding-inline: var(--mantine-spacing-xl);
 }
 
 .highlight {
@@ -20,7 +20,7 @@
     font-size: var(--mantine-font-size-xl);
     line-height: 1.5;
     letter-spacing: 0.01em;
-    padding: 0 var(--mantine-spacing-sm);
+    padding-inline: var(--mantine-spacing-sm);
   }
 }
 
