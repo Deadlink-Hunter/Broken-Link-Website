@@ -5,7 +5,10 @@ const colors = theme.colors;
 
 export const typographyVariants: Record<string, TypographyVariant> = {
   primary: { color: colors.primary[5] },
-  secondary: { color: colors.purple[5] },
+  secondary: { color: colors.gray[5] },
+  tertiary: { color: colors.gray[4] },
+  cyan: { color: colors.cyan[5] },
+  purple: { color: colors.purple[5] },
   success: { color: colors.success[5] },
   warning: { color: colors.warning[5] },
   error: { color: colors.error[5] },
