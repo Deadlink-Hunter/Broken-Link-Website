@@ -43,7 +43,7 @@ In order to see the ui log in.
 
 To fully use the scanner features, you **MUST** run the Backend server locally (or connect to a deployed instance). The frontend communicates with the backend to perform the actual link checking.
 
-👉 **Get the Backend here:** [Broken-Link-Checker Repository](https://github.com/Deadlink-Hunter/Broken-Link-Checker)
+**Get the Backend here:** [Broken-Link-Checker Repository](https://github.com/Deadlink-Hunter/Broken-Link-Checker)
 
 ---
 

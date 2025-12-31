@@ -42,7 +42,7 @@ Para ver a interface, faça login.
 
 Para utilizar totalmente as funcionalidades de scanner, você **DEVE** rodar o servidor Backend localmente (ou conectar-se a uma instância implantada). O frontend se comunica com o backend para realizar a verificação real dos links.
 
-👉 **Obtenha o Backend aqui:** [Repositório Broken-Link-Checker](https://github.com/Deadlink-Hunter/Broken-Link-Checker)
+**Obtenha o Backend aqui:** [Repositório Broken-Link-Checker](https://github.com/Deadlink-Hunter/Broken-Link-Checker)
 
 -----
 
