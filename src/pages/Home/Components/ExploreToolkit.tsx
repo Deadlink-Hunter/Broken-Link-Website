@@ -1,5 +1,6 @@
 import { IconArrowRight, IconChartLine, IconInfoCircle, IconScan } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
+import { Title } from '@mantine/core';
 import { Button } from '@/components/UI/Button/Button';
 import { Card } from '@/components/UI/Card/Card';
 import { Typography } from '@/components/UI/Typography/Typography';
@@ -36,11 +37,11 @@ export const ExploreToolkit = () => {
 
   return (
     <div className={classes.container}>
-      <Typography variant='h1' className={classes.title}>
+      <Title order={1} className={classes.title}>
         {t('explore_toolkit_title_part1')}
-        <span className={classes.highlight}>{t('explore_toolkit_title_highlight')}</span>
+        <span className={classes.highlight}> {t('explore_toolkit_title_highlight')}</span>{' '}
         {t('explore_toolkit_title_part2')}
-      </Typography>
+      </Title>
       <Typography variant='body' className={classes.description}>
         {t('explore_toolkit_description')}
       </Typography>
@@ -50,7 +51,9 @@ export const ExploreToolkit = () => {
             <div>
               {card.icon && <card.icon size={36} className={classes.cardIcon} />}
               <div className={classes.cardHeader}>
-                <Typography variant='h3'>{t(card.titleKey)}</Typography>
+                <Title order={3} className={classes.cardTitle}>
+                  {t(card.titleKey)}
+                </Title>
               </div>
               <Typography variant='body' className={classes.cardDescription}>
                 {t(card.descriptionKey)}
