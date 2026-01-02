@@ -1,5 +1,6 @@
 import '@mantine/core/styles.css';
 import '@mantine/charts/styles.css';
+import './app.css';
 
 import { DirectionProvider, MantineProvider } from '@mantine/core';
 import Footer from './components/Footer/Footer';
@@ -10,8 +11,10 @@ export default function App() {
   return (
     <DirectionProvider detectDirection>
       <MantineProvider theme={theme}>
-        <Router />
-        <Footer />
+        <div className='app'>
+          <Router />
+          <Footer />
+        </div>
       </MantineProvider>
     </DirectionProvider>
   );
