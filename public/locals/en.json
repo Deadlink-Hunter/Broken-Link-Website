@@ -1,7 +1,4 @@
 {
-  "welcome_title": "Welcome to ",
-  "welcome_highlight": "Mantine",
-  "welcome_description_before_link": "This starter Vite project includes a minimal setup. If you want to learn more on Mantine + Vite integration follow",
   "welcome_link_text": "this guide",
   "welcome_description_after_link": ". To get started edit pages/Home.page.tsx file.",
   "about_feature_card": {
@@ -78,4 +75,3 @@
   "explore_toolkit_card3_description": "Learn more about the mission behind Deadlink-Hunter, its open-source nature, and how you can contribute.",
   "explore_toolkit_card3_button": "Learn More"
 }
-
