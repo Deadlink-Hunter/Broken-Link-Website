@@ -40,6 +40,11 @@
     "madeWith": "Made with",
     "byOpenSrc": "by the open source community"
   },
+  "navbar": {
+    "header": "Deadlink-Hunter",
+    "github": "GitHub",
+    "githubMobile": "View on GitHub"
+  },
   "explore_toolkit_title_part1": "Explore the ",
   "explore_toolkit_title_highlight": "Toolkit",
   "explore_toolkit_title_part2": "",

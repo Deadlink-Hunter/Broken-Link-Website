@@ -1,4 +1,5 @@
 import { CSSProperties } from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 import { NavLink } from '@mantine/core';
 import { useHover } from '@mantine/hooks';
 import { useIsDark } from '@/components/Hooks/useIsDark';
@@ -29,9 +30,10 @@ export const Link = ({
   const applyHover = disableHover ? false : hovered;
   return (
     <NavLink
+      component={RouterLink}
       ref={ref}
       label={label}
-      href={href}
+      to={href}
       styles={{
         root: { ...linkStyles.root, ...rootStyle },
         label: { ...linkStyles.label(applyHover, isDark, hoverColor, labelColor), ...labelStyle },

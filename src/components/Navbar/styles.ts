@@ -9,7 +9,7 @@ export const desktopStyles = {
   },
   innerContainer: {
     width: '100%',
-    maxWidth: '1210px',
+    maxWidth: theme.breakpoints.lg,
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -49,8 +49,8 @@ export const mobileStyles = {
   headerContainer: { display: 'flex', alignItems: 'center' },
   header: { fontWeight: '700', fontSize: theme.fontSizes.xl, marginLeft: '.2rem' },
   logoSize: { height: '1.75rem' },
-  burger: { paddingRight: '1.8rem' },
-  burgerSize: 18,
+  burger: { paddingRight: '1.8rem', width: 18, height: 18 },
+
   linksContainer: { padding: '.6rem' },
   link: {
     fontWeight: '700',
@@ -74,11 +74,10 @@ export const mobileStyles = {
   },
   buttonIconColor: theme.colors.gray[2],
   buttonText: { margin: '0 .8rem', color: theme.colors.gray[2], fontWeight: '700' },
-  buttonTextSize: 'small' as const,
+
   navDivider: {
     marginLeft: 'calc(50% - 50vw)',
     marginRight: 'calc(50% - 50vw)',
     transform: 'scaleY(.2)',
   },
-  dividerVariant: 'muted' as const,
 };
