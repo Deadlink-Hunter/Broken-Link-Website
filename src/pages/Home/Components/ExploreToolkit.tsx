@@ -38,7 +38,7 @@ export const ExploreToolkit = () => {
     <div className={classes.container}>
       <Typography variant='h1' className={classes.title}>
         {t('explore_toolkit_title_part1')}
-        <span className={classes.highlight}>{t('explore_toolkit_title_highlight')}</span>
+        <span className={classes.highlight}> {t('explore_toolkit_title_highlight')}</span>{' '}
         {t('explore_toolkit_title_part2')}
       </Typography>
       <Typography variant='body' className={classes.description}>
