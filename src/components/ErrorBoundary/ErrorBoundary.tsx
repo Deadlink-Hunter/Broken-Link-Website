@@ -20,6 +20,7 @@ export class ErrorBoundary extends Component<Props, State> {
   }
 
   public componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    // eslint-disable-next-line
     console.error('Uncaught error:', error, errorInfo);
   }
 

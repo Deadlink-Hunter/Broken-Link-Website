@@ -1,0 +1,8 @@
+.app {
+  background: linear-gradient(
+    135deg,
+    var(--mantine-color-primary-9) 0%,
+    var(--mantine-color-primary-8) 50%,
+    var(--mantine-color-primary-7) 100%
+  );
+}

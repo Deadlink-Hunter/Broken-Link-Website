@@ -1,7 +1,4 @@
 {
-  "welcome_title": "Welcome to ",
-  "welcome_highlight": "Mantine",
-  "welcome_description_before_link": "This starter Vite project includes a minimal setup. If you want to learn more on Mantine + Vite integration follow",
   "welcome_link_text": "this guide",
   "welcome_description_after_link": ". To get started edit pages/Home.page.tsx file.",
   "about_feature_card": {
@@ -64,6 +61,11 @@
     "madeWith": "Made with",
     "byOpenSrc": "by the open source community"
   },
+  "navbar": {
+    "header": "Deadlink-Hunter",
+    "github": "GitHub",
+    "githubMobile": "View on GitHub"
+  },
   "explore_toolkit_title_part1": "Explore the ",
   "explore_toolkit_title_highlight": "Toolkit",
   "explore_toolkit_title_part2": "",
@@ -78,4 +80,3 @@
   "explore_toolkit_card3_description": "Learn more about the mission behind Deadlink-Hunter, its open-source nature, and how you can contribute.",
   "explore_toolkit_card3_button": "Learn More"
 }
-
