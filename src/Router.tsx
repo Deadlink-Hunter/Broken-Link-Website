@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { AppLayout } from './AppLayout';
 import { ErrorComponent } from './components/ErrorBoundary/components/ErrorComponent';
 import { ErrorBoundary } from './components/ErrorBoundary/ErrorBoundary';
 import { ROUTES } from './constants/routes.consts';
@@ -12,6 +13,7 @@ const withErrorBoundary = (element: React.ReactNode) => <ErrorBoundary>{element}
 const router = createBrowserRouter([
   {
     path: ROUTES.HOME,
+    element: <AppLayout />,
     errorElement: (
       <ErrorBoundary>
         <ErrorComponent />
