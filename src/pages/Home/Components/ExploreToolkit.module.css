@@ -1,5 +1,4 @@
 /* TODO Make sure that there are no inline styles in here and everything will come from the theme */
-
 .title {
   color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
   font-size: rem(60px);
@@ -41,9 +40,9 @@
   justify-content: space-between;
   position: relative;
   padding: var(--mantine-spacing-md);
-  background-color: rgb(255, 255, 255, 0.05);
+  background-color:var(--mantine-color-default);
   backdrop-filter: blur(10px);
-  border: 1px solid rgb(255, 255, 255, 0.05);
+  border: 1px solid var(--mantine-color-default-border);
 }
 
 .cardHeader {
