@@ -5,7 +5,7 @@ import { Button } from '@/components/UI/Button/Button';
 import { Card } from '@/components/UI/Card/Card';
 import { Typography } from '@/components/UI/Typography/Typography';
 import classes from '@/pages/Home/Components/ExploreToolkit.module.css';
-import { useExploreToolkitCardsData } './useExploreToolkitCardsData';
+import { useExploreToolkitCardsData } from './useExploreToolkitCardsData';
 
 // TODO - Make this more according to the design inside base44
 export const ExploreToolkit = () => {
