@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--mantine-color-primary-9) 0%, var(--mantine-color-primary-8) 50%, var(--mantine-color-primary-7) 100%);
+
   overflow: hidden;
   font-family: var(--mantine-font-family);
   padding: var(--mantine-spacing-2xl);

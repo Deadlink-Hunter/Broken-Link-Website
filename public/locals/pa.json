@@ -1,7 +1,4 @@
 {
-  "welcome_title": "ਵੈਲਕਮ ਟੂ ",
-  "welcome_highlight": "Mantine",
-  "welcome_description_before_link": "ਇਹ Vite ਪ੍ਰੋਜੈਕਟ ਘੱਟੋ-ਘੱਟ ਸੰਰਚਨਾ ਨਾਲ ਆਇਆ ਹੈ। ਜੇ ਤੁਸੀਂ Mantine ਅਤੇ Vite ਇਕਠੇ ਕਰਨ ਬਾਰੇ ਹੋਰ ਸਿੱਖਣਾ ਚਾਹੁੰਦੇ ਹੋ ਤਾਂ ਇਸਨੂੰ ਫੋਲੋ ਕਰੋ",
   "welcome_link_text": "ਇਸ ਗਾਈਡ ਨੂੰ",
   "welcome_description_after_link": ". ਸ਼ੁਰੂ ਕਰਨ ਲਈ pages/Home.page.tsx ਫਾਈਲ ਨੂੰ ਸੰਪਾਦਿਤ ਕਰੋ।"
 }
