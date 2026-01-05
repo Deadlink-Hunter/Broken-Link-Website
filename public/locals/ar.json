@@ -1,7 +1,4 @@
 {
-  "welcome_title": "مرحبًا بك في ",
-  "welcome_highlight": "Mantine",
-  "welcome_description_before_link": "يتضمن هذا المشروع Vite إعدادًا أساسيًا. إذا كنت تريد معرفة المزيد عن تكامل Mantine مع Vite، اتبع",
   "welcome_link_text": "هذا الدليل",
   "welcome_description_after_link": ". للبدء، قم بتحرير ملف pages/Home.page.tsx."
 }

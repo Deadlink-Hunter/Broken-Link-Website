@@ -1,7 +1,4 @@
 {
-  "welcome_title": "خوش آمدید به ",
-  "welcome_highlight": "Mantine",
-  "welcome_description_before_link": "این پروژه Vite شامل یک پیکربندی حداقلی است. اگر می‌خواهید بیشتر درباره ادغام Mantine و Vite بیاموزید، دنبال کنید",
   "welcome_link_text": "این راهنما",
   "welcome_description_after_link": ". برای شروع، فایل pages/Home.page.tsx را ویرایش کنید."
 }

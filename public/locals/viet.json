@@ -1,7 +1,4 @@
 {
-  "welcome_title": "Chào mừng đến với ",
-  "welcome_highlight": "Mantine",
-  "welcome_description_before_link": "Dự án Vite này bao gồm một cấu hình tối thiểu. Nếu bạn muốn tìm hiểu thêm về việc tích hợp Mantine và Vite, hãy theo dõi",
   "welcome_link_text": "hướng dẫn này",
   "welcome_description_after_link": ". Để bắt đầu, hãy chỉnh sửa tệp pages/Home.page.tsx."
 }

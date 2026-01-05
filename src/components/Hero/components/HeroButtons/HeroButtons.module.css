@@ -1,0 +1,85 @@
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: var(--mantine-spacing-xl);
+  margin-top: var(--mantine-spacing-md);
+}
+
+.startButton,
+.githubButton {
+  align-items: center;
+  border: none;
+  font-weight: 600;
+  font-size: var(--mantine-font-size-md);
+  width: 13.75rem;
+  height: 2.5rem;
+  padding: var(--mantine-spacing-md) var(--mantine-spacing-lg);
+  border-radius: 0.75rem;
+}
+
+.startButton {
+  background: linear-gradient(90deg, var(--mantine-color-cyan-4) 0%, var(--mantine-color-purple-5) 100%);
+  background-color: transparent;
+  color: var(--mantine-color-white);
+  box-shadow: 0 var(--mantine-spacing-sm)
+                var(--mantine-spacing-lg) 
+                color-mix(in srgb, var(--mantine-color-cyan-4) 30%, transparent);
+}
+
+.startButton:hover {
+  background: linear-gradient(90deg, var(--mantine-color-cyan-5) 0%, var(--mantine-color-purple-7) 100%);
+}
+
+.githubButton a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--mantine-spacing-sm);
+  color: var(--mantine-color-black); 
+  text-decoration: none;
+  
+}
+
+.githubButton {
+  background: var(--mantine-color-white);
+  color: var(--mantine-color-primary-7);
+  text-decoration: none;
+  box-shadow: 0 var(--mantine-spacing-sm)
+                var(--mantine-spacing-lg) 
+                color-mix(in srgb, var(--mantine-color-primary-8) 20%, transparent);
+}
+
+.githubButton:hover {
+  background: var(--mantine-color-primary-7);
+  color: var(--mantine-color-white);
+}
+
+.githubButton:hover a {
+  color: var(--mantine-color-white);
+}
+
+.buttonIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+@media (max-width: 64em) {
+  .buttons {
+    flex-direction: column;
+    gap: var(--mantine-spacing-lg);
+    margin-top: var(--mantine-spacing-lg);
+    margin-bottom: var(--mantine-spacing-md);
+  }
+
+  .startButton,
+  .githubButton {
+    font-size: var(--mantine-font-size-lg);
+  }
+
+  .githubButton {
+    margin-bottom: var(--mantine-spacing-xl);
+  }
+}
+

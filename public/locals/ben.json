@@ -1,7 +1,4 @@
 {
-  "welcome_title": "স্বাগতম ",
-  "welcome_highlight": "Mantine",
-  "welcome_description_before_link": "এই Vite প্রজেক্টে একটি মিনিমাল কনফিগারেশন রয়েছে। আপনি যদি Mantine এবং Vite এর ইন্টিগ্রেশন সম্পর্কে আরও জানতে চান, তাহলে অনুসরণ করুন",
   "welcome_link_text": "এই নির্দেশিকা",
   "welcome_description_after_link": "। শুরু করার জন্য pages/Home.page.tsx ফাইলটি সম্পাদনা করুন।"
 }
