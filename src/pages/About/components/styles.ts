@@ -1,6 +1,15 @@
+import { CSSProperties } from 'react';
 import { theme } from '@/theme';
 
 const colors = theme.colors;
+
+export const pageWrapperStyle: CSSProperties = {
+  width: '100%',
+  minHeight: '100vh',
+  display: 'flex',
+  flexDirection: 'column',
+  padding: '6rem 1.5rem',
+};
 
 export const centerGrid = {
   display: 'flex',
@@ -10,14 +19,13 @@ export const centerGrid = {
 };
 
 export const smallContainerStyle = {
-  padding: theme.spacing.lg,
   display: 'grid',
   maxWidth: 'max-content',
   gap: theme.spacing.lg,
   gridTemplateColumns: '1fr',
 };
+
 export const bigContainerStyle = {
-  padding: theme.spacing.lg,
   display: 'grid',
   maxWidth: 'max-content',
   gap: theme.spacing.lg,
@@ -33,6 +41,15 @@ export const featureCardStyles = {
   gridTemplateColumns: 'auto auto',
   gap: theme.spacing.lg,
   maxWidth: '40rem',
+};
+
+export const missionCardStyles: CSSProperties = {
+  backgroundColor: colors.primary[7],
+  padding: theme.spacing.lg,
+  display: 'flex',
+  flexDirection: 'column',
+  textAlign: 'center',
+  gap: theme.spacing.lg,
 };
 
 export const titleStyle = {
