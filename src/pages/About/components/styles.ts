@@ -5,17 +5,21 @@ const colors = theme.colors;
 
 export const pageWrapperStyle: CSSProperties = {
   width: '100%',
+  maxWidth: '80rem',
   minHeight: '100vh',
   display: 'flex',
   flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
   padding: '6rem 1.5rem',
+  margin: '0 auto',
 };
 
 export const centerGrid = {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  minHeight: '100vh',
+  marginBottom: theme.spacing['2xl'],
 };
 
 export const smallContainerStyle = {
@@ -40,12 +44,11 @@ export const featureCardStyles = {
   display: 'grid',
   gridTemplateColumns: 'auto auto',
   gap: theme.spacing.lg,
-  maxWidth: '40rem',
 };
 
 export const missionCardStyles: CSSProperties = {
   backgroundColor: colors.primary[7],
-  padding: theme.spacing.lg,
+  padding: theme.spacing.xl,
   display: 'flex',
   flexDirection: 'column',
   textAlign: 'center',
