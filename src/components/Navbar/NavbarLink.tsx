@@ -25,7 +25,7 @@ export default function NavbarLink({ href, label, variant }: NavbarLinkItemProps
     );
   }
 
-  if (variant === 'mobile')
+  if (variant === 'mobile') {
     return (
       <Link
         href={href}
@@ -35,5 +35,5 @@ export default function NavbarLink({ href, label, variant }: NavbarLinkItemProps
         rootStyle={mobileStyles.linkContainer(isActive)}
       />
     );
+  }
 }
-
