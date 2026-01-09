@@ -1,6 +1,5 @@
 import { IconBrandGithub } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
-import logo from '../../../public/logo.svg';
 import { Button } from '../UI/Button/Button';
 import { Divider } from '../UI/Divider/Divider';
 import { Link } from '../UI/Link/Link';
@@ -14,7 +13,7 @@ export default function DesktopNav() {
       <div style={styles.container}>
         <div style={styles.innerContainer}>
           <div style={styles.headerContainer}>
-            <img alt='Deadlink logo' style={styles.logoSize} src={logo} />
+            <img alt='Deadlink logo' style={styles.logoSize} src='/logo.svg' />
             <Link labelStyle={styles.header} href='/' label={t('navbar.header')} disableHover />
           </div>
           <div style={styles.linksContainer}>

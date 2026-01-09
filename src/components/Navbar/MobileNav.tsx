@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Burger } from '@mantine/core';
-import logo from '../../../public/logo.svg';
 import { Divider } from '../UI/Divider/Divider';
 import { Link } from '../UI/Link/Link';
 import NavbarLinks from './NavbarLinks';
@@ -19,7 +18,7 @@ export default function MobileNav() {
     <div>
       <div style={styles.container}>
         <div style={styles.headerContainer}>
-          <img alt='Deadlink logo' style={styles.logoSize} src={logo} />
+          <img alt='Deadlink logo' style={styles.logoSize} src='/logo.svg' />
           <Link labelStyle={styles.header} href='/' label={t('navbar.header')} />
         </div>
         <Burger
