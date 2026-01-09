@@ -1,13 +1,13 @@
 import { useState } from 'react';
-import { IconBrandGithub } from '@tabler/icons-react';
+// import { IconBrandGithub } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
-import { useLocation } from 'react-router-dom';
+// import { useLocation } from 'react-router-dom';
 import { Burger } from '@mantine/core';
 import logo from '../../../public/logo.svg';
-import { Button } from '../UI/Button/Button';
+// import { Button } from '../UI/Button/Button';
 import { Divider } from '../UI/Divider/Divider';
 import { Link } from '../UI/Link/Link';
-import { Typography } from '../UI/Typography/Typography';
+// import { Typography } from '../UI/Typography/Typography';
 import NavbarLinks from './NavbarLinks';
 import { mobileStyles as styles } from './styles';
 
@@ -38,7 +38,7 @@ export default function MobileNav() {
           <NavbarLinks displayLinks={displayLinks} variant='mobile' />
         </div>
       )}
-      <Divider variant={'muted'} style={styles.navDivider} />
+      <Divider variant='muted' style={styles.navDivider} />
     </div>
   );
 }

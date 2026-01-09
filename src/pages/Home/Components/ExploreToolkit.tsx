@@ -9,7 +9,7 @@ import { useExploreToolkitCardsData } from './useExploreToolkitCardsData';
 // TODO - Make this more according to the design inside base44
 export const ExploreToolkit = () => {
   const { t } = useTranslation();
-  const { CARDS_DATA } = useExploreToolkitCardsData(); 
+  const { CARDS_DATA } = useExploreToolkitCardsData();
 
   return (
     <div className={classes.container}>
