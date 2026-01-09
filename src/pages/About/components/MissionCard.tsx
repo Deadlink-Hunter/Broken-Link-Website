@@ -1,6 +1,6 @@
+import { useTranslation } from 'react-i18next';
 import { Card } from '@/components/UI/Card/Card';
 import { Typography } from '@/components/UI/Typography/Typography';
-import { useTranslation } from 'react-i18next';
 import { missionCardStyles, paragraphStyle, titleStyle } from './styles';
 
 export const MissionCard = () => {
