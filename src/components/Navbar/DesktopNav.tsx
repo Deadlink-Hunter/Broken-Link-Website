@@ -27,8 +27,8 @@ export default function DesktopNav() {
             <IconBrandGithub style={styles.buttonIcon} size={18} />
             {t('navbar.github')}
           </Button>
+          <ColorSchemeToggleNavbar />
         </div>
-        <ColorSchemeToggleNavbar />
       </div>
 
       <Divider style={styles.divider} />
