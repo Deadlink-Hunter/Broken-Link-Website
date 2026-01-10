@@ -10,8 +10,8 @@
 This README is available in multiple languages.
 Click below to switch:
 
-- 🇨🇳 [简体中文 (Simplified Chinese)](README-ZH-CN.md)
-- 🇧🇷 [Português Brasileiro](README-PT-BR.md)
+- 🇨🇳 [简体中文 (Simplified Chinese)](readmes/README-ZH-CN.md)
+- 🇧🇷 [Português Brasileiro](readmes/README-PT-BR.md)
 
 Deadlink-Hunter is an open-source project designed to find broken links in GitHub repositories (with future support for other platforms).
 The goal is to help maintainers keep their documentation clean, reliable, and frustration-free for readers.
