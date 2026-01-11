@@ -1,26 +1,27 @@
 import { useState } from 'react';
 import { IconMoon, IconSun } from '@tabler/icons-react';
-import { Button, Group, useComputedColorScheme, useMantineColorScheme } from '@mantine/core';
+import { useComputedColorScheme, useMantineColorScheme } from '@mantine/core';
+import { Button } from '../UI/Button/Button';
 
-export function ColorSchemeToggleNavbar() {
+export function ThemeToggle() {
   const { setColorScheme } = useMantineColorScheme();
   const [theme, setButtonTheme] = useState(false);
   const computedColorScheme = useComputedColorScheme('light', { getInitialValueInEffect: true });
 
-  function handleSetButtonTheme() {
+  function handleThemeButtonClicked() {
     setButtonTheme(!theme);
   }
 
   return (
-    <Group justify='left'>
+    <div>
       <Button
         onClick={() => {
           setColorScheme(computedColorScheme === 'light' ? 'dark' : 'light');
-          handleSetButtonTheme();
+          handleThemeButtonClicked();
         }}
       >
-        {theme ? <IconMoon /> : <IconSun />}Change Theme
+        {theme ? <IconMoon /> : <IconSun />}
       </Button>
-    </Group>
+    </div>
   );
 }

@@ -1,8 +1,7 @@
 import { IconBrandGithub } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
-// import { useLocation } from 'react-router-dom';
 import logo from '../../../public/logo.svg';
-import { ColorSchemeToggleNavbar } from '../ColorSchemeToggle/ColorSchemeToggleNavbar';
+import { ThemeToggle } from './ThemeToggle';
 import { Button } from '../UI/Button/Button';
 import { Divider } from '../UI/Divider/Divider';
 import { Link } from '../UI/Link/Link';
@@ -27,7 +26,7 @@ export default function DesktopNav() {
             <IconBrandGithub style={styles.buttonIcon} size={18} />
             {t('navbar.github')}
           </Button>
-          <ColorSchemeToggleNavbar />
+          <ThemeToggle />
         </div>
       </div>
 
