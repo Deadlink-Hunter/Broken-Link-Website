@@ -1,8 +1,12 @@
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/UI/Button/Button';
 import { Card } from '@/components/UI/Card/Card';
 import { Typography } from '@/components/UI/Typography/Typography';
+import { ROUTES } from '@/constants/routes.consts';
 
 export const ErrorComponent = () => {
+  const navigate = useNavigate();
+
   return (
     <Card>
       <Typography variant='h2'>Something went wrong!</Typography>
@@ -15,7 +19,7 @@ export const ErrorComponent = () => {
         <li>Clear your browser cache</li>
         <li>Try again in a few minutes</li>
       </ul>
-      <Button onClick={() => (window.location.href = '/')}>Go to Home Page</Button>
+      <Button onClick={() => navigate(ROUTES.HOME)}>Go to Home Page</Button>
     </Card>
   );
 };

@@ -15,7 +15,7 @@ export default function DesktopNav() {
       <div style={styles.container}>
         <div style={styles.innerContainer}>
           <div style={styles.headerContainer}>
-            <img alt='Deadlink logo' style={styles.logoSize} src={logo} />
+            <img alt='Deadlink logo' style={styles.logoSize} src='/logo.svg' />
             <Link labelStyle={styles.header} href='/' label={t('navbar.header')} disableHover />
           </div>
           <div style={styles.linksContainer}>

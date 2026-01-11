@@ -1,6 +1,5 @@
 import { IconBrandGithub } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
-// import { useLocation } from 'react-router-dom';
 import { Divider } from '@mantine/core';
 import { Button } from '../UI/Button/Button';
 import { Typography } from '../UI/Typography/Typography';

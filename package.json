@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "version": "0.0.0",
+  "homepage": "https://deadlink-hunter.github.io/Broken-Link-Website",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

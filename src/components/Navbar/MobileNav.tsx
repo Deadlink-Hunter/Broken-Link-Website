@@ -20,7 +20,7 @@ export default function MobileNav() {
     <div>
       <div style={styles.container}>
         <div style={styles.headerContainer}>
-          <img alt='Deadlink logo' style={styles.logoSize} src={logo} />
+          <img alt='Deadlink logo' style={styles.logoSize} src='/logo.svg' />
           <Link labelStyle={styles.header} href='/' label={t('navbar.header')} />
         </div>
         <Burger
