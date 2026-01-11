@@ -5,8 +5,8 @@ import logo from '../../../public/logo.svg';
 import { Divider } from '../UI/Divider/Divider';
 import { Link } from '../UI/Link/Link';
 import NavbarLinks from './NavbarLinks';
-import { ThemeToggle } from './ThemeToggle';
 import { mobileStyles as styles } from './styles';
+import { ThemeToggle } from './ThemeToggle';
 
 export default function MobileNav() {
   const { t } = useTranslation();

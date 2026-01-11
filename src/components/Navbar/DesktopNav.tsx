@@ -1,12 +1,12 @@
 import { IconBrandGithub } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
 import logo from '../../../public/logo.svg';
-import { ThemeToggle } from './ThemeToggle';
 import { Button } from '../UI/Button/Button';
 import { Divider } from '../UI/Divider/Divider';
 import { Link } from '../UI/Link/Link';
 import NavbarLinks from './NavbarLinks';
 import { desktopStyles as styles } from './styles';
+import { ThemeToggle } from './ThemeToggle';
 
 export default function DesktopNav() {
   const { t } = useTranslation();
