@@ -10,18 +10,17 @@ export const NAVIGATION_LINKS = [
   { label: 'Statistics', href: ROUTES.STATISTICS },
   { label: 'About', href: ROUTES.ABOUT },
 ];
+
 export type NavbarVariant = 'mobile' | 'desktop';
 
 interface NavbarProps {
   variant?: NavbarVariant;
 }
 
-export default function Navbar({ variant }: NavbarProps) {
-  const isMobileView =
-    variant === 'mobile'
-      ? true
-      : variant === 'desktop'
-        ? false
-        : useMediaQuery(`(max-width: ${theme.breakpoints.lg})`);
+export default function Navbar() {
+  const isMobileView = useMediaQuery(
+    `(max-width: ${theme.breakpoints.lg})`
+  );
+  
   return isMobileView ? <MobileNav /> : <DesktopNav />;
 }
