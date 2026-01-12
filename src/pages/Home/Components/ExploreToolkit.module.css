@@ -1,4 +1,3 @@
-/* TODO: Convert this file to a .styles.ts file */
 /* TODO Make sure that there are no inline styles in here and everything will come from the theme */
 .title {
   color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
