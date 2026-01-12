@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { HERO_CONSTANTS } from '@/constants/hero.consts';
+import { EXTERNAL_LINKS } from '@/constants/links.consts';
 import { ROUTES } from '@/constants/routes.consts';
 
 
@@ -10,13 +10,13 @@ export const useFooterData = () => {
     { href: ROUTES.ABOUT, label: t('footer.About') },
     { href: ROUTES.SCANNER, label: t('footer.Scanner') },
     { href: ROUTES.STATISTICS, label: t('footer.Statistics') },
-    { href: HERO_CONSTANTS.GITHUB_URL, label: t('footer.Documentation') },
+    { href: EXTERNAL_LINKS.GITHUB.REPO, label: t('footer.Documentation') },
   ];
 
   const COMMUNITY_LINKS = [
-    { href: HERO_CONSTANTS.GITHUB_URL, label: t('footer.Contribute') },
-    { href: `${HERO_CONSTANTS.GITHUB_URL}/issues`, label: t('footer.Issues') },
-    { href: `${HERO_CONSTANTS.GITHUB_URL}/issues`, label: t('footer.FeatureRequests') },
+    { href: EXTERNAL_LINKS.GITHUB.REPO, label: t('footer.Contribute') },
+    { href: `${EXTERNAL_LINKS.GITHUB.REPO}/issues`, label: t('footer.Issues') },
+    { href: `${EXTERNAL_LINKS.GITHUB.REPO}/issues`, label: t('footer.FeatureRequests') },
   ];
 
   return {
