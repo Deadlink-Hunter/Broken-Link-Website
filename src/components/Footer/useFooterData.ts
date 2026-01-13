@@ -1,21 +1,18 @@
 import { useTranslation } from 'react-i18next';
+import { FOOTER_QUICK_LINKS, FOOTER_COMMUNITY_LINKS } from '@/constants/links.consts';
 
 export const useFooterData = () => {
   const { t } = useTranslation();
 
-  const QUICK_LINKS = [
-    { href: '#', label: t('footer.About') },
-    { href: '#', label: t('footer.Scanner') },
-    { href: '#', label: t('footer.Statistics') },
-    { href: '#', label: t('footer.Documentation') },
-  ];
+  const QUICK_LINKS = FOOTER_QUICK_LINKS.map(link => ({
+    href: link.href,
+    label: t(link.label),
+  }));
 
-  const COMMUNITY_LINKS = [
-    { href: '#', label: t('footer.Contribute') },
-    { href: '#', label: t('footer.Issues') },
-    { href: '#', label: t('footer.FeatureRequests') },
-    { href: '#', label: t('footer.Discord') },
-  ];
+  const COMMUNITY_LINKS = FOOTER_COMMUNITY_LINKS.map(link => ({
+    href: link.href,
+    label: t(link.label),
+  }));
 
   return {
     QUICK_LINKS,
