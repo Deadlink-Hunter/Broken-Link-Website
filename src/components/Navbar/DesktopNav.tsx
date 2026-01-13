@@ -5,6 +5,7 @@ import { Divider } from '../UI/Divider/Divider';
 import { Link } from '../UI/Link/Link';
 import NavbarLinks from './NavbarLinks';
 import { desktopStyles as styles } from './styles';
+import { ThemeToggle } from './ThemeToggle';
 
 export default function DesktopNav() {
   const { t } = useTranslation();
@@ -24,6 +25,7 @@ export default function DesktopNav() {
             <IconBrandGithub style={styles.buttonIcon} size={18} />
             {t('navbar.github')}
           </Button>
+          <ThemeToggle />
         </div>
       </div>
 

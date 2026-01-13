@@ -5,6 +5,7 @@ import { Divider } from '../UI/Divider/Divider';
 import { Link } from '../UI/Link/Link';
 import NavbarLinks from './NavbarLinks';
 import { mobileStyles as styles } from './styles';
+import { ThemeToggle } from './ThemeToggle';
 
 export default function MobileNav() {
   const { t } = useTranslation();
@@ -34,6 +35,7 @@ export default function MobileNav() {
         </div>
       )}
       <Divider variant='muted' style={styles.navDivider} />
+      <ThemeToggle />
     </div>
   );
 }

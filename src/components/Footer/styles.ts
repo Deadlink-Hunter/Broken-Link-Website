@@ -11,7 +11,7 @@ export const footerStyles = {
     height: '41vh',
   },
 
- container: {
+  container: {
     maxWidth: '100%',
     marginTop: '3rem',
     padding: '0 1.4rem',
@@ -59,4 +59,3 @@ export const footerStyles = {
     paddingBottom: '4rem',
   },
 };
-
