@@ -1,6 +1,5 @@
 import { IconBrandGithub } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
-import logo from '../../../public/logo.svg';
 import { Button } from '../UI/Button/Button';
 import { Divider } from '../UI/Divider/Divider';
 import { Link } from '../UI/Link/Link';

@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Burger } from '@mantine/core';
-import logo from '../../../public/logo.svg';
 import { Divider } from '../UI/Divider/Divider';
 import { Link } from '../UI/Link/Link';
 import NavbarLinks from './NavbarLinks';
