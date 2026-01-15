@@ -49,6 +49,13 @@ export const scanPageStyle = {
     marginTop: theme.spacing.xl,
   },
 
+  scanCardsContainerMobile: {
+    display: 'grid',
+    gridTemplateColumns: '1fr',
+    gap: theme.spacing.xl,
+    marginTop: theme.spacing.xl,
+  },
+
   scanCardStyle: {
     display: 'flex',
     backgroundColor: colors.primary[6],
@@ -77,7 +84,7 @@ export const scanPageStyle = {
 
   cardTitle: (isDark: boolean): CSSProperties => ({
     color: getTextColor(isDark),
-    fontSize: '1.5em',
+    fontSize: theme.fontSizes['2xl'],
     fontWeight: 'bold',
     paddingBlock: theme.spacing.sm,
   }),
@@ -100,7 +107,7 @@ export const scanPageStyle = {
       fontSize: theme.fontSizes.md,
       backgroundColor: colors.primary[7],
       borderColor: colors.primary[5],
-      color: 'white',
+      color: colors.gray[0],
       '&::placeholder': {
         color: colors.gray[4],
       },
@@ -127,9 +134,7 @@ export const scanPageStyle = {
     borderRadius: theme.radius.md,
     fontSize: theme.fontSizes.lg,
     height: '50px',
-    paddingLeft: theme.spacing.lg,
-    paddingRight: theme.spacing.lg,
-
+    paddingInline: theme.spacing.lg,
     backgroundImage: `linear-gradient(90deg, ${theme.colors.cyan[4]} 0%, ${theme.colors.grape[5]} 100%)`,
     color: theme.white,
     border: 0,
@@ -186,7 +191,6 @@ export const scanPageStyle = {
     width: '100%',
   } satisfies CSSProperties,
 
-  // SegmentedControl yerine basit buton yerleşimi
   segmentedWrapper: {
     display: 'flex',
     backgroundColor: colors.primary[7],

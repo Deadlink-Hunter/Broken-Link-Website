@@ -4,16 +4,10 @@ import { useIsDark } from '@/components/Hooks/useIsDark';
 import { Button } from '@/components/UI/Button/Button';
 import { Card } from '@/components/UI/Card/Card';
 import { Typography } from '@/components/UI/Typography/Typography';
+import { ScanLinkCardProps } from '../types/scan';
 import { scanPageStyle } from './styles';
 
-interface ScanLinksCardProps {
-  scanType: string;
-  setScanType: (value: string) => void;
-  url: string;
-  setUrl: (value: string) => void;
-}
-
-export const ScanLinksCard = ({ scanType, setScanType, url, setUrl }: ScanLinksCardProps) => {
+export const ScanLinksCard = ({ scanType, setScanType, url, setUrl }: ScanLinkCardProps) => {
   const { t } = useTranslation();
   const isDark = useIsDark();
 
