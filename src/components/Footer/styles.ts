@@ -12,6 +12,7 @@ export const footerStyles = {
   },
 
   container: {
+    maxWidth: '100%',
     marginTop: '3rem',
     padding: '0 1.4rem',
   },

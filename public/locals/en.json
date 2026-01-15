@@ -78,5 +78,7 @@
   "explore_toolkit_card2_button": "View Statistics",
   "explore_toolkit_card3_title": "About The Project",
   "explore_toolkit_card3_description": "Learn more about the mission behind Deadlink-Hunter, its open-source nature, and how you can contribute.",
-  "explore_toolkit_card3_button": "Learn More"
+  "explore_toolkit_card3_button": "Learn More",
+  "our_mission_card_title": "Our Mission",
+  "our_mission_card_description": "To provide developers with a reliable, efficient, and easy-to-use solution for maintaining link integrity across their broken links shouldn't break user experiences, and every repository deserves to be link-perfect."
 }

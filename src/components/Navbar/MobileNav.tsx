@@ -1,15 +1,11 @@
 import { useState } from 'react';
-import { IconBrandGithub } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
-import { useLocation } from 'react-router-dom';
 import { Burger } from '@mantine/core';
-import logo from '../../../public/logo.svg';
-import { Button } from '../UI/Button/Button';
 import { Divider } from '../UI/Divider/Divider';
 import { Link } from '../UI/Link/Link';
-import { Typography } from '../UI/Typography/Typography';
 import NavbarLinks from './NavbarLinks';
 import { mobileStyles as styles } from './styles';
+import { ThemeToggle } from './ThemeToggle';
 
 export default function MobileNav() {
   const { t } = useTranslation();
@@ -23,7 +19,7 @@ export default function MobileNav() {
     <div>
       <div style={styles.container}>
         <div style={styles.headerContainer}>
-          <img alt='Deadlink logo' style={styles.logoSize} src={logo} />
+          <img alt='Deadlink logo' style={styles.logoSize} src='/logo.svg' />
           <Link labelStyle={styles.header} href='/' label={t('navbar.header')} />
         </div>
         <Burger
@@ -38,7 +34,8 @@ export default function MobileNav() {
           <NavbarLinks displayLinks={displayLinks} variant='mobile' />
         </div>
       )}
-      <Divider variant={'muted'} style={styles.navDivider} />
+      <Divider variant='muted' style={styles.navDivider} />
+      <ThemeToggle />
     </div>
   );
 }

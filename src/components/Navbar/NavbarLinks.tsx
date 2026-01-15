@@ -1,6 +1,5 @@
 import { IconBrandGithub } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
-import { useLocation } from 'react-router-dom';
 import { Divider } from '@mantine/core';
 import { Button } from '../UI/Button/Button';
 import { Typography } from '../UI/Typography/Typography';
@@ -31,7 +30,7 @@ function MobileGithubBtn() {
     <div style={mobileStyles.buttonContainer}>
       <Button style={mobileStyles.button}>
         <IconBrandGithub color={mobileStyles.buttonIconColor} size={16} />
-        <Typography size={'small'} style={mobileStyles.buttonText}>
+        <Typography size='small' style={mobileStyles.buttonText}>
           {t('navbar.githubMobile')}
         </Typography>
       </Button>
@@ -40,14 +39,16 @@ function MobileGithubBtn() {
 }
 
 export default function NavbarLinks({ variant, displayLinks = true }: NavbarLinksProps) {
-  if (variant === 'desktop') return <Links variant='desktop' />;
-  if (variant === 'mobile' && displayLinks)
+  if (variant === 'desktop') {
+    return <Links variant='desktop' />;
+  }
+  if (variant === 'mobile' && displayLinks) {
     return (
       <>
         <Links variant='mobile' />
-        <Divider variant={'muted'} style={mobileStyles.linksDivider} />
+        <Divider variant='muted' style={mobileStyles.linksDivider} />
         <MobileGithubBtn />
       </>
     );
+  }
 }
-
