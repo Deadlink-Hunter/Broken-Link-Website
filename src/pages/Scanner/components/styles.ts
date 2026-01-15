@@ -183,7 +183,7 @@ export const scanPageStyle = {
     fontSize: theme.fontSizes.md,
     backgroundColor: colors.primary[7],
     borderColor: colors.primary[5],
-    color: 'white',
+    color: colors.gray[5],
     padding: theme.spacing.sm,
     borderRadius: theme.radius.md,
     border: `1px solid ${colors.primary[5]}`,
