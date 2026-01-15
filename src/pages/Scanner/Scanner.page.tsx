@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Container, SimpleGrid } from '@mantine/core';
 import { ScanLinksCard } from './components/ScanLinksCard';
 import { ScanResultsCard } from './components/ScanResultsCard';
 import { ScanTitlePage } from './components/ScanTitle';
@@ -10,14 +9,14 @@ const ScannerPage = () => {
   const [url, setUrl] = useState('');
 
   return (
-    <Container style={scanPageStyle.container}>
+    <div style={scanPageStyle.container}>
       <ScanTitlePage />
 
-      <SimpleGrid style={scanPageStyle.scanCardsContainer}>
+      <div style={scanPageStyle.scanCardsContainer}>
         <ScanLinksCard scanType={scanType} setScanType={setScanType} url={url} setUrl={setUrl} />
         <ScanResultsCard />
-      </SimpleGrid>
-    </Container>
+      </div>
+    </div>
   );
 };
 

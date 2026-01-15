@@ -1,16 +1,9 @@
 import { IconSearch } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
-import {
-  Button,
-  Card,
-  Group,
-  SegmentedControl,
-  Stack,
-  Text,
-  TextInput,
-  Title,
-} from '@mantine/core';
 import { useIsDark } from '@/components/Hooks/useIsDark';
+import { Button } from '@/components/UI/Button/Button';
+import { Card } from '@/components/UI/Card/Card';
+import { Typography } from '@/components/UI/Typography/Typography';
 import { scanPageStyle } from './styles';
 
 interface ScanLinksCardProps {
@@ -25,54 +18,51 @@ export const ScanLinksCard = ({ scanType, setScanType, url, setUrl }: ScanLinksC
   const isDark = useIsDark();
 
   return (
-    <Card withBorder style={scanPageStyle.scanCardStyle}>
-      <Group mb='lg'>
+    <Card withBorder shadow='0' style={scanPageStyle.scanCardStyle}>
+      <div style={scanPageStyle.cardHeader}>
         <IconSearch style={scanPageStyle.searchIcon} />
-        <Title style={scanPageStyle.cardTitle(isDark)}>
+        <Typography style={scanPageStyle.cardTitle(isDark)}>
           {t('scanner_page.scan_links_card.title')}
-        </Title>
-      </Group>
+        </Typography>
+      </div>
 
-      <Stack gap='lg'>
-        <SegmentedControl
-          value={scanType}
-          onChange={setScanType}
-          data={[
-            {
-              label: t('scanner_page.scan_links_card.toggle_single'),
-              value: 'single',
-            },
-            {
-              label: t('scanner_page.scan_links_card.toggle_repo'),
-              value: 'repository',
-            },
-          ]}
-          fullWidth
-          styles={scanPageStyle.segmentedControl}
-        />
+      <div style={scanPageStyle.inputSection}>
+        <div style={scanPageStyle.segmentedWrapper}>
+          <Button
+            onClick={() => setScanType('single')}
+            style={scanType === 'single' ? scanPageStyle.activeTab : scanPageStyle.passiveTab}
+          >
+            {t('scanner_page.scan_links_card.toggle_single')}
+          </Button>
+          <Button
+            onClick={() => setScanType('repository')}
+            style={scanType === 'repository' ? scanPageStyle.activeTab : scanPageStyle.passiveTab}
+          >
+            {t('scanner_page.scan_links_card.toggle_repo')}
+          </Button>
+        </div>
 
-        <Stack gap='xs'>
-          <Text style={scanPageStyle.linkDescription}>
+        <div style={scanPageStyle.inputGroup}>
+          <Typography style={scanPageStyle.linkDescription}>
             {t('scanner_page.scan_links_card.input_label')}
-          </Text>
-          <TextInput
+          </Typography>
+
+          <input
+            type='text'
             placeholder={t('scanner_page.scan_links_card.input_placeholder')}
             value={url}
-            onChange={(event) => setUrl(event.currentTarget.value)}
-            styles={scanPageStyle.textInput}
+            onChange={(event) => setUrl(event.target.value)}
+            style={scanPageStyle.customInput}
           />
-        </Stack>
+        </div>
 
         <Button
           style={scanPageStyle.linkButton}
-          fullWidth
           leftSection={<img alt='Deadlink logo' src='logo.svg' style={scanPageStyle.buttonIcon} />}
-          variant='gradient'
-          gradient={scanPageStyle.titleStyle.gradientConfig}
         >
           {t('scanner_page.scan_links_card.button_check')}
         </Button>
-      </Stack>
+      </div>
     </Card>
   );
 };

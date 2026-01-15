@@ -1,5 +1,4 @@
 import { useTranslation } from 'react-i18next';
-import { Stack, Text } from '@mantine/core';
 import { useIsDark } from '@/components/Hooks/useIsDark';
 import { Typography } from '@/components/UI/Typography/Typography';
 import { scanPageStyle } from './styles';
@@ -9,16 +8,11 @@ export const ScanTitlePage = () => {
   const isDark = useIsDark();
 
   return (
-    <Stack style={scanPageStyle.centerGrid}>
-      <Text
-        inherit
-        variant='gradient'
-        style={scanPageStyle.titleStyle.gradientText}
-        gradient={scanPageStyle.titleStyle.gradientConfig}
-      >
-        {t('scanner_page.title')}{' '}
-      </Text>
+    <div style={scanPageStyle.centerGrid}>
+      <Typography variant='title' style={scanPageStyle.titleStyle}>
+        <span style={scanPageStyle.titleStyle}>{t('scanner_page.title')} </span>
+      </Typography>
       <Typography style={scanPageStyle.text(isDark)}>{t('scanner_page.description')}</Typography>
-    </Stack>
+    </div>
   );
 };

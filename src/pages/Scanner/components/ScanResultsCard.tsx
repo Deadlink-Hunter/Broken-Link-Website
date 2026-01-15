@@ -1,7 +1,8 @@
 import { IconAlertCircle, IconSearch } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
-import { Card, Group, Stack, Text, Title } from '@mantine/core';
 import { useIsDark } from '@/components/Hooks/useIsDark';
+import { Card } from '@/components/UI/Card/Card';
+import { Typography } from '@/components/UI/Typography/Typography';
 import { scanPageStyle } from './styles';
 
 export const ScanResultsCard = () => {
@@ -10,19 +11,19 @@ export const ScanResultsCard = () => {
 
   return (
     <Card withBorder style={scanPageStyle.scanCardStyle}>
-      <Group mb='lg'>
+      <div style={scanPageStyle.cardHeader}>
         <IconAlertCircle style={scanPageStyle.alertIcon} />
-        <Title style={scanPageStyle.cardTitle(isDark)}>
+        <Typography style={scanPageStyle.cardTitle(isDark)}>
           {t('scanner_page.scan_results_card.title')}
-        </Title>
-      </Group>
+        </Typography>
+      </div>
 
-      <Stack style={scanPageStyle.resultsStack}>
+      <div style={scanPageStyle.resultsStack}>
         <IconSearch style={scanPageStyle.emptyStateIcon} />
-        <Text style={scanPageStyle.resultDescription}>
+        <Typography style={scanPageStyle.resultDescription}>
           {t('scanner_page.scan_results_card.empty_state')}
-        </Text>
-      </Stack>
+        </Typography>
+      </div>
     </Card>
   );
 };
