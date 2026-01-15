@@ -3,16 +3,17 @@ import { Container, SimpleGrid } from '@mantine/core';
 import { ScanLinksCard } from './components/ScanLinksCard';
 import { ScanResultsCard } from './components/ScanResultsCard';
 import { ScanTitlePage } from './components/ScanTitle';
+import { scanPageStyle } from './components/styles';
 
 const ScannerPage = () => {
   const [scanType, setScanType] = useState('single');
   const [url, setUrl] = useState('');
 
   return (
-    <Container size='xl' py='xl'>
+    <Container style={scanPageStyle.container}>
       <ScanTitlePage />
 
-      <SimpleGrid cols={{ base: 1, md: 2 }} spacing={30}>
+      <SimpleGrid style={scanPageStyle.scanCardsContainer}>
         <ScanLinksCard scanType={scanType} setScanType={setScanType} url={url} setUrl={setUrl} />
         <ScanResultsCard />
       </SimpleGrid>
