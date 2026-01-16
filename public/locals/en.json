@@ -80,5 +80,21 @@
   "explore_toolkit_card3_description": "Learn more about the mission behind Deadlink-Hunter, its open-source nature, and how you can contribute.",
   "explore_toolkit_card3_button": "Learn More",
   "our_mission_card_title": "Our Mission",
-  "our_mission_card_description": "To provide developers with a reliable, efficient, and easy-to-use solution for maintaining link integrity across their broken links shouldn't break user experiences, and every repository deserves to be link-perfect."
+  "our_mission_card_description": "To provide developers with a reliable, efficient, and easy-to-use solution for maintaining link integrity across their broken links shouldn't break user experiences, and every repository deserves to be link-perfect.",
+  "scanner_page": {
+    "title": "Link Scanner",
+    "description": "Test individual URLs or scan entire repositories for broken links with lightning speed",
+    "scan_links_card": {
+      "title": "Scan Links",
+      "toggle_single": "Single URL",
+      "toggle_repo": "Repository",
+      "input_label": "Enter URL to check",
+      "input_placeholder": "https://example.com/page",
+      "button_check": "Check Link"
+    },
+    "scan_results_card": {
+      "title": "Scan Results",
+      "empty_state": "Enter a URL or repository above to start scanning for broken links"
+    }
+  }
 }
