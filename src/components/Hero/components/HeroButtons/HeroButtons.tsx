@@ -2,7 +2,8 @@ import { IconBrandGithub, IconSearch } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/UI/Button/Button';
-import { HERO_CONSTANTS } from '@/constants/hero.consts';
+import { LinkButton, LinkTarget } from '@/components/UI/Button/LinkButton';
+import { EXTERNAL_LINKS } from '@/constants/links.consts';
 import { ROUTES } from '@/constants/routes.consts';
 import classes from './HeroButtons.module.css';
 
@@ -23,12 +24,15 @@ export const HeroButtons = () => {
       >
         {t('hero.buttons.startScanning')}
       </Button>
-      <Button variant='white' className={classes.githubButton}>
-        <a href={HERO_CONSTANTS.GITHUB_URL} target='_blank' rel='noopener noreferrer'>
-          <IconBrandGithub className={classes.buttonIcon} />
-          {t('hero.buttons.viewOnGitHub')}
-        </a>
-      </Button>
+      <LinkButton
+        href={EXTERNAL_LINKS.GITHUB.REPO}
+        target={LinkTarget.Blank}
+        variant='white'
+        className={classes.githubButton}
+      >
+        <IconBrandGithub className={classes.buttonIcon} />
+        {t('hero.buttons.viewOnGitHub')}
+      </LinkButton>
     </div>
   );
 };
