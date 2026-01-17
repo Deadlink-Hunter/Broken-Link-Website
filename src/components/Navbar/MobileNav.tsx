@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Burger } from '@mantine/core';
 import { Divider } from '../UI/Divider/Divider';
@@ -6,14 +6,20 @@ import { Link } from '../UI/Link/Link';
 import NavbarLinks from './NavbarLinks';
 import { mobileStyles as styles } from './styles';
 import { ThemeToggle } from './ThemeToggle';
+import { useLocation } from 'react-router-dom';
 
 export default function MobileNav() {
   const { t } = useTranslation();
   const [displayLinks, setDisplayLinks] = useState(false);
+  const location = useLocation()
 
   function handleDisplayLinks() {
     setDisplayLinks((prev) => !prev);
   }
+
+  useEffect(() => {
+    setDisplayLinks(false)
+  }, [location.pathname])
 
   return (
     <div>
