@@ -23,8 +23,10 @@ export const desktopStyles = {
     justifyContent: 'center',
     alignItems: 'center',
   },
-  linkHoverColor: (isPathMatch: boolean) => (isPathMatch ? theme.colors.cyan[4] : theme.white),
-  linkColor: (isPathMatch: boolean) => (isPathMatch ? theme.colors.cyan[4] : theme.colors.gray[2]),
+  linkHoverColor: (isPathMatch: boolean) =>
+  isPathMatch ? theme.colors.cyan[5] : theme.colors.gray[7],
+
+  linkColor: (isPathMatch: boolean) => (isPathMatch ? theme.colors.cyan[4] : theme.colors.gray[4]),
   linkStyle: {
     fontWeight: 'bold',
     padding: '.77rem',
