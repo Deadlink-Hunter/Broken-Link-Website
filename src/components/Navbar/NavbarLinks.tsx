@@ -3,10 +3,10 @@ import { useTranslation } from 'react-i18next';
 import { Divider } from '@mantine/core';
 import { LinkButton, LinkTarget } from '../UI/Button/LinkButton';
 import { Typography } from '../UI/Typography/Typography';
-import { NavbarVariant, NAVIGATION_LINKS } from './Navbar';
+import { NavbarVariant } from './Navbar';
 import NavbarLink from './NavbarLink';
 import { mobileStyles } from './styles';
-import { EXTERNAL_LINKS } from '@/constants/links.consts';
+import { useNavigationLinks } from '@/components/Hooks/useNavigationLinks';
 
 interface NavbarLinksProps {
   variant: NavbarVariant;
@@ -17,19 +17,22 @@ interface LinksProps {
 }
 
 function Links({ variant }: LinksProps) {
+  const { navigationLinks } = useNavigationLinks();
+
   return (
     <>
-      {NAVIGATION_LINKS.map((link) => (
+      {navigationLinks.map((link) => (
         <NavbarLink key={link.href} href={link.href} label={link.label} variant={variant} />
       ))}
     </>
   );
 }
 function MobileGithubBtn() {
+  const { externalLinks } = useNavigationLinks();
   const { t } = useTranslation();
   return (
     <div style={mobileStyles.buttonContainer}>
-      <LinkButton href={EXTERNAL_LINKS.GITHUB.REPO} target={LinkTarget.Blank} style={mobileStyles.button}>
+      <LinkButton href={externalLinks.GITHUB.REPO} target={LinkTarget.Blank} style={mobileStyles.button}>
         <IconBrandGithub color={mobileStyles.buttonIconColor} size={16} />
         <Typography size='small' style={mobileStyles.buttonText}>
           {t('navbar.githubMobile')}

@@ -6,9 +6,10 @@ import { Link } from '../UI/Link/Link';
 import NavbarLinks from './NavbarLinks';
 import { desktopStyles as styles } from './styles';
 import { ThemeToggle } from './ThemeToggle';
-import { EXTERNAL_LINKS } from '@/constants/links.consts';
+import { useNavigationLinks } from '@/components/Hooks/useNavigationLinks';
 
 export default function DesktopNav() {
+  const { externalLinks } = useNavigationLinks();
   const { t } = useTranslation();
   return (
     <>
@@ -22,7 +23,7 @@ export default function DesktopNav() {
             <NavbarLinks variant='desktop' />
           </div>
           {/* TODO - add option for button hover effect */}
-          <LinkButton href={EXTERNAL_LINKS.GITHUB.REPO} target={LinkTarget.Blank} style={styles.button}>
+          <LinkButton href={externalLinks.GITHUB.REPO} target={LinkTarget.Blank} style={styles.button}>
             <IconBrandGithub style={styles.buttonIcon} size={18} />
             {t('navbar.github')}
           </LinkButton>

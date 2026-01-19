@@ -9,14 +9,17 @@ import { Divider } from '../UI/Divider/Divider';
 import { Link } from '../UI/Link/Link';
 import { Typography } from '../UI/Typography/Typography';
 import { footerStyles } from './styles';
-import { useFooterData } from './useFooterData';
-import { EXTERNAL_LINKS } from '@/constants/links.consts';
+import { useNavigationLinks } from '@/components/Hooks/useNavigationLinks';
 
 export default function Footer() {
+  const { 
+    externalLinks, 
+    footerQuickLinks, 
+    footerCommunityLinks 
+  } = useNavigationLinks();
   const { t } = useTranslation();
   const { width } = useViewportSize();
   const isMobileView = width < 1024;
-  const { QUICK_LINKS, COMMUNITY_LINKS } = useFooterData();
   const isDark = useIsDark();
 
   return (
@@ -41,7 +44,7 @@ export default function Footer() {
             </Text>
             <Typography style={footerStyles.text(isDark)}>{t('footer.about')}</Typography>
             <LinkButton
-              href={EXTERNAL_LINKS.GITHUB.REPO}
+              href={externalLinks.GITHUB.REPO}
               target={LinkTarget.Blank}
               leftSection={
                 <IconStar style={{ marginRight: theme.spacing.lg }} size={footerStyles.iconSize} />
@@ -54,14 +57,14 @@ export default function Footer() {
 
           <Box>
             <Typography style={footerStyles.header(isDark)}>{t('footer.QuickLinks')}</Typography>
-            {QUICK_LINKS.map((link, i) => (
+            {footerQuickLinks.map((link, i) => (
               <Link key={i + link.label} href={link.href} label={link.label} />
             ))}
           </Box>
 
           <Box>
             <Typography style={footerStyles.header(isDark)}>{t('footer.Community')}</Typography>
-            {COMMUNITY_LINKS.map((link, i) => (
+            {footerCommunityLinks.map((link, i) => (
               <Link key={i + link.label} href={link.href} label={link.label} />
             ))}
           </Box>
