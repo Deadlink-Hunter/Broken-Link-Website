@@ -1,7 +1,7 @@
 import { AxiosError } from 'axios';
 import { StatusCodes } from 'http-status-codes';
 import api from '../Api/api';
-import { API_CHECH_URL, API_CHECH_URLS } from './constants';
+import { API_CHECK_URL, API_CHECK_URLS } from './constants';
 import { ApiErrorTypes, MultipleUrlsResponse, ServerErrorData, UrlCheckResult } from './types';
 
 const handleApiError = (err: unknown) => {
@@ -15,7 +15,7 @@ const handleApiError = (err: unknown) => {
 const linkCheckerService = {
   checkLink: async (url: string): Promise<UrlCheckResult> => {
     try {
-      const response = await api.post(API_CHECH_URL, { url });
+      const response = await api.post(API_CHECK_URL, { url });
       return { status: response.status, data: response.data.data };
     } catch (err) {
       return handleApiError(err);
@@ -23,7 +23,7 @@ const linkCheckerService = {
   },
   checkLinks: async (urls: string[]): Promise<MultipleUrlsResponse> => {
     try {
-      const response = await api.post(API_CHECH_URLS, { urls });
+      const response = await api.post(API_CHECK_URLS, { urls });
       return { status: response.status, data: response.data.data };
     } catch (err) {
       return handleApiError(err);
