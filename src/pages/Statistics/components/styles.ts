@@ -13,5 +13,3 @@ export const graphsStyles = {
   }),
   cardHeader: { color: theme.white, fontWeight: 'bold', fontSize: '1.4em', marginBottom: '1rem' },
 };
-
-export const pageContainer = {};
