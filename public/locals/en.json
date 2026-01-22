@@ -43,6 +43,10 @@
       "accuracyRate": "Accuracy Rate"
     }
   },
+  "charts":{
+    "scanActivity" : "Scan Activity Over Time",
+    "linkTypesDistribustion": "Link Types Distribution"
+  },
   "footer": {
     "header": "Deadlink-Hunter",
     "about": "Open-source tool for finding and eliminating broken links in GitHub repositories. Built with ❤️ for the developer community.",
