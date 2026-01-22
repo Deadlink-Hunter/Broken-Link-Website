@@ -5,6 +5,7 @@ import { Card } from '@/components/UI/Card/Card';
 import { Typography } from '@/components/UI/Typography/Typography';
 import { theme } from '@/theme';
 import { graphsStyles } from './styles';
+import { useTranslation } from 'react-i18next';
 
 // TODO - replace hardcoded data with data from the server
 const donutData = [
@@ -27,16 +28,17 @@ const lineData = {
 } satisfies LineData;
 
 export default function Charts() {
+  const { t } = useTranslation();
   const isMobileView = useMediaQuery(`(max-width: ${theme.breakpoints.lg})`);
   return (
     <div style={graphsStyles.containerDisplay(isMobileView)}>
       <Card style={graphsStyles.cardStyles(isMobileView)}>
-        <Typography style={graphsStyles.cardHeader}>Scan Activity Over Time</Typography>
+        <Typography style={graphsStyles.cardHeader}>{t('charts.scanActivity')}</Typography>
         <Chart type={ChartType.Line} data={lineData} />
       </Card>
 
       <Card style={graphsStyles.cardStyles(isMobileView)}>
-        <Typography style={graphsStyles.cardHeader}>Link Types Distribution</Typography>
+        <Typography style={graphsStyles.cardHeader}>{t('charts.linkTypesDistribustion')}</Typography>
         <Chart type={ChartType.Donut} data={donutData} />
       </Card>
     </div>
