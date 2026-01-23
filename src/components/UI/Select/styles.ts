@@ -2,7 +2,7 @@ import { theme } from '@/theme';
 
 const colors = theme.colors;
 
-export const dropdownVariants = {
+export const selectVariants = {
   primary: {
     backgroundColor: colors.white,
     border: `1px solid ${colors.gray[4]}`,
