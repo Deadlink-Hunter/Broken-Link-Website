@@ -1,0 +1,78 @@
+import { IconUpload } from '@tabler/icons-react';
+import { FormEvent, ChangeEvent } from 'react';
+import { useTranslation } from 'react-i18next';
+
+import { Button } from '@/components/UI/Button/Button';
+import { scanPageStyle } from './styles';
+
+interface RepositoryScanFormProps {
+  url: string;
+  setUrl: (value: string) => void;
+  multipleUrl: string;
+  setMultipleUrl: (value: string) => void;
+  onSubmit?: () => void;
+};
+
+export const RepositoryScanForm = ({
+  url,
+  setUrl,
+  multipleUrl,
+  setMultipleUrl,
+  onSubmit,
+}: RepositoryScanFormProps) => {
+  const { t } = useTranslation();
+  const baseKey = 'scanner_page.scan_links_card.repository';
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    onSubmit?.();
+  };
+
+  const handleUrlChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setUrl(e.target.value);
+  }
+
+  const handleMultipleUrlChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+    setMultipleUrl(e.target.value);
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <div style={scanPageStyle.formFieldGroup}>
+        <label htmlFor='repository-url' style={scanPageStyle.fieldLabel}>
+          {t(`${baseKey}.input_label`)}
+        </label>
+        <input
+          id='repository-url'
+          type='url'
+          value={url}
+          onChange={handleUrlChange}
+          placeholder={t(`${baseKey}.input_placeholder`)}
+          style={scanPageStyle.textInputStyle}
+        />
+      </div>
+
+      <div style={scanPageStyle.formFieldGroup}>
+        <label htmlFor='multiple-urls' style={scanPageStyle.fieldLabel}>
+          {t(`${baseKey}.textarea_label`)}
+        </label>
+        <textarea
+          id='multiple-urls'
+          value={multipleUrl}
+          onChange={handleMultipleUrlChange}
+          placeholder={t(`${baseKey}.textarea_placeholder`)}
+          style={scanPageStyle.textareaStyle}
+          rows={4}
+        />
+      </div>
+
+      <Button
+        style={scanPageStyle.scanSubmitButton}
+        leftSection={<IconUpload style={scanPageStyle.scanSubmitButtonIcon} />}
+      >
+        {t(`${baseKey}.button_check`)}
+      </Button>
+    </form>
+  );
+};
+

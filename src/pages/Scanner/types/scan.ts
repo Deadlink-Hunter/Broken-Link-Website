@@ -5,4 +5,6 @@ export interface ScanLinkCardProps {
   setScanType: (value: ScanMode) => void;
   url: string;
   setUrl: (value: string) => void;
+  multipleUrl: string;
+  setMultipleUrl: (value: string) => void;
 }
