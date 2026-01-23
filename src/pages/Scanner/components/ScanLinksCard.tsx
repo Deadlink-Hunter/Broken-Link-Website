@@ -1,24 +1,43 @@
 import { IconSearch } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
+
 import { useIsDark } from '@/components/Hooks/useIsDark';
 import { Button } from '@/components/UI/Button/Button';
 import { Card } from '@/components/UI/Card/Card';
 import { Typography } from '@/components/UI/Typography/Typography';
+
 import { ScanLinkCardProps } from '../types/scan';
 import { scanPageStyle } from './styles';
+import { RepositoryScanForm } from './RepositoryScanForm'
+import { SingleScanForm } from './SingleScanForm';
 
-export const ScanLinksCard = ({ scanType, setScanType, url, setUrl }: ScanLinkCardProps) => {
+export const ScanLinksCard = ({ scanType, setScanType, url, setUrl, multipleUrl, setMultipleUrl }: ScanLinkCardProps) => {
   const { t } = useTranslation();
   const isDark = useIsDark();
 
+  const renderScanForm = () => {
+    if (scanType === 'single') {
+      return <SingleScanForm url={url} setUrl={setUrl} />
+    }
+
+    return (
+      <RepositoryScanForm
+        url={url}
+        setUrl={setUrl}
+        multipleUrl={multipleUrl}
+        setMultipleUrl={setMultipleUrl}
+      />
+    );
+  }
+
   return (
     <Card withBorder shadow='0' style={scanPageStyle.scanCardStyle}>
-      <div style={scanPageStyle.cardHeader}>
+      <header style={scanPageStyle.cardHeader}>
         <IconSearch style={scanPageStyle.searchIcon} />
         <Typography style={scanPageStyle.cardTitle(isDark)}>
           {t('scanner_page.scan_links_card.title')}
         </Typography>
-      </div>
+      </header>
 
       <div style={scanPageStyle.inputSection}>
         <div style={scanPageStyle.segmentedWrapper}>
@@ -26,36 +45,17 @@ export const ScanLinksCard = ({ scanType, setScanType, url, setUrl }: ScanLinkCa
             onClick={() => setScanType('single')}
             style={scanType === 'single' ? scanPageStyle.activeTab : scanPageStyle.passiveTab}
           >
-            {t('scanner_page.scan_links_card.toggle_single')}
+            {t('scanner_page.scan_links_card.toggle.single')}
           </Button>
           <Button
             onClick={() => setScanType('repository')}
             style={scanType === 'repository' ? scanPageStyle.activeTab : scanPageStyle.passiveTab}
           >
-            {t('scanner_page.scan_links_card.toggle_repo')}
+            {t('scanner_page.scan_links_card.toggle.repository')}
           </Button>
         </div>
 
-        <div style={scanPageStyle.inputGroup}>
-          <Typography style={scanPageStyle.linkDescription}>
-            {t('scanner_page.scan_links_card.input_label')}
-          </Typography>
-
-          <input
-            type='text'
-            placeholder={t('scanner_page.scan_links_card.input_placeholder')}
-            value={url}
-            onChange={(event) => setUrl(event.target.value)}
-            style={scanPageStyle.customInput}
-          />
-        </div>
-
-        <Button
-          style={scanPageStyle.linkButton}
-          leftSection={<img alt='Deadlink logo' src='logo.svg' style={scanPageStyle.buttonIcon} />}
-        >
-          {t('scanner_page.scan_links_card.button_check')}
-        </Button>
+        {renderScanForm()}
       </div>
     </Card>
   );
