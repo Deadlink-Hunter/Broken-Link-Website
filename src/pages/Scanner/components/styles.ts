@@ -114,7 +114,7 @@ export const scanPageStyle = {
     },
   },
 
-  buttonIcon: {
+  scanSubmitButtonIcon: {
     marginRight: '10px',
   },
 
@@ -124,16 +124,17 @@ export const scanPageStyle = {
     color: colors.yellow[5],
   },
 
-  linkDescription: {
+  fieldLabel: {
     color: colors.gray[0],
     fontSize: theme.fontSizes.sm,
     width: '500px',
   },
 
-  linkButton: {
+  scanSubmitButton: {
     borderRadius: theme.radius.md,
     fontSize: theme.fontSizes.lg,
     height: '50px',
+    width: '100%',
     paddingInline: theme.spacing.lg,
     backgroundImage: `linear-gradient(90deg, ${theme.colors.cyan[4]} 0%, ${theme.colors.grape[5]} 100%)`,
     color: theme.white,
@@ -173,18 +174,30 @@ export const scanPageStyle = {
     flex: 1,
   } satisfies CSSProperties,
 
-  inputGroup: {
+  formFieldGroup: {
     display: 'flex',
     flexDirection: 'column',
     gap: theme.spacing.xs,
   } satisfies CSSProperties,
 
-  customInput: {
+  textInputStyle: {
     fontSize: theme.fontSizes.md,
     backgroundColor: colors.primary[7],
     borderColor: colors.primary[5],
     color: colors.gray[5],
-    padding: theme.spacing.sm,
+    padding: '8px 12px',
+    borderRadius: theme.radius.md,
+    border: `1px solid ${colors.primary[5]}`,
+    outline: 'none',
+    width: '100%',
+  } satisfies CSSProperties,
+
+  textareaStyle: {
+    fontSize: theme.fontSizes.md,
+    backgroundColor: colors.primary[7],
+    borderColor: colors.primary[5],
+    color: colors.gray[5],
+    padding: '8px 12px',
     borderRadius: theme.radius.md,
     border: `1px solid ${colors.primary[5]}`,
     outline: 'none',
