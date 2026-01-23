@@ -4,38 +4,41 @@ import { theme } from '@/theme';
 const colors = theme.colors;
 const getTextColor = (isDark: boolean) => (isDark ? theme.white : colors.gray[7]);
 
+const gradientPrimary =
+  'linear-gradient(90deg, var(--mantine-color-cyan-4) 0%, var(--mantine-color-purple-5) 100%)';
+
+const flexColumnCenter: CSSProperties = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+};
+
 export const scanPageStyle = {
   container: {
+    ...flexColumnCenter,
+    padding: '6rem 1.5rem',
     maxWidth: '1200px',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
     margin: '0 auto',
   } satisfies CSSProperties,
 
   centerGrid: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
+    ...flexColumnCenter,
     marginBottom: theme.spacing['2xl'],
-
     marginTop: theme.spacing.lg,
   } satisfies CSSProperties,
-  titleStyle: {
-    background:
-      'linear-gradient(90deg, var(--mantine-color-cyan-4) 0%, var(--mantine-color-purple-5) 100%)',
 
+  titleStyle: {
+    background: gradientPrimary,
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
     backgroundClip: 'text',
-
     fontWeight: 900,
     fontSize: '4rem',
     lineHeight: 1.1,
     display: 'inline-block',
   },
+
   text: (isDark: boolean): CSSProperties => ({
     color: getTextColor(isDark),
     paddingBlock: theme.spacing.lg,
@@ -47,25 +50,23 @@ export const scanPageStyle = {
     gridTemplateColumns: '1fr 1fr',
     gap: theme.spacing.xl,
     marginTop: theme.spacing.xl,
-  },
+  } satisfies CSSProperties,
 
   scanCardsContainerMobile: {
     display: 'grid',
     gridTemplateColumns: '1fr',
     gap: theme.spacing.xl,
     marginTop: theme.spacing.xl,
-  },
+  } satisfies CSSProperties,
 
   scanCardStyle: {
     display: 'flex',
-    backgroundColor: colors.primary[6],
-    borderColor: colors.primary[5],
-    padding: theme.spacing.xl,
-    borderRadius: theme.radius.lg,
+    flexDirection: 'column',
     gap: theme.spacing.md,
     width: '100%',
-    height: '400px',
-    flexDirection: 'column',
+    backgroundColor: colors.primary[6],
+    borderColor: colors.primary[5],
+    borderRadius: theme.radius.lg,
     boxShadow: 'none',
   } satisfies CSSProperties,
 
@@ -80,7 +81,7 @@ export const scanPageStyle = {
     height: '24px',
     color: colors.cyan[4],
     marginBottom: theme.spacing.sm,
-  },
+  } satisfies CSSProperties,
 
   cardTitle: (isDark: boolean): CSSProperties => ({
     color: getTextColor(isDark),
@@ -122,25 +123,27 @@ export const scanPageStyle = {
     width: '24px',
     height: '24px',
     color: colors.yellow[5],
-  },
+  } satisfies CSSProperties,
 
   fieldLabel: {
     color: colors.gray[0],
     fontSize: theme.fontSizes.sm,
     width: '500px',
-  },
+  } satisfies CSSProperties,
 
   scanSubmitButton: {
-    borderRadius: theme.radius.md,
-    fontSize: theme.fontSizes.lg,
     height: '50px',
     width: '100%',
     paddingInline: theme.spacing.lg,
-    backgroundImage: `linear-gradient(90deg, ${theme.colors.cyan[4]} 0%, ${theme.colors.grape[5]} 100%)`,
+    fontSize: theme.fontSizes.lg,
+    borderRadius: theme.radius.md,
+    marginTop: '16px',
+    backgroundImage: `linear-gradient(90deg, ${colors.cyan[4]} 0%, ${colors.grape[5]} 100%)`,
     color: theme.white,
     border: 0,
     cursor: 'pointer',
-  },
+  } satisfies CSSProperties,
+
   resultDescription: {
     color: colors.gray[6],
     maxWidth: '300px',
@@ -151,12 +154,9 @@ export const scanPageStyle = {
   } satisfies CSSProperties,
 
   resultsStack: {
-    display: 'flex',
-    flexDirection: 'column',
+    ...flexColumnCenter,
     flex: 1,
     height: '100%',
-    alignItems: 'center',
-    justifyContent: 'center',
     gap: theme.spacing.md,
   } satisfies CSSProperties,
 
@@ -165,7 +165,7 @@ export const scanPageStyle = {
     height: '80px',
     opacity: 0.2,
     color: 'white',
-  },
+  } satisfies CSSProperties,
 
   inputSection: {
     display: 'flex',
@@ -177,6 +177,7 @@ export const scanPageStyle = {
   formFieldGroup: {
     display: 'flex',
     flexDirection: 'column',
+    marginTop: '16px',
     gap: theme.spacing.xs,
   } satisfies CSSProperties,
 
