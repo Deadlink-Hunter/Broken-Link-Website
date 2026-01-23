@@ -6,10 +6,6 @@ import MobileNav from './MobileNav';
 
 export type NavbarVariant = 'mobile' | 'desktop';
 
-interface NavbarProps {
-  variant?: NavbarVariant;
-}
-
 export default function Navbar() {
   const isMobileView = useMediaQuery(
     `(max-width: ${theme.breakpoints.lg})`
@@ -17,3 +13,4 @@ export default function Navbar() {
   
   return isMobileView ? <MobileNav /> : <DesktopNav />;
 }
+
