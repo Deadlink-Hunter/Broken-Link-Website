@@ -9,20 +9,32 @@ import { ScanMode } from './types/scan';
 const ScannerPage = () => {
   const [scanType, setScanType] = useState<ScanMode>('single');
   const [url, setUrl] = useState('');
+  const [multipleUrl, setMultipleUrl] = useState('');
+
   const { width } = useViewportSize();
   const isMobile = width <= 1024;
 
-  return (
-    <div style={scanPageStyle.container}>
-      <ScanTitlePage />
+  const getCardsContainerStyle = () =>
+    isMobile ? scanPageStyle.scanCardsContainerMobile : scanPageStyle.scanCardsContainer;
 
-      <div
-        style={isMobile ? scanPageStyle.scanCardsContainerMobile : scanPageStyle.scanCardsContainer}
-      >
-        <ScanLinksCard scanType={scanType} setScanType={setScanType} url={url} setUrl={setUrl} />
+  return (
+    <main style={scanPageStyle.container}>
+      <header>
+        <ScanTitlePage />
+      </header>
+
+      <section style={getCardsContainerStyle()} aria-label='Scanner tools'>
+        <ScanLinksCard
+          scanType={scanType}
+          setScanType={setScanType}
+          url={url}
+          setUrl={setUrl}
+          multipleUrl={multipleUrl}
+          setMultipleUrl={setMultipleUrl}
+        />
         <ScanResultsCard />
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 
