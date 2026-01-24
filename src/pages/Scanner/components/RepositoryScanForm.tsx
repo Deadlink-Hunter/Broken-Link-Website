@@ -21,7 +21,7 @@ export const RepositoryScanForm = ({
   onSubmit,
 }: RepositoryScanFormProps) => {
   const { t } = useTranslation();
-  const baseKey = 'scanner_page.scan_links_card.repository';
+  const baseTranslationKey = 'scanner_page.scan_links_card.repository';
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -40,27 +40,27 @@ export const RepositoryScanForm = ({
     <form onSubmit={handleSubmit}>
       <div style={scanPageStyle.formFieldGroup}>
         <label htmlFor='repository-url' style={scanPageStyle.fieldLabel}>
-          {t(`${baseKey}.input_label`)}
+          {t(`${baseTranslationKey}.input_label`)}
         </label>
         <input
           id='repository-url'
           type='url'
           value={url}
           onChange={handleUrlChange}
-          placeholder={t(`${baseKey}.input_placeholder`)}
+          placeholder={t(`${baseTranslationKey}.input_placeholder`)}
           style={scanPageStyle.textInputStyle}
         />
       </div>
 
       <div style={scanPageStyle.formFieldGroup}>
         <label htmlFor='multiple-urls' style={scanPageStyle.fieldLabel}>
-          {t(`${baseKey}.textarea_label`)}
+          {t(`${baseTranslationKey}.textarea_label`)}
         </label>
         <textarea
           id='multiple-urls'
           value={multipleUrl}
           onChange={handleMultipleUrlChange}
-          placeholder={t(`${baseKey}.textarea_placeholder`)}
+          placeholder={t(`${baseTranslationKey}.textarea_placeholder`)}
           style={scanPageStyle.textareaStyle}
           rows={4}
         />
@@ -70,7 +70,7 @@ export const RepositoryScanForm = ({
         style={scanPageStyle.scanSubmitButton}
         leftSection={<IconUpload style={scanPageStyle.scanSubmitButtonIcon} />}
       >
-        {t(`${baseKey}.button_check`)}
+        {t(`${baseTranslationKey}.button_check`)}
       </Button>
     </form>
   );

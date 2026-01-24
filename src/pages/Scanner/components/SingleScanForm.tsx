@@ -12,7 +12,7 @@ interface SingleScanFormProps {
 
 export const SingleScanForm = ({ url, setUrl, onSubmit }: SingleScanFormProps) => {
   const { t } = useTranslation();
-  const baseKey = 'scanner_page.scan_links_card.single';
+  const baseTranslationKey = 'scanner_page.scan_links_card.single';
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -27,12 +27,12 @@ export const SingleScanForm = ({ url, setUrl, onSubmit }: SingleScanFormProps) =
     <form onSubmit={handleSubmit}>
       <div style={scanPageStyle.formFieldGroup}>
         <label htmlFor='single-scan-url' style={scanPageStyle.fieldLabel}>
-          {t(`${baseKey}.input_label`)}
+          {t(`${baseTranslationKey}.input_label`)}
         </label>
         <input
           id='single-scan-url'
           type='url'
-          placeholder={t(`${baseKey}.input_placeholder`)}
+          placeholder={t(`${baseTranslationKey}.input_placeholder`)}
           value={url}
           onChange={handleUrlChange}
           style={scanPageStyle.textInputStyle}
@@ -45,7 +45,7 @@ export const SingleScanForm = ({ url, setUrl, onSubmit }: SingleScanFormProps) =
           <img alt='Deadlink logo' src='logo.svg' style={scanPageStyle.scanSubmitButtonIcon} />
         }
       >
-        {t(`${baseKey}.button_check`)}
+        {t(`${baseTranslationKey}.button_check`)}
       </Button>
     </form>
   );
