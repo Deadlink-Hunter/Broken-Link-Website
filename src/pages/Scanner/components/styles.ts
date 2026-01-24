@@ -14,6 +14,18 @@ const flexColumnCenter: CSSProperties = {
   justifyContent: 'center',
 };
 
+const baseInputStyle: CSSProperties = {
+  width: '100%',
+  boxSizing: 'border-box',
+  fontSize: theme.fontSizes.md,
+  color: colors.gray[5],
+  backgroundColor: colors.primary[7],
+  padding: '8px 12px',
+  borderRadius: theme.radius.md,
+  border: `1px solid ${colors.primary[5]}`,
+  outline: 'none',
+};
+
 export const scanPageStyle = {
   container: {
     ...flexColumnCenter,
@@ -182,27 +194,13 @@ export const scanPageStyle = {
   } satisfies CSSProperties,
 
   textInputStyle: {
-    fontSize: theme.fontSizes.md,
-    backgroundColor: colors.primary[7],
-    borderColor: colors.primary[5],
-    color: colors.gray[5],
-    padding: '8px 12px',
-    borderRadius: theme.radius.md,
-    border: `1px solid ${colors.primary[5]}`,
-    outline: 'none',
-    width: '100%',
+    ...baseInputStyle,
   } satisfies CSSProperties,
 
   textareaStyle: {
-    fontSize: theme.fontSizes.md,
-    backgroundColor: colors.primary[7],
-    borderColor: colors.primary[5],
-    color: colors.gray[5],
-    padding: '8px 12px',
-    borderRadius: theme.radius.md,
-    border: `1px solid ${colors.primary[5]}`,
-    outline: 'none',
-    width: '100%',
+    ...baseInputStyle,
+    resize: 'vertical',
+    minHeight: '100px',
   } satisfies CSSProperties,
 
   segmentedWrapper: {
