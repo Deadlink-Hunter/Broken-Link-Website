@@ -20,7 +20,7 @@ const baseInputStyle: CSSProperties = {
   fontSize: theme.fontSizes.md,
   color: colors.gray[5],
   backgroundColor: colors.primary[7],
-  padding: '8px 12px',
+  padding: `${theme.spacing.md} ${theme.spacing.lg}`,
   borderRadius: theme.radius.md,
   border: `1px solid ${colors.primary[5]}`,
   outline: 'none',
