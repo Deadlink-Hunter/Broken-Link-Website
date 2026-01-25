@@ -6,7 +6,7 @@ import { Button } from '@/components/UI/Button/Button';
 import { Card } from '@/components/UI/Card/Card';
 import { Typography } from '@/components/UI/Typography/Typography';
 
-import { ScanLinkCardProps } from '../types/scan';
+import { ScanLinkCardProps, ScanMode } from '../types/scan';
 import { scanPageStyle } from './styles';
 import { RepositoryScanForm } from './RepositoryScanForm'
 import { SingleScanForm } from './SingleScanForm';
@@ -15,8 +15,12 @@ export const ScanLinksCard = ({ scanType, setScanType, url, setUrl, multipleUrl,
   const { t } = useTranslation();
   const isDark = useIsDark();
 
+  const isSingle = scanType === ScanMode.SINGLE;
+  const singleButtonStyle = isSingle ? scanPageStyle.activeTab : scanPageStyle.passiveTab;
+  const repositoryButtonStyle = !isSingle ? scanPageStyle.activeTab : scanPageStyle.passiveTab;
+
   const renderScanForm = () => {
-    if (scanType === 'single') {
+    if (isSingle) {
       return <SingleScanForm url={url} setUrl={setUrl} />
     }
 
@@ -42,14 +46,14 @@ export const ScanLinksCard = ({ scanType, setScanType, url, setUrl, multipleUrl,
       <div style={scanPageStyle.inputSection}>
         <div style={scanPageStyle.segmentedWrapper}>
           <Button
-            onClick={() => setScanType('single')}
-            style={scanType === 'single' ? scanPageStyle.activeTab : scanPageStyle.passiveTab}
+            onClick={() => setScanType(ScanMode.SINGLE)}
+            style={singleButtonStyle}
           >
             {t('scanner_page.scan_links_card.toggle.single')}
           </Button>
           <Button
-            onClick={() => setScanType('repository')}
-            style={scanType === 'repository' ? scanPageStyle.activeTab : scanPageStyle.passiveTab}
+            onClick={() => setScanType(ScanMode.REPOSITORY)}
+            style={repositoryButtonStyle}
           >
             {t('scanner_page.scan_links_card.toggle.repository')}
           </Button>

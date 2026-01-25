@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import { useViewportSize } from '@mantine/hooks';
+import { useMediaQuery } from '@mantine/hooks';
+import { theme } from '@/theme';
+
 import { ScanLinksCard } from './components/ScanLinksCard';
 import { ScanResultsCard } from './components/ScanResultsCard';
 import { ScanTitlePage } from './components/ScanTitle';
@@ -7,15 +9,15 @@ import { scanPageStyle } from './components/styles';
 import { ScanMode } from './types/scan';
 
 const ScannerPage = () => {
-  const [scanType, setScanType] = useState<ScanMode>('single');
+  const [scanType, setScanType] = useState<ScanMode>(ScanMode.SINGLE);
   const [url, setUrl] = useState('');
   const [multipleUrl, setMultipleUrl] = useState('');
 
-  const { width } = useViewportSize();
-  const isMobile = width <= 1024;
+  const isMobile = useMediaQuery(`(max-width: ${theme.breakpoints.md})`);
 
-  const getCardsContainerStyle = () =>
-    isMobile ? scanPageStyle.scanCardsContainerMobile : scanPageStyle.scanCardsContainer;
+  const cardsContainerStyle = isMobile
+    ? scanPageStyle.scanCardsContainerMobile
+    : scanPageStyle.scanCardsContainer;
 
   return (
     <main style={scanPageStyle.container}>
@@ -23,7 +25,7 @@ const ScannerPage = () => {
         <ScanTitlePage />
       </header>
 
-      <section style={getCardsContainerStyle()} aria-label='Scanner tools'>
+      <section style={cardsContainerStyle} aria-label='Scanner tools'>
         <ScanLinksCard
           scanType={scanType}
           setScanType={setScanType}

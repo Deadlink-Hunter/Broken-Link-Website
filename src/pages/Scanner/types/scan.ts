@@ -1,4 +1,7 @@
-export type ScanMode = 'single' | 'repository';
+export enum ScanMode {
+  SINGLE = 'single',
+  REPOSITORY = 'repository',
+}
 
 export interface ScanLinkCardProps {
   scanType: ScanMode;
