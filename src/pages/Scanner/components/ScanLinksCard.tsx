@@ -19,9 +19,13 @@ export const ScanLinksCard = ({ scanType, setScanType, url, setUrl, multipleUrl,
   const singleButtonStyle = isSingle ? scanPageStyle.activeTab : scanPageStyle.passiveTab;
   const repositoryButtonStyle = !isSingle ? scanPageStyle.activeTab : scanPageStyle.passiveTab;
 
+  const submitScanRequest = () => {
+    // TODO: Connect to scanning backend
+  };
+
   const renderScanForm = () => {
     if (isSingle) {
-      return <SingleScanForm url={url} setUrl={setUrl} />
+      return <SingleScanForm url={url} setUrl={setUrl} onSubmit={submitScanRequest} />
     }
 
     return (
@@ -30,6 +34,7 @@ export const ScanLinksCard = ({ scanType, setScanType, url, setUrl, multipleUrl,
         setUrl={setUrl}
         multipleUrl={multipleUrl}
         setMultipleUrl={setMultipleUrl}
+        onSubmit={submitScanRequest}
       />
     );
   }

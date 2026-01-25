@@ -10,7 +10,7 @@ interface RepositoryScanFormProps {
   setUrl: (value: string) => void;
   multipleUrl: string;
   setMultipleUrl: (value: string) => void;
-  onSubmit?: () => void;
+  onSubmit: () => void;
 };
 
 export const RepositoryScanForm = ({
@@ -23,9 +23,9 @@ export const RepositoryScanForm = ({
   const { t } = useTranslation();
   const baseTranslationKey = 'scanner_page.scan_links_card.repository';
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    onSubmit?.();
+  const handleSubmit = (e?: FormEvent<HTMLFormElement>) => {
+    e?.preventDefault();
+    onSubmit();
   };
 
   const handleUrlChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -56,6 +56,7 @@ export const RepositoryScanForm = ({
         <label htmlFor='multiple-urls' style={scanPageStyle.fieldLabel}>
           {t(`${baseTranslationKey}.textarea_label`)}
         </label>
+        {/* TODO - replace this with future shared text component */}
         <textarea
           id='multiple-urls'
           value={multipleUrl}
@@ -67,6 +68,7 @@ export const RepositoryScanForm = ({
       </div>
 
       <Button
+        onClick={handleSubmit}
         style={scanPageStyle.scanSubmitButton}
         leftSection={<IconUpload style={scanPageStyle.scanSubmitButtonIcon} />}
       >

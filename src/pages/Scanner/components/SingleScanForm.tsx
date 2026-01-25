@@ -7,16 +7,16 @@ import { scanPageStyle } from './styles';
 interface SingleScanFormProps {
   url: string;
   setUrl: (value: string) => void;
-  onSubmit?: () => void;
+  onSubmit: () => void;
 }
 
 export const SingleScanForm = ({ url, setUrl, onSubmit }: SingleScanFormProps) => {
   const { t } = useTranslation();
   const baseTranslationKey = 'scanner_page.scan_links_card.single';
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    onSubmit?.();
+  const handleSubmit = (e?: FormEvent<HTMLFormElement>) => {
+    e?.preventDefault();
+    onSubmit();
   };
 
   const handleUrlChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -40,6 +40,7 @@ export const SingleScanForm = ({ url, setUrl, onSubmit }: SingleScanFormProps) =
       </div>
 
       <Button
+        onClick={handleSubmit}
         style={scanPageStyle.scanSubmitButton}
         leftSection={
           <img alt='Deadlink logo' src='logo.svg' style={scanPageStyle.scanSubmitButtonIcon} />
