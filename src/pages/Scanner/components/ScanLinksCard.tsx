@@ -15,29 +15,14 @@ export const ScanLinksCard = ({ scanType, setScanType, url, setUrl, multipleUrl,
   const { t } = useTranslation();
   const isDark = useIsDark();
 
-  const isSingle = scanType === ScanMode.SINGLE;
-  const singleButtonStyle = isSingle ? scanPageStyle.activeTab : scanPageStyle.passiveTab;
-  const repositoryButtonStyle = !isSingle ? scanPageStyle.activeTab : scanPageStyle.passiveTab;
+  const isSingleTabActive = scanType === ScanMode.SINGLE;
+  
+  const singleButtonStyle = isSingleTabActive ? scanPageStyle.activeTab : scanPageStyle.passiveTab;
+  const repositoryButtonStyle = isSingleTabActive ? scanPageStyle.passiveTab : scanPageStyle.activeTab;
 
   const submitScanRequest = () => {
     // TODO: Connect to scanning backend
   };
-
-  const renderScanForm = () => {
-    if (isSingle) {
-      return <SingleScanForm url={url} setUrl={setUrl} onSubmit={submitScanRequest} />
-    }
-
-    return (
-      <RepositoryScanForm
-        url={url}
-        setUrl={setUrl}
-        multipleUrl={multipleUrl}
-        setMultipleUrl={setMultipleUrl}
-        onSubmit={submitScanRequest}
-      />
-    );
-  }
 
   return (
     <Card withBorder shadow='0' style={scanPageStyle.scanCardStyle}>
@@ -64,7 +49,21 @@ export const ScanLinksCard = ({ scanType, setScanType, url, setUrl, multipleUrl,
           </Button>
         </div>
 
-        {renderScanForm()}
+        {isSingleTabActive ? (
+          <SingleScanForm
+            url={url}
+            setUrl={setUrl}
+            onSubmit={submitScanRequest}
+          />
+        ) : (
+          <RepositoryScanForm
+            url={url}
+            setUrl={setUrl}
+            multipleUrl={multipleUrl}
+            setMultipleUrl={setMultipleUrl}
+            onSubmit={submitScanRequest}
+          />
+        )}
       </div>
     </Card>
   );
