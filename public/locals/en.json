@@ -89,12 +89,27 @@
     "description": "Test individual URLs or scan entire repositories for broken links with lightning speed",
     "scan_links_card": {
       "title": "Scan Links",
-      "toggle_single": "Single URL",
-      "toggle_repo": "Repository",
-      "input_label": "Enter URL to check",
-      "input_placeholder": "https://example.com/page",
-      "button_check": "Check Link"
+
+      "toggle": {
+        "single": "Single URL",
+        "repository": "Repository"
+      },
+
+      "single": {
+        "input_label": "Enter URL to check",
+        "input_placeholder": "https://example.com/page",
+        "button_check": "Check Link"
+      },
+
+      "repository": {
+        "input_label": "GitHub Repository URL",
+        "input_placeholder": "https://github.com/username/repository",
+        "textarea_label": "Or paste multiple URLs",
+        "textarea_placeholder": "https://example1.com\nhttps://example2.com\nhttps://example3.com",
+        "button_check": "Scan Repository"
+      }
     },
+
     "scan_results_card": {
       "title": "Scan Results",
       "empty_state": "Enter a URL or repository above to start scanning for broken links"
