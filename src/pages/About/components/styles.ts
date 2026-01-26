@@ -2,6 +2,8 @@ import { CSSProperties } from 'react';
 import { theme } from '@/theme';
 
 const colors = theme.colors;
+const getTextColor = (isDark: boolean) =>
+  isDark ? theme.white : colors.gray[7];
 
 export const pageWrapperStyle: CSSProperties = {
   width: '100%',
@@ -58,6 +60,7 @@ export const missionCardStyles: CSSProperties = {
 export const titleStyle = {
   color: colors.primary[1],
 };
+
 export const paragraphStyle = {
   color: colors.primary[2],
   gridColumnStart: 2,
@@ -65,4 +68,42 @@ export const paragraphStyle = {
 
 export const iconStyle = {
   gridRowEnd: 'span 2',
+};
+
+export const aboutPageStyle = {
+  centerGrid: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: theme.spacing['2xl'],
+  } satisfies CSSProperties,
+
+  titleStyle: {
+    fontWeight: 900,
+    fontSize: '3.5rem',
+    lineHeight: 1.1,
+    display: 'inline-block',
+    textAlign: 'center',
+  } satisfies CSSProperties,
+
+  whiteText: {
+    color: theme.white,
+  } satisfies CSSProperties,
+
+  brandStyle: {
+    background:
+      'linear-gradient(90deg, var(--mantine-color-cyan-4) 0%, var(--mantine-color-purple-5) 100%)',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    backgroundClip: 'text',
+  } satisfies CSSProperties,
+
+  text: (isDark: boolean): CSSProperties => ({
+    color: getTextColor(isDark),
+    paddingBlock: theme.spacing.lg,
+    fontSize: '1.1rem',
+    textAlign: 'center',
+    maxWidth: '700px',
+  }),
 };
