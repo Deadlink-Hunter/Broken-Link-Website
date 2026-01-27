@@ -1,6 +1,13 @@
 {
   "welcome_link_text": "this guide",
   "welcome_description_after_link": ". To get started edit pages/Home.page.tsx file.",
+  "about_page":{
+    "title": {
+      "about": "About ",
+      "deadlink_hunter": "Deadlink-Hunter"
+    },
+    "description": "A powerful, open-source tool designed to mantain the integrity of links within your GitHub repositories by identifying and eliminating broken links before they impact your users."
+  },
   "about_feature_card": {
     "card_one": {
       "title": "Precision Scanning",
