@@ -3,7 +3,7 @@ import { useIsDark } from '@/components/Hooks/useIsDark';
 import { Typography } from '@/components/UI/Typography/Typography';
 import { aboutPageStyle } from './styles';
 
-export const AboutTitlePage = () => {
+export const AboutTitle = () => {
   const { t } = useTranslation();
   const isDark = useIsDark();
 
