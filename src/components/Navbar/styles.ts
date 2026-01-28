@@ -66,7 +66,6 @@ export const mobileStyles = {
   linksDivider: { marginLeft: 'calc(50% - 50vw)', marginRight: 'calc(50% - 50vw)' },
   buttonContainer: { display: 'flex' },
   button: {
-    backgroundColor: 'white',
     margin: '.6rem',
     display: 'block',
     flex: 1,
