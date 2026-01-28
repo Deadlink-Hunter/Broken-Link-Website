@@ -32,8 +32,6 @@ export const desktopStyles = {
     padding: '.77rem',
   },
   button: {
-    color: theme.colors.gray[2],
-    backgroundColor: 'white',
     padding: '.6rem',
     borderRadius: '6px',
   },

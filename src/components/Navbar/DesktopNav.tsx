@@ -23,7 +23,7 @@ export default function DesktopNav() {
             <NavbarLinks variant='desktop' />
           </div>
           {/* TODO - add option for button hover effect */}
-          <LinkButton href={externalLinks.GITHUB.REPO} target={LinkTarget.Blank} style={styles.button}>
+          <LinkButton href={externalLinks.GITHUB.REPO} target={LinkTarget.Blank} style={styles.button} variant='primary'>
             <IconBrandGithub style={styles.buttonIcon} size={18} />
             {t('navbar.github')}
           </LinkButton>
