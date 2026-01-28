@@ -32,7 +32,7 @@ function MobileGithubBtn() {
   const { t } = useTranslation();
   return (
     <div style={mobileStyles.buttonContainer}>
-      <LinkButton href={externalLinks.GITHUB.REPO} target={LinkTarget.Blank} style={mobileStyles.button}>
+      <LinkButton href={externalLinks.GITHUB.REPO} target={LinkTarget.Blank} variant='primary' style={mobileStyles.button}>
         <IconBrandGithub color={mobileStyles.buttonIconColor} size={16} />
         <Typography size='small' style={mobileStyles.buttonText}>
           {t('navbar.githubMobile')}
