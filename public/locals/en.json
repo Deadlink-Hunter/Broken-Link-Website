@@ -50,6 +50,13 @@
       "accuracyRate": "Accuracy Rate"
     }
   },
+  "statistics_page":{
+    "title": {
+      "performance": "Performance",
+      "analytics": "Analytics"
+    },
+    "description": "Real time insights into your link scanning performance and repository health metrics."
+  },
   "charts":{
     "scanActivity" : "Scan Activity Over Time",
     "linkTypesDistribustion": "Link Types Distribution"
