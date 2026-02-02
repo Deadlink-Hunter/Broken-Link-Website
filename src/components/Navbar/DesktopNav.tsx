@@ -7,6 +7,7 @@ import NavbarLinks from './NavbarLinks';
 import { desktopStyles as styles } from './styles';
 import { ThemeToggle } from './ThemeToggle';
 import { useNavigationLinks } from '@/components/Hooks/useNavigationLinks';
+import logo from '/logo.svg';
 
 export default function DesktopNav() {
   const { externalLinks } = useNavigationLinks();
@@ -16,7 +17,7 @@ export default function DesktopNav() {
       <div style={styles.container}>
         <div style={styles.innerContainer}>
           <div style={styles.headerContainer}>
-            <img alt='Deadlink logo' style={styles.logoSize} src='/logo.svg' />
+            <img alt='Deadlink logo' style={styles.logoSize} src={logo} />
             <Link labelStyle={styles.header} href='/' label={t('navbar.header')} disableHover />
           </div>
           <div style={styles.linksContainer}>
