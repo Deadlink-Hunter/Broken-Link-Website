@@ -6,6 +6,7 @@ import { Link } from '../UI/Link/Link';
 import NavbarLinks from './NavbarLinks';
 import { mobileStyles as styles } from './styles';
 import { ThemeToggle } from './ThemeToggle';
+import logo from '/logo.svg';
 
 export default function MobileNav() {
   const { t } = useTranslation();
@@ -19,7 +20,7 @@ export default function MobileNav() {
     <div>
       <div style={styles.container}>
         <div style={styles.headerContainer}>
-          <img alt='Deadlink logo' style={styles.logoSize} src='/logo.svg' />
+          <img alt='Deadlink logo' style={styles.logoSize} src={logo} />
           <Link labelStyle={styles.header} href='/' label={t('navbar.header')} />
         </div>
         <Burger
