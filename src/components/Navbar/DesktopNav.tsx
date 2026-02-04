@@ -1,13 +1,13 @@
 import { IconBrandGithub } from '@tabler/icons-react';
+import logo from '/logo.svg';
 import { useTranslation } from 'react-i18next';
+import { useNavigationLinks } from '@/components/Hooks/useNavigationLinks';
 import { LinkButton, LinkTarget } from '../UI/Button/LinkButton';
-import { Divider } from '../UI/Divider/Divider';
+// import { Divider } from '../UI/Divider/Divider';
 import { Link } from '../UI/Link/Link';
 import NavbarLinks from './NavbarLinks';
 import { desktopStyles as styles } from './styles';
 import { ThemeToggle } from './ThemeToggle';
-import { useNavigationLinks } from '@/components/Hooks/useNavigationLinks';
-import logo from '/logo.svg';
 
 export default function DesktopNav() {
   const { externalLinks } = useNavigationLinks();
@@ -24,7 +24,12 @@ export default function DesktopNav() {
             <NavbarLinks variant='desktop' />
           </div>
           {/* TODO - add option for button hover effect */}
-          <LinkButton href={externalLinks.GITHUB.REPO} target={LinkTarget.Blank} style={styles.button} variant='primary'>
+          <LinkButton
+            href={externalLinks.GITHUB.REPO}
+            target={LinkTarget.Blank}
+            style={styles.button}
+            variant='primary'
+          >
             <IconBrandGithub style={styles.buttonIcon} size={18} />
             {t('navbar.github')}
           </LinkButton>
@@ -32,7 +37,7 @@ export default function DesktopNav() {
         </div>
       </div>
 
-      <Divider style={styles.divider} />
+      {/* <Divider style={styles.divider} /> */}
     </>
   );
 }
