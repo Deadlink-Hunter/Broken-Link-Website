@@ -6,7 +6,7 @@ export const EXTERNAL_LINKS = {
     ISSUES: 'https://github.com/Deadlink-Hunter/Broken-Link-Website/issues',
     FEATURE_REQUEST: 'https://github.com/Deadlink-Hunter/Broken-Link-Website/issues/new?template=feature_request.md'
   },
-  DOCUMENTATION: '#'
+  DOCUMENTATION: 'https://github.com/memona008/Broken-Link-Website.git'
 } as const;
 
 export const NAVIGATION_LINKS = [
