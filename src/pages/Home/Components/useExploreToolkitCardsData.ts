@@ -1,4 +1,4 @@
-import { IconChartLine, IconInfoCircle, IconScan } from '@tabler/icons-react';
+import { IconChartHistogram, IconInfoCircle, IconSearch } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
 
 export const useExploreToolkitCardsData = () => {
@@ -10,14 +10,14 @@ export const useExploreToolkitCardsData = () => {
       titleKey: t('explore_toolkit_card1_title'),
       descriptionKey: t('explore_toolkit_card1_description'),
       buttonTextKey: t('explore_toolkit_card1_button'),
-      icon: IconScan,
+      icon: IconSearch,
     },
     {
       id: 'card2',
       titleKey: t('explore_toolkit_card2_title'),
       descriptionKey: t('explore_toolkit_card2_description'),
       buttonTextKey: t('explore_toolkit_card2_button'),
-      icon: IconChartLine,
+      icon: IconChartHistogram,
     },
     {
       id: 'card3',

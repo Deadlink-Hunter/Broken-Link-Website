@@ -25,9 +25,9 @@ export const ExploreToolkit = () => {
         {CARDS_DATA.map((card) => (
           <Card key={card.id} className={classes.card}>
             <div>
-              {card.icon && <card.icon size={36} className={classes.cardIcon} />}
+              {card.icon && <card.icon size={60} className={classes.cardIcon} />}
               <div className={classes.cardHeader}>
-                <Typography variant='h3'>{card.titleKey}</Typography>
+                <Typography variant='h3' className={classes.cardTitle}>{card.titleKey}</Typography>
               </div>
               <Typography variant='body' className={classes.cardDescription}>
                 {card.descriptionKey}
