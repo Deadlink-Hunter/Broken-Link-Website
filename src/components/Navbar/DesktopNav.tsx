@@ -3,7 +3,6 @@ import logo from '/logo.svg';
 import { useTranslation } from 'react-i18next';
 import { useNavigationLinks } from '@/components/Hooks/useNavigationLinks';
 import { LinkButton, LinkTarget } from '../UI/Button/LinkButton';
-// import { Divider } from '../UI/Divider/Divider';
 import { Link } from '../UI/Link/Link';
 import NavbarLinks from './NavbarLinks';
 import { desktopStyles as styles } from './styles';
@@ -36,8 +35,6 @@ export default function DesktopNav() {
           <ThemeToggle />
         </div>
       </div>
-
-      {/* <Divider style={styles.divider} /> */}
     </>
   );
 }
