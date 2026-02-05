@@ -21,10 +21,6 @@
   color: var(--mantine-color-white);
 }
 
-.titleBlack {
-  color: var(--mantine-color-black);
-}
-
 .tagline {
   display: flex;
   align-items: center;
