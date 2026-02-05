@@ -13,7 +13,7 @@ export const HeroTitle = () => {
           <span className={classes.titleGradient}>{t('hero.title.deadlink')}</span>
         </Typography>
         <Typography variant='title' className={classes.title}>
-          <span className={classes.titleWhite}>{t('hero.title.hunter')}</span>
+          <span className={classes.titleBlack}>{t('hero.title.hunter')}</span>
         </Typography>
       </div>
 
