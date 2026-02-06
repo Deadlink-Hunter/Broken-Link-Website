@@ -1,9 +1,9 @@
 import { useTranslation } from 'react-i18next';
 import {
   EXTERNAL_LINKS,
-  NAVIGATION_LINKS,
-  FOOTER_QUICK_LINKS,
   FOOTER_COMMUNITY_LINKS,
+  FOOTER_QUICK_LINKS,
+  NAVIGATION_LINKS,
 } from '@/constants/links.consts';
 
 export const useNavigationLinks = () => {

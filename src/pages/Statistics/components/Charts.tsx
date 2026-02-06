@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { useMediaQuery } from '@mantine/hooks';
 import Chart from '@/components/Charts/Chart';
 import { ChartType, LineData } from '@/components/Charts/chart.types';
@@ -5,7 +6,6 @@ import { Card } from '@/components/UI/Card/Card';
 import { Typography } from '@/components/UI/Typography/Typography';
 import { theme } from '@/theme';
 import { graphsStyles } from './styles';
-import { useTranslation } from 'react-i18next';
 
 // TODO - replace hardcoded data with data from the server
 const donutData = [
@@ -38,7 +38,9 @@ export default function Charts() {
       </Card>
 
       <Card style={graphsStyles.cardStyles(isMobileView)}>
-        <Typography style={graphsStyles.cardHeader}>{t('charts.linkTypesDistribustion')}</Typography>
+        <Typography style={graphsStyles.cardHeader}>
+          {t('charts.linkTypesDistribustion')}
+        </Typography>
         <Chart type={ChartType.Donut} data={donutData} />
       </Card>
     </div>

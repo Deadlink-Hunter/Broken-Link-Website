@@ -5,7 +5,7 @@ import Navbar from './components/Navbar/Navbar';
 export function AppLayout() {
   return (
     <>
-      <ScrollRestoration/>
+      <ScrollRestoration />
       <Navbar />
       <Outlet />
       <Footer />

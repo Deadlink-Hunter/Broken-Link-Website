@@ -1,16 +1,14 @@
 import { IconBolt, IconShield } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
+import { useIsDark } from '@/components/Hooks/useIsDark';
 import { Typography } from '@/components/UI/Typography/Typography';
-import { useMantineTheme, useMantineColorScheme } from '@mantine/core';
 import classes from './HeroTitle.module.css';
 
 export const HeroTitle = () => {
   const { t } = useTranslation();
-  const theme = useMantineTheme();
-  const { colorScheme } = useMantineColorScheme();
+  const isDark = useIsDark();
 
-  const hunterColor =
-    colorScheme === 'dark' ? theme.colors.gray[0] : theme.colors.dark[9];
+  const hunterColor = isDark ? classes.titleWhite : classes.titleBlack;
 
   return (
     <>
@@ -18,15 +16,8 @@ export const HeroTitle = () => {
         <Typography variant='title' className={classes.title}>
           <span className={classes.titleGradient}>{t('hero.title.deadlink')}</span>
         </Typography>
-        <Typography 
-          variant='title' 
-          className={classes.title}
-          style={{
-          color: hunterColor,
-          transition: 'color 0.3s ease',
-          }}          
-        >
-          <span>{t('hero.title.hunter')}</span>
+        <Typography variant='title' className={classes.title}>
+          <span className={hunterColor}>{t('hero.title.hunter')}</span>
         </Typography>
       </div>
 
