@@ -9,7 +9,7 @@
 Este README está disponível em múltiplos idiomas.
 Clique abaixo para alternar:
 
-  - 🇺🇸 [English (Inglês)](README.md)
+  - 🇺🇸 [English (Inglês)](https://github.com/Deadlink-Hunter/Broken-Link-Website/blob/main/README.md)
   - 🇨🇳 [简体中文 (Chinês Simplificado)](README-ZH-CN.md)
 
 Deadlink-Hunter é um projeto open-source projetado para encontrar links quebrados em repositórios do GitHub (com suporte futuro para outras plataformas).
