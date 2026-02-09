@@ -7,12 +7,15 @@ interface SharedCardProps extends Omit<CardProps, 'style'> {
   children: ReactNode;
 }
 
-export const Card = ({ style = {}, children, ...props }: SharedCardProps) => {
-  const defaultStyle = cardStyles.default;
-
+export const Card = ({ children, className, ...props }: SharedCardProps) => {
   return (
-    <MantineCard data-testid='card' style={{ ...defaultStyle, ...style }} {...props}>
+    <MantineCard
+      data-testid='card'
+      className={className}
+      {...props}
+    >
       {children}
     </MantineCard>
   );
 };
+
