@@ -19,6 +19,12 @@ export const exploreToolkitStyles = {
     marginBottom: theme.spacing.xl,
   } satisfies CSSProperties,
 
+   grid: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(3, 1fr)',
+    gap: theme.spacing.xl,
+  } satisfies CSSProperties,
+
   highlight: {
     backgroundImage: `linear-gradient(90deg, ${colors.cyan[4]}, ${colors.purple[5]})`,
     WebkitBackgroundClip: 'text',

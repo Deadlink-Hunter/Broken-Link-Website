@@ -1,6 +1,5 @@
 import { IconArrowRight } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
-import { Box, Container, SimpleGrid } from '@mantine/core';
 import { Button } from '@/components/UI/Button/Button';
 import { Card } from '@/components/UI/Card/Card';
 import { Typography } from '@/components/UI/Typography/Typography';
@@ -12,7 +11,7 @@ export const ExploreToolkit = () => {
   const { CARDS_DATA } = useExploreToolkitCardsData();
 
   return (
-    <Container style={exploreToolkitStyles.container}>
+    <div style={exploreToolkitStyles.container}>
       <Typography variant="h1" style={exploreToolkitStyles.title}>
         {t('explore_toolkit_title_part1')}
         <span style={exploreToolkitStyles.highlight}>
@@ -25,14 +24,14 @@ export const ExploreToolkit = () => {
         {t('explore_toolkit_description')}
       </Typography>
 
-      <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl">
+      <div style={exploreToolkitStyles.grid}>
         {CARDS_DATA.map((card) => (
           <Card key={card.id} style={exploreToolkitStyles.cardRoot}>
-            <Box>
+            <div>
               {card.icon && (
-                <Box style={exploreToolkitStyles.cardIcon}>
-                  <card.icon size={35} />
-                </Box>
+                <div style={exploreToolkitStyles.cardIcon}>
+                  <card.icon size={40} />
+                </div>
               )}
 
               <Typography variant="h3" style={exploreToolkitStyles.cardTitle}>
@@ -42,7 +41,7 @@ export const ExploreToolkit = () => {
               <Typography variant="body" style={exploreToolkitStyles.cardDescription}>
                 {card.descriptionKey}
               </Typography>
-            </Box>
+            </div>
 
             {card.buttonTextKey && (
               <Button variant="primary" style={exploreToolkitStyles.cardButton}>
@@ -51,7 +50,7 @@ export const ExploreToolkit = () => {
             )}
           </Card>
         ))}
-      </SimpleGrid>
-    </Container>
+      </div>
+    </div>
   );
 };
