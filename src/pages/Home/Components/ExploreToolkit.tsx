@@ -44,7 +44,7 @@ export const ExploreToolkit = () => {
             </div>
 
             {card.buttonTextKey && (
-              <LinkButton variant="primary" style={exploreToolkitStyles.cardButton} href={"/Broken-Link-Website" + card.link}>
+              <LinkButton variant="primary" style={exploreToolkitStyles.cardButton} href={card.link}>
                 {card.buttonTextKey} <IconArrowRight size={18} />
               </LinkButton>
             )}
