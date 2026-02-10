@@ -1,14 +1,16 @@
 import { IconArrowRight } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
-import { Button } from '@/components/UI/Button/Button';
 import { Card } from '@/components/UI/Card/Card';
 import { Typography } from '@/components/UI/Typography/Typography';
 import { useExploreToolkitCardsData } from './useExploreToolkitCardsData';
 import { exploreToolkitStyles } from './styles';
+import { Button } from '@/components/UI/Button/Button';
+import { useNavigate } from 'react-router-dom';
 
 export const ExploreToolkit = () => {
   const { t } = useTranslation();
   const { CARDS_DATA } = useExploreToolkitCardsData();
+  const navigate = useNavigate();
 
   return (
     <div style={exploreToolkitStyles.container}>
@@ -44,7 +46,7 @@ export const ExploreToolkit = () => {
             </div>
 
             {card.buttonTextKey && (
-              <Button variant="primary" style={exploreToolkitStyles.cardButton}>
+              <Button variant="primary" style={exploreToolkitStyles.cardButton} onClick={() => navigate(card.link)}>
                 {card.buttonTextKey} <IconArrowRight size={18} />
               </Button>
             )}
