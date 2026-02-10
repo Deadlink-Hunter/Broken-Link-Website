@@ -4,11 +4,13 @@ import { Card } from '@/components/UI/Card/Card';
 import { Typography } from '@/components/UI/Typography/Typography';
 import { useExploreToolkitCardsData } from './useExploreToolkitCardsData';
 import { exploreToolkitStyles } from './styles';
-import { LinkButton } from '@/components/UI/Button/LinkButton';
+import { Button } from '@/components/UI/Button/Button';
+import { useNavigate } from 'react-router-dom';
 
 export const ExploreToolkit = () => {
   const { t } = useTranslation();
   const { CARDS_DATA } = useExploreToolkitCardsData();
+  const navigate = useNavigate();
 
   return (
     <div style={exploreToolkitStyles.container}>
@@ -44,9 +46,9 @@ export const ExploreToolkit = () => {
             </div>
 
             {card.buttonTextKey && (
-              <LinkButton variant="primary" style={exploreToolkitStyles.cardButton} href={card.link}>
+              <Button variant="primary" style={exploreToolkitStyles.cardButton} onClick={() => navigate(card.link)}>
                 {card.buttonTextKey} <IconArrowRight size={18} />
-              </LinkButton>
+              </Button>
             )}
           </Card>
         ))}
