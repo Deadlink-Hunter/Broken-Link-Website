@@ -1,10 +1,10 @@
 import { IconArrowRight } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
-import { Button } from '@/components/UI/Button/Button';
 import { Card } from '@/components/UI/Card/Card';
 import { Typography } from '@/components/UI/Typography/Typography';
 import { useExploreToolkitCardsData } from './useExploreToolkitCardsData';
 import { exploreToolkitStyles } from './styles';
+import { LinkButton } from '@/components/UI/Button/LinkButton';
 
 export const ExploreToolkit = () => {
   const { t } = useTranslation();
@@ -44,9 +44,9 @@ export const ExploreToolkit = () => {
             </div>
 
             {card.buttonTextKey && (
-              <Button variant="primary" style={exploreToolkitStyles.cardButton}>
+              <LinkButton variant="primary" style={exploreToolkitStyles.cardButton} href={card.link}>
                 {card.buttonTextKey} <IconArrowRight size={18} />
-              </Button>
+              </LinkButton>
             )}
           </Card>
         ))}

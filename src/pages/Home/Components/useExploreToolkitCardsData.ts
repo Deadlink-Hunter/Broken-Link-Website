@@ -11,6 +11,7 @@ export const useExploreToolkitCardsData = () => {
       descriptionKey: t('explore_toolkit_card1_description'),
       buttonTextKey: t('explore_toolkit_card1_button'),
       icon: IconSearch,
+      link: t('explore_toolkit_card1_link'),
     },
     {
       id: 'card2',
@@ -18,6 +19,7 @@ export const useExploreToolkitCardsData = () => {
       descriptionKey: t('explore_toolkit_card2_description'),
       buttonTextKey: t('explore_toolkit_card2_button'),
       icon: IconChartHistogram,
+      link: t('explore_toolkit_card2_link'),
     },
     {
       id: 'card3',
@@ -25,6 +27,7 @@ export const useExploreToolkitCardsData = () => {
       descriptionKey: t('explore_toolkit_card3_description'),
       buttonTextKey: t('explore_toolkit_card3_button'),
       icon: IconInfoCircle,
+      link: t('explore_toolkit_card3_link'),
     },
   ];
 
