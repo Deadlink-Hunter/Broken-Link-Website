@@ -26,7 +26,6 @@ jobs:
             - The PR title & description clearly explain the changes.
             - All checks/tests pass.
             - You've linked it to an issue (if applicable).
-            - Also check that build and storybook:build both runs.
 
             **Happy contributing! 🚀**
             `;
