@@ -2,8 +2,7 @@ import { CSSProperties } from 'react';
 import { theme } from '@/theme';
 
 const colors = theme.colors;
-const getTextColor = (isDark: boolean) =>
-  isDark ? theme.white : colors.gray[7];
+const getTextColor = (isDark: boolean) => (isDark ? theme.white : colors.gray[7]);
 
 export const pageWrapperStyle: CSSProperties = {
   width: '100%',
@@ -89,6 +88,10 @@ export const aboutPageStyle = {
 
   whiteText: {
     color: theme.white,
+  } satisfies CSSProperties,
+
+  blackText: {
+    color: 'var(--mantine-color-black)',
   } satisfies CSSProperties,
 
   brandStyle: {
