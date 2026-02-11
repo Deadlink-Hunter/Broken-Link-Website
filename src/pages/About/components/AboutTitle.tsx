@@ -7,12 +7,12 @@ export const AboutTitle = () => {
   const { t } = useTranslation();
   const isDark = useIsDark();
 
-  const hunterColor = isDark ? aboutPageStyle.whiteText : aboutPageStyle.blackText;
+  const aboutTextColor = isDark ? aboutPageStyle.whiteText : aboutPageStyle.blackText;
 
   return (
     <div style={aboutPageStyle.centerGrid}>
       <Typography variant='title' style={aboutPageStyle.titleStyle}>
-        <span style={hunterColor}>{t('about_page.title.about')}</span>
+        <span style={aboutTextColor}>{t('about_page.title.about')}</span>
         <span style={aboutPageStyle.brandStyle}>{t('about_page.title.deadlink_hunter')}</span>
       </Typography>
 
