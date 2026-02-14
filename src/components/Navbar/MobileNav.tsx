@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import logo from '/logo.svg';
 import { useTranslation } from 'react-i18next';
 import { Burger } from '@mantine/core';
 import { Divider } from '../UI/Divider/Divider';
@@ -6,7 +7,6 @@ import { Link } from '../UI/Link/Link';
 import NavbarLinks from './NavbarLinks';
 import { mobileStyles as styles } from './styles';
 import { ThemeToggle } from './ThemeToggle';
-import logo from '/logo.svg';
 
 export default function MobileNav() {
   const { t } = useTranslation();
