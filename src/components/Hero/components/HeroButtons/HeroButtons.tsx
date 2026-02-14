@@ -1,10 +1,10 @@
 import { IconBrandGithub, IconSearch } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
+import { useNavigationLinks } from '@/components/Hooks/useNavigationLinks';
 import { Button } from '@/components/UI/Button/Button';
 import { LinkButton, LinkTarget } from '@/components/UI/Button/LinkButton';
 import { ROUTES } from '@/constants/routes.consts';
-import { useNavigationLinks } from '@/components/Hooks/useNavigationLinks';
 import classes from './HeroButtons.module.css';
 
 export const HeroButtons = () => {

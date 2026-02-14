@@ -2,8 +2,7 @@ import { CSSProperties } from 'react';
 import { theme } from '@/theme';
 
 const colors = theme.colors;
-const getTextColor = (isDark: boolean) =>
-  isDark ? theme.white : colors.gray[7];
+const getTextColor = (isDark: boolean) => (isDark ? theme.white : colors.gray[7]);
 
 export const graphsStyles = {
   containerDisplay: (isMobileView: boolean): CSSProperties => ({

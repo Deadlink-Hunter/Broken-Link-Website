@@ -1,7 +1,7 @@
 import { AxiosError } from 'axios';
 import { StatusCodes } from 'http-status-codes';
 import api from '../Api/api';
-import { API_CHECK_URL, API_CHECK_URLS} from './constants';
+import { API_CHECK_URL, API_CHECK_URLS } from './constants';
 import { ApiErrorTypes, MultipleUrlsResponse, ServerErrorData, UrlCheckResult } from './types';
 
 const handleApiError = (err: unknown) => {

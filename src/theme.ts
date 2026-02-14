@@ -8,9 +8,9 @@ const primary: MantineColorsTuple = [
   '#475569',
   '#334155',
   '#1e293b',
-  '#0f172a',
-  '#0f172a',
-  '#0f172a',
+  '#111827',
+  '#1e293b80',
+  '#33415580',
 ];
 
 const accentCyan: MantineColorsTuple = [

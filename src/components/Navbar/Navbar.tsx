@@ -3,14 +3,10 @@ import { theme } from '@/theme';
 import DesktopNav from './DesktopNav';
 import MobileNav from './MobileNav';
 
-
 export type NavbarVariant = 'mobile' | 'desktop';
 
 export default function Navbar() {
-  const isMobileView = useMediaQuery(
-    `(max-width: ${theme.breakpoints.lg})`
-  );
-  
+  const isMobileView = useMediaQuery(`(max-width: ${theme.breakpoints.lg})`);
+
   return isMobileView ? <MobileNav /> : <DesktopNav />;
 }
-

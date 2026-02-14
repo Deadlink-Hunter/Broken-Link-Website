@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useMediaQuery } from '@mantine/hooks';
 import { theme } from '@/theme';
-
 import { ScanLinksCard } from './components/ScanLinksCard';
 import { ScanResultsCard } from './components/ScanResultsCard';
 import { ScanTitlePage } from './components/ScanTitle';

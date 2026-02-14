@@ -1,7 +1,6 @@
+import { ChangeEvent, FormEvent } from 'react';
 import { IconUpload } from '@tabler/icons-react';
-import { FormEvent, ChangeEvent } from 'react';
 import { useTranslation } from 'react-i18next';
-
 import { Button } from '@/components/UI/Button/Button';
 import { scanPageStyle } from './styles';
 
@@ -11,7 +10,7 @@ interface RepositoryScanFormProps {
   multipleUrl: string;
   setMultipleUrl: (value: string) => void;
   onSubmit: () => void;
-};
+}
 
 export const RepositoryScanForm = ({
   url,
@@ -30,11 +29,11 @@ export const RepositoryScanForm = ({
 
   const handleUrlChange = (e: ChangeEvent<HTMLInputElement>) => {
     setUrl(e.target.value);
-  }
+  };
 
   const handleMultipleUrlChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     setMultipleUrl(e.target.value);
-  }
+  };
 
   return (
     <form onSubmit={handleSubmit}>
@@ -77,4 +76,3 @@ export const RepositoryScanForm = ({
     </form>
   );
 };
-

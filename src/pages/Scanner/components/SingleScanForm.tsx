@@ -1,6 +1,5 @@
+import { ChangeEvent, FormEvent } from 'react';
 import { useTranslation } from 'react-i18next';
-import { FormEvent, ChangeEvent } from 'react';
-
 import { Button } from '@/components/UI/Button/Button';
 import { scanPageStyle } from './styles';
 

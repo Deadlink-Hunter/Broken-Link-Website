@@ -14,12 +14,12 @@ export const exploreToolkitStyles = {
   title: {
     color: `light-dark(${theme.black}, ${theme.white})`,
     fontWeight: 900,
-    fontSize: '3.5rem', 
+    fontSize: '3.5rem',
     textAlign: 'center',
     marginBottom: theme.spacing.xl,
   } satisfies CSSProperties,
 
-   grid: {
+  grid: {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
     gap: theme.spacing.xl,

@@ -2,6 +2,7 @@ import { IconCode, IconHeart, IconStar } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
 import { Box, Container, SimpleGrid, Text } from '@mantine/core';
 import { useViewportSize } from '@mantine/hooks';
+import { useNavigationLinks } from '@/components/Hooks/useNavigationLinks';
 import { theme } from '@/theme';
 import { useIsDark } from '../Hooks/useIsDark';
 import { LinkButton, LinkTarget } from '../UI/Button/LinkButton';
@@ -9,14 +10,9 @@ import { Divider } from '../UI/Divider/Divider';
 import { Link } from '../UI/Link/Link';
 import { Typography } from '../UI/Typography/Typography';
 import { footerStyles } from './styles';
-import { useNavigationLinks } from '@/components/Hooks/useNavigationLinks';
 
 export default function Footer() {
-  const { 
-    externalLinks, 
-    footerQuickLinks, 
-    footerCommunityLinks 
-  } = useNavigationLinks();
+  const { externalLinks, footerQuickLinks, footerCommunityLinks } = useNavigationLinks();
   const { t } = useTranslation();
   const { width } = useViewportSize();
   const isMobileView = width < 1024;

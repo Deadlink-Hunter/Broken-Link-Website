@@ -34,4 +34,3 @@ export const useExploreToolkitCardsData = () => {
 
   return { CARDS_DATA };
 };
-

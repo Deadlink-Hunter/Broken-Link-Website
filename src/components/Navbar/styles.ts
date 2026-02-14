@@ -24,7 +24,7 @@ export const desktopStyles = {
     alignItems: 'center',
   },
   linkHoverColor: (isPathMatch: boolean) =>
-  isPathMatch ? theme.colors.cyan[5] : theme.colors.gray[7],
+    isPathMatch ? theme.colors.cyan[5] : theme.colors.gray[7],
 
   linkColor: (isPathMatch: boolean) => (isPathMatch ? theme.colors.cyan[4] : theme.colors.gray[4]),
   linkStyle: {

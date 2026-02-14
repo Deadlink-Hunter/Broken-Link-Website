@@ -9,13 +9,9 @@ export const StatisticsTitle = () => {
 
   return (
     <div style={statisticsPageStyle.centerGrid}>
-      <Typography variant="title" style={statisticsPageStyle.titleStyle}>
-        <span style={statisticsPageStyle.whiteText}>
-          {t('statistics_page.title.performance')}{' '}
-        </span>
-        <span style={statisticsPageStyle.brandStyle}>
-          {t('statistics_page.title.analytics')}
-        </span>
+      <Typography variant='title' style={statisticsPageStyle.titleStyle}>
+        <span style={statisticsPageStyle.whiteText}>{t('statistics_page.title.performance')} </span>
+        <span style={statisticsPageStyle.brandStyle}>{t('statistics_page.title.analytics')}</span>
       </Typography>
 
       <Typography style={statisticsPageStyle.text(isDark)}>

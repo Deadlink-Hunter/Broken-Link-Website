@@ -28,12 +28,10 @@ export const LinkButton = ({
   const variantStyle = buttonVariants[variant];
   const mergedStyle: MantineStyleProp = {
     ...variantStyle,
-    ...style
+    ...style,
   } as MantineStyleProp;
 
-  const linkRel = target === LinkTarget.Blank
-    ? rel || 'noopener noreferrer'
-    : rel;
+  const linkRel = target === LinkTarget.Blank ? rel || 'noopener noreferrer' : rel;
 
   return (
     <MantineButton
