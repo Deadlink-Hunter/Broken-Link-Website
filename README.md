@@ -32,10 +32,6 @@ You can see the deployed website here: [Deadlink-Hunter Website](https://deadlin
 
 You can check the [more elaborated ui](https://link-guard-191fc128.base44.app) that was created with base44 as initial inspiration.
 
-<img width="434" height="667" alt="image" src="https://github.com/user-attachments/assets/6ae53712-a40a-4e33-bbb5-fd6445c3aec2" />
-
-In order to see the UI, log in.
-
 <p align="left"><a href="#top-btn">Back to the top of page</a></p>
 
 ---
