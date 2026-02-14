@@ -1,5 +1,5 @@
 import React, { CSSProperties } from 'react';
-import { SelectProps, Select as MantineSelect, MantineStyleProp } from '@mantine/core';
+import { Select as MantineSelect, MantineStyleProp, SelectProps } from '@mantine/core';
 import { selectVariants } from './styles';
 
 interface SharedSelectProps extends Omit<SelectProps, 'style' | 'data' | 'onChange'> {
@@ -16,7 +16,6 @@ export const Select = ({
   onChange,
   ...props
 }: SharedSelectProps) => {
-
   const variantStyle = selectVariants[variant];
 
   const mergedStyle: MantineStyleProp = {
@@ -26,7 +25,7 @@ export const Select = ({
 
   return (
     <MantineSelect
-      data-testid="select"
+      data-testid='select'
       data={data}
       onChange={onChange}
       style={mergedStyle}

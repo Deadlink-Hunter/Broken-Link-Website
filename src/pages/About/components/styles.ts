@@ -38,7 +38,8 @@ export const bigContainerStyle = {
 };
 
 export const featureCardStyles = {
-  backgroundColor: colors.primary[7],
+  backgroundColor: colors.primary[8],
+  border: `1px solid ${colors.primary[9]}`,
   boxShadow: `0 1px 3px ${colors.primary[1]}`,
   padding: theme.spacing.lg,
   borderRadius: '0.5rem',
@@ -48,7 +49,8 @@ export const featureCardStyles = {
 };
 
 export const missionCardStyles: CSSProperties = {
-  backgroundColor: colors.primary[7],
+  backgroundColor: colors.primary[8],
+  border: `1px solid ${colors.primary[9]}`,
   padding: theme.spacing.xl,
   display: 'flex',
   flexDirection: 'column',

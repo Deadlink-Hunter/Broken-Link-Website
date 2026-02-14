@@ -8,7 +8,7 @@ export const HeroTitle = () => {
   const { t } = useTranslation();
   const isDark = useIsDark();
 
-  const hunterColor = isDark ? classes.titleWhite : classes.titleBlack;  
+  const hunterColor = isDark ? classes.titleWhite : classes.titleBlack;
 
   return (
     <>
