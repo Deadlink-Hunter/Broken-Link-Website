@@ -8,37 +8,6 @@
       content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
     />
     <title>Deadlink Hunter</title>
-    <!-- GitHub Pages SPA: redirect handling and trailing-slash fix -->
-    <script type="text/javascript">
-      (function () {
-        var basePath = window.location.pathname.startsWith('/Broken-Link-Website')
-          ? '/Broken-Link-Website'
-          : '/';
-        var currentLocation = window.location;
-
-        // 1. Restore path from 404 redirect query (?/path) so the SPA can route correctly
-        if (currentLocation.search[1] === '/') {
-          var decoded = currentLocation.search
-            .slice(1)
-            .split('&')
-            .map(function (s) {
-              return s.replace(/~and~/g, '&');
-            })
-            .join('?');
-          window.history.replaceState(
-            null,
-            null,
-            currentLocation.pathname.slice(0, -1) + decoded + currentLocation.hash
-          );
-        }
-        // 2. Ensure base path has trailing slash so asset paths resolve correctly
-        else if (currentLocation.pathname === basePath) {
-          currentLocation.replace(
-            basePath + '/' + currentLocation.search + currentLocation.hash
-          );
-        }
-      })();
-    </script>
   </head>
   <body>
     <div id="root"></div>

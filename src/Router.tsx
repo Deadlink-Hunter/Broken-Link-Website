@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 import { AppLayout } from './AppLayout';
 import { ErrorComponent } from './components/ErrorBoundary/components/ErrorComponent';
 import { ErrorBoundary } from './components/ErrorBoundary/ErrorBoundary';
@@ -10,7 +10,7 @@ import StatisticsPage from './pages/Statistics/Statistics.page';
 
 const withErrorBoundary = (element: React.ReactNode) => <ErrorBoundary>{element}</ErrorBoundary>;
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   [
     {
       path: ROUTES.HOME,
@@ -40,9 +40,6 @@ const router = createBrowserRouter(
       ],
     },
   ],
-  {
-    basename: '/Broken-Link-Website',
-  }
 );
 
 export function Router() {
