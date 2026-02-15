@@ -10,37 +10,35 @@ import StatisticsPage from './pages/Statistics/Statistics.page';
 
 const withErrorBoundary = (element: React.ReactNode) => <ErrorBoundary>{element}</ErrorBoundary>;
 
-const router = createHashRouter(
-  [
-    {
-      path: ROUTES.HOME,
-      element: <AppLayout />,
-      errorElement: (
-        <ErrorBoundary>
-          <ErrorComponent />
-        </ErrorBoundary>
-      ),
-      children: [
-        {
-          index: true,
-          element: withErrorBoundary(<HomePage />),
-        },
-        {
-          path: ROUTES.ABOUT,
-          element: withErrorBoundary(<AboutPage />),
-        },
-        {
-          path: ROUTES.SCANNER,
-          element: withErrorBoundary(<ScannerPage />),
-        },
-        {
-          path: ROUTES.STATISTICS,
-          element: withErrorBoundary(<StatisticsPage />),
-        },
-      ],
-    },
-  ],
-);
+const router = createHashRouter([
+  {
+    path: ROUTES.HOME,
+    element: <AppLayout />,
+    errorElement: (
+      <ErrorBoundary>
+        <ErrorComponent />
+      </ErrorBoundary>
+    ),
+    children: [
+      {
+        index: true,
+        element: withErrorBoundary(<HomePage />),
+      },
+      {
+        path: ROUTES.ABOUT,
+        element: withErrorBoundary(<AboutPage />),
+      },
+      {
+        path: ROUTES.SCANNER,
+        element: withErrorBoundary(<ScannerPage />),
+      },
+      {
+        path: ROUTES.STATISTICS,
+        element: withErrorBoundary(<StatisticsPage />),
+      },
+    ],
+  },
+]);
 
 export function Router() {
   return <RouterProvider router={router} />;
