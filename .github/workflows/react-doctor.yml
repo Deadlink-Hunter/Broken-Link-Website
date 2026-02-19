@@ -16,5 +16,11 @@ jobs:
         with:
           node-version: 18
 
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
       - name: Run React Doctor
         run: npx -y react-doctor@latest . --score
