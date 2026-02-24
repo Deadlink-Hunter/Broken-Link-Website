@@ -12,29 +12,26 @@ export default function DesktopNav() {
   const { externalLinks } = useNavigationLinks();
   const { t } = useTranslation();
   return (
-    <>
-      <div style={styles.container}>
-        <div style={styles.innerContainer}>
-          <div style={styles.headerContainer}>
-            <img alt='Deadlink logo' style={styles.logoSize} src={logo} />
-            <Link labelStyle={styles.header} href='/' label={t('navbar.header')} disableHover />
-          </div>
-          <div style={styles.linksContainer}>
-            <NavbarLinks variant='desktop' />
-          </div>
-          {/* TODO - add option for button hover effect */}
-          <LinkButton
-            href={externalLinks.GITHUB.REPO}
-            target={LinkTarget.Blank}
-            style={styles.button}
-            variant='primary'
-          >
-            <IconBrandGithub style={styles.buttonIcon} size={18} />
-            {t('navbar.github')}
-          </LinkButton>
-          <ThemeToggle />
-        </div>
+    <div style={styles.container}>
+      <div style={styles.headerContainer}>
+        <img alt='Deadlink logo' style={styles.logoSize} src={logo} />
+        <Link labelStyle={styles.header} href='/' label={t('navbar.header')} disableHover />
       </div>
-    </>
+      <div style={styles.linksContainer}>
+        <NavbarLinks variant='desktop' />
+      </div>
+      {/* TODO - add option for button hover effect */}
+      <div style={styles.buttonContainers}>
+        <LinkButton
+          href={externalLinks.GITHUB.REPO}
+          target={LinkTarget.Blank}
+          style={styles.button}
+          variant='primary'
+        >
+          <IconBrandGithub width={36} height={18} />
+        </LinkButton>
+        <ThemeToggle />
+      </div>
+    </div>
   );
 }
