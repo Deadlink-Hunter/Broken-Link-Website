@@ -41,6 +41,7 @@ export const howItWorksStyles = {
 
   card: {
     width: '25rem',
+    height: '18rem',
     justifyContent: 'space-around',
   } satisfies CSSProperties,
 
