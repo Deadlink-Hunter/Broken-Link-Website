@@ -12,6 +12,6 @@ export const typographyVariants: Record<string, TypographyVariant> = {
   success: { color: colors.success[5] },
   warning: { color: colors.warning[5] },
   error: { color: colors.error[5] },
-  title: { color: colors.primary[7], size: CUSTOM_SIZES.EXTRA_LARGE },
+  title: { color: colors.primary[1], size: CUSTOM_SIZES.EXTRA_LARGE },
   subtitle: { color: colors.primary[6], size: CUSTOM_SIZES.LARGE },
 };

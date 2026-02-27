@@ -1,10 +1,11 @@
-import { CSSProperties } from 'react';
+import type { CSSProperties } from 'react';
 import { rgba } from '@mantine/core';
 import { theme } from '@/theme';
 
 const colors = theme.colors;
 
-export const exploreToolkitStyles = {
+// TODO: there is a code duplication in here, we should extract common title styles to a single place
+export const howItWorksStyles = {
   container: {
     maxWidth: 1200,
     margin: '0 auto',
@@ -19,12 +20,6 @@ export const exploreToolkitStyles = {
     marginBottom: theme.spacing.xl,
   } satisfies CSSProperties,
 
-  grid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-    gap: theme.spacing.xl,
-  } satisfies CSSProperties,
-
   highlight: {
     backgroundImage: `linear-gradient(90deg, ${colors.cyan[4]}, ${colors.purple[5]})`,
     WebkitBackgroundClip: 'text',
@@ -37,20 +32,16 @@ export const exploreToolkitStyles = {
     textAlign: 'center',
   } satisfies CSSProperties,
 
-  cardIcon: {
-    marginBottom: theme.spacing.lg,
-    padding: 14,
-    borderRadius: 14,
-    display: 'inline-flex',
-    alignItems: 'center',
+  cards: {
+    display: 'flex',
     justifyContent: 'center',
+    gap: '2rem',
+    flexWrap: 'wrap',
+  } satisfies CSSProperties,
 
-    background: `linear-gradient(
-      135deg,
-      ${rgba(colors.cyan[4], 0.25)},
-      ${rgba(colors.purple[5], 0.25)}
-    )`,
-    color: colors.cyan[4],
+  card: {
+    width: '25rem',
+    justifyContent: 'space-around',
   } satisfies CSSProperties,
 
   cardTitle: {
@@ -65,18 +56,5 @@ export const exploreToolkitStyles = {
     color: rgba(theme.white, 0.72),
     fontSize: '0.95rem',
     lineHeight: 1.6,
-  } satisfies CSSProperties,
-
-  cardButton: {
-    marginTop: 'auto',
-    padding: 0,
-    backgroundColor: 'transparent',
-    border: 'none',
-
-    color: colors.cyan[4],
-    fontWeight: 600,
-    display: 'inline-flex',
-    alignItems: 'center',
-    gap: 8,
   } satisfies CSSProperties,
 };
