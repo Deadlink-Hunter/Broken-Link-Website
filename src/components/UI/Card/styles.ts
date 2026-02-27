@@ -7,7 +7,6 @@ const colors = theme.colors;
 export const cardStyles = {
   default: {
     height: '100%',
-    minHeight: 340,
     padding: theme.spacing.xl,
     display: 'flex',
     flexDirection: 'column',
