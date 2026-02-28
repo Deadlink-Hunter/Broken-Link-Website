@@ -33,10 +33,10 @@ export default function MobileNav() {
       {displayLinks && (
         <div style={styles.linksContainer}>
           <NavbarLinks displayLinks={displayLinks} variant='mobile' />
+          <ThemeToggle />
         </div>
       )}
       <Divider variant='muted' style={styles.navDivider} />
-      <ThemeToggle />
     </div>
   );
 }

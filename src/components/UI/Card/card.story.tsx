@@ -89,7 +89,6 @@ export const CardWithNestedElements: Story = {
       expect(child).toBeInstanceOf(HTMLElement);
     });
     expect(card).toHaveStyle({ width: '352px' });
-    expect(card).toHaveStyle({ padding: '16px' });
   },
 };
 

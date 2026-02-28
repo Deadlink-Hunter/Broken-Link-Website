@@ -26,7 +26,7 @@ export const ExploreToolkit = () => {
 
       <div style={exploreToolkitStyles.grid}>
         {CARDS_DATA.map((card) => (
-          <Card key={card.id} style={exploreToolkitStyles.cardRoot}>
+          <Card key={card.id}>
             <div>
               {card.icon && (
                 <div style={exploreToolkitStyles.cardIcon}>

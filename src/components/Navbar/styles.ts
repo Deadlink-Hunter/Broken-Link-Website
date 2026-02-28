@@ -2,16 +2,10 @@ import { theme } from '@/theme';
 
 export const desktopStyles = {
   container: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: '.6rem 0',
-  },
-  innerContainer: {
     width: '100%',
-    maxWidth: theme.breakpoints.lg,
     display: 'flex',
-    justifyContent: 'space-between',
+    minHeight: '74px',
+    justifyContent: 'space-around',
     alignItems: 'center',
     marginTop: '.45rem',
   },
@@ -37,6 +31,7 @@ export const desktopStyles = {
   },
   buttonIcon: { marginRight: '1rem' },
   divider: { transform: 'scaleY(.1)' },
+  buttonContainers: { display: 'flex', gap: '1rem' },
 };
 
 export const mobileStyles = {
@@ -78,5 +73,8 @@ export const mobileStyles = {
     marginLeft: 'calc(50% - 50vw)',
     marginRight: 'calc(50% - 50vw)',
     transform: 'scaleY(.2)',
+  },
+  themeToggle: {
+    backround: 'red',
   },
 };
