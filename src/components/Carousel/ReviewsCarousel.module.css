@@ -1,0 +1,60 @@
+.carouselWrapper {
+  position: relative;
+}
+
+.root {
+  padding: 0 1rem;
+}
+
+.viewport {
+  overflow: hidden;
+}
+
+/* Navigation arrows */
+.control {
+  background: white !important;
+  border: 1px solid var(--mantine-color-gray-3) !important;
+  border-radius: 999px !important;
+  width: 56px !important;
+  height: 56px !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  color: var(--mantine-color-dark) !important;
+  transition: all 0.3s ease;
+}
+
+.control:hover {
+  background: var(--mantine-color-blue-0) !important;
+  transform: scale(1.12);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Custom indicator dots (rendered outside Mantine's withIndicators) */
+.customIndicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 1.5rem;
+}
+
+.indicator {
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50% !important;
+  background: var(--mantine-color-gray-3) !important;
+  transition: all 0.4s ease;
+}
+
+.indicator[data-active] {
+  background: var(--mantine-color-blue-6) !important;
+  width: 40px !important;
+  border-radius: 999px !important;
+  transform: scale(1.1);
+}
+
+.empty {
+  text-align: center;
+  padding: 4rem 1rem;
+  color: var(--mantine-color-dimmed);
+  font-size: 1.3rem;
+}
