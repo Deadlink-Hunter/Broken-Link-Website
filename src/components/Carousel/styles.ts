@@ -23,7 +23,7 @@ export const testimonialCardStyles = {
  *  ±2+ → further away (hidden in practice with 3 visible slides)
  */
 export function getLoopDistance(index: number, activeIndex: number, total: number): number {
-  const raw = ((index - activeIndex) % total + total) % total;
+  const raw = (((index - activeIndex) % total) + total) % total;
   return raw > total / 2 ? raw - total : raw;
 }
 

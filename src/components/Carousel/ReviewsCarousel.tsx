@@ -1,9 +1,9 @@
-import { Carousel } from '@mantine/carousel';
-import { UnstyledButton } from '@mantine/core';
-import { useId } from '@mantine/hooks';
 import { Children, ReactNode, useCallback, useRef, useState } from 'react';
 import { IconChevronLeft, IconChevronRight } from '@tabler/icons-react';
 import type { EmblaCarouselType } from 'embla-carousel';
+import { Carousel } from '@mantine/carousel';
+import { UnstyledButton } from '@mantine/core';
+import { useId } from '@mantine/hooks';
 import { getLoopDistance, getSlideTransitionStyle } from './styles';
 import classes from './ReviewsCarousel.module.css';
 
