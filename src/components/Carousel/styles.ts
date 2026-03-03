@@ -15,26 +15,11 @@ export const testimonialCardStyles = {
   } satisfies CSSProperties,
 } as const;
 
-/**
- * Returns the shortest signed distance between a slide index and the active
- * index in a looped/circular list.
- *   0  → active slide
- *  ±1  → immediate left/right neighbours
- *  ±2+ → further away (hidden in practice with 3 visible slides)
- */
 export function getLoopDistance(index: number, activeIndex: number, total: number): number {
   const raw = (((index - activeIndex) % total) + total) % total;
   return raw > total / 2 ? raw - total : raw;
 }
 
-/**
- * Returns the inline CSSProperties applied to the wrapper <div> inside each
- * Carousel.Slide, based on that slide's signed distance from the active one.
- *
- * Distance  0  → active:  scale 1.2, no blur, full opacity, z-index 2 (front)
- * Distance ±1  → side:    scale 1.0, blur 2 px, reduced opacity, z-index 1 (behind)
- * Distance ±2+ → hidden:  collapsed, fully transparent (loop clones, off-screen)
- */
 export function getSlideTransitionStyle(distance: number): CSSProperties {
   const base: CSSProperties = {
     position: 'relative',
@@ -63,7 +48,6 @@ export function getSlideTransitionStyle(distance: number): CSSProperties {
     };
   }
 
-  // Off-screen slides — kept invisible; Embla may reposition them for loop continuity
   return {
     ...base,
     transform: 'scale(0.85)',

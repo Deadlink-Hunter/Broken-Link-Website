@@ -1,11 +1,10 @@
 import { Children, ReactNode, useCallback, useRef, useState } from 'react';
-import { IconChevronLeft, IconChevronRight } from '@tabler/icons-react';
 import type { EmblaCarouselType } from 'embla-carousel';
-import { Carousel } from '@mantine/carousel';
-import { UnstyledButton } from '@mantine/core';
-import { useId } from '@mantine/hooks';
 import { getLoopDistance, getSlideTransitionStyle } from './styles';
 import classes from './ReviewsCarousel.module.css';
+import { Carousel } from '@mantine/carousel';
+import { IconChevronLeft, IconChevronRight } from '@tabler/icons-react';
+import { UnstyledButton } from '@mantine/core';
 
 interface ReviewsCarouselProps {
   children: ReactNode;
@@ -13,8 +12,6 @@ interface ReviewsCarouselProps {
 }
 
 export function ReviewsCarousel({ children, height = 500 }: ReviewsCarouselProps) {
-  // All hooks must come before any early return
-  const id = useId();
   const [activeEmblaIndex, setActiveEmblaIndex] = useState(0);
   const emblaApiRef = useRef<EmblaCarouselType | null>(null);
 
@@ -29,13 +26,9 @@ export function ReviewsCarousel({ children, height = 500 }: ReviewsCarouselProps
     return <div className={classes.empty}>Nenhuma avaliação disponível.</div>;
   }
 
-  // Embla's canLoop() requires: other slides total >= viewport width.
-  // With slideSize 33.33%: 3 slides = 100% of viewport → canLoop = false (loop disabled).
-  // Doubling to 6 slides = 200% → other slides = 5 × 33.33% = 166% ≥ 100% → canLoop = true ✓
   const loopedSlides = [...slidesArray, ...slidesArray];
   const totalLooped = loopedSlides.length;
 
-  // Map Embla's 0-5 index back to the real 0-2 data index for indicators
   const activeDataIndex = activeEmblaIndex % totalReal;
 
   return (
@@ -62,14 +55,13 @@ export function ReviewsCarousel({ children, height = 500 }: ReviewsCarouselProps
         {loopedSlides.map((child, i) => {
           const distance = getLoopDistance(i, activeEmblaIndex, totalLooped);
           return (
-            <Carousel.Slide key={`${id}-${i}`} style={{ padding: '3rem 0.5rem' }}>
+            <Carousel.Slide key={i} style={{ padding: '3rem 0.5rem' }}>
               <div style={getSlideTransitionStyle(distance)}>{child}</div>
             </Carousel.Slide>
           );
         })}
       </Carousel>
 
-      {/* Custom indicators: show only totalReal dots, not totalLooped */}
       <div className={classes.customIndicators}>
         {Array.from({ length: totalReal }, (_, idx) => (
           <UnstyledButton

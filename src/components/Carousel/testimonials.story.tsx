@@ -28,10 +28,6 @@ const STORY_TESTIMONIALS: TestimonialData[] = [
   },
 ];
 
-// ---------------------------------------------------------------------------
-// FeedbackCard stories
-// ---------------------------------------------------------------------------
-
 const cardMeta: Meta<typeof FeedbackCard> = {
   title: 'Components/Carousel/FeedbackCard',
   component: FeedbackCard,
@@ -78,10 +74,6 @@ export const withAvatar: CardStory = {
     avatarUrl: 'https://i.pravatar.cc/150?img=5',
   },
 };
-
-// ---------------------------------------------------------------------------
-// ReviewsCarousel stories
-// ---------------------------------------------------------------------------
 
 export const testimonialsCarousel: CardStory = {
   render: () => (

@@ -1,4 +1,8 @@
-import { Avatar, Rating, Stack, Text, Title } from '@mantine/core';
+import { Avatar } from '@/components/UI/Avatar/Avatar';
+import { Rating } from '@/components/UI/Rating/Rating';
+import { Stack } from '@/components/UI/Stack/Stack';
+import { Text } from '@/components/UI/Text/Text';
+import { Title } from '@/components/UI/Title/Title';
 import { Card } from '@/components/UI/Card/Card';
 import { testimonialCardStyles } from './styles';
 import type { FeedbackCardProps } from './types';
