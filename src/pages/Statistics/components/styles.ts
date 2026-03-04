@@ -38,6 +38,11 @@ export const statisticsPageStyle = {
     color: theme.white,
   } satisfies CSSProperties,
 
+  blackText: {
+    color: 'var(--mantine-color-black)',
+  } satisfies CSSProperties,
+
+
   brandStyle: {
     background:
       'linear-gradient(90deg, var(--mantine-color-cyan-4) 0%, var(--mantine-color-purple-5) 100%)',
