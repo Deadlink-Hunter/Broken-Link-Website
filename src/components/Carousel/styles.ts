@@ -5,13 +5,13 @@ const SLIDE_TRANSITION =
 
 export const testimonialCardStyles = {
   default: {
-    backgroundColor: 'white',
-    borderRadius: 32,
-    border: '1px solid var(--mantine-color-gray-2)',
+    backgroundColor: 'var(--mantine-color-white)',
+    borderRadius: 'var(--mantine-radius-md)',
+    border: '1px solid var(--mantine-color-gray-4)',
     backdropFilter: 'none',
     textAlign: 'center',
     justifyContent: 'flex-start',
-    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.07)',
+    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.12)',
   } satisfies CSSProperties,
 } as const;
 
@@ -21,38 +21,17 @@ export function getLoopDistance(index: number, activeIndex: number, total: numbe
 }
 
 export function getSlideTransitionStyle(distance: number): CSSProperties {
-  const base: CSSProperties = {
+  const isActive = distance === 0;
+  const isAdjacent = Math.abs(distance) === 1;
+
+  return {
     position: 'relative',
     height: '100%',
     willChange: 'transform, opacity, filter',
     transition: SLIDE_TRANSITION,
-  };
-
-  if (distance === 0) {
-    return {
-      ...base,
-      transform: 'scale(1.2)',
-      opacity: 1,
-      filter: 'blur(0px)',
-      zIndex: 2,
-    };
-  }
-
-  if (Math.abs(distance) === 1) {
-    return {
-      ...base,
-      transform: 'scale(1)',
-      opacity: 0.72,
-      filter: 'blur(2px)',
-      zIndex: 1,
-    };
-  }
-
-  return {
-    ...base,
-    transform: 'scale(0.85)',
-    opacity: 0,
-    filter: 'blur(4px)',
-    zIndex: 0,
+    transform: isActive ? 'scale(1.2)' : isAdjacent ? 'scale(1)' : 'scale(0.85)',
+    opacity: isActive ? 1 : isAdjacent ? 'var(--mantine-opacity-lg)' : 'var(--mantine-opacity-0)',
+    filter: isActive ? 'blur(0px)' : isAdjacent ? 'blur(2px)' : 'blur(4px)',
+    zIndex: isActive ? 2 : isAdjacent ? 1 : 0,
   };
 }

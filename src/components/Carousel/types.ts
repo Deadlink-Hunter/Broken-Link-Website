@@ -6,5 +6,3 @@ export interface TestimonialData {
   avatarUrl?: string;
   date?: string;
 }
-
-export type FeedbackCardProps = TestimonialData;
