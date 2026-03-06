@@ -1,0 +1,76 @@
+.carouselWrapper {
+  position: relative;
+}
+
+.root {
+  padding: 0 1rem;
+}
+
+.viewport {
+  overflow: hidden;
+}
+
+.control {
+  background: var(--mantine-color-surface-0);
+  border: 1px solid var(--mantine-color-gray-3);
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  box-shadow: var(--mantine-shadow-md);
+  color: var(--mantine-color-dark);
+  transition: all 0.3s ease;
+}
+
+.control:hover {
+  background: var(--mantine-color-blue-0);
+  transform: scale(1.12);
+  box-shadow: var(--mantine-shadow-sm);
+}
+
+.customIndicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  min-width: 12px;
+  padding: 0;
+  border-radius: 50%;
+  background: var(--mantine-color-gray-3);
+  transition: all 0.4s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.indicator[data-active] {
+  background: var(--mantine-color-blue-6);
+  width: 40px;
+  border-radius: 50%;
+  transform: scale(1.1);
+}
+
+.empty {
+  text-align: center;
+  padding: 4rem 1rem;
+  color: var(--mantine-color-dimmed);
+  font-size: 1.3rem;
+}
+
+.slide {
+  padding: 3rem 1rem;
+  flex: 0 0 80%;
+  min-width: 0;
+}
+
+@media (min-width: 768px) {
+  .slide {
+    flex: 0 0 40%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
