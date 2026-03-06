@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ReviewsCarousel } from './ReviewsCarousel';
+import { Avatar, Rating, Stack, Text, Title } from '@mantine/core';
 import { Card } from '@/components/UI/Card/Card';
-import { Avatar, Rating, Stack, Title, Text } from '@mantine/core';
+import { ReviewsCarousel } from './ReviewsCarousel';
 
 const SAMPLE_ITEMS = [
   { name: 'Mariana Costa', role: 'Product Designer', comment: 'Atendimento impecável!', rating: 5 },
@@ -9,12 +9,26 @@ const SAMPLE_ITEMS = [
   { name: 'Ana Souza', role: 'UX Researcher', comment: 'Incrível!', rating: 5 },
 ];
 
-const SampleCard = ({ name, role, comment, rating }: { name: string; role: string; comment: string; rating: number }) => (
+const SampleCard = ({
+  name,
+  role,
+  comment,
+  rating,
+}: {
+  name: string;
+  role: string;
+  comment: string;
+  rating: number;
+}) => (
   <Card style={{ padding: '2rem' }}>
     <Stack align='center' gap='md'>
-      <Avatar size={80} radius='xl' color='cyan'>{name.charAt(0)}</Avatar>
+      <Avatar size={80} radius='xl' color='cyan'>
+        {name.charAt(0)}
+      </Avatar>
       <Title order={4}>{name}</Title>
-      <Text size='sm' c='dimmed'>{role}</Text>
+      <Text size='sm' c='dimmed'>
+        {role}
+      </Text>
       <Rating value={rating} readOnly color='yellow' />
       <Text size='md'>{comment}</Text>
     </Stack>

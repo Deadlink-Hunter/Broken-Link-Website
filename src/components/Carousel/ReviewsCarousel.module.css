@@ -1,6 +1,5 @@
 .carouselWrapper {
   position: relative;
-  min-height: 500px;
 }
 
 .root {
@@ -17,7 +16,7 @@
   border-radius: 50%;
   width: 56px;
   height: 56px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--mantine-shadow-md);
   color: var(--mantine-color-dark);
   transition: all 0.3s ease;
 }

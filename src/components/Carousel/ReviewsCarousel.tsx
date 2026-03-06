@@ -1,9 +1,8 @@
 import { ReactElement, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
-import { IconChevronLeft, IconChevronRight } from '@tabler/icons-react';
 import { Carousel } from '@mantine/carousel';
 import { Button } from '@/components/UI/Button/Button';
-import { getLoopDistance, getSlideTransitionStyle } from './styles';
+import { carouselIcons, emblaOptions, getLoopDistance, getSlideTransitionStyle } from './styles';
 import classes from './ReviewsCarousel.module.css';
 
 interface ReviewsCarouselProps {
@@ -30,15 +29,10 @@ export const ReviewsCarousel = ({ children }: ReviewsCarouselProps) => {
         withControls
         draggable
         onSlideChange={setActiveEmblaIndex}
-        nextControlIcon={<IconChevronRight size={40} stroke={2} />}
-        previousControlIcon={<IconChevronLeft size={40} stroke={2} />}
+        nextControlIcon={carouselIcons.next}
+        previousControlIcon={carouselIcons.previous}
         classNames={classes}
-        emblaOptions={{
-          align: 'center',
-          loop: true,
-          dragFree: false,
-          slidesToScroll: 1,
-        }}
+        emblaOptions={emblaOptions}
       >
         {loopedSlides.map((child, i) => {
           const distance = getLoopDistance(i, activeEmblaIndex, loopedSlides.length);
@@ -63,4 +57,4 @@ export const ReviewsCarousel = ({ children }: ReviewsCarouselProps) => {
       </div>
     </div>
   );
-}
+};

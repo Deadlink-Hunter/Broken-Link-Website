@@ -1,7 +1,20 @@
-import type { CSSProperties } from 'react';
+import type { CSSProperties, ReactElement } from 'react';
+import { IconChevronLeft, IconChevronRight } from '@tabler/icons-react';
 
 const SLIDE_TRANSITION =
   'transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.5s ease, filter 0.5s ease';
+
+export const carouselIcons: { next: ReactElement; previous: ReactElement } = {
+  next: <IconChevronRight size={40} stroke={2} />,
+  previous: <IconChevronLeft size={40} stroke={2} />,
+};
+
+export const emblaOptions = {
+  align: 'center',
+  loop: true,
+  dragFree: false,
+  slidesToScroll: 1,
+} as const;
 
 export const testimonialCardStyles = {
   default: {
@@ -11,7 +24,7 @@ export const testimonialCardStyles = {
     backdropFilter: 'none',
     textAlign: 'center',
     justifyContent: 'flex-start',
-    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.12)',
+    boxShadow: 'var(--mantine-shadow-md)',
   } satisfies CSSProperties,
 } as const;
 
