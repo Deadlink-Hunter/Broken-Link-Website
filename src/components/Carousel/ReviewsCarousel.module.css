@@ -6,10 +6,6 @@
   padding: 0 1rem;
 }
 
-.viewport {
-  overflow: hidden;
-}
-
 .control {
   background: var(--mantine-color-surface-0);
   border: 1px solid var(--mantine-color-gray-3);

@@ -13,14 +13,10 @@ export const ReviewsCarousel = ({ children }: ReviewsCarouselProps) => {
   const [activeEmblaIndex, setActiveEmblaIndex] = useState(0);
   const [, emblaApi] = useEmblaCarousel();
 
-  const totalReal = children.length;
-
-  if (totalReal === 0) {
-    return <div className={classes.empty}>Nenhuma avaliação disponível.</div>;
-  }
+  const carouselLength = children.length;
 
   const loopedSlides = [...children, ...children];
-  const indicators = Array.from({ length: totalReal }, (_, i) => i);
+  const indicators = Array.from({ length: carouselLength }, (_, i) => i);
 
   return (
     <div className={classes.carouselWrapper}>
