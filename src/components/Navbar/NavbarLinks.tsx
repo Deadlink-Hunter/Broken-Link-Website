@@ -38,7 +38,7 @@ function MobileGithubBtn() {
         variant='primary'
         style={mobileStyles.button}
       >
-        <IconBrandGithub color={mobileStyles.buttonIconColor} size={16} />
+        <IconBrandGithub size={16} />
         <Typography size='small' style={mobileStyles.buttonText}>
           {t('navbar.githubMobile')}
         </Typography>
