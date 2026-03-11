@@ -25,8 +25,8 @@
   "dependencies": {
     "@mantine/carousel": "^8.3.15",
     "@mantine/charts": "^8.3.9",
-    "@mantine/core": "8.2.1",
-    "@mantine/hooks": "8.2.1",
+    "@mantine/core": "^8.3.16",
+    "@mantine/hooks": "^8.3.16",
     "@tabler/icons-react": "^3.35.0",
     "axios": "^1.12.2",
     "http-status-codes": "^2.3.0",
