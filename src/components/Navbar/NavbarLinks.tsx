@@ -1,6 +1,6 @@
 import { IconBrandGithub } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
-import { Divider } from '@mantine/core';
+import { Divider, useMantineColorScheme } from '@mantine/core';
 import { useNavigationLinks } from '@/components/Hooks/useNavigationLinks';
 import { LinkButton, LinkTarget } from '../UI/Button/LinkButton';
 import { Typography } from '../UI/Typography/Typography';
@@ -30,6 +30,8 @@ function Links({ variant }: LinksProps) {
 function MobileGithubBtn() {
   const { externalLinks } = useNavigationLinks();
   const { t } = useTranslation();
+  const { colorScheme } = useMantineColorScheme();
+  const isDark = colorScheme === 'dark';
   return (
     <div style={mobileStyles.buttonContainer}>
       <LinkButton
@@ -38,7 +40,7 @@ function MobileGithubBtn() {
         variant='primary'
         style={mobileStyles.button}
       >
-        <IconBrandGithub size={16} />
+        <IconBrandGithub color={mobileStyles.buttonIconColor(isDark)} size={16} />
         <Typography size='small' style={mobileStyles.buttonText}>
           {t('navbar.githubMobile')}
         </Typography>

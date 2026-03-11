@@ -51,7 +51,7 @@ export const mobileStyles = {
     fontWeight: '700',
     fontSize: '1rem',
   },
-  linkColor: (isPathMatch: boolean) => (isPathMatch ? theme.colors.cyan[4] : undefined),
+  linkColor: (isPathMatch: boolean) => (isPathMatch ? theme.colors.cyan[4] : theme.colors.gray[7]),
   linkContainer: (isPathMatch: boolean) => ({
     backgroundColor: isPathMatch ? '#1e293b' : 'transparent',
     borderRadius: '8px',
@@ -65,8 +65,8 @@ export const mobileStyles = {
     flex: 1,
     borderRadius: '4px',
   },
-  buttonIconColor: theme.colors.gray[2],
-  buttonText: { margin: '0 .8rem', color: undefined, fontWeight: '700' },
+  buttonIconColor: (isDark: boolean) => (isDark ? theme.colors.gray[2] : theme.colors.gray[7]),
+  buttonText: { margin: '0 .8rem', fontWeight: '700' },
 
   navDivider: {
     marginLeft: 'calc(50% - 50vw)',
