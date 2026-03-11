@@ -6,16 +6,11 @@ const getTextColor = (isDark: boolean) => (isDark ? theme.white : colors.gray[7]
 const getSubTextColor = (isDark: boolean) => (isDark ? colors.gray[2] : colors.gray[7]);
 
 export const footerStyles = {
-  wrapper: {
-    color: colors.gray[2],
-    height: '41vh',
-  },
-
   container: {
-    maxWidth: '100%',
-    marginTop: '3rem',
-    padding: '0 1.4rem',
-  },
+    maxWidth: 1200,
+    margin: '3rem auto 0',
+    padding: '0 2.5rem',
+  } satisfies CSSProperties,
 
   gradientText: { fontWeight: 'bold', fontSize: '1.4em' },
 
@@ -30,7 +25,7 @@ export const footerStyles = {
   }),
 
   linkBoxWrapper: {
-    paddingBottom: '2rem',
+    paddingBottom: '3rem',
   },
 
   openSrcTxt: (isMobileView: boolean, isDark: boolean): CSSProperties => ({
@@ -38,10 +33,12 @@ export const footerStyles = {
     alignItems: 'center',
     justifyContent: isMobileView ? 'center' : 'flex-start',
     gap: '.4rem',
+    fontSize: theme.fontSizes.sm,
     color: getSubTextColor(isDark),
   }),
 
   rightsTxt: (isMobileView: boolean, isDark: boolean): CSSProperties => ({
+    fontSize: theme.fontSizes.sm,
     color: getSubTextColor(isDark),
     textAlign: isMobileView ? 'center' : 'end',
   }),

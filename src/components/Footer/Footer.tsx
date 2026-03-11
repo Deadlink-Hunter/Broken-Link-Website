@@ -65,9 +65,11 @@ export default function Footer() {
             ))}
           </Box>
         </SimpleGrid>
+      </Container>
 
-        <Divider />
+      <Divider />
 
+      <Container style={footerStyles.container}>
         <SimpleGrid style={footerStyles.bottomGrid} cols={footerStyles.bottomGridColLayout}>
           <Typography style={footerStyles.openSrcTxt(isMobileView, isDark)}>
             <IconCode size={footerStyles.iconSize} /> {t('footer.madeWith')}
