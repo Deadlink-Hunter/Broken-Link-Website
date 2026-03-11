@@ -136,7 +136,11 @@
 
     "scan_results_card": {
       "title": "Scan Results",
-      "empty_state": "Enter a URL or repository above to start scanning for broken links"
+      "empty_state": "Enter a URL or repository above to start scanning for broken links",
+      "loading": "Scanning...",
+      "response_time": "Response time: {{responseTime}}ms",
+      "total_response_time": "Total response time: {{responseTime}}ms",
+      "summary": "{{working}} working, {{broken}} broken out of {{total}}"
     }
   }
 }
