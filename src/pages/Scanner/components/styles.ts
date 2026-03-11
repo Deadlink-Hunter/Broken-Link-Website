@@ -179,6 +179,48 @@ export const scanPageStyle = {
     color: 'white',
   } satisfies CSSProperties,
 
+  errorIcon: {
+    width: '80px',
+    height: '80px',
+    opacity: 0.2,
+    color: colors.error[5],
+  } satisfies CSSProperties,
+
+  errorText: {
+    color: colors.error[5],
+    maxWidth: '300px',
+    width: '100%',
+    textAlign: 'center',
+    fontSize: theme.fontSizes.md,
+  } satisfies CSSProperties,
+
+  urlRowContainer: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: theme.spacing.sm,
+    maxWidth: '100%',
+  } satisfies CSSProperties,
+
+  statusIcon: (isBroken: boolean) =>
+    ({
+      color: isBroken ? colors.error[5] : colors.success[5],
+      flexShrink: 0,
+    }) satisfies CSSProperties,
+
+  resultsColumn: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: theme.spacing.md,
+    flex: 1,
+  } satisfies CSSProperties,
+
+  resultsListContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: theme.spacing.sm,
+    overflow: 'auto',
+  } satisfies CSSProperties,
+
   inputSection: {
     display: 'flex',
     flexDirection: 'column',
