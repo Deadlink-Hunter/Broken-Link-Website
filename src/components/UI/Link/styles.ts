@@ -2,7 +2,7 @@ import { theme } from '@/theme';
 
 export const defaultHoverColor = theme.colors.cyan[4];
 
-export const getTextColor = (isDark: boolean) => (isDark ? theme.white : theme.colors.gray[7]);
+const getTextColor = (isDark: boolean) => (isDark ? theme.white : theme.colors.gray[7]);
 
 export const linkStyles = {
   root: {

@@ -22,7 +22,7 @@ export const Link = ({
   rootStyle,
   disableHover = false,
   hoverColor = defaultHoverColor,
-  labelColor = undefined,
+  labelColor,
   ...props
 }: LinkProps) => {
   const { hovered, ref } = useHover();
