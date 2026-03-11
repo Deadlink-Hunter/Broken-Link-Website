@@ -20,7 +20,7 @@ export const desktopStyles = {
   linkHoverColor: (isPathMatch: boolean) =>
     isPathMatch ? theme.colors.cyan[5] : theme.colors.gray[7],
 
-  linkColor: (isPathMatch: boolean) => (isPathMatch ? theme.colors.cyan[4] : theme.colors.gray[4]),
+  linkColor: (isPathMatch: boolean) => (isPathMatch ? theme.colors.cyan[4] : theme.colors.gray[7]),
   linkStyle: {
     fontWeight: 'bold',
     padding: '.77rem',
@@ -51,9 +51,8 @@ export const mobileStyles = {
     fontWeight: '700',
     fontSize: '1rem',
   },
-  linkColor: (isPathMatch: boolean) => (isPathMatch ? theme.colors.cyan[4] : theme.white),
+  linkColor: (isPathMatch: boolean) => (isPathMatch ? theme.colors.cyan[4] : theme.colors.gray[7]),
   linkContainer: (isPathMatch: boolean) => ({
-    // backgroundColor exists in theme but not reachable through it (its the seventh color under primary colors array )
     backgroundColor: isPathMatch ? '#1e293b' : 'transparent',
     borderRadius: '8px',
     padding: '.6rem',
@@ -66,8 +65,8 @@ export const mobileStyles = {
     flex: 1,
     borderRadius: '4px',
   },
-  buttonIconColor: theme.colors.gray[2],
-  buttonText: { margin: '0 .8rem', color: theme.colors.gray[2], fontWeight: '700' },
+  buttonIconColor: (isDark: boolean) => (isDark ? theme.colors.gray[2] : theme.colors.gray[7]),
+  buttonText: { margin: '0 .8rem', fontWeight: '700' },
 
   navDivider: {
     marginLeft: 'calc(50% - 50vw)',

@@ -3,7 +3,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import { NavLink } from '@mantine/core';
 import { useHover } from '@mantine/hooks';
 import { useIsDark } from '@/components/Hooks/useIsDark';
-import { defaultHoverColor, defaultLabelColor, linkStyles } from './styles';
+import { defaultHoverColor, linkStyles } from './styles';
 
 interface LinkProps {
   label: string;
@@ -22,7 +22,7 @@ export const Link = ({
   rootStyle,
   disableHover = false,
   hoverColor = defaultHoverColor,
-  labelColor = defaultLabelColor,
+  labelColor,
   ...props
 }: LinkProps) => {
   const { hovered, ref } = useHover();
