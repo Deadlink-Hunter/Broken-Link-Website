@@ -7,7 +7,7 @@ const getSubTextColor = (isDark: boolean) => (isDark ? colors.gray[2] : colors.g
 
 export const footerStyles = {
   container: {
-    maxWidth: 1200,
+    maxWidth: '75rem',
     margin: '3rem auto 0',
     padding: '0 2.5rem',
   } satisfies CSSProperties,
