@@ -5,16 +5,21 @@ import { theme } from '@/theme';
 const colors = theme.colors;
 
 // TODO: there is a code duplication in here, we should extract common title styles to a single place
-export const cardIconWrapper = (from: string, to: string): CSSProperties => ({
+const cardIconBase: CSSProperties = {
   marginBottom: theme.spacing.lg,
   padding: '0.875rem',
   borderRadius: '0.875rem',
   display: 'inline-flex',
   alignItems: 'center',
   justifyContent: 'center',
-  background: `linear-gradient(135deg, ${from}, ${to})`,
   color: theme.white,
-});
+};
+
+export const cardIconStyles = {
+  scan: { ...cardIconBase, background: `linear-gradient(135deg, ${colors.cyan[3]}, ${colors.cyan[6]})` },
+  analyze: { ...cardIconBase, background: `linear-gradient(135deg, ${colors.error[4]}, ${colors.purple[5]})` },
+  fix: { ...cardIconBase, background: `linear-gradient(135deg, ${colors.success[3]}, ${colors.success[6]})` },
+} satisfies Record<string, CSSProperties>;
 
 export const howItWorksStyles = {
   container: {
