@@ -5,9 +5,20 @@ import { theme } from '@/theme';
 const colors = theme.colors;
 
 // TODO: there is a code duplication in here, we should extract common title styles to a single place
+export const cardIconWrapper = (from: string, to: string): CSSProperties => ({
+  marginBottom: theme.spacing.lg,
+  padding: '0.875rem',
+  borderRadius: '0.875rem',
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  background: `linear-gradient(135deg, ${from}, ${to})`,
+  color: theme.white,
+});
+
 export const howItWorksStyles = {
   container: {
-    maxWidth: 1200,
+    maxWidth: '75rem',
     margin: '0 auto',
     padding: theme.spacing['2xl'],
   } satisfies CSSProperties,
@@ -27,7 +38,7 @@ export const howItWorksStyles = {
   } satisfies CSSProperties,
 
   description: {
-    maxWidth: 520,
+    maxWidth: '32.5rem',
     margin: `0 auto ${theme.spacing['2xl']}`,
     textAlign: 'center',
   } satisfies CSSProperties,
@@ -37,12 +48,33 @@ export const howItWorksStyles = {
     justifyContent: 'center',
     gap: '2rem',
     flexWrap: 'wrap',
+    paddingBottom: theme.spacing['2xl'],
   } satisfies CSSProperties,
 
   card: {
     width: '25rem',
     height: '18rem',
-    justifyContent: 'space-around',
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start',
+    gap: theme.spacing.md,
+    position: 'relative',
+    overflow: 'visible',
+  } satisfies CSSProperties,
+
+  stepBadge: {
+    position: 'absolute',
+    top: '-1rem',
+    left: '-1rem',
+    width: '3rem',
+    height: '3rem',
+    borderRadius: '50%',
+    background: `linear-gradient(135deg, ${colors.cyan[4]}, ${colors.purple[5]})`,
+    color: theme.white,
+    fontWeight: 750,
+    fontSize: '1.2rem',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   } satisfies CSSProperties,
 
   cardTitle: {
