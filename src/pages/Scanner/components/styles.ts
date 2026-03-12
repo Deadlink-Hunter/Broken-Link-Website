@@ -180,15 +180,15 @@ export const scanPageStyle = {
   } satisfies CSSProperties,
 
   errorIcon: {
-    width: '80px',
-    height: '80px',
+    width: '5rem',
+    height: '5rem',
     opacity: 0.2,
     color: colors.error[5],
   } satisfies CSSProperties,
 
   errorText: {
     color: colors.error[5],
-    maxWidth: '300px',
+    maxWidth: '18.75rem',
     width: '100%',
     textAlign: 'center',
     fontSize: theme.fontSizes.md,
