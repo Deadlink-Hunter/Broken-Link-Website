@@ -2,6 +2,7 @@ import { IconBolt, IconCircleCheck, IconSearch } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
 import { HowItWorkCard } from './HowItWorkCard';
 import { HowItWorkTitles } from './HowItWorkTitles';
+import { HowItWorkFeatureCard } from './HowItWorkFeatureCard';
 import { cardIconStyles, howItWorksStyles } from './styles';
 
 export const HowItWork = () => {
@@ -33,6 +34,8 @@ export const HowItWork = () => {
           iconStyle={cardIconStyles.fix}
         />
       </div>
+      
+      <HowItWorkFeatureCard />
     </>
   );
 };

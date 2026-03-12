@@ -4,7 +4,7 @@ import { theme } from '@/theme';
 
 const colors = theme.colors;
 
-// TODO: there is a code duplication in here, we should extract common title styles to a single place
+
 const cardIconBase: CSSProperties = {
   marginBottom: theme.spacing.lg,
   padding: '0.875rem',
@@ -40,6 +40,10 @@ export const howItWorksStyles = {
     backgroundImage: `linear-gradient(90deg, ${colors.cyan[4]}, ${colors.purple[5]})`,
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
+  } satisfies CSSProperties,
+
+  highlightCyan: {
+    color: colors.cyan[4],
   } satisfies CSSProperties,
 
   description: {
@@ -94,5 +98,161 @@ export const howItWorksStyles = {
     color: rgba(theme.white, 0.72),
     fontSize: '0.95rem',
     lineHeight: 1.6,
+  } satisfies CSSProperties,
+
+  featureCard: {
+    width: '100%',
+    maxWidth: '65rem',
+    margin: '0 auto',
+    marginBottom: theme.spacing['2xl'],
+    display: 'flex',
+    flexDirection: 'row',
+    gap: '3rem',
+    padding: '3rem',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    flexWrap: 'wrap', 
+  } satisfies CSSProperties,
+
+  featureGraphicContainer: {
+    flex: 1,
+    minWidth: '250px',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    gap: '2rem',
+    position: 'relative',
+  } satisfies CSSProperties,
+
+  graphicLineGroup: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '1rem',
+    width: '100%',
+  } satisfies CSSProperties,
+
+  graphicLineCyan: {
+    height: '6px',
+    flex: 1,
+    borderRadius: '4px',
+    background: `linear-gradient(90deg, ${colors.cyan[6]}, transparent)`,
+  } satisfies CSSProperties,
+
+  graphicLinePurple: {
+    height: '6px',
+    flex: 1,
+    borderRadius: '4px',
+    background: `linear-gradient(90deg, transparent, ${colors.purple[6]})`,
+  } satisfies CSSProperties,
+
+  graphicIconRed: {
+    width: '32px',
+    height: '32px',
+    borderRadius: '50%',
+    backgroundColor: 'rgba(250, 82, 82, 0.2)',
+    border: `1px dashed ${colors.error[5]}`,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  } satisfies CSSProperties,
+
+  graphicIconGreen: {
+    width: '32px',
+    height: '32px',
+    borderRadius: '50%',
+    backgroundColor: colors.success[6],
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  } satisfies CSSProperties,
+
+  graphicMainIcon: {
+    width: '80px',
+    height: '80px',
+    borderRadius: '50%',
+    background: `linear-gradient(135deg, ${colors.cyan[5]}, ${colors.purple[5]})`,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'relative',
+  } satisfies CSSProperties,
+
+  graphicCheckBadge: {
+    position: 'absolute',
+    top: 0,
+    right: -5,
+    width: '24px',
+    height: '24px',
+    borderRadius: '50%',
+    backgroundColor: colors.success[5],
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    border: '3px solid #1a1b1e', 
+  } satisfies CSSProperties,
+
+  featureTextContent: {
+    flex: 1.5,
+    minWidth: '300px',
+  } satisfies CSSProperties,
+
+  featureList: {
+    listStyleType: 'none',
+    padding: 0,
+    margin: 0,
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '1.2rem',
+  } satisfies CSSProperties,
+
+  featureListItem: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '1.2rem', 
+  } satisfies CSSProperties,
+
+
+  listDotCyan: {
+    width: '8px',
+    height: '8px',
+    borderRadius: '50%',
+    backgroundColor: colors.cyan[4],
+    boxShadow: `0 0 0 4px ${rgba(colors.cyan[4], 0.2)}`,
+    flexShrink: 0,
+    margin: '0 4px', 
+  } satisfies CSSProperties,
+
+  listDotPurple: {
+    width: '8px',
+    height: '8px',
+    borderRadius: '50%',
+    backgroundColor: colors.purple[5],
+    boxShadow: `0 0 0 4px ${rgba(colors.purple[5], 0.2)}`,
+    flexShrink: 0,
+    margin: '0 4px',
+  } satisfies CSSProperties,
+
+  listDotGreen: {
+    width: '8px',
+    height: '8px',
+    borderRadius: '50%',
+    backgroundColor: colors.success[5],
+    boxShadow: `0 0 0 4px ${rgba(colors.success[5], 0.2)}`,
+    flexShrink: 0,
+    margin: '0 4px',
+  } satisfies CSSProperties,
+
+
+  featureTitleGradient: {
+    backgroundImage: `linear-gradient(90deg, ${colors.cyan[4]}, ${colors.purple[5]})`,
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+  } satisfies CSSProperties,
+
+  featureDescriptionText: {
+    marginBottom: '2rem',
+    fontSize: '0.95rem',
+    lineHeight: 1.6,
+    color: rgba(theme.white, 0.75),
   } satisfies CSSProperties,
 };
