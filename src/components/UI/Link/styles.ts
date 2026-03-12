@@ -12,7 +12,7 @@ export const linkStyles = {
     return {
       textDecoration: 'none',
       fontWeight: '500',
-      color: hovered ? hoverColor : labelColor ?? getTextColor(isDark),
+      color: hovered ? hoverColor : (labelColor ?? getTextColor(isDark)),
     };
   },
 };

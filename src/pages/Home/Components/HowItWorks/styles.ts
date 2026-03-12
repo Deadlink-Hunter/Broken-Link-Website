@@ -4,7 +4,6 @@ import { theme } from '@/theme';
 
 const colors = theme.colors;
 
-
 const cardIconBase: CSSProperties = {
   marginBottom: theme.spacing.lg,
   padding: '0.875rem',
@@ -16,9 +15,18 @@ const cardIconBase: CSSProperties = {
 };
 
 export const cardIconStyles = {
-  scan: { ...cardIconBase, background: `linear-gradient(135deg, ${colors.cyan[3]}, ${colors.cyan[6]})` },
-  analyze: { ...cardIconBase, background: `linear-gradient(135deg, ${colors.error[4]}, ${colors.purple[5]})` },
-  fix: { ...cardIconBase, background: `linear-gradient(135deg, ${colors.success[3]}, ${colors.success[6]})` },
+  scan: {
+    ...cardIconBase,
+    background: `linear-gradient(135deg, ${colors.cyan[3]}, ${colors.cyan[6]})`,
+  },
+  analyze: {
+    ...cardIconBase,
+    background: `linear-gradient(135deg, ${colors.error[4]}, ${colors.purple[5]})`,
+  },
+  fix: {
+    ...cardIconBase,
+    background: `linear-gradient(135deg, ${colors.success[3]}, ${colors.success[6]})`,
+  },
 } satisfies Record<string, CSSProperties>;
 
 export const howItWorksStyles = {
@@ -111,7 +119,7 @@ export const howItWorksStyles = {
     padding: '3rem',
     alignItems: 'center',
     justifyContent: 'space-between',
-    flexWrap: 'wrap', 
+    flexWrap: 'wrap',
   } satisfies CSSProperties,
 
   featureGraphicContainer: {
@@ -188,7 +196,7 @@ export const howItWorksStyles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    border: '3px solid #1a1b1e', 
+    border: '3px solid #1a1b1e',
   } satisfies CSSProperties,
 
   featureTextContent: {
@@ -208,9 +216,8 @@ export const howItWorksStyles = {
   featureListItem: {
     display: 'flex',
     alignItems: 'center',
-    gap: '1.2rem', 
+    gap: '1.2rem',
   } satisfies CSSProperties,
-
 
   listDotCyan: {
     width: '8px',
@@ -219,7 +226,7 @@ export const howItWorksStyles = {
     backgroundColor: colors.cyan[4],
     boxShadow: `0 0 0 4px ${rgba(colors.cyan[4], 0.2)}`,
     flexShrink: 0,
-    margin: '0 4px', 
+    margin: '0 4px',
   } satisfies CSSProperties,
 
   listDotPurple: {
@@ -241,7 +248,6 @@ export const howItWorksStyles = {
     flexShrink: 0,
     margin: '0 4px',
   } satisfies CSSProperties,
-
 
   featureTitleGradient: {
     backgroundImage: `linear-gradient(90deg, ${colors.cyan[4]}, ${colors.purple[5]})`,
