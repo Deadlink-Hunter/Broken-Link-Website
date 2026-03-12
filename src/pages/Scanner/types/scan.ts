@@ -1,4 +1,5 @@
 import type {
+  ApiErrorTypes,
   MultipleUrlsResponse,
   UrlCheckData,
   UrlCheckResult,
@@ -6,7 +7,6 @@ import type {
 
 export enum ScanMode {
   SINGLE = 'single',
-  // TODO: Repository scan mode is not yet implemented
   REPOSITORY = 'repository',
 }
 
@@ -35,10 +35,10 @@ export interface MultipleResultData {
 
 export type ResolvedScanResults = SingleResultData | MultipleResultData;
 
-export interface AsyncCallbacks {
-  onLoading: (loading: boolean) => void;
-  onError: (error: string | null) => void;
-  onResults: (result: ScanResult | null) => void;
+export interface ScanMutationVariables {
+  scanType: ScanMode;
+  url: string;
+  multipleUrl: string;
 }
 
 export interface ScanLinkCardProps {
@@ -48,11 +48,11 @@ export interface ScanLinkCardProps {
   setUrl: (value: string) => void;
   multipleUrl: string;
   setMultipleUrl: (value: string) => void;
-  callbacks: AsyncCallbacks;
+  onScan: (variables: ScanMutationVariables) => void;
 }
 
 export interface ScanResultsCardProps {
   results: ScanResult | null;
   loading: boolean;
-  error: string | null;
+  error: ApiErrorTypes | null;
 }

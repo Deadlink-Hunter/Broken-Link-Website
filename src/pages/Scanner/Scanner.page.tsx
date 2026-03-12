@@ -5,21 +5,26 @@ import { ScanLinksCard } from './components/ScanLinksCard';
 import { ScanResultsCard } from './components/ScanResultsCard';
 import { ScanTitlePage } from './components/ScanTitle';
 import { scanPageStyle } from './components/styles';
-import { ScanMode, ScanResult } from './types/scan';
+import { ScanMode, type ScanMutationVariables } from './types/scan';
+import { useScanMutation } from './useScanMutation';
 
 const ScannerPage = () => {
   const [scanType, setScanType] = useState<ScanMode>(ScanMode.SINGLE);
   const [url, setUrl] = useState('');
   const [multipleUrl, setMultipleUrl] = useState('');
-  const [results, setResults] = useState<ScanResult | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+
+  const { data, isLoading, error, mutate, reset } = useScanMutation();
 
   const isMobile = useMediaQuery(`(max-width: ${theme.breakpoints.md})`);
 
   const cardsContainerStyle = isMobile
     ? scanPageStyle.scanCardsContainerMobile
     : scanPageStyle.scanCardsContainer;
+
+  const handleScan = (variables: ScanMutationVariables) => {
+    reset();
+    mutate(variables);
+  };
 
   return (
     <main style={scanPageStyle.container}>
@@ -35,9 +40,9 @@ const ScannerPage = () => {
           setUrl={setUrl}
           multipleUrl={multipleUrl}
           setMultipleUrl={setMultipleUrl}
-          callbacks={{ onLoading: setLoading, onError: setError, onResults: setResults }}
+          onScan={handleScan}
         />
-        <ScanResultsCard results={results} loading={loading} error={error} />
+        <ScanResultsCard results={data} loading={isLoading} error={error} />
       </section>
     </main>
   );
