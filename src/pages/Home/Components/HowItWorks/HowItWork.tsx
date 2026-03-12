@@ -2,7 +2,7 @@ import { IconBolt, IconCircleCheck, IconSearch } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
 import { HowItWorkCard } from './HowItWorkCard';
 import { HowItWorkTitles } from './HowItWorkTitles';
-import { howItWorksStyles } from './styles';
+import { cardIconStyles, howItWorksStyles } from './styles';
 
 export const HowItWork = () => {
   const { t } = useTranslation();
@@ -14,17 +14,23 @@ export const HowItWork = () => {
         <HowItWorkCard
           title={t('how_it_works_card1_title')}
           description={t('how_it_works_card1_description')}
-          icon={<IconSearch size={48} />}
+          icon={<IconSearch size={40} />}
+          stepNumber={1}
+          iconStyle={cardIconStyles.scan}
         />
         <HowItWorkCard
           title={t('how_it_works_card2_title')}
           description={t('how_it_works_card2_description')}
-          icon={<IconBolt size={48} />}
+          icon={<IconBolt size={40} />}
+          stepNumber={2}
+          iconStyle={cardIconStyles.analyze}
         />
         <HowItWorkCard
           title={t('how_it_works_card3_title')}
           description={t('how_it_works_card3_description')}
-          icon={<IconCircleCheck size={48} />}
+          icon={<IconCircleCheck size={40} />}
+          stepNumber={3}
+          iconStyle={cardIconStyles.fix}
         />
       </div>
     </>
