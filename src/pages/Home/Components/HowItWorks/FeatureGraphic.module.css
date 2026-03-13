@@ -1,8 +1,8 @@
 .floatingIcon {
-  animation: subtleFloat 4s ease-in-out infinite;
+  animation: subtle-float 4s ease-in-out infinite;
 }
 
-@keyframes subtleFloat {
+@keyframes subtle-float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-0.5rem); }
 }
