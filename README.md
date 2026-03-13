@@ -48,16 +48,18 @@ To fully use the scanner features, you **MUST** run the Backend server locally (
 
 ## Table of Contents
 
-- [The why](#the-why)
+- [The Why](#the-why)
 - [Contributing](#contributing)
-- [Contributors](#contributors)
+- [Environment Variables](#environment-variables)
 - [Docker Setup](#docker-setup)
+- [API & Postman Collection](#api--postman-collection)
 - [Mantine Vite template](#mantine-vite-template)
 - [Features](#features)
 - [pnpm scripts](#pnpm-scripts)
 - [Build and dev scripts](#build-and-dev-scripts)
   - [Testing scripts](#testing-scripts)
   - [Other scripts](#other-scripts)
+- [Contributors](#contributors)
 
 <p align="left"><a href="#top-btn">Go back to the top of page</a></p>
 
@@ -204,6 +206,7 @@ Make sure your backend server is running at `http://localhost:3000` (or adjust t
 This project is based on the Mantine Vite template.
 
 <p align="left"><a href="#top-btn">Go back to the top of the page</a></p>
+
 ## Features
 
 This template comes with the following features:
@@ -219,6 +222,7 @@ This template comes with the following features:
 ## pnpm scripts
 
 <p align="left"><a href="#top-btn">Go back to the top of the page</a></p>
+
 ## Build and dev scripts
 
 - `dev` – start development server
