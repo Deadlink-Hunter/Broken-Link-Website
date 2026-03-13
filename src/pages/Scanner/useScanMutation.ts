@@ -10,7 +10,7 @@ const parseMultipleUrls = (input: string): string[] =>
     .map((line) => line.trim())
     .filter((line) => line.length > 0);
 
-const hasError = (result: { error?: string | null }): result is { error: string } =>
+const hasError = (result: { error?: ApiErrorTypes | null }): result is { error: ApiErrorTypes } =>
   Boolean(result.error);
 
 async function runSingleUrlScan(url: string): Promise<ScanResult> {
