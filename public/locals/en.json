@@ -140,7 +140,14 @@
       "loading": "Scanning...",
       "response_time": "Response time: {{responseTime}}ms",
       "total_response_time": "Total response time: {{responseTime}}ms",
-      "summary": "{{working}} working, {{broken}} broken out of {{total}}"
+      "summary": "{{working}} working, {{broken}} broken out of {{total}}",
+      "errors": {
+        "url_required": "URL is required",
+        "internal_server_error": "Internal server error",
+        "urls_array_required": "URLs array is required",
+        "one_url_required": "At least one URL is required",
+        "maximum_urls_allowed": "Maximum {{max}} URLs allowed per request"
+      }
     }
   }
 }

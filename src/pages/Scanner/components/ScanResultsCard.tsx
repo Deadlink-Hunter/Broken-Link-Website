@@ -7,6 +7,7 @@ import { Loader } from '@/components/UI/Loader/Loader';
 import { Typography } from '@/components/UI/Typography/Typography';
 import type { UrlCheckData } from '@/services/LinkChecker/types';
 import { ResolvedKind, ScanResultsCardProps } from '../types/scan';
+import { getErrorTranslationKey, getErrorTranslationOptions } from '../utils/errorTranslations';
 import { resolveScanResults, sumResponseTimes } from '../utils/scan';
 import { scanPageStyle } from './styles';
 
@@ -54,6 +55,8 @@ export const ScanResultsCard = ({ results, loading, error }: ScanResultsCardProp
   const resultsList = resolved?.kind === ResolvedKind.MULTIPLE ? resolved.results : null;
   const summary = resolved?.kind === ResolvedKind.MULTIPLE ? resolved.summary : null;
   const totalResponseTime = resultsList ? sumResponseTimes(resultsList) : 0;
+  const errorKey = error ? getErrorTranslationKey(error) : null;
+  const errorOptions = error ? getErrorTranslationOptions(error) : undefined;
 
   if (loading) {
     return (
@@ -66,11 +69,13 @@ export const ScanResultsCard = ({ results, loading, error }: ScanResultsCardProp
     );
   }
 
-  if (error) {
+  if (error && errorKey) {
     return (
       <CardShell title={TITLE_KEY} contentStyle={scanPageStyle.resultsStack}>
         <IconX style={scanPageStyle.errorIcon} />
-        <Typography style={scanPageStyle.errorText}>{error}</Typography>
+        <Typography style={scanPageStyle.errorText}>
+          {t(errorKey, errorOptions)}
+        </Typography>
       </CardShell>
     );
   }
