@@ -100,8 +100,10 @@ export const ScanResultsCard = ({ results, loading, error }: ScanResultsCardProp
     );
   }
 
-  if (!resultsList || !summary) return null;
-  
+  if (!resultsList || !summary) {
+    return null;
+  }
+
   return (
     <CardShell title={TITLE_KEY} contentStyle={scanPageStyle.resultsColumn}>
       <div style={scanPageStyle.resultsListContainer}>
