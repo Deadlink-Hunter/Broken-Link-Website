@@ -23,10 +23,10 @@
     "serve-storybook": "npx serve storybook-static -p 8080"
   },
   "dependencies": {
-    "@mantine/carousel": "^8.3.16",
-    "@mantine/charts": "^8.3.16",
-    "@mantine/core": "^8.3.16",
-    "@mantine/hooks": "^8.3.16",
+    "@mantine/carousel": "^8.3.17",
+    "@mantine/charts": "^8.3.17",
+    "@mantine/core": "^8.3.17",
+    "@mantine/hooks": "^8.3.17",
     "@tabler/icons-react": "^3.40.0",
     "axios": "^1.13.6",
     "http-status-codes": "^2.3.0",
