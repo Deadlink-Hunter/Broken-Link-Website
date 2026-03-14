@@ -16,9 +16,18 @@ const cardIconBase: CSSProperties = {
 };
 
 export const cardIconStyles = {
-  scan: { ...cardIconBase, background: `linear-gradient(135deg, ${colors.cyan[3]}, ${colors.cyan[6]})` },
-  analyze: { ...cardIconBase, background: `linear-gradient(135deg, ${colors.error[4]}, ${colors.purple[5]})` },
-  fix: { ...cardIconBase, background: `linear-gradient(135deg, ${colors.success[3]}, ${colors.success[6]})` },
+  scan: {
+    ...cardIconBase,
+    background: `linear-gradient(135deg, ${colors.cyan[3]}, ${colors.cyan[6]})`,
+  },
+  analyze: {
+    ...cardIconBase,
+    background: `linear-gradient(135deg, ${colors.error[4]}, ${colors.purple[5]})`,
+  },
+  fix: {
+    ...cardIconBase,
+    background: `linear-gradient(135deg, ${colors.success[3]}, ${colors.success[6]})`,
+  },
 } satisfies Record<string, CSSProperties>;
 
 export const howItWorksStyles = {
