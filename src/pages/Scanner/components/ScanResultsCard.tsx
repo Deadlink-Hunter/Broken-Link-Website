@@ -50,6 +50,10 @@ const UrlResultRow = ({ url, isBroken }: UrlResultRowProps) => (
 
 export const ScanResultsCard = ({ results, loading, error }: ScanResultsCardProps) => {
   const { t } = useTranslation();
+  const resolved = resolveScanResults(results);
+  const resultsList = resolved?.kind === ResolvedKind.MULTIPLE ? resolved.results : null;
+  const summary = resolved?.kind === ResolvedKind.MULTIPLE ? resolved.summary : null;
+  const totalResponseTime = resultsList ? sumResponseTimes(resultsList) : 0;
 
   if (loading) {
     return (
@@ -71,7 +75,6 @@ export const ScanResultsCard = ({ results, loading, error }: ScanResultsCardProp
     );
   }
 
-  const resolved = resolveScanResults(results);
   if (!resolved) {
     return (
       <CardShell title={TITLE_KEY} contentStyle={scanPageStyle.resultsStack}>
@@ -97,8 +100,8 @@ export const ScanResultsCard = ({ results, loading, error }: ScanResultsCardProp
     );
   }
 
-  const { results: resultsList, summary } = resolved;
-  const totalResponseTime = sumResponseTimes(resultsList);
+  if (!resultsList || !summary) return null;
+  
   return (
     <CardShell title={TITLE_KEY} contentStyle={scanPageStyle.resultsColumn}>
       <div style={scanPageStyle.resultsListContainer}>
