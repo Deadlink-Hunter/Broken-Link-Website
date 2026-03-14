@@ -11,7 +11,13 @@ interface HowItWorkCardProps {
   iconStyle: CSSProperties;
 }
 
-export const HowItWorkCard = ({ title, description, icon, stepNumber, iconStyle }: HowItWorkCardProps) => {
+export const HowItWorkCard = ({
+  title,
+  description,
+  icon,
+  stepNumber,
+  iconStyle,
+}: HowItWorkCardProps) => {
   return (
     <Card style={howItWorksStyles.card}>
       <div style={howItWorksStyles.stepBadge}>{stepNumber}</div>
