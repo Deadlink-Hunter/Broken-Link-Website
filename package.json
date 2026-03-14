@@ -38,7 +38,7 @@
     "recharts": "^3.5.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.29.0",
+    "@eslint/js": "^9.39.4",
     "@ianvs/prettier-plugin-sort-imports": "^4.4.2",
     "@storybook/addon-a11y": "9.0.18",
     "@storybook/addon-storysource": "^8.6.14",
