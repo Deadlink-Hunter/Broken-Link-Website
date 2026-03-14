@@ -73,9 +73,7 @@ export const ScanResultsCard = ({ results, loading, error }: ScanResultsCardProp
     return (
       <CardShell title={TITLE_KEY} contentStyle={scanPageStyle.resultsStack}>
         <IconX style={scanPageStyle.errorIcon} />
-        <Typography style={scanPageStyle.errorText}>
-          {t(errorKey, errorOptions)}
-        </Typography>
+        <Typography style={scanPageStyle.errorText}>{t(errorKey, errorOptions)}</Typography>
       </CardShell>
     );
   }
