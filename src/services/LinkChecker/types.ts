@@ -13,7 +13,6 @@ export interface ServerErrorData {
   error: string;
   message?: string;
 }
-/** Shape for a single URL check result (single response data and multi results items) */
 export interface UrlCheckData {
   url: string;
   isBroken: boolean;

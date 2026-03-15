@@ -52,6 +52,10 @@ const UrlResultRow = ({ url, isBroken }: UrlResultRowProps) => (
 export const ScanResultsCard = ({ results, loading, error }: ScanResultsCardProps) => {
   const { t } = useTranslation();
   const resolved = resolveScanResults(results);
+  const isSingle = resolved?.kind === ResolvedKind.SINGLE;
+  const url = isSingle ? resolved.url : undefined;
+  const isBroken = isSingle ? resolved.isBroken : undefined;
+  const responseTime = isSingle ? resolved.responseTime : undefined;
   const resultsList = resolved?.kind === ResolvedKind.MULTIPLE ? resolved.results : null;
   const summary = resolved?.kind === ResolvedKind.MULTIPLE ? resolved.summary : null;
   const totalResponseTime = resultsList ? sumResponseTimes(resultsList) : 0;
@@ -89,8 +93,7 @@ export const ScanResultsCard = ({ results, loading, error }: ScanResultsCardProp
     );
   }
 
-  if (resolved.kind === ResolvedKind.SINGLE) {
-    const { url, isBroken, responseTime } = resolved;
+  if (isSingle && url !== undefined && isBroken !== undefined) {
     return (
       <CardShell title={TITLE_KEY} contentStyle={scanPageStyle.resultsStack}>
         <UrlResultRow url={url} isBroken={isBroken} />
