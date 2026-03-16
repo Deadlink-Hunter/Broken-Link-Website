@@ -5,7 +5,7 @@ import { useIsDark } from '@/components/Hooks/useIsDark';
 import { Card } from '@/components/UI/Card/Card';
 import { Loader } from '@/components/UI/Loader/Loader';
 import { Typography } from '@/components/UI/Typography/Typography';
-import type { UrlCheckData } from '@/services/LinkChecker/types';
+import type { ApiErrorTypes, UrlCheckData } from '@/services/LinkChecker/types';
 import {
   MultipleResultData,
   ResolvedKind,
@@ -54,70 +54,62 @@ const UrlResultRow = ({ url, isBroken }: UrlResultRowProps) => {
   );
 };
 
-export const ScanResultsCard = ({ results, loading, error }: ScanResultsCardProps) => {
+const LoadingState = () => {
   const { t } = useTranslation();
+  return (
+    <CardShell title={TITLE_KEY} contentStyle={scanPageStyle.resultsStack}>
+      <Loader size='large' />
+      <Typography style={scanPageStyle.resultDescription}>
+        {t('scanner_page.scan_results_card.loading')}
+      </Typography>
+    </CardShell>
+  );
+};
 
-  const resolved = resolveScanResults(results);
-  const kind = resolved?.kind;
+const ErrorState = ({ error }: { error: ApiErrorTypes }) => {
+  const { t } = useTranslation();
+  const errorKey = getErrorTranslationKey(error);
+  const errorOptions = getErrorTranslationOptions(error);
 
-  const isSingle = kind === ResolvedKind.SINGLE;
-  const isMultiple = kind === ResolvedKind.MULTIPLE;
+  return (
+    <CardShell title={TITLE_KEY} contentStyle={scanPageStyle.resultsStack}>
+      <IconX style={scanPageStyle.errorIcon} />
+      <Typography style={scanPageStyle.errorText}>{t(errorKey, errorOptions)}</Typography>
+    </CardShell>
+  );
+};
 
-  const { url, isBroken, responseTime } = isSingle ? (resolved as SingleResultData) : {};
-  const { results: resultsList, summary } = isMultiple ? (resolved as MultipleResultData) : {};
+const EmptyState = () => {
+  const { t } = useTranslation();
+  return (
+    <CardShell title={TITLE_KEY} contentStyle={scanPageStyle.resultsStack}>
+      <IconSearch style={scanPageStyle.emptyStateIcon} />
+      <Typography style={scanPageStyle.resultDescription}>
+        {t('scanner_page.scan_results_card.empty_state')}
+      </Typography>
+    </CardShell>
+  );
+};
 
-  const totalResponseTime = resultsList ? sumResponseTimes(resultsList) : 0;
-
-  const errorKey = error ? getErrorTranslationKey(error) : null;
-  const errorOptions = error ? getErrorTranslationOptions(error) : undefined;
-
-  if (loading) {
-    return (
-      <CardShell title={TITLE_KEY} contentStyle={scanPageStyle.resultsStack}>
-        <Loader size='large' />
+const SingleResult = ({ data }: { data: SingleResultData }) => {
+  const { t } = useTranslation();
+  const { url, isBroken, responseTime } = data;
+  return (
+    <CardShell title={TITLE_KEY} contentStyle={scanPageStyle.resultsStack}>
+      <UrlResultRow url={url} isBroken={isBroken} />
+      {responseTime !== undefined && (
         <Typography style={scanPageStyle.resultDescription}>
-          {t('scanner_page.scan_results_card.loading')}
+          {t('scanner_page.scan_results_card.response_time', { responseTime })}
         </Typography>
-      </CardShell>
-    );
-  }
+      )}
+    </CardShell>
+  );
+};
 
-  if (error && errorKey) {
-    return (
-      <CardShell title={TITLE_KEY} contentStyle={scanPageStyle.resultsStack}>
-        <IconX style={scanPageStyle.errorIcon} />
-        <Typography style={scanPageStyle.errorText}>{t(errorKey, errorOptions)}</Typography>
-      </CardShell>
-    );
-  }
-
-  if (!resolved) {
-    return (
-      <CardShell title={TITLE_KEY} contentStyle={scanPageStyle.resultsStack}>
-        <IconSearch style={scanPageStyle.emptyStateIcon} />
-        <Typography style={scanPageStyle.resultDescription}>
-          {t('scanner_page.scan_results_card.empty_state')}
-        </Typography>
-      </CardShell>
-    );
-  }
-
-  if (isSingle && url !== undefined && isBroken !== undefined) {
-    return (
-      <CardShell title={TITLE_KEY} contentStyle={scanPageStyle.resultsStack}>
-        <UrlResultRow url={url} isBroken={isBroken} />
-        {responseTime !== undefined && (
-          <Typography style={scanPageStyle.resultDescription}>
-            {t('scanner_page.scan_results_card.response_time', { responseTime })}
-          </Typography>
-        )}
-      </CardShell>
-    );
-  }
-
-  if (!resultsList || !summary) {
-    return null;
-  }
+const MultipleResults = ({ data }: { data: MultipleResultData }) => {
+  const { t } = useTranslation();
+  const { results: resultsList, summary } = data;
+  const totalResponseTime = sumResponseTimes(resultsList);
 
   return (
     <CardShell title={TITLE_KEY} contentStyle={scanPageStyle.resultsColumn}>
@@ -142,4 +134,29 @@ export const ScanResultsCard = ({ results, loading, error }: ScanResultsCardProp
       )}
     </CardShell>
   );
+};
+
+export const ScanResultsCard = ({ results, loading, error }: ScanResultsCardProps) => {
+  const resolved = resolveScanResults(results);
+
+  if (loading) {
+    return <LoadingState />;
+  }
+
+  if (error) {
+    return <ErrorState error={error} />;
+  }
+
+  if (!resolved) {
+    return <EmptyState />;
+  }
+
+  if (resolved.kind === ResolvedKind.SINGLE) {
+    return <SingleResult data={resolved as SingleResultData} />;
+  }
+  if (resolved.kind === ResolvedKind.MULTIPLE) {
+    return <MultipleResults data={resolved as MultipleResultData} />;
+  }
+
+  return null;
 };
