@@ -1,7 +1,7 @@
 .cardWrapper {
   width: 100%;
   max-width: 65rem;
-  margin: 0 auto 4rem auto;
+  margin: 0 auto 4rem;
   display: flex;
   flex-direction: row;
   gap: 3rem;
