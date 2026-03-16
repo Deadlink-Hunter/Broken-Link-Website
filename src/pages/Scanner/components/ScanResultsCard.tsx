@@ -6,7 +6,12 @@ import { Card } from '@/components/UI/Card/Card';
 import { Loader } from '@/components/UI/Loader/Loader';
 import { Typography } from '@/components/UI/Typography/Typography';
 import type { UrlCheckData } from '@/services/LinkChecker/types';
-import { ResolvedKind, ScanResultsCardProps } from '../types/scan';
+import {
+  MultipleResultData,
+  ResolvedKind,
+  ScanResultsCardProps,
+  SingleResultData,
+} from '../types/scan';
 import { getErrorTranslationKey, getErrorTranslationOptions } from '../utils/errorTranslations';
 import { resolveScanResults, sumResponseTimes } from '../utils/scan';
 import { scanPageStyle } from './styles';
@@ -38,27 +43,31 @@ const CardShell = ({ title, contentStyle, children }: CardShellProps) => {
   );
 };
 
-const UrlResultRow = ({ url, isBroken }: UrlResultRowProps) => (
-  <div style={scanPageStyle.urlRowContainer}>
-    {isBroken ? (
-      <IconX style={scanPageStyle.statusIcon(isBroken)} />
-    ) : (
-      <IconCheck style={scanPageStyle.statusIcon(isBroken)} />
-    )}
-    <span style={scanPageStyle.resultDescription}>{url}</span>
-  </div>
-);
+const UrlResultRow = ({ url, isBroken }: UrlResultRowProps) => {
+  const StatusIcon = isBroken ? IconX : IconCheck;
+
+  return (
+    <div style={scanPageStyle.urlRowContainer}>
+      <StatusIcon style={scanPageStyle.statusIcon(isBroken)} />
+      <span style={scanPageStyle.resultDescription}>{url}</span>
+    </div>
+  );
+};
 
 export const ScanResultsCard = ({ results, loading, error }: ScanResultsCardProps) => {
   const { t } = useTranslation();
+
   const resolved = resolveScanResults(results);
-  const isSingle = resolved?.kind === ResolvedKind.SINGLE;
-  const url = isSingle ? resolved.url : undefined;
-  const isBroken = isSingle ? resolved.isBroken : undefined;
-  const responseTime = isSingle ? resolved.responseTime : undefined;
-  const resultsList = resolved?.kind === ResolvedKind.MULTIPLE ? resolved.results : null;
-  const summary = resolved?.kind === ResolvedKind.MULTIPLE ? resolved.summary : null;
+  const kind = resolved?.kind;
+
+  const isSingle = kind === ResolvedKind.SINGLE;
+  const isMultiple = kind === ResolvedKind.MULTIPLE;
+
+  const { url, isBroken, responseTime } = isSingle ? (resolved as SingleResultData) : {};
+  const { results: resultsList, summary } = isMultiple ? (resolved as MultipleResultData) : {};
+
   const totalResponseTime = resultsList ? sumResponseTimes(resultsList) : 0;
+
   const errorKey = error ? getErrorTranslationKey(error) : null;
   const errorOptions = error ? getErrorTranslationOptions(error) : undefined;
 
