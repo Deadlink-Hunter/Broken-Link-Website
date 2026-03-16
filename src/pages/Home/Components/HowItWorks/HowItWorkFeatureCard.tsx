@@ -22,13 +22,18 @@ export const HowItWorkFeatureCard = () => {
         <div style={howItWorksStyles.featureTextContent}>
           <div style={howItWorksStyles.featureTitleContainer}>
             <Typography variant='title' style={howItWorksStyles.featureTitleLine}>
-              {t('how_it_works_feature_title_prefix')} <span style={howItWorksStyles.highlightCyan}>{t('how_it_works_feature_title_highlight')}</span>
+              {t('how_it_works_feature_title_prefix')}{' '}
+              <span style={howItWorksStyles.highlightCyan}>
+                {t('how_it_works_feature_title_highlight')}
+              </span>
             </Typography>
             <Typography variant='title' style={howItWorksStyles.featureTitleLine}>
-               <span style={howItWorksStyles.featureTitleGradient}>{t('how_it_works_feature_title_suffix')}</span>
+              <span style={howItWorksStyles.featureTitleGradient}>
+                {t('how_it_works_feature_title_suffix')}
+              </span>
             </Typography>
           </div>
-          
+
           <Typography variant='description' style={howItWorksStyles.featureDescriptionText}>
             {t('how_it_works_feature_description')}
           </Typography>
