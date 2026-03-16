@@ -37,35 +37,35 @@ export const bigContainerStyle = {
   gridTemplateColumns: '1fr 1fr',
 };
 
-export const featureCardStyles = {
-  backgroundColor: colors.primary[8],
-  border: `1px solid ${colors.primary[9]}`,
-  boxShadow: `0 1px 3px ${colors.primary[1]}`,
+export const getFeatureCardStyles = (isDark: boolean) => ({
+  backgroundColor: isDark ? colors.primary[8] : theme.white,
+  border: `1px solid ${isDark ? colors.primary[9] : colors.primary[1]}`,
+  boxShadow: `0 1px 3px ${isDark ? colors.primary[1] : colors.primary[2]}`,
   padding: theme.spacing.lg,
   borderRadius: '0.5rem',
   display: 'grid',
   gridTemplateColumns: 'auto auto',
   gap: theme.spacing.lg,
-};
+});
 
-export const missionCardStyles: CSSProperties = {
-  backgroundColor: colors.primary[8],
-  border: `1px solid ${colors.primary[9]}`,
+export const getMissionCardStyles = (isDark: boolean): CSSProperties => ({
+  backgroundColor: isDark ? colors.primary[8] : theme.white,
+  border: `1px solid ${isDark ? colors.primary[9] : colors.primary[1]}`,
   padding: theme.spacing.xl,
   display: 'flex',
   flexDirection: 'column',
   textAlign: 'center',
   gap: theme.spacing.lg,
-};
+});
 
-export const titleStyle = {
-  color: colors.primary[1],
-};
+export const getTitleStyle = (isDark: boolean) => ({
+  color: isDark ? colors.primary[1] : theme.black,
+});
 
-export const paragraphStyle = {
-  color: colors.primary[2],
+export const getParagraphStyle = (isDark: boolean) => ({
+  color: isDark ? colors.primary[2] : colors.gray[7],
   gridColumnStart: 2,
-};
+});
 
 export const iconStyle = {
   gridRowEnd: 'span 2',

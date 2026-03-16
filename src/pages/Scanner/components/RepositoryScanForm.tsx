@@ -1,8 +1,9 @@
 import { ChangeEvent, FormEvent } from 'react';
 import { IconUpload } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
+import { useIsDark } from '@/components/Hooks/useIsDark';
 import { Button } from '@/components/UI/Button/Button';
-import { scanPageStyle } from './styles';
+import { getScanPageStyle } from './styles';
 
 interface RepositoryScanFormProps {
   url: string;
@@ -20,6 +21,8 @@ export const RepositoryScanForm = ({
   onSubmit,
 }: RepositoryScanFormProps) => {
   const { t } = useTranslation();
+  const isDark = useIsDark();
+  const scanPageStyle = getScanPageStyle(isDark);
   const baseTranslationKey = 'scanner_page.scan_links_card.repository';
 
   const handleSubmit = (e?: FormEvent<HTMLFormElement>) => {

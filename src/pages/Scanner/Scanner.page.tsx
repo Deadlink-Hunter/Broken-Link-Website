@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { useMediaQuery } from '@mantine/hooks';
+import { useIsDark } from '@/components/Hooks/useIsDark';
 import { theme } from '@/theme';
 import { ScanLinksCard } from './components/ScanLinksCard';
 import { ScanResultsCard } from './components/ScanResultsCard';
 import { ScanTitlePage } from './components/ScanTitle';
-import { scanPageStyle } from './components/styles';
+import { getScanPageStyle } from './components/styles';
 import { ScanMode } from './types/scan';
 
 const ScannerPage = () => {
@@ -13,6 +14,8 @@ const ScannerPage = () => {
   const [multipleUrl, setMultipleUrl] = useState('');
 
   const isMobile = useMediaQuery(`(max-width: ${theme.breakpoints.md})`);
+  const isDark = useIsDark();
+  const scanPageStyle = getScanPageStyle(isDark);
 
   const cardsContainerStyle = isMobile
     ? scanPageStyle.scanCardsContainerMobile

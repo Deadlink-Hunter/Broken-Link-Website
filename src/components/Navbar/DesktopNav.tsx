@@ -1,16 +1,19 @@
 import { IconBrandGithub } from '@tabler/icons-react';
 import logo from '/logo.svg';
 import { useTranslation } from 'react-i18next';
+import { useIsDark } from '@/components/Hooks/useIsDark';
 import { useNavigationLinks } from '@/components/Hooks/useNavigationLinks';
 import { LinkButton, LinkTarget } from '../UI/Button/LinkButton';
 import { Link } from '../UI/Link/Link';
 import NavbarLinks from './NavbarLinks';
-import { desktopStyles as styles } from './styles';
+import { getDesktopStyles } from './styles';
 import { ThemeToggle } from './ThemeToggle';
 
 export default function DesktopNav() {
   const { externalLinks } = useNavigationLinks();
   const { t } = useTranslation();
+  const isDark = useIsDark();
+  const styles = getDesktopStyles(isDark);
   return (
     <div style={styles.container}>
       <div style={styles.headerContainer}>

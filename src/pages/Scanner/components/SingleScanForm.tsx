@@ -1,7 +1,8 @@
 import { ChangeEvent, FormEvent } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useIsDark } from '@/components/Hooks/useIsDark';
 import { Button } from '@/components/UI/Button/Button';
-import { scanPageStyle } from './styles';
+import { getScanPageStyle } from './styles';
 
 interface SingleScanFormProps {
   url: string;
@@ -11,6 +12,8 @@ interface SingleScanFormProps {
 
 export const SingleScanForm = ({ url, setUrl, onSubmit }: SingleScanFormProps) => {
   const { t } = useTranslation();
+  const isDark = useIsDark();
+  const scanPageStyle = getScanPageStyle(isDark);
   const baseTranslationKey = 'scanner_page.scan_links_card.single';
 
   const handleSubmit = (e?: FormEvent<HTMLFormElement>) => {

@@ -1,11 +1,14 @@
-import { IconBolt, IconCircleCheck, IconSearch } from '@tabler/icons-react';
+import { IconBolt, IconCheck, IconSearch } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
+import { useIsDark } from '@/components/Hooks/useIsDark';
 import { HowItWorkCard } from './HowItWorkCard';
 import { HowItWorkTitles } from './HowItWorkTitles';
-import { cardIconStyles, howItWorksStyles } from './styles';
+import { cardIconStyles, getHowItWorksStyles } from './styles';
 
 export const HowItWork = () => {
   const { t } = useTranslation();
+  const isDark = useIsDark();
+  const howItWorksStyles = getHowItWorksStyles(isDark);
 
   return (
     <>
@@ -28,7 +31,7 @@ export const HowItWork = () => {
         <HowItWorkCard
           title={t('how_it_works_card3_title')}
           description={t('how_it_works_card3_description')}
-          icon={<IconCircleCheck size={40} />}
+          icon={<IconCheck size={40} />}
           stepNumber={3}
           iconStyle={cardIconStyles.fix}
         />

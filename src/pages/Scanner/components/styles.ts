@@ -14,19 +14,19 @@ const flexColumnCenter: CSSProperties = {
   justifyContent: 'center',
 };
 
-const baseInputStyle: CSSProperties = {
+const getBaseInputStyle = (isDark: boolean): CSSProperties => ({
   width: '100%',
   boxSizing: 'border-box',
   fontSize: theme.fontSizes.md,
-  color: colors.gray[5],
-  backgroundColor: colors.primary[7],
+  color: isDark ? colors.gray[5] : colors.gray[7],
+  backgroundColor: isDark ? colors.primary[7] : theme.white,
   padding: `${theme.spacing.md} ${theme.spacing.lg}`,
   borderRadius: theme.radius.md,
-  border: `1px solid ${colors.primary[5]}`,
+  border: `1px solid ${isDark ? colors.primary[5] : colors.gray[4]}`,
   outline: 'none',
-};
+});
 
-export const scanPageStyle = {
+export const getScanPageStyle = (isDark: boolean) => ({
   container: {
     ...flexColumnCenter,
     padding: '6rem 1.5rem',
@@ -51,11 +51,11 @@ export const scanPageStyle = {
     display: 'inline-block',
   },
 
-  text: (isDark: boolean): CSSProperties => ({
+  text: {
     color: getTextColor(isDark),
     paddingBlock: theme.spacing.lg,
     fontSize: '1.2em',
-  }),
+  } satisfies CSSProperties,
 
   scanCardsContainer: {
     display: 'grid',
@@ -76,10 +76,12 @@ export const scanPageStyle = {
     flexDirection: 'column',
     gap: theme.spacing.md,
     width: '100%',
-    backgroundColor: colors.primary[6],
-    borderColor: colors.primary[5],
+    backgroundColor: isDark ? colors.primary[6] : theme.white,
+    borderColor: isDark ? colors.primary[5] : colors.gray[3],
+    borderWidth: 1,
+    borderStyle: 'solid',
     borderRadius: theme.radius.lg,
-    boxShadow: 'none',
+    boxShadow: isDark ? 'none' : '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
   } satisfies CSSProperties,
 
   cardHeader: {
@@ -95,34 +97,34 @@ export const scanPageStyle = {
     marginBottom: theme.spacing.sm,
   } satisfies CSSProperties,
 
-  cardTitle: (isDark: boolean): CSSProperties => ({
+  cardTitle: {
     color: getTextColor(isDark),
     fontSize: theme.fontSizes['2xl'],
     fontWeight: 'bold',
     paddingBlock: theme.spacing.sm,
-  }),
+  } satisfies CSSProperties,
 
   segmentedControl: {
     borderRadius: theme.radius.md,
     root: {
-      backgroundColor: colors.primary[7],
+      backgroundColor: isDark ? colors.primary[7] : colors.gray[1],
     },
     label: {
-      color: colors.gray[4],
+      color: isDark ? colors.gray[4] : colors.gray[7],
     },
     indicator: {
-      backgroundColor: colors.primary[5],
+      backgroundColor: isDark ? colors.primary[5] : theme.white,
     },
   },
 
   textInput: {
     input: {
       fontSize: theme.fontSizes.md,
-      backgroundColor: colors.primary[7],
-      borderColor: colors.primary[5],
-      color: colors.gray[0],
+      backgroundColor: isDark ? colors.primary[7] : theme.white,
+      borderColor: isDark ? colors.primary[5] : colors.gray[4],
+      color: isDark ? colors.gray[0] : colors.gray[9],
       '&::placeholder': {
-        color: colors.gray[4],
+        color: isDark ? colors.gray[4] : colors.gray[5],
       },
     },
   },
@@ -138,7 +140,7 @@ export const scanPageStyle = {
   } satisfies CSSProperties,
 
   fieldLabel: {
-    color: colors.gray[0],
+    color: isDark ? colors.gray[0] : colors.gray[9],
     fontSize: theme.fontSizes.sm,
     width: '500px',
   } satisfies CSSProperties,
@@ -176,7 +178,7 @@ export const scanPageStyle = {
     width: '80px',
     height: '80px',
     opacity: 0.2,
-    color: 'white',
+    color: isDark ? 'white' : 'black',
   } satisfies CSSProperties,
 
   inputSection: {
@@ -194,27 +196,28 @@ export const scanPageStyle = {
   } satisfies CSSProperties,
 
   textInputStyle: {
-    ...baseInputStyle,
+    ...getBaseInputStyle(isDark),
   } satisfies CSSProperties,
 
   textareaStyle: {
-    ...baseInputStyle,
+    ...getBaseInputStyle(isDark),
     resize: 'vertical',
     minHeight: '100px',
   } satisfies CSSProperties,
 
   segmentedWrapper: {
     display: 'flex',
-    backgroundColor: colors.primary[7],
+    backgroundColor: isDark ? colors.primary[7] : colors.gray[1],
     padding: '4px',
     borderRadius: theme.radius.md,
   } satisfies CSSProperties,
 
   activeTab: {
     flex: 1,
-    backgroundColor: colors.primary[5],
-    color: 'white',
+    backgroundColor: isDark ? colors.primary[5] : theme.white,
+    color: isDark ? 'white' : colors.gray[9],
     border: 'none',
+    boxShadow: isDark ? 'none' : '0 1px 3px rgba(0,0,0,0.1)',
     borderRadius: theme.radius.sm,
     padding: '8px',
     cursor: 'pointer',
@@ -223,9 +226,9 @@ export const scanPageStyle = {
   passiveTab: {
     flex: 1,
     backgroundColor: 'transparent',
-    color: colors.gray[4],
+    color: isDark ? colors.gray[4] : colors.gray[6],
     border: 'none',
     padding: '8px',
     cursor: 'pointer',
   } satisfies CSSProperties,
-};
+});

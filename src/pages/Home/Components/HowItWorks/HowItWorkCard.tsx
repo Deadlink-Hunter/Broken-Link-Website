@@ -1,7 +1,8 @@
 import { CSSProperties, ReactNode } from 'react';
+import { useIsDark } from '@/components/Hooks/useIsDark';
 import { Card } from '@/components/UI/Card/Card';
 import { Typography } from '@/components/UI/Typography/Typography';
-import { howItWorksStyles } from './styles';
+import { getHowItWorksStyles } from './styles';
 
 interface HowItWorkCardProps {
   title: string;
@@ -18,12 +19,19 @@ export const HowItWorkCard = ({
   stepNumber,
   iconStyle,
 }: HowItWorkCardProps) => {
+  const isDark = useIsDark();
+  const howItWorksStyles = getHowItWorksStyles(isDark);
+
   return (
     <Card style={howItWorksStyles.card}>
       <div style={howItWorksStyles.stepBadge}>{stepNumber}</div>
       <div style={iconStyle}>{icon}</div>
-      <Typography variant='title'>{title}</Typography>
-      <Typography variant='description'>{description}</Typography>
+      <Typography variant='primary' style={howItWorksStyles.cardTitle}>
+        {title}
+      </Typography>
+      <Typography variant='primary' style={howItWorksStyles.cardDescription}>
+        {description}
+      </Typography>
     </Card>
   );
 };

@@ -1,6 +1,7 @@
 import { useMatch, useResolvedPath } from 'react-router-dom';
+import { useIsDark } from '@/components/Hooks/useIsDark';
 import { Link } from '../UI/Link/Link';
-import { desktopStyles, mobileStyles } from './styles';
+import { getDesktopStyles, getMobileStyles } from './styles';
 
 interface NavbarLinkItemProps {
   href: string;
@@ -12,6 +13,9 @@ export default function NavbarLink({ href, label, variant }: NavbarLinkItemProps
   const resolvedPath = useResolvedPath(href);
   const match = useMatch({ path: resolvedPath.pathname, end: true });
   const isActive = Boolean(match);
+  const isDark = useIsDark();
+  const mobileStyles = getMobileStyles(isDark);
+  const desktopStyles = getDesktopStyles(isDark);
 
   if (variant === 'desktop') {
     return (

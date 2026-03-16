@@ -4,7 +4,7 @@ import { theme } from '@/theme';
 
 const colors = theme.colors;
 
-export const exploreToolkitStyles = {
+export const getExploreToolkitStyles = (isDark: boolean) => ({
   container: {
     maxWidth: 1200,
     margin: '0 auto',
@@ -12,7 +12,7 @@ export const exploreToolkitStyles = {
   } satisfies CSSProperties,
 
   title: {
-    color: `light-dark(${theme.black}, ${theme.white})`,
+    color: isDark ? theme.white : theme.black,
     fontWeight: 900,
     fontSize: '3.5rem',
     textAlign: 'center',
@@ -54,7 +54,7 @@ export const exploreToolkitStyles = {
   } satisfies CSSProperties,
 
   cardTitle: {
-    color: theme.white,
+    color: isDark ? theme.white : theme.black,
     fontWeight: 900,
     fontSize: '1.25rem',
     marginBottom: theme.spacing.sm,
@@ -62,7 +62,7 @@ export const exploreToolkitStyles = {
 
   cardDescription: {
     marginBottom: theme.spacing.xl,
-    color: rgba(theme.white, 0.72),
+    color: isDark ? rgba(theme.white, 0.72) : colors.gray[7],
     fontSize: '0.95rem',
     lineHeight: 1.6,
   } satisfies CSSProperties,
@@ -73,10 +73,10 @@ export const exploreToolkitStyles = {
     backgroundColor: 'transparent',
     border: 'none',
 
-    color: colors.cyan[4],
+    color: isDark ? colors.cyan[4] : colors.cyan[7],
     fontWeight: 600,
     display: 'inline-flex',
     alignItems: 'center',
     gap: 8,
   } satisfies CSSProperties,
-};
+});

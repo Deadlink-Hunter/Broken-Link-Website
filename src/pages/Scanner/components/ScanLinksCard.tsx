@@ -7,7 +7,7 @@ import { Typography } from '@/components/UI/Typography/Typography';
 import { ScanLinkCardProps, ScanMode } from '../types/scan';
 import { RepositoryScanForm } from './RepositoryScanForm';
 import { SingleScanForm } from './SingleScanForm';
-import { scanPageStyle } from './styles';
+import { getScanPageStyle } from './styles';
 
 export const ScanLinksCard = ({
   scanType,
@@ -19,6 +19,7 @@ export const ScanLinksCard = ({
 }: ScanLinkCardProps) => {
   const { t } = useTranslation();
   const isDark = useIsDark();
+  const scanPageStyle = getScanPageStyle(isDark);
 
   const isSingleTabActive = scanType === ScanMode.SINGLE;
 
@@ -35,7 +36,7 @@ export const ScanLinksCard = ({
     <Card withBorder shadow='0' style={scanPageStyle.scanCardStyle}>
       <header style={scanPageStyle.cardHeader}>
         <IconSearch style={scanPageStyle.searchIcon} />
-        <Typography style={scanPageStyle.cardTitle(isDark)}>
+        <Typography style={scanPageStyle.cardTitle}>
           {t('scanner_page.scan_links_card.title')}
         </Typography>
       </header>
