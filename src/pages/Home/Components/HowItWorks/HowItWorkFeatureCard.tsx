@@ -15,38 +15,35 @@ export const HowItWorkFeatureCard = () => {
   ];
 
   return (
-    <Card className={classes.cardWrapper}>
-      <FeatureGraphic />
+    <Card className={classes.featureCard}>
+      <div className={classes.innerContent}>
+        <FeatureGraphic />
 
-      <div style={howItWorksStyles.featureTextContent}>
-        <div style={howItWorksStyles.featureTitleContainer}>
-          <Typography variant='title' style={howItWorksStyles.featureTitleLine}>
-            {t('how_it_works_feature_title_prefix')}{' '}
-            <span style={howItWorksStyles.highlightCyan}>
-              {t('how_it_works_feature_title_highlight')}
-            </span>
+        <div style={howItWorksStyles.featureTextContent}>
+          <div style={howItWorksStyles.featureTitleContainer}>
+            <Typography variant='title' style={howItWorksStyles.featureTitleLine}>
+              {t('how_it_works_feature_title_prefix')} <span style={howItWorksStyles.highlightCyan}>{t('how_it_works_feature_title_highlight')}</span>
+            </Typography>
+            <Typography variant='title' style={howItWorksStyles.featureTitleLine}>
+               <span style={howItWorksStyles.featureTitleGradient}>{t('how_it_works_feature_title_suffix')}</span>
+            </Typography>
+          </div>
+          
+          <Typography variant='description' style={howItWorksStyles.featureDescriptionText}>
+            {t('how_it_works_feature_description')}
           </Typography>
-          <Typography variant='title' style={howItWorksStyles.featureTitleLine}>
-            <span style={howItWorksStyles.featureTitleGradient}>
-              {t('how_it_works_feature_title_suffix')}
-            </span>
-          </Typography>
+
+          <ul style={howItWorksStyles.featureList}>
+            {featurePoints.map((point, index) => (
+              <li key={index} style={howItWorksStyles.featureListItem}>
+                <div style={point.dotStyle} />
+                <Typography variant='body' style={howItWorksStyles.featureListText}>
+                  {point.text}
+                </Typography>
+              </li>
+            ))}
+          </ul>
         </div>
-
-        <Typography variant='description' style={howItWorksStyles.featureDescriptionText}>
-          {t('how_it_works_feature_description')}
-        </Typography>
-
-        <ul style={howItWorksStyles.featureList}>
-          {featurePoints.map((point, index) => (
-            <li key={index} style={howItWorksStyles.featureListItem}>
-              <div style={point.dotStyle} />
-              <Typography variant='body' style={howItWorksStyles.featureListText}>
-                {point.text}
-              </Typography>
-            </li>
-          ))}
-        </ul>
       </div>
     </Card>
   );

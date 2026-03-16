@@ -1,7 +1,12 @@
-.cardWrapper {
+.featureCard {
   width: 100%;
   max-width: 65rem;
-  margin: 0 auto 4rem;
+  margin: 0 auto 4rem auto;
+  padding: 0;
+  overflow: hidden;
+}
+
+.innerContent {
   display: flex;
   flex-direction: row;
   gap: 3rem;
@@ -9,13 +14,17 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  box-sizing: border-box;
+  width: 100%;
 }
 
-/* 📱 Mobile Breakpoint: Triggers on screens smaller than 768px */
 @media (max-width: 768px) {
-  .cardWrapper {
-    width: calc(100% - 2rem);
+  .featureCard {
+    width: calc(100% - 2.5rem);
+  }
+  
+  .innerContent {
     padding: 1.5rem;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 }

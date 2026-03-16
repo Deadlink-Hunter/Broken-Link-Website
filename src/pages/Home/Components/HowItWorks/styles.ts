@@ -31,18 +31,9 @@ const baseListDot: CSSProperties = {
 };
 
 export const cardIconStyles = {
-  scan: {
-    ...cardIconBase,
-    background: `linear-gradient(135deg, ${colors.cyan[3]}, ${colors.cyan[6]})`,
-  },
-  analyze: {
-    ...cardIconBase,
-    background: `linear-gradient(135deg, ${colors.error[4]}, ${colors.purple[5]})`,
-  },
-  fix: {
-    ...cardIconBase,
-    background: `linear-gradient(135deg, ${colors.success[3]}, ${colors.success[6]})`,
-  },
+  scan: { ...cardIconBase, background: `linear-gradient(135deg, ${colors.cyan[3]}, ${colors.cyan[6]})` },
+  analyze: { ...cardIconBase, background: `linear-gradient(135deg, ${colors.error[4]}, ${colors.purple[5]})` },
+  fix: { ...cardIconBase, background: `linear-gradient(135deg, ${colors.success[3]}, ${colors.success[6]})` },
 } satisfies Record<string, CSSProperties>;
 
 export const howItWorksStyles = {
@@ -87,13 +78,16 @@ export const howItWorksStyles = {
   } satisfies CSSProperties,
 
   card: {
-    width: '25rem',
-    height: '18rem',
+    // FIX: Using calc() forces empty space on the sides so the absolute badge doesn't get cut off!
+    width: 'calc(100% - 2.5rem)',
+    maxWidth: '25rem',
+    minHeight: '18rem',
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
     gap: theme.spacing.md,
     position: 'relative',
     overflow: 'visible',
+    boxSizing: 'border-box',
   } satisfies CSSProperties,
 
   stepBadge: {
@@ -131,7 +125,7 @@ export const howItWorksStyles = {
 
   featureGraphicContainer: {
     flex: 1,
-    minWidth: '15.625rem',
+    minWidth: 'min(15.625rem, 100%)',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -191,12 +185,12 @@ export const howItWorksStyles = {
     width: '1.5rem',
     height: '1.5rem',
     backgroundColor: colors.success[5],
-    border: `0.1875rem solid ${colors.primary[7]}`,
+    border: `0.1875rem solid ${colors.primary[7]}`, 
   } satisfies CSSProperties,
 
   featureTextContent: {
     flex: 1.5,
-    minWidth: '18.75rem',
+    minWidth: 'min(18.75rem, 100%)',
   } satisfies CSSProperties,
 
   featureTitleContainer: {
@@ -205,13 +199,14 @@ export const howItWorksStyles = {
     marginBottom: '1.5rem',
   } satisfies CSSProperties,
 
-  // Using 2.1rem here intentionally because the standard 2xl theme size is too small for this specific card layout
   featureTitleLine: {
     fontFamily: theme.fontFamily,
-    fontSize: '2.1rem',
+    fontSize: theme.fontSizes.xxl,
     fontWeight: 900,
     lineHeight: 1.2,
     color: theme.white,
+    overflowWrap: 'break-word',
+    wordWrap: 'break-word',
   } satisfies CSSProperties,
 
   featureTitleGradient: {
