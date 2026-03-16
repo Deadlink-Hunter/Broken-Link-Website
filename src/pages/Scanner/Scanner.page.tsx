@@ -1,19 +1,27 @@
 import { useState } from 'react';
+import { useMutation } from '@tanstack/react-query';
 import { useMediaQuery } from '@mantine/hooks';
+import { ApiErrorTypes } from '@/services/LinkChecker/types';
 import { theme } from '@/theme';
 import { ScanLinksCard } from './components/ScanLinksCard';
 import { ScanResultsCard } from './components/ScanResultsCard';
 import { ScanTitlePage } from './components/ScanTitle';
 import { scanPageStyle } from './components/styles';
-import { ScanMode, type ScanMutationVariables } from './types/scan';
-import { useScanMutation } from './useScanMutation';
+import { ScanMode, type ScanMutationVariables, type ScanResult } from './types/scan';
+import { runScan } from './utils/scanMutation';
 
 const ScannerPage = () => {
   const [scanType, setScanType] = useState<ScanMode>(ScanMode.SINGLE);
   const [url, setUrl] = useState('');
   const [multipleUrl, setMultipleUrl] = useState('');
 
-  const { data, isLoading, error, mutate, reset } = useScanMutation();
+  const { data, isPending, error, mutate, reset } = useMutation<
+    ScanResult,
+    ApiErrorTypes,
+    ScanMutationVariables
+  >({
+    mutationFn: runScan,
+  });
 
   const isMobile = useMediaQuery(`(max-width: ${theme.breakpoints.md})`);
 
@@ -42,7 +50,7 @@ const ScannerPage = () => {
           setMultipleUrl={setMultipleUrl}
           onScan={handleScan}
         />
-        <ScanResultsCard results={data} loading={isLoading} error={error} />
+        <ScanResultsCard results={data ?? null} loading={isPending} error={error ?? null} />
       </section>
     </main>
   );

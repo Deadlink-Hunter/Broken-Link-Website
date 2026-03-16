@@ -1,8 +1,7 @@
-import { useMutation } from '@tanstack/react-query';
 import { MAX_URLS_PER_REQUEST } from '@/services/LinkChecker/constants';
 import linkCheckerService from '@/services/LinkChecker/linkCheckerService';
 import { ApiErrorTypes } from '@/services/LinkChecker/types';
-import { ScanMode, type ScanMutationVariables, type ScanResult } from './types/scan';
+import { ScanMode, type ScanMutationVariables, type ScanResult } from '../types/scan';
 
 const parseMultipleUrls = (input: string): string[] =>
   input
@@ -40,21 +39,7 @@ async function runMultipleUrlsScan(multipleUrl: string): Promise<ScanResult> {
   return result;
 }
 
-async function runScan(variables: ScanMutationVariables): Promise<ScanResult> {
+export async function runScan(variables: ScanMutationVariables): Promise<ScanResult> {
   const { scanType, url, multipleUrl } = variables;
   return scanType === ScanMode.SINGLE ? runSingleUrlScan(url) : runMultipleUrlsScan(multipleUrl);
-}
-
-export function useScanMutation() {
-  const mutation = useMutation<ScanResult, ApiErrorTypes, ScanMutationVariables>({
-    mutationFn: runScan,
-  });
-
-  return {
-    data: mutation.data ?? null,
-    isLoading: mutation.isPending,
-    error: mutation.error ?? null,
-    mutate: mutation.mutate,
-    reset: mutation.reset,
-  };
 }
