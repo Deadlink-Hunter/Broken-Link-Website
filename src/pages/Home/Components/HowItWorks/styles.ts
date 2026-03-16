@@ -31,18 +31,9 @@ const baseListDot: CSSProperties = {
 };
 
 export const cardIconStyles = {
-  scan: {
-    ...cardIconBase,
-    background: `linear-gradient(135deg, ${colors.cyan[3]}, ${colors.cyan[6]})`,
-  },
-  analyze: {
-    ...cardIconBase,
-    background: `linear-gradient(135deg, ${colors.error[4]}, ${colors.purple[5]})`,
-  },
-  fix: {
-    ...cardIconBase,
-    background: `linear-gradient(135deg, ${colors.success[3]}, ${colors.success[6]})`,
-  },
+  scan: { ...cardIconBase, background: `linear-gradient(135deg, ${colors.cyan[3]}, ${colors.cyan[6]})` },
+  analyze: { ...cardIconBase, background: `linear-gradient(135deg, ${colors.error[4]}, ${colors.purple[5]})` },
+  fix: { ...cardIconBase, background: `linear-gradient(135deg, ${colors.success[3]}, ${colors.success[6]})` },
 } satisfies Record<string, CSSProperties>;
 
 export const howItWorksStyles = {
@@ -129,19 +120,6 @@ export const howItWorksStyles = {
     lineHeight: 1.6,
   } satisfies CSSProperties,
 
-  featureCard: {
-    width: '100%',
-    maxWidth: '65rem',
-    margin: `0 auto ${theme.spacing['2xl']}`,
-    display: 'flex',
-    flexDirection: 'row',
-    gap: '3rem',
-    padding: '3rem',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    flexWrap: 'wrap',
-  } satisfies CSSProperties,
-
   featureGraphicContainer: {
     flex: 1,
     minWidth: '15.625rem',
@@ -204,7 +182,7 @@ export const howItWorksStyles = {
     width: '1.5rem',
     height: '1.5rem',
     backgroundColor: colors.success[5],
-    border: `0.1875rem solid ${colors.primary[7]}`,
+    border: `0.1875rem solid ${colors.primary[7]}`, 
   } satisfies CSSProperties,
 
   featureTextContent: {
@@ -218,6 +196,7 @@ export const howItWorksStyles = {
     marginBottom: '1.5rem',
   } satisfies CSSProperties,
 
+  // Using 2.1rem here intentionally because the standard 2xl theme size is too small for this specific card layout
   featureTitleLine: {
     fontFamily: theme.fontFamily,
     fontSize: '2.1rem',

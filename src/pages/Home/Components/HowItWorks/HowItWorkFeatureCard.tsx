@@ -3,6 +3,7 @@ import { Card } from '@/components/UI/Card/Card';
 import { Typography } from '@/components/UI/Typography/Typography';
 import { FeatureGraphic } from './FeatureGraphic';
 import { howItWorksStyles } from './styles';
+import classes from './HowItWorkFeatureCard.module.css';
 
 export const HowItWorkFeatureCard = () => {
   const { t } = useTranslation();
@@ -14,24 +15,19 @@ export const HowItWorkFeatureCard = () => {
   ];
 
   return (
-    <Card style={howItWorksStyles.featureCard}>
+    <Card className={classes.cardWrapper}>
       <FeatureGraphic />
 
       <div style={howItWorksStyles.featureTextContent}>
         <div style={howItWorksStyles.featureTitleContainer}>
           <Typography variant='title' style={howItWorksStyles.featureTitleLine}>
-            {t('how_it_works_feature_title_prefix')}{' '}
-            <span style={howItWorksStyles.highlightCyan}>
-              {t('how_it_works_feature_title_highlight')}
-            </span>
+            {t('how_it_works_feature_title_prefix')} <span style={howItWorksStyles.highlightCyan}>{t('how_it_works_feature_title_highlight')}</span>
           </Typography>
           <Typography variant='title' style={howItWorksStyles.featureTitleLine}>
-            <span style={howItWorksStyles.featureTitleGradient}>
-              {t('how_it_works_feature_title_suffix')}
-            </span>
+             <span style={howItWorksStyles.featureTitleGradient}>{t('how_it_works_feature_title_suffix')}</span>
           </Typography>
         </div>
-
+        
         <Typography variant='description' style={howItWorksStyles.featureDescriptionText}>
           {t('how_it_works_feature_description')}
         </Typography>

@@ -1,0 +1,21 @@
+.cardWrapper {
+  width: 100%;
+  max-width: 65rem;
+  margin: 0 auto 4rem auto;
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  padding: 3rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* 📱 Mobile Breakpoint: Triggers on screens smaller than 768px */
+@media (max-width: 768px) {
+  .cardWrapper {
+    width: calc(100% - 2rem);
+    padding: 1.5rem;
+    gap: 2rem;
+  }
+}
