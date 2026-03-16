@@ -4,8 +4,8 @@ import { Typography } from '@/components/UI/Typography/Typography';
 import type { UrlCheckData } from '@/services/LinkChecker/types';
 import type { MultipleResultData } from '../../types/scan';
 import { sumResponseTimes } from '../../utils/scan';
-import { CardShell } from './CardShell';
 import { scanPageStyle } from '../styles';
+import { CardShell } from './CardShell';
 
 const TITLE_KEY = 'scanner_page.scan_results_card.title';
 
@@ -41,11 +41,11 @@ export const MultipleResults = ({ data }: { data: MultipleResultData }) => {
         })}
       </Typography>
       {totalResponseTime > 0 && (
-      <Typography style={scanPageStyle.resultDescription}>
-        {t('scanner_page.scan_results_card.total_response_time', {
-          responseTime: totalResponseTime,
-        })}
-      </Typography>
+        <Typography style={scanPageStyle.resultDescription}>
+          {t('scanner_page.scan_results_card.total_response_time', {
+            responseTime: totalResponseTime,
+          })}
+        </Typography>
       )}
     </CardShell>
   );

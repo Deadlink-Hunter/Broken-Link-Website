@@ -1,9 +1,9 @@
 import { useTranslation } from 'react-i18next';
 import { Typography } from '@/components/UI/Typography/Typography';
 import type { SingleResultData } from '../../types/scan';
+import { scanPageStyle } from '../styles';
 import { CardShell } from './CardShell';
 import { UrlResultRow } from './MultipleResults';
-import { scanPageStyle } from '../styles';
 
 const TITLE_KEY = 'scanner_page.scan_results_card.title';
 
