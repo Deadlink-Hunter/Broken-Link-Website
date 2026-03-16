@@ -36,14 +36,14 @@ export function resolveScanResults(result: ScanResult | null): ResolvedScanResul
     };
   }
   if (isSingleUrlScanResult(result)) {
-    const singleLinkResult = result.data;
+    const { url, isBroken, statusCode, error, responseTime } = result.data;
     return {
       kind: ResolvedKind.SINGLE,
-      url: singleLinkResult.url,
-      isBroken: singleLinkResult.isBroken,
-      statusCode: singleLinkResult.statusCode,
-      error: singleLinkResult.error,
-      responseTime: singleLinkResult.responseTime,
+      url,
+      isBroken,
+      statusCode,
+      error,
+      responseTime,
     };
   }
   return null;
