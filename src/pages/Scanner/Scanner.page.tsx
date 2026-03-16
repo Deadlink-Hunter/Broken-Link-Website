@@ -4,7 +4,7 @@ import { useMediaQuery } from '@mantine/hooks';
 import { ApiErrorTypes } from '@/services/LinkChecker/types';
 import { theme } from '@/theme';
 import { ScanLinksCard } from './components/ScanLinksCard';
-import { ScanResultsCard } from './components/ScanResultsCard';
+import { ScanResultsCard } from './components/ScanResultsCard/ScanResultsCard';
 import { ScanTitlePage } from './components/ScanTitle';
 import { scanPageStyle } from './components/styles';
 import { ScanMode, type ScanMutationVariables, type ScanResult } from './types/scan';
