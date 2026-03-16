@@ -109,6 +109,7 @@ const themeOverride = createTheme({
     lg: '1.125rem',
     xl: '1.25rem',
     '2xl': '1.5rem',
+    xxl: '2.1rem',
   },
   defaultRadius: 'md',
   spacing: {

@@ -1,0 +1,14 @@
+.floatingIcon {
+  animation: subtle-float 4s ease-in-out infinite;
+}
+
+@keyframes subtle-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-0.5rem); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floatingIcon {
+    animation: none;
+  }
+}

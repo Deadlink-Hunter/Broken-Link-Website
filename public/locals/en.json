@@ -108,6 +108,13 @@
   "how_it_works_title_highlight": "Works",
   "how_it_works_title_part2": "",
   "how_it_works_subtitle": "Fix broken links in three simple steps. No installation required.",
+  "how_it_works_feature_title_prefix": "Healing Broken Links,",
+  "how_it_works_feature_title_highlight": "One",
+  "how_it_works_feature_title_suffix": "Repository at a Time",
+  "how_it_works_feature_description": "Think of Deadlink-Hunter as your repository's healthcare provider. We diagnose broken connections, identify the issues, and provide you with a clear treatment plan to restore your project's health.",
+  "how_it_works_feature_point_1": "No more 404 errors breaking your documentation",
+  "how_it_works_feature_point_2": "Keep your users' trust with working references",
+  "how_it_works_feature_point_3": "Maintain professional repository standards",
   "scanner_page": {
     "title": "Link Scanner",
     "description": "Test individual URLs or scan entire repositories for broken links with lightning speed",
