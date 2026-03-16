@@ -30,7 +30,7 @@ export const cardIconStyles = {
   },
 } satisfies Record<string, CSSProperties>;
 
-export const howItWorksStyles = {
+export const getHowItWorksStyles = (isDark: boolean) => ({
   container: {
     maxWidth: '75rem',
     margin: '0 auto',
@@ -38,7 +38,7 @@ export const howItWorksStyles = {
   } satisfies CSSProperties,
 
   title: {
-    color: `light-dark(${theme.black}, ${theme.white})`,
+    color: isDark ? theme.white : theme.black,
     fontWeight: 900,
     fontSize: '3.5rem',
     textAlign: 'center',
@@ -92,7 +92,7 @@ export const howItWorksStyles = {
   } satisfies CSSProperties,
 
   cardTitle: {
-    color: theme.white,
+    color: isDark ? theme.white : theme.black,
     fontWeight: 900,
     fontSize: '1.25rem',
     marginBottom: theme.spacing.sm,
@@ -100,8 +100,8 @@ export const howItWorksStyles = {
 
   cardDescription: {
     marginBottom: theme.spacing.xl,
-    color: rgba(theme.white, 0.72),
+    color: isDark ? rgba(theme.white, 0.72) : colors.gray[7],
     fontSize: '0.95rem',
     lineHeight: 1.6,
   } satisfies CSSProperties,
-};
+});

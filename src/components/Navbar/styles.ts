@@ -1,6 +1,6 @@
 import { theme } from '@/theme';
 
-export const desktopStyles = {
+export const getDesktopStyles = (isDark: boolean) => ({
   container: {
     width: '100%',
     display: 'flex',
@@ -18,9 +18,10 @@ export const desktopStyles = {
     alignItems: 'center',
   },
   linkHoverColor: (isPathMatch: boolean) =>
-    isPathMatch ? theme.colors.cyan[5] : theme.colors.gray[7],
+    isPathMatch ? theme.colors.cyan[5] : isDark ? theme.colors.gray[2] : theme.colors.gray[7],
 
-  linkColor: (isPathMatch: boolean) => (isPathMatch ? theme.colors.cyan[4] : theme.colors.gray[7]),
+  linkColor: (isPathMatch: boolean) =>
+    isPathMatch ? theme.colors.cyan[4] : isDark ? theme.colors.gray[2] : theme.colors.gray[7],
   linkStyle: {
     fontWeight: 'bold',
     padding: '.77rem',
@@ -32,9 +33,9 @@ export const desktopStyles = {
   buttonIcon: { marginRight: '1rem' },
   divider: { transform: 'scaleY(.1)' },
   buttonContainers: { display: 'flex', gap: '1rem' },
-};
+});
 
-export const mobileStyles = {
+export const getMobileStyles = (isDark: boolean) => ({
   container: {
     display: 'flex',
     alignItems: 'center',
@@ -51,9 +52,10 @@ export const mobileStyles = {
     fontWeight: '700',
     fontSize: '1rem',
   },
-  linkColor: (isPathMatch: boolean) => (isPathMatch ? theme.colors.cyan[4] : theme.colors.gray[7]),
+  linkColor: (isPathMatch: boolean) =>
+    isPathMatch ? theme.colors.cyan[4] : isDark ? theme.colors.gray[2] : theme.colors.gray[7],
   linkContainer: (isPathMatch: boolean) => ({
-    backgroundColor: isPathMatch ? '#1e293b' : 'transparent',
+    backgroundColor: isPathMatch ? (isDark ? '#1e293b' : theme.colors.gray[3]) : 'transparent',
     borderRadius: '8px',
     padding: '.6rem',
   }),
@@ -65,8 +67,8 @@ export const mobileStyles = {
     flex: 1,
     borderRadius: '4px',
   },
-  buttonIconColor: (isDark: boolean) => (isDark ? theme.colors.gray[2] : theme.colors.gray[7]),
-  buttonText: { margin: '0 .8rem', fontWeight: '700' },
+  buttonIconColor: theme.white,
+  buttonText: { margin: '0 .8rem', fontWeight: '700', color: theme.white },
 
   navDivider: {
     marginLeft: 'calc(50% - 50vw)',
@@ -74,6 +76,6 @@ export const mobileStyles = {
     transform: 'scaleY(.2)',
   },
   themeToggle: {
-    backround: 'red',
+    background: 'transparent',
   },
-};
+});

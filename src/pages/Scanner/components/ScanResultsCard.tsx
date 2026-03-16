@@ -3,17 +3,18 @@ import { useTranslation } from 'react-i18next';
 import { useIsDark } from '@/components/Hooks/useIsDark';
 import { Card } from '@/components/UI/Card/Card';
 import { Typography } from '@/components/UI/Typography/Typography';
-import { scanPageStyle } from './styles';
+import { getScanPageStyle } from './styles';
 
 export const ScanResultsCard = () => {
   const { t } = useTranslation();
   const isDark = useIsDark();
+  const scanPageStyle = getScanPageStyle(isDark);
 
   return (
     <Card withBorder style={scanPageStyle.scanCardStyle}>
       <div style={scanPageStyle.cardHeader}>
         <IconAlertCircle style={scanPageStyle.alertIcon} />
-        <Typography style={scanPageStyle.cardTitle(isDark)}>
+        <Typography style={scanPageStyle.cardTitle}>
           {t('scanner_page.scan_results_card.title')}
         </Typography>
       </div>

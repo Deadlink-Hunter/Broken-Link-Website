@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { useMediaQuery } from '@mantine/hooks';
 import Chart from '@/components/Charts/Chart';
 import { ChartType, LineData } from '@/components/Charts/chart.types';
+import { useIsDark } from '@/components/Hooks/useIsDark';
 import { Card } from '@/components/UI/Card/Card';
 import { Typography } from '@/components/UI/Typography/Typography';
 import { theme } from '@/theme';
@@ -29,16 +30,17 @@ const lineData = {
 
 export default function Charts() {
   const { t } = useTranslation();
+  const isDark = useIsDark();
   const isMobileView = useMediaQuery(`(max-width: ${theme.breakpoints.lg})`);
   return (
     <div style={graphsStyles.containerDisplay(isMobileView)}>
       <Card style={graphsStyles.cardStyles(isMobileView)}>
-        <Typography style={graphsStyles.cardHeader}>{t('charts.scanActivity')}</Typography>
+        <Typography style={graphsStyles.cardHeader(isDark)}>{t('charts.scanActivity')}</Typography>
         <Chart type={ChartType.Line} data={lineData} />
       </Card>
 
       <Card style={graphsStyles.cardStyles(isMobileView)}>
-        <Typography style={graphsStyles.cardHeader}>
+        <Typography style={graphsStyles.cardHeader(isDark)}>
           {t('charts.linkTypesDistribustion')}
         </Typography>
         <Chart type={ChartType.Donut} data={donutData} />

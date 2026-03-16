@@ -1,12 +1,13 @@
 import { IconBrandGithub } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
-import { Divider, useMantineColorScheme } from '@mantine/core';
+import { Divider } from '@mantine/core';
+import { useIsDark } from '@/components/Hooks/useIsDark';
 import { useNavigationLinks } from '@/components/Hooks/useNavigationLinks';
 import { LinkButton, LinkTarget } from '../UI/Button/LinkButton';
 import { Typography } from '../UI/Typography/Typography';
 import { NavbarVariant } from './Navbar';
 import NavbarLink from './NavbarLink';
-import { mobileStyles } from './styles';
+import { getMobileStyles } from './styles';
 
 interface NavbarLinksProps {
   variant: NavbarVariant;
@@ -30,8 +31,8 @@ function Links({ variant }: LinksProps) {
 function MobileGithubBtn() {
   const { externalLinks } = useNavigationLinks();
   const { t } = useTranslation();
-  const { colorScheme } = useMantineColorScheme();
-  const isDark = colorScheme === 'dark';
+  const isDark = useIsDark();
+  const mobileStyles = getMobileStyles(isDark);
   return (
     <div style={mobileStyles.buttonContainer}>
       <LinkButton
@@ -40,7 +41,7 @@ function MobileGithubBtn() {
         variant='primary'
         style={mobileStyles.button}
       >
-        <IconBrandGithub color={mobileStyles.buttonIconColor(isDark)} size={16} />
+        <IconBrandGithub color={mobileStyles.buttonIconColor} size={16} />
         <Typography size='small' style={mobileStyles.buttonText}>
           {t('navbar.githubMobile')}
         </Typography>
@@ -50,6 +51,8 @@ function MobileGithubBtn() {
 }
 
 export default function NavbarLinks({ variant, displayLinks = true }: NavbarLinksProps) {
+  const isDark = useIsDark();
+  const mobileStyles = getMobileStyles(isDark);
   if (variant === 'desktop') {
     return <Links variant='desktop' />;
   }

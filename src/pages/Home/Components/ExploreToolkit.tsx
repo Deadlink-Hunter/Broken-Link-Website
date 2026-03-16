@@ -1,16 +1,19 @@
 import { IconArrowRight } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
+import { useIsDark } from '@/components/Hooks/useIsDark';
 import { Button } from '@/components/UI/Button/Button';
 import { Card } from '@/components/UI/Card/Card';
 import { Typography } from '@/components/UI/Typography/Typography';
-import { exploreToolkitStyles } from './styles';
+import { getExploreToolkitStyles } from './styles';
 import { useExploreToolkitCardsData } from './useExploreToolkitCardsData';
 
 export const ExploreToolkit = () => {
   const { t } = useTranslation();
   const { CARDS_DATA } = useExploreToolkitCardsData();
   const navigate = useNavigate();
+  const isDark = useIsDark();
+  const exploreToolkitStyles = getExploreToolkitStyles(isDark);
 
   return (
     <div style={exploreToolkitStyles.container}>

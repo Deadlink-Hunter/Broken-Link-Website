@@ -14,7 +14,12 @@ export const graphsStyles = {
     width: isMobileView ? '90%' : '30%',
     margin: theme.spacing.lg,
   }),
-  cardHeader: { color: theme.white, fontWeight: 'bold', fontSize: '1.4em', marginBottom: '1rem' },
+  cardHeader: (isDark: boolean): CSSProperties => ({
+    color: getTextColor(isDark),
+    fontWeight: 'bold',
+    fontSize: '1.4em',
+    marginBottom: '1rem',
+  }),
 };
 
 export const statisticsPageStyle = {
