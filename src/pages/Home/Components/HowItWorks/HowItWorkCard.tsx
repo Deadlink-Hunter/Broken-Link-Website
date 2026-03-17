@@ -9,7 +9,7 @@ interface HowItWorkCardProps {
   icon: ReactNode;
   stepNumber: number;
   iconStyle: CSSProperties;
-  className?: string;
+  cardStyle?: CSSProperties;
 }
 
 export const HowItWorkCard = ({
@@ -18,10 +18,10 @@ export const HowItWorkCard = ({
   icon,
   stepNumber,
   iconStyle,
-  className,
+  cardStyle,
 }: HowItWorkCardProps) => {
   return (
-    <Card className={className}>
+    <Card style={cardStyle}>
       <div style={howItWorksStyles.stepBadge}>{stepNumber}</div>
       <div style={iconStyle}>{icon}</div>
       <Typography variant='title'>{title}</Typography>
