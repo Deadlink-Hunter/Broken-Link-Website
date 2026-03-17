@@ -1,0 +1,43 @@
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding-bottom: var(--mantine-spacing-2xl);
+}
+
+.card {
+  width: calc(100% - 2.5rem);
+  max-width: 25rem;
+  min-height: 18rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: var(--mantine-spacing-md);
+  position: relative;
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+@media (max-width: 64em) {
+  .cards {
+    gap: 1.5rem;
+  }
+
+  .card {
+    max-width: 22rem;
+  }
+}
+
+@media (max-width: 48em) {
+  .cards {
+    gap: 1.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 100%;
+    min-height: auto;
+  }
+}
