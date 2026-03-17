@@ -86,10 +86,32 @@ export const howItWorksStyles = {
     paddingBottom: theme.spacing['2xl'],
   } satisfies CSSProperties,
 
+  cardsMobile: {
+    display: 'flex',
+    justifyContent: 'center',
+    gap: '1.25rem',
+    flexWrap: 'wrap',
+    paddingBottom: theme.spacing['2xl'],
+    paddingLeft: '1.25rem',
+    paddingRight: '1.25rem',
+  } satisfies CSSProperties,
+
   card: {
     width: 'calc(100% - 2.5rem)',
     maxWidth: '25rem',
     minHeight: '18rem',
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start',
+    gap: theme.spacing.md,
+    position: 'relative',
+    overflow: 'visible',
+    boxSizing: 'border-box',
+  } satisfies CSSProperties,
+
+  cardMobile: {
+    width: '100%',
+    maxWidth: '100%',
+    minHeight: 'auto',
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
     gap: theme.spacing.md,
