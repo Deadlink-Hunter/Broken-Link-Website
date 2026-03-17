@@ -13,26 +13,25 @@ export interface ServerErrorData {
   error: string;
   message?: string;
 }
+export interface UrlCheckData {
+  url: string;
+  isBroken: boolean;
+  statusCode?: number;
+  error?: string;
+  responseTime?: number;
+}
+
 export interface UrlCheckResult {
   status: number;
-  data?: {
-    url: string;
-    isBroken: boolean;
-    statusCode?: number;
-    error?: string;
-    responseTime?: number;
-  };
+  data?: UrlCheckData;
   error?: ApiErrorTypes;
 }
+
 export interface MultipleUrlsResponse {
   status: number;
   data?: {
-    results: UrlCheckResult[];
-    summary: {
-      total: number;
-      broken: number;
-      working: number;
-    };
+    results: UrlCheckData[];
+    summary: { total: number; broken: number; working: number };
   };
   error?: ApiErrorTypes;
 }

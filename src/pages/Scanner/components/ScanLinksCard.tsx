@@ -16,6 +16,7 @@ export const ScanLinksCard = ({
   setUrl,
   multipleUrl,
   setMultipleUrl,
+  onScan,
 }: ScanLinkCardProps) => {
   const { t } = useTranslation();
   const isDark = useIsDark();
@@ -28,7 +29,7 @@ export const ScanLinksCard = ({
     : scanPageStyle.activeTab;
 
   const submitScanRequest = () => {
-    // TODO: Connect to scanning backend
+    onScan({ scanType, url, multipleUrl });
   };
 
   return (
