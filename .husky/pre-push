@@ -1,4 +1,4 @@
-echo "Running pre-commit hook"
+echo "Running pre-push hook"
 
 run_command() {
   echo "Running: $1"
@@ -9,7 +9,7 @@ run_command() {
   echo "Completed: $1"
 }
 
-pnpm run prettier:write  
-run_command "pnpm run eslint"
+run_command "pnpm build"
+run_command "pnpm storybook:build"
 
-echo "Pre-commit passed!"
+echo "Pre-push passed!"
