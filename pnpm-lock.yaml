@@ -58,8 +58,8 @@ importers:
         specifier: ^4.7.1
         version: 4.7.1(prettier@3.8.1)
       '@storybook/addon-a11y':
-        specifier: 9.0.18
-        version: 9.0.18(storybook@9.1.20(@testing-library/dom@10.4.1)(prettier@3.8.1)(vite@6.4.1(@types/node@22.19.15)(sugarss@5.0.1(postcss@8.5.8))))
+        specifier: 9.1.20
+        version: 9.1.20(storybook@9.1.20(@testing-library/dom@10.4.1)(prettier@3.8.1)(vite@6.4.1(@types/node@22.19.15)(sugarss@5.0.1(postcss@8.5.8))))
       '@storybook/addon-storysource':
         specifier: ^8.6.14
         version: 8.6.14(storybook@9.1.20(@testing-library/dom@10.4.1)(prettier@3.8.1)(vite@6.4.1(@types/node@22.19.15)(sugarss@5.0.1(postcss@8.5.8))))
@@ -832,10 +832,10 @@ packages:
   '@standard-schema/utils@0.3.0':
     resolution: {integrity: sha512-e7Mew686owMaPJVNNLs55PUvgz371nKgwsc4vxE49zsODpJEnxgxRo2y/OKrqueavXgZNMDVj3DdHFlaSAeU8g==}
 
-  '@storybook/addon-a11y@9.0.18':
-    resolution: {integrity: sha512-msbsTI9TmePQ5ElVclLi7ns5WaAntouJFaj9ElNugFWME21k68RiyXnioDjDfEoi/+y8tthQNNqjsHoX/Ev0Og==}
+  '@storybook/addon-a11y@9.1.20':
+    resolution: {integrity: sha512-VFZ34y4ApmFwIzPRs2OJrG6jtYhM5y91eCZLTlR/HMGQciKF4TdOJHjj+5vf91SOER5UDcLizXetpiUowiZSgw==}
     peerDependencies:
-      storybook: ^9.0.18
+      storybook: ^9.1.20
 
   '@storybook/addon-storysource@8.6.14':
     resolution: {integrity: sha512-/eDCNUHPdsVDF53B+Ebi9gHSNcRrA3puo1UCDio8wMN+jBMoWh6E5wSjXDsxWaOyp0Zwuq8XUx8AdgTlg/rcrw==}
@@ -4098,7 +4098,7 @@ snapshots:
 
   '@standard-schema/utils@0.3.0': {}
 
-  '@storybook/addon-a11y@9.0.18(storybook@9.1.20(@testing-library/dom@10.4.1)(prettier@3.8.1)(vite@6.4.1(@types/node@22.19.15)(sugarss@5.0.1(postcss@8.5.8))))':
+  '@storybook/addon-a11y@9.1.20(storybook@9.1.20(@testing-library/dom@10.4.1)(prettier@3.8.1)(vite@6.4.1(@types/node@22.19.15)(sugarss@5.0.1(postcss@8.5.8))))':
     dependencies:
       '@storybook/global': 5.0.0
       axe-core: 4.11.1
