@@ -1,5 +1,5 @@
 import { CSSProperties } from 'react';
-import { theme } from '@/theme';
+import { sharedStyles, theme } from '@/theme';
 
 const colors = theme.colors;
 const getTextColor = (isDark: boolean) => (isDark ? theme.white : colors.gray[7]);
@@ -80,12 +80,14 @@ export const aboutPageStyle = {
     marginBottom: theme.spacing['2xl'],
   } satisfies CSSProperties,
 
+
   titleStyle: {
-    fontWeight: 900,
-    fontSize: '3.5rem',
-    lineHeight: 1.1,
+    ...sharedStyles.sectionTitle,
     display: 'inline-block',
-    textAlign: 'center',
+  } satisfies CSSProperties,
+
+  brandStyle: {
+    ...sharedStyles.gradientText,
   } satisfies CSSProperties,
 
   whiteText: {
@@ -96,13 +98,6 @@ export const aboutPageStyle = {
     color: 'var(--mantine-color-black)',
   } satisfies CSSProperties,
 
-  brandStyle: {
-    background:
-      'linear-gradient(90deg, var(--mantine-color-cyan-4) 0%, var(--mantine-color-purple-5) 100%)',
-    WebkitBackgroundClip: 'text',
-    WebkitTextFillColor: 'transparent',
-    backgroundClip: 'text',
-  } satisfies CSSProperties,
 
   text: (isDark: boolean): CSSProperties => ({
     color: getTextColor(isDark),

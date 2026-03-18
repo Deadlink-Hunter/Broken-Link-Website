@@ -1,11 +1,8 @@
 import { CSSProperties } from 'react';
-import { theme } from '@/theme';
+import { sharedStyles, theme } from '@/theme';
 
 const colors = theme.colors;
 const getTextColor = (isDark: boolean) => (isDark ? theme.white : colors.gray[7]);
-
-const gradientPrimary =
-  'linear-gradient(90deg, var(--mantine-color-cyan-4) 0%, var(--mantine-color-purple-5) 100%)';
 
 const flexColumnCenter: CSSProperties = {
   display: 'flex',
@@ -41,15 +38,12 @@ export const scanPageStyle = {
   } satisfies CSSProperties,
 
   titleStyle: {
-    background: gradientPrimary,
-    WebkitBackgroundClip: 'text',
-    WebkitTextFillColor: 'transparent',
-    backgroundClip: 'text',
+    ...sharedStyles.gradientText,
     fontWeight: 900,
     fontSize: '4rem',
     lineHeight: 1.1,
     display: 'inline-block',
-  },
+  } satisfies CSSProperties,
 
   text: (isDark: boolean): CSSProperties => ({
     color: getTextColor(isDark),

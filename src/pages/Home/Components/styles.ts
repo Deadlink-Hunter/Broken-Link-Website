@@ -1,6 +1,6 @@
 import { CSSProperties } from 'react';
 import { rgba } from '@mantine/core';
-import { theme } from '@/theme';
+import { sharedStyles, theme } from '@/theme';
 
 const colors = theme.colors;
 
@@ -12,10 +12,8 @@ export const exploreToolkitStyles = {
   } satisfies CSSProperties,
 
   title: {
+    ...sharedStyles.sectionTitle,
     color: `light-dark(${theme.black}, ${theme.white})`,
-    fontWeight: 900,
-    fontSize: '3.5rem',
-    textAlign: 'center',
     marginBottom: theme.spacing.xl,
   } satisfies CSSProperties,
 
