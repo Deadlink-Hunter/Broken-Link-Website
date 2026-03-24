@@ -1,4 +1,161 @@
 {
-    "welcome_link_text": "questa guida",
-    "welcome_description_after_link": ". Per iniziare, modifica il file pages/Home.page.tsx."
+  "welcome_link_text": "questa guida",
+  "welcome_description_after_link": ". Per iniziare, modifica il file pages/Home.page.tsx.",
+  "about_page": {
+    "title": {
+      "about": "Chi siamo ",
+      "deadlink_hunter": "Deadlink-Hunter"
+    },
+    "description": "Uno strumento potente e open-source progettato per mantenere l'integrità dei link nei tuoi repository GitHub, identificando ed eliminando i link non funzionanti prima che impattino sui tuoi utenti."
+  },
+  "about_feature_card": {
+    "card_one": {
+      "title": "Scansione di Precisione",
+      "description": "Algoritmi avanzati rilevano link non funzionanti in file markdown, documentazione e commenti del codice con precisione assoluta."
+    },
+    "card_two": {
+      "title": "Report Automatizzati",
+      "description": "Genera report completi con dettagli, suggerimenti per le correzioni e classifiche di priorità per una manutenzione efficiente."
+    },
+    "card_three": {
+      "title": "Integrazione con GitHub",
+      "description": "Integra facilmente con il tuo workflow GitHub tramite Actions, webhook e creazione automatica di pull request."
+    },
+    "card_four": {
+      "title": "Open Source",
+      "description": "Completamente open source e guidato dalla community. Contribuisci, personalizza ed estendi per adattarlo alle esigenze del tuo progetto."
+    }
+  },
+  "hero": {
+    "title": {
+      "deadlink": "Deadlink",
+      "hunter": "Hunter"
+    },
+    "tagline": {
+      "openSource": "Open Source",
+      "lightningFast": "Velocità Fulminea"
+    },
+    "description": {
+      "part1": "Elimina i link non funzionanti dai tuoi repository GitHub con",
+      "highlight": "scansione di precisione",
+      "part2": "e report completi."
+    },
+    "buttons": {
+      "startScanning": "Inizia la Scansione",
+      "viewOnGitHub": "Visualizza su GitHub"
+    },
+    "statistics": {
+      "linksScanned": "Link Scansionati",
+      "reposAnalyzed": "Repository Analizzati",
+      "accuracyRate": "Tasso di Precisione"
+    }
+  },
+  "statistics_page": {
+    "title": {
+      "performance": "Performance",
+      "analytics": "Analytics"
+    },
+    "description": "Informazioni in tempo reale sulle prestazioni della scansione dei link e le metriche di salute del repository."
+  },
+  "charts": {
+    "scanActivity": "Attività di Scansione nel Tempo",
+    "linkTypesDistribustion": "Distribuzione dei Tipi di Link"
+  },
+  "footer": {
+    "header": "Deadlink-Hunter",
+    "about": "Strumento open-source per trovare ed eliminare link non funzionanti nei repository GitHub. Realizzato con ❤️ per la community degli sviluppatori.",
+    "gitBtnTxt": "Metti una stella su GitHub",
+    "QuickLinks": "Link Rapidi",
+    "About": "Chi Siamo",
+    "Scanner": "Scanner",
+    "Statistics": "Statistiche",
+    "Documentation": "Documentazione",
+    "Community": "Community",
+    "Contribute": "Contribuisci",
+    "Issues": "Segnalazioni",
+    "FeatureRequests": "Richieste di Funzionalità",
+    "rights": "© Deadlink-Hunter. Licenza MIT.",
+    "madeWith": "Realizzato con",
+    "byOpenSrc": "dalla community open source"
+  },
+  "navbar": {
+    "header": "Deadlink-Hunter",
+    "github": "GitHub",
+    "githubMobile": "Visualizza su GitHub"
+  },
+  "explore_toolkit_title_part1": "Esplora il ",
+  "explore_toolkit_title_highlight": "Toolkit",
+  "explore_toolkit_title_part2": "",
+  "explore_toolkit_description": "Tutto ciò di cui hai bisogno per mantenere i tuoi repository in salute e i tuoi link attivi.",
+  "explore_toolkit_card1_title": "Scanner di Link Istantaneo",
+  "explore_toolkit_card1_description": "Controlla rapidamente un singolo URL o scansiona un intero repository alla ricerca di link non funzionanti con il nostro scanner potente e facile da usare.",
+  "explore_toolkit_card1_button": "Inizia la Scansione",
+  "explore_toolkit_card2_title": "Analytics delle Prestazioni",
+  "explore_toolkit_card2_description": "Approfondisci statistiche dettagliate e visualizzazioni sulla cronologia delle scansioni, la salute dei link e le prestazioni del progetto nel tempo.",
+  "explore_toolkit_card2_button": "Visualizza Statistiche",
+  "explore_toolkit_card3_title": "Il Progetto",
+  "explore_toolkit_card3_description": "Scopri di più sulla missione di Deadlink-Hunter, la sua natura open-source e come puoi contribuire.",
+  "explore_toolkit_card3_button": "Scopri di più",
+  "our_mission_card_title": "La Nostra Missione",
+  "our_mission_card_description": "Fornire agli sviluppatori una soluzione affidabile, efficiente e facile da usare per mantenere l'integrità dei link nei loro repository. I link non funzionanti non dovrebbero rovinare l'esperienza degli utenti, e ogni repository merita di essere perfetto.",
+  "how_it_works_card1_title": "Scansiona il Repository",
+  "how_it_works_card1_description": "Inserisci l'URL del tuo repository GitHub o incolla un elenco di link da verificare per connessioni non funzionanti.",
+  "how_it_works_card2_title": "Analisi Fulminea",
+  "how_it_works_card2_description": "Il nostro scanner intelligente controlla ogni link, seguendo i reindirizzamenti e validando le risposte HTTP in pochi secondi.",
+  "how_it_works_card3_title": "Ottieni un Report Dettagliato",
+  "how_it_works_card3_description": "Ricevi un riepilogo completo dei link funzionanti e non funzionanti con indicazioni concrete per correggerli.",
+  "how_it_works_title_part1": "Come ",
+  "how_it_works_title_highlight": "Funziona",
+  "how_it_works_title_part2": "",
+  "how_it_works_subtitle": "Risolvi i link non funzionanti in tre semplici passaggi. Nessuna installazione richiesta.",
+  "how_it_works_feature_title_prefix": "Ripara i Link Non Funzionanti,",
+  "how_it_works_feature_title_highlight": "Un",
+  "how_it_works_feature_title_suffix": "Repository alla Volta",
+  "how_it_works_feature_description": "Pensa a Deadlink-Hunter come al medico del tuo repository. Diagnostichiamo le connessioni interrotte, identifichiamo i problemi e ti forniamo un piano di intervento chiaro per ripristinare la salute del tuo progetto.",
+  "how_it_works_feature_point_1": "Niente più errori 404 che rovinano la tua documentazione",
+  "how_it_works_feature_point_2": "Mantieni la fiducia dei tuoi utenti con riferimenti funzionanti",
+  "how_it_works_feature_point_3": "Rispetta gli standard professionali del repository",
+  "scanner_page": {
+    "title": "Scanner di Link",
+    "description": "Testa singoli URL o scansiona interi repository alla ricerca di link non funzionanti a velocità fulminea",
+    "scan_links_card": {
+      "title": "Scansiona Link",
+
+      "toggle": {
+        "single": "URL Singolo",
+        "repository": "Repository"
+      },
+
+      "single": {
+        "input_label": "Inserisci URL da verificare",
+        "input_placeholder": "https://example.com/page",
+        "button_check": "Verifica Link"
+      },
+
+      "repository": {
+        "input_label": "URL del Repository GitHub",
+        "input_placeholder": "https://github.com/user/repository",
+        "textarea_label": "Oppure incolla più URL",
+        "textarea_placeholder": "https://example1.com\nhttps://example2.com\nhttps://example3.com",
+        "button_check": "Scansiona Repository"
+      }
+    },
+
+    "scan_results_card": {
+      "title": "Risultati della Scansione",
+      "empty_state": "Inserisci un URL o un repository sopra per iniziare la scansione dei link non funzionanti",
+      "loading": "Scansione in corso...",
+      "response_time": "Tempo di risposta: {{responseTime}}ms",
+      "total_response_time": "Tempo di risposta totale: {{responseTime}}ms",
+      "summary": "{{working}} funzionanti, {{broken}} non funzionanti su {{total}}",
+      "errors": {
+        "url_required": "L'URL è obbligatorio",
+        "internal_server_error": "Errore interno del server",
+        "urls_array_required": "È richiesto un array di URL",
+        "one_url_required": "È richiesto almeno un URL",
+        "maximum_urls_allowed": "Massimo {{max}} URL consentiti per richiesta"
+      }
+    }
+  }
 }
+
