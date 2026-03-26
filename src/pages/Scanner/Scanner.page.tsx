@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useMutation } from '@tanstack/react-query';
 import { useMediaQuery } from '@mantine/hooks';
+import { Typography } from '@/components/UI/Typography/Typography';
 import { ApiErrorTypes } from '@/services/LinkChecker/types';
 import { theme } from '@/theme';
 import { ScanLinksCard } from './components/ScanLinksCard';
@@ -51,6 +52,10 @@ const ScannerPage = () => {
           onScan={handleScan}
         />
         <ScanResultsCard results={data ?? null} loading={isPending} error={error ?? null} />
+        {/* TODO - Remove this when we have a deployed server */}
+        <Typography variant='title'>
+          *Right now we don&apos;t have deployed server, the above will not work
+        </Typography>
       </section>
     </main>
   );
