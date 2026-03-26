@@ -1,6 +1,6 @@
 import { IconBolt, IconCircleCheck, IconSearch } from '@tabler/icons-react';
-import { useMediaQuery } from '@mantine/hooks';
 import { useTranslation } from 'react-i18next';
+import { useMediaQuery } from '@mantine/hooks';
 import { theme } from '@/theme';
 import { HowItWorkCard } from './HowItWorkCard';
 import { HowItWorkFeatureCard } from './HowItWorkFeatureCard';

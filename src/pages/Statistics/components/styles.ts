@@ -27,7 +27,6 @@ export const statisticsPageStyle = {
     marginTop: theme.spacing['2xl'],
   } satisfies CSSProperties,
 
-
   titleStyle: {
     ...sharedStyles.sectionTitle,
   } satisfies CSSProperties,
@@ -43,7 +42,6 @@ export const statisticsPageStyle = {
   blackText: {
     color: 'var(--mantine-color-black)',
   } satisfies CSSProperties,
-
 
   text: (isDark: boolean): CSSProperties => ({
     color: getTextColor(isDark),

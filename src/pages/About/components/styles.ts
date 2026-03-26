@@ -80,7 +80,6 @@ export const aboutPageStyle = {
     marginBottom: theme.spacing['2xl'],
   } satisfies CSSProperties,
 
-
   titleStyle: {
     ...sharedStyles.sectionTitle,
     display: 'inline-block',
@@ -97,7 +96,6 @@ export const aboutPageStyle = {
   blackText: {
     color: 'var(--mantine-color-black)',
   } satisfies CSSProperties,
-
 
   text: (isDark: boolean): CSSProperties => ({
     color: getTextColor(isDark),
