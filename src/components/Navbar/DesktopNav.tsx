@@ -1,5 +1,6 @@
 import { IconBrandGithub } from '@tabler/icons-react';
 import logo from '/logo.svg';
+import i18n from 'i18next';
 import { useTranslation } from 'react-i18next';
 import { Select } from '@mantine/core';
 import { useNavigationLinks } from '@/components/Hooks/useNavigationLinks';
@@ -13,7 +14,6 @@ import { Link } from '../UI/Link/Link';
 import NavbarLinks from './NavbarLinks';
 import { desktopStyles as styles } from './styles';
 import { ThemeToggle } from './ThemeToggle';
-import i18n from 'i18next';
 
 export default function DesktopNav() {
   const { externalLinks } = useNavigationLinks();
@@ -40,7 +40,7 @@ export default function DesktopNav() {
       <div style={styles.linksContainer}>
         <NavbarLinks variant='desktop' />
       </div>
-      
+
       <div style={styles.buttonContainers}>
         <LinkButton
           href={externalLinks.GITHUB.REPO}

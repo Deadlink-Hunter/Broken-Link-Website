@@ -1,15 +1,19 @@
 import { useState } from 'react';
 import logo from '/logo.svg';
+import i18n from 'i18next';
 import { useTranslation } from 'react-i18next';
 import { Burger } from '@mantine/core';
+import {
+  DEFAULT_LANGUAGE_LABEL,
+  LANGUAGE_OPTIONS,
+  SUPPORTED_LANGUAGES,
+} from '@/constants/languages';
 import { Divider } from '../UI/Divider/Divider';
 import { Link } from '../UI/Link/Link';
+import { Select } from '../UI/Select/Select';
 import NavbarLinks from './NavbarLinks';
 import { mobileStyles as styles } from './styles';
 import { ThemeToggle } from './ThemeToggle';
-import { Select } from '../UI/Select/Select';
-import { DEFAULT_LANGUAGE_LABEL, LANGUAGE_OPTIONS, SUPPORTED_LANGUAGES } from '@/constants/languages';
-import i18n from 'i18next';
 
 export default function MobileNav() {
   const { t } = useTranslation();
@@ -20,15 +24,16 @@ export default function MobileNav() {
     DEFAULT_LANGUAGE_LABEL;
 
   const handleLanguageChange = (label: string | null) => {
-    if (!label) {return;}
+    if (!label) {
+      return;
+    }
     const selected = SUPPORTED_LANGUAGES.find((l) => l.label === label)!;
     i18n.changeLanguage(selected.value);
   };
-  
+
   function handleDisplayLinks() {
     setDisplayLinks((prev) => !prev);
   }
-
 
   return (
     <div>

@@ -3,11 +3,11 @@ import { initReactI18next } from 'react-i18next';
 import deTranslations from '../public/locals/de.json';
 import enTranslations from '../public/locals/en.json';
 import esTranslations from '../public/locals/es.json';
-import ptBrTranslations from '../public/locals/ptbr.json';
-import turTranslations from '../public/locals/tur.json';
 import frTranslations from '../public/locals/fr.json';
 import itTranslations from '../public/locals/it.json';
 import nlTranslations from '../public/locals/nl.json';
+import ptBrTranslations from '../public/locals/ptbr.json';
+import turTranslations from '../public/locals/tur.json';
 
 i18n.use(initReactI18next).init({
   resources: {
@@ -24,17 +24,17 @@ i18n.use(initReactI18next).init({
       translation: deTranslations,
     },
     tur: {
-      translation: turTranslations
+      translation: turTranslations,
     },
     fr: {
-      translation: frTranslations
+      translation: frTranslations,
     },
     it: {
-      translation: itTranslations
+      translation: itTranslations,
     },
     nl: {
-      translation: nlTranslations
-    }
+      translation: nlTranslations,
+    },
   },
   lng: 'en',
   fallbackLng: 'en',

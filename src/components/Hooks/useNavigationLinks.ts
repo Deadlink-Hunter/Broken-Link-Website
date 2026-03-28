@@ -11,7 +11,7 @@ export const useNavigationLinks = () => {
 
   const translatedNavigationLinks = NAVIGATION_LINKS.map((link) => ({
     ...link,
-    label: t(link.label),
+    label: t(link.labelKey),
   }));
 
   const translatedFooterQuickLinks = FOOTER_QUICK_LINKS.map((link) => ({
