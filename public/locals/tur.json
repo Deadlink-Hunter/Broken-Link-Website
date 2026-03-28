@@ -1,4 +1,160 @@
 {
   "welcome_link_text": "bu kılavuzu",
-  "welcome_description_after_link": "takip edin. Başlamak için pages/Home.page.tsx dosyasını düzenleyin."
+  "welcome_description_after_link": ". Başlamak için pages/Home.page.tsx dosyasını düzenleyin.",
+  "about_page": {
+    "title": {
+      "about": "Hakkında ",
+      "deadlink_hunter": "Kırık Link Avcısı"
+    },
+    "description": "GitHub depolarınızdaki linklerin bütünlüğünü korumak için tasarlanmış güçlü, açık kaynak bir araçtır. Kırık linkleri kullanıcılarınıza ulaşmadan önce tespit eder ve ortadan kaldırır."
+  },
+  "about_feature_card": {
+    "card_one": {
+      "title": "Hassas Tarama",
+      "description": "Gelişmiş algoritmalar, markdown dosyalarında, dokümantasyonlarda ve kod yorumlarında kırık linkleri yüksek doğrulukla tespit eder."
+    },
+    "card_two": {
+      "title": "Otomatik Raporlar",
+      "description": "Detaylı analizler, düzeltme önerileri ve öncelik sıralamalarıyla kapsamlı raporlar oluşturun, bakım işlemlerini kolaylaştırın."
+    },
+    "card_three": {
+      "title": "GitHub Entegrasyonu",
+      "description": "GitHub iş akışınıza Actions, webhooklar ve otomatik pull request oluşturma ile sorunsuz bir şekilde entegre olun."
+    },
+    "card_four": {
+      "title": "Açık Kaynak",
+      "description": "Tamamen açık kaynaklı ve topluluk odaklıdır. Katkıda bulunun, özelleştirin ve projenizin ihtiyaçlarına göre geliştirin."
+    }
+  },
+  "hero": {
+    "title": {
+      "deadlink": "Kırık Link",
+      "hunter": "Avcısı"
+    },
+    "tagline": {
+      "openSource": "Açık Kaynak",
+      "lightningFast": "Şimşek Hızıyla"
+    },
+    "description": {
+      "part1": "GitHub depolarınızdaki kırık linkleri",
+      "highlight": "hassas tarama",
+      "part2": "ve kapsamlı raporlarla ortadan kaldırın."
+    },
+    "buttons": {
+      "startScanning": "Taramaya Başla",
+      "viewOnGitHub": "GitHub'da Görüntüle"
+    },
+    "statistics": {
+      "linksScanned": "Taranan Linkler",
+      "reposAnalyzed": "Analiz Edilen Depolar",
+      "accuracyRate": "Doğruluk Oranı"
+    }
+  },
+  "statistics_page": {
+    "title": {
+      "performance": "Performans",
+      "analytics": "Analitik"
+    },
+    "description": "Link tarama performansınızı ve depo sağlık metriklerini gerçek zamanlı olarak inceleyin."
+  },
+  "charts": {
+    "scanActivity": "Zamana Göre Tarama Aktivitesi",
+    "linkTypesDistribustion": "Link Türleri Dağılımı"
+  },
+  "footer": {
+    "header": "Kırık Link Avcısı",
+    "about": "GitHub depolarındaki kırık linkleri bulmak ve kaldırmak için açık kaynaklı bir araç. ❤️ ile geliştirici topluluğu için hazırlandı.",
+    "gitBtnTxt": "GitHub'da Yıldızla",
+    "QuickLinks": "Hızlı Linkler",
+    "About": "Hakkında",
+    "Scanner": "Tarayıcı",
+    "Statistics": "İstatistikler",
+    "Documentation": "Dokümantasyon",
+    "Community": "Topluluk",
+    "Contribute": "Katkıda Bulun",
+    "Issues": "Sorunlar",
+    "FeatureRequests": "Özellik Talepleri",
+    "rights": "© Kırık Link Avcısı. MIT lisansı ile lisanslanmıştır.",
+    "madeWith": "İle yapıldı",
+    "byOpenSrc": "açık kaynak topluluğu tarafından"
+  },
+  "navbar": {
+    "header": "Kırık Link Avcısı",
+    "github": "GitHub",
+    "githubMobile": "GitHub'da Görüntüle",
+    "home": "Anasayfa",
+    "scanner": "Tarayıcı",
+    "statistics": "İstatistikler",
+    "about": "Hakkında"
+  },
+  "explore_toolkit_title_part1": "Araştır ",
+  "explore_toolkit_title_highlight": "Araç Setini",
+  "explore_toolkit_title_part2": "",
+  "explore_toolkit_description": "Depolarınızı sağlıklı tutmak ve linklerinizi canlı tutmak için ihtiyacınız olan her şey.",
+  "explore_toolkit_card1_title": "Anında Link Tarayıcı",
+  "explore_toolkit_card1_description": "Tek bir URL’yi hızla kontrol edin veya güçlü ve kullanımı kolay tarayıcı ile tüm depoyu tarayın.",
+  "explore_toolkit_card1_button": "Taramaya Başla",
+  "explore_toolkit_card2_title": "Performans Analitiği",
+  "explore_toolkit_card2_description": "Tarama geçmişi, link sağlığı ve proje performansı hakkında detaylı istatistikler ve görselleştirmelere göz atın.",
+  "explore_toolkit_card2_button": "İstatistikleri Görüntüle",
+  "explore_toolkit_card3_title": "Proje Hakkında",
+  "explore_toolkit_card3_description": "Kırık Link Avcısı’nın misyonu, açık kaynak yapısı ve katkıda bulunma yolları hakkında bilgi edinin.",
+  "explore_toolkit_card3_button": "Daha Fazla Bilgi",
+  "our_mission_card_title": "Misyonumuz",
+  "our_mission_card_description": "Geliştiricilere güvenilir, verimli ve kullanımı kolay bir çözüm sunmak; kırık linklerin kullanıcı deneyimlerini bozmasını engellemek ve her deponun link bakımına uygun olmasını sağlamak.",
+  "how_it_works_card1_title": "Deponuzu Tara",
+  "how_it_works_card1_description": "GitHub depo URL’nizi girin veya kırık bağlantıları kontrol etmek için bir link listesi yapıştırın.",
+  "how_it_works_card2_title": "Şimşek Hızında Analiz",
+  "how_it_works_card2_description": "Akıllı tarayıcımız her linki saniyeler içinde kontrol eder, yönlendirmeleri takip eder ve HTTP yanıtlarını doğrular.",
+  "how_it_works_card3_title": "Detaylı Rapor Alın",
+  "how_it_works_card3_description": "Çalışan ve kırık linkleri detaylı şekilde analiz eden, düzeltme önerileri sunan kapsamlı bir rapor alın.",
+  "how_it_works_title_part1": "Nasıl ",
+  "how_it_works_title_highlight": "Çalışır",
+  "how_it_works_title_part2": "",
+  "how_it_works_subtitle": "Kırık linkleri üç basit adımda düzeltin. Kurulum gerekmez.",
+  "how_it_works_feature_title_prefix": "Kırık Linkleri Onar,",
+  "how_it_works_feature_title_highlight": "Bir",
+  "how_it_works_feature_title_suffix": "Depoda Zamanla",
+  "how_it_works_feature_description": "Kırık Link Avcısı’nı deponuzun sağlık hizmeti sağlayıcısı olarak düşünün. Kırık bağlantıları tespit eder, sorunları belirler ve projenizin sağlığını geri kazandıracak net bir plan sunar.",
+  "how_it_works_feature_point_1": "404 hatalarının dokümantasyonunuzu bozmaması",
+  "how_it_works_feature_point_2": "Kullanıcılarınızın güvenini çalışan referanslarla koruyun",
+  "how_it_works_feature_point_3": "Profesyonel depo standartlarını sürdürün",
+  "scanner_page": {
+    "title": "Link Tarayıcı",
+    "description": "Bireysel URL’leri test edin veya tüm depoları ışık hızıyla tarayın",
+    "scan_links_card": {
+      "title": "Linkleri Tara",
+      "toggle": {
+        "single": "Tek URL",
+        "repository": "Depo"
+      },
+      "single": {
+        "input_label": "Kontrol etmek için URL girin",
+        "input_placeholder": "https://example.com/page",
+        "button_check": "Linki Kontrol Et"
+      },
+      "repository": {
+        "input_label": "GitHub Depo URL",
+        "input_placeholder": "https://github.com/kullaniciadi/depo",
+        "textarea_label": "Ya da birden fazla URL yapıştırın",
+        "textarea_placeholder": "https://example1.com\nhttps://example2.com\nhttps://example3.com",
+        "button_check": "Depoyu Tara"
+      }
+    },
+    "scan_results_card": {
+      "title": "Tarama Sonuçları",
+      "empty_state": "Başlamak için yukarıdaki URL veya depoyu girin",
+      "loading": "Tarama yapılıyor...",
+      "response_time": "Yanıt süresi: {{responseTime}}ms",
+      "total_response_time": "Toplam yanıt süresi: {{responseTime}}ms",
+      "summary": "{{working}} çalışan, {{broken}} kırık, toplam {{total}}",
+      "errors": {
+        "url_required": "URL gereklidir",
+        "internal_server_error": "Sunucu hatası",
+        "urls_array_required": "URL dizisi gereklidir",
+        "one_url_required": "En az bir URL gereklidir",
+        "maximum_urls_allowed": "İstek başına en fazla {{max}} URL izin verilir"
+      }
+    }
+  }
 }

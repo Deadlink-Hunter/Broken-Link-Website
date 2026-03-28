@@ -9,6 +9,9 @@ export const desktopStyles = {
     alignItems: 'center',
     marginTop: '.45rem',
   },
+  languageSelect: {
+    width: '130px',
+  },
   headerContainer: { display: 'flex', alignItems: 'center' },
   logoSize: { height: '1.75rem' },
   header: { fontWeight: '700', fontSize: theme.fontSizes.xl, marginLeft: '.2rem' },
@@ -40,6 +43,10 @@ export const mobileStyles = {
     alignItems: 'center',
     justifyContent: 'space-between',
     padding: '1rem 1.5rem',
+  },
+  languageSelect: {
+    width: '130px',
+    margin: '10px 0',
   },
   headerContainer: { display: 'flex', alignItems: 'center' },
   header: { fontWeight: '700', fontSize: theme.fontSizes.xl, marginLeft: '.2rem' },

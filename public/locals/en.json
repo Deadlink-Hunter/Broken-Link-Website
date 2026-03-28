@@ -81,7 +81,11 @@
   "navbar": {
     "header": "Deadlink-Hunter",
     "github": "GitHub",
-    "githubMobile": "View on GitHub"
+    "githubMobile": "View on GitHub",
+    "home": "Home",
+    "scanner": "Scanner",
+    "statistics": "Statistics",
+    "about": "About"
   },
   "explore_toolkit_title_part1": "Explore the ",
   "explore_toolkit_title_highlight": "Toolkit",

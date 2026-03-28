@@ -7,6 +7,7 @@ import { Typography } from '../UI/Typography/Typography';
 import { NavbarVariant } from './Navbar';
 import NavbarLink from './NavbarLink';
 import { mobileStyles } from './styles';
+import { t } from 'i18next';
 
 interface NavbarLinksProps {
   variant: NavbarVariant;
@@ -21,8 +22,13 @@ function Links({ variant }: LinksProps) {
 
   return (
     <>
-      {navigationLinks.map((link) => (
-        <NavbarLink key={link.href} href={link.href} label={link.label} variant={variant} />
+       {navigationLinks.map((link) => (
+        <NavbarLink
+          key={link.href}
+          href={link.href}
+          label={t(link.labelKey)}
+          variant={variant}
+        />
       ))}
     </>
   );

@@ -7,14 +7,28 @@ import { Link } from '../UI/Link/Link';
 import NavbarLinks from './NavbarLinks';
 import { mobileStyles as styles } from './styles';
 import { ThemeToggle } from './ThemeToggle';
+import { Select } from '../UI/Select/Select';
+import { DEFAULT_LANGUAGE_LABEL, LANGUAGE_OPTIONS, SUPPORTED_LANGUAGES } from '@/constants/languages';
+import i18n from 'i18next';
 
 export default function MobileNav() {
   const { t } = useTranslation();
   const [displayLinks, setDisplayLinks] = useState(false);
 
+  const currentLanguageLabel =
+    SUPPORTED_LANGUAGES.find((lang) => lang.value === i18n.language)?.label ||
+    DEFAULT_LANGUAGE_LABEL;
+
+  const handleLanguageChange = (label: string | null) => {
+    if (!label) {return;}
+    const selected = SUPPORTED_LANGUAGES.find((l) => l.label === label)!;
+    i18n.changeLanguage(selected.value);
+  };
+  
   function handleDisplayLinks() {
     setDisplayLinks((prev) => !prev);
   }
+
 
   return (
     <div>
@@ -33,6 +47,13 @@ export default function MobileNav() {
       {displayLinks && (
         <div style={styles.linksContainer}>
           <NavbarLinks displayLinks={displayLinks} variant='mobile' />
+          <Select
+            data={LANGUAGE_OPTIONS}
+            value={currentLanguageLabel}
+            onChange={handleLanguageChange}
+            allowDeselect={false}
+            className={styles.languageSelect.margin}
+          />
           <ThemeToggle />
         </div>
       )}

@@ -10,10 +10,10 @@ export const EXTERNAL_LINKS = {
 } as const;
 
 export const NAVIGATION_LINKS = [
-  { href: '/', label: 'Home' },
-  { href: '/scanner', label: 'Scanner' },
-  { href: '/statistics', label: 'Statistics' },
-  { href: '/about', label: 'About' },
+  { href: '/', labelKey: 'navbar.home' },
+  { href: '/scanner', labelKey: 'navbar.scanner' },
+  { href: '/statistics', labelKey: 'navbar.statistics' },
+  { href: '/about', labelKey: 'navbar.about' },
 ] as const;
 
 export const FOOTER_QUICK_LINKS = [

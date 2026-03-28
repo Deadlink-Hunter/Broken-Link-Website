@@ -1,4 +1,160 @@
 {
   "welcome_link_text": "deze gids",
-  "welcome_description_after_link": ". Om te beginnen, bewerk het bestand pages/Home.page.tsx."
+  "welcome_description_after_link": ". Om aan de slag te gaan, bewerk het bestand pages/Home.page.tsx.",
+  "about_page": {
+    "title": {
+      "about": "Over ",
+      "deadlink_hunter": "Deadlink-Hunter"
+    },
+    "description": "Een krachtige, open-source tool die is ontworpen om de integriteit van links in uw GitHub-repositories te behouden door kapotte links te identificeren en te verwijderen voordat ze uw gebruikers beïnvloeden."
+  },
+  "about_feature_card": {
+    "card_one": {
+      "title": "Precisie-scannen",
+      "description": "Geavanceerde algoritmen detecteren kapotte links in markdown-bestanden, documentatie en code-opmerkingen met uiterste precisie."
+    },
+    "card_two": {
+      "title": "Geautomatiseerde rapporten",
+      "description": "Genereer uitgebreide rapporten met gedetailleerde analyses, suggesties voor oplossingen en prioriteitsrangschikkingen voor efficiënt onderhoud."
+    },
+    "card_three": {
+      "title": "GitHub Integratie",
+      "description": "Naadloze integratie met uw GitHub-workflow via Actions, webhooks en automatische creatie van pull requests."
+    },
+    "card_four": {
+      "title": "Open Source",
+      "description": "Volledig open-source en community-gedreven. Draag bij, pas aan en breid uit naar de behoeften van uw project."
+    }
+  },
+  "hero": {
+    "title": {
+      "deadlink": "Deadlink",
+      "hunter": "Hunter"
+    },
+    "tagline": {
+      "openSource": "Open Source",
+      "lightningFast": "Bliksemsnel"
+    },
+    "description": {
+      "part1": "Verwijder kapotte links uit uw GitHub-repositories met",
+      "highlight": "precisie-scannen",
+      "part2": "en uitgebreide rapportage."
+    },
+    "buttons": {
+      "startScanning": "Start scannen",
+      "viewOnGitHub": "Bekijk op GitHub"
+    },
+    "statistics": {
+      "linksScanned": "Links gescand",
+      "reposAnalyzed": "Repo's geanalyseerd",
+      "accuracyRate": "Nauwkeurigheid"
+    }
+  },
+  "statistics_page": {
+    "title": {
+      "performance": "Prestaties",
+      "analytics": "Analyse"
+    },
+    "description": "Real-time inzichten in uw link-scanprestaties en gezondheidsstatistieken van uw repository."
+  },
+  "charts": {
+    "scanActivity": "Scanactiviteit door de tijd heen",
+    "linkTypesDistribustion": "Verdeling van linktypes"
+  },
+  "footer": {
+    "header": "Deadlink-Hunter",
+    "about": "Open-source tool voor het vinden en verwijderen van kapotte links in GitHub-repositories. Gebouwd met ❤️ voor de developer community.",
+    "gitBtnTxt": "Ster op GitHub",
+    "QuickLinks": "Snelkoppelingen",
+    "About": "Over",
+    "Scanner": "Scanner",
+    "Statistics": "Statistieken",
+    "Documentation": "Documentatie",
+    "Community": "Community",
+    "Contribute": "Bijdragen",
+    "Issues": "Issues",
+    "FeatureRequests": "Functieverzoeken",
+    "rights": "© Deadlink-Hunter. Gelicentieerd onder MIT.",
+    "madeWith": "Gemaakt met",
+    "byOpenSrc": "door de open source community"
+  },
+  "navbar": {
+    "header": "Deadlink-Hunter",
+    "github": "GitHub",
+    "githubMobile": "Bekijk op GitHub",
+    "home": "Startpagina",
+    "scanner": "Scanner",
+    "statistics": "Statistieken",
+    "about": "Over"
+  },
+  "explore_toolkit_title_part1": "Verken de ",
+  "explore_toolkit_title_highlight": "Toolkit",
+  "explore_toolkit_title_part2": "",
+  "explore_toolkit_description": "Alles wat u nodig heeft om uw repositories gezond en uw links in leven te houden.",
+  "explore_toolkit_card1_title": "Directe Link Scanner",
+  "explore_toolkit_card1_description": "Controleer snel een enkele URL of scan een hele repository op kapotte links met onze krachtige scanner.",
+  "explore_toolkit_card1_button": "Start scannen",
+  "explore_toolkit_card2_title": "Prestatieanalyse",
+  "explore_toolkit_card2_description": "Duik in gedetailleerde statistieken over scangeschiedenis, linkgezondheid en projectprestaties.",
+  "explore_toolkit_card2_button": "Bekijk statistieken",
+  "explore_toolkit_card3_title": "Over het project",
+  "explore_toolkit_card3_description": "Lees meer over de missie achter Deadlink-Hunter, het open-source karakter en hoe u kunt bijdragen.",
+  "explore_toolkit_card3_button": "Lees meer",
+  "our_mission_card_title": "Onze Missie",
+  "our_mission_card_description": "Ontwikkelaars een betrouwbare, efficiënte en gebruiksvriendelijke oplossing bieden voor linkintegriteit; kapotte links mogen de gebruikerservaring niet verpesten.",
+  "how_it_works_card1_title": "Scan uw repository",
+  "how_it_works_card1_description": "Voer uw GitHub repo URL in of plak een lijst met links om te controleren op kapotte verbindingen.",
+  "how_it_works_card2_title": "Bliksemsnelle analyse",
+  "how_it_works_card2_description": "Onze intelligente scanner controleert elke link, volgt redirects en valideert HTTP-responses in seconden.",
+  "how_it_works_card3_title": "Ontvang een gedetailleerd rapport",
+  "how_it_works_card3_description": "Ontvang een compleet overzicht van werkende en kapotte links met bruikbare inzichten om ze te herstellen.",
+  "how_it_works_title_part1": "Hoe het ",
+  "how_it_works_title_highlight": "werkt",
+  "how_it_works_title_part2": "",
+  "how_it_works_subtitle": "Herstel kapotte links in drie simpele stappen. Geen installatie vereist.",
+  "how_it_works_feature_title_prefix": "Kapotte links genezen,",
+  "how_it_works_feature_title_highlight": "Eén",
+  "how_it_works_feature_title_suffix": "repository tegelijk",
+  "how_it_works_feature_description": "Zie Deadlink-Hunter als de zorgverlener van uw repository. We diagnosticeren kapotte verbindingen en herstellen de gezondheid van uw project.",
+  "how_it_works_feature_point_1": "Geen 404-fouten meer die uw documentatie verpesten",
+  "how_it_works_feature_point_2": "Behoud het vertrouwen van gebruikers met werkende referenties",
+  "how_it_works_feature_point_3": "Behoud professionele repository-standaarden",
+  "scanner_page": {
+    "title": "Link Scanner",
+    "description": "Test individuele URL's of scan hele repositories met lichtsnelheid",
+    "scan_links_card": {
+      "title": "Links scannen",
+      "toggle": {
+        "single": "Enkele URL",
+        "repository": "Repository"
+      },
+      "single": {
+        "input_label": "Voer de te controleren URL in",
+        "input_placeholder": "https://example.com/page",
+        "button_check": "Controleer link"
+      },
+      "repository": {
+        "input_label": "GitHub Repository URL",
+        "input_placeholder": "https://github.com/gebruikersnaam/repository",
+        "textarea_label": "Of plak meerdere URL's",
+        "textarea_placeholder": "https://example1.com\nhttps://example2.com",
+        "button_check": "Scan repository"
+      }
+    },
+    "scan_results_card": {
+      "title": "Scanresultaten",
+      "empty_state": "Voer hierboven een URL of repository in om te beginnen met scannen",
+      "loading": "Scannen...",
+      "response_time": "Responstijd: {{responseTime}}ms",
+      "total_response_time": "Totale responstijd: {{responseTime}}ms",
+      "summary": "{{working}} werkend, {{broken}} kapot van de {{total}}",
+      "errors": {
+        "url_required": "URL is vereist",
+        "internal_server_error": "Interne serverfout",
+        "urls_array_required": "URL-array is vereist",
+        "one_url_required": "Ten minste één URL is vereist",
+        "maximum_urls_allowed": "Maximaal {{max}} URL's toegestaan per verzoek"
+      }
+    }
+  }
 }

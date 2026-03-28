@@ -1,4 +1,143 @@
 {
-    "welcome_link_text": "dieser Anleitung",
-    "welcome_description_after_link": ". Um loszulegen, bearbeite die Datei pages/Home.page.tsx."
+  "welcome_link_text": "dieser Anleitung",
+  "welcome_description_after_link": ". Bearbeiten Sie zum Starten die Datei pages/Home.page.tsx.",
+  "about_page": {
+    "title": {
+      "about": "Über ",
+      "deadlink_hunter": "Deadlink-Hunter"
+    },
+    "description": "Ein leistungsstarkes Open-Source-Tool, das entwickelt wurde, um die Integrität von Links in Ihren GitHub-Repositories zu bewahren, indem es defekte Links identifiziert und entfernt, bevor sie Ihre Benutzer beeinträchtigen."
+  },
+  "about_feature_card": {
+    "card_one": {
+      "title": "Präzisions-Scanning",
+      "description": "Fortschrittliche Algorithmen erkennen defekte Links in Markdown-Dateien, Dokumentationen und Code-Kommentaren mit höchster Genauigkeit."
+    },
+    "card_two": {
+      "title": "Automatisierte Berichte",
+      "description": "Erstellen Sie umfassende Berichte mit detaillierten Analysen, Korrekturvorschlägen und Prioritätsrankings für eine effiziente Wartung."
+    },
+    "card_three": {
+      "title": "GitHub-Integration",
+      "description": "Integrieren Sie sich nahtlos in Ihren GitHub-Workflow durch Actions, Webhooks und automatische Pull-Request-Erstellung."
+    },
+    "card_four": {
+      "title": "Open Source",
+      "description": "Vollständig quelloffen und gemeinschaftsorientiert. Tragen Sie bei, passen Sie es an und erweitern Sie es nach Ihren Projektanforderungen."
+    }
+  },
+  "hero": {
+    "title": { "deadlink": "Deadlink", "hunter": "Hunter" },
+    "tagline": { "openSource": "Open Source", "lightningFast": "Blitzschnell" },
+    "description": {
+      "part1": "Eliminieren Sie defekte Links aus Ihren GitHub-Repositories mit",
+      "highlight": "Präzisions-Scanning",
+      "part2": "und umfassender Berichterstattung."
+    },
+    "buttons": { "startScanning": "Scan Starten", "viewOnGitHub": "Auf GitHub ansehen" },
+    "statistics": {
+      "linksScanned": "Gescannte Links",
+      "reposAnalyzed": "Analysierte Repos",
+      "accuracyRate": "Genauigkeitsrate"
+    }
+  },
+  "statistics_page": {
+    "title": { "performance": "Leistung", "analytics": "Analytik" },
+    "description": "Echtzeit-Einblicke in Ihre Link-Scanning-Leistung und Repository-Gesundheitsmetriken."
+  },
+  "charts": {
+    "scanActivity": "Scan-Aktivität im Zeitverlauf",
+    "linkTypesDistribustion": "Verteilung der Link-Typen"
+  },
+  "footer": {
+    "header": "Deadlink-Hunter",
+    "about": "Open-Source-Tool zum Finden und Eliminieren defekter Links in GitHub-Repositories. Gebaut mit ❤️ für die Entwickler-Community.",
+    "gitBtnTxt": "Stern auf GitHub geben",
+    "QuickLinks": "Schnelllinks",
+    "About": "Über uns",
+    "Scanner": "Scanner",
+    "Statistics": "Statistiken",
+    "Documentation": "Dokumentation",
+    "Community": "Community",
+    "Contribute": "Beitragen",
+    "Issues": "Probleme",
+    "FeatureRequests": "Feature-Anfragen",
+    "rights": "© Deadlink-Hunter. Lizenziert unter MIT.",
+    "madeWith": "Hergestellt mit",
+    "byOpenSrc": "von der Open-Source-Community"
+  },
+  "navbar": {
+    "header": "Deadlink-Hunter",
+    "github": "GitHub",
+    "githubMobile": "Auf GitHub ansehen",
+    "home": "Startseite",
+    "scanner": "Scanner",
+    "statistics": "Statistiken",
+    "about": "Über"
+  },
+  "explore_toolkit_title_part1": "Erkunden Sie das ",
+  "explore_toolkit_title_highlight": "Toolkit",
+  "explore_toolkit_description": "Alles, was Sie brauchen, um Ihre Repositories gesund und Ihre Links am Leben zu erhalten.",
+  "explore_toolkit_card1_title": "Sofort-Link-Scanner",
+  "explore_toolkit_card1_description": "Prüfen Sie schnell eine einzelne URL oder scannen Sie ein ganzes Repository mit unserem leistungsstarken Scanner.",
+  "explore_toolkit_card1_button": "Scan Starten",
+  "explore_toolkit_card2_title": "Leistungsanalyse",
+  "explore_toolkit_card2_description": "Tauchen Sie ein in detaillierte Statistiken über Scan-Historie, Link-Gesundheit und Projektleistung.",
+  "explore_toolkit_card2_button": "Statistiken ansehen",
+  "explore_toolkit_card3_title": "Über das Projekt",
+  "explore_toolkit_card3_description": "Erfahren Sie mehr über die Mission von Deadlink-Hunter und wie Sie dazu beitragen können.",
+  "explore_toolkit_card3_button": "Mehr erfahren",
+  "our_mission_card_title": "Unsere Mission",
+  "our_mission_card_description": "Entwicklern eine zuverlässige und effiziente Lösung zur Aufrechterhaltung der Link-Integrität zu bieten; defekte Links sollten das Benutzererlebnis nicht beeinträchtigen.",
+  "how_it_works_card1_title": "Repository Scannen",
+  "how_it_works_card1_description": "Geben Sie Ihre GitHub-URL ein oder fügen Sie eine Liste von Links ein, um nach defekten Verbindungen zu suchen.",
+  "how_it_works_card2_title": "Blitzschnelle Analyse",
+  "how_it_works_card2_description": "Unser intelligenter Scanner prüft jeden Link, folgt Weiterleitungen und validiert HTTP-Antworten in Sekunden.",
+  "how_it_works_card3_title": "Detaillierten Bericht erhalten",
+  "how_it_works_card3_description": "Erhalten Sie eine umfassende Aufschlüsselung der funktionierenden und defekten Links mit Handlungsempfehlungen.",
+  "how_it_works_title_part1": "Wie es ",
+  "how_it_works_title_highlight": "funktioniert",
+  "how_it_works_subtitle": "Beheben Sie defekte Links in drei einfachen Schritten. Keine Installation erforderlich.",
+  "how_it_works_feature_title_prefix": "Defekte Links heilen,",
+  "how_it_works_feature_title_highlight": "Eins",
+  "how_it_works_feature_title_suffix": "nach dem anderen",
+  "how_it_works_feature_description": "Betrachten Sie Deadlink-Hunter als den Gesundheitsdienstleister Ihres Repositories. Wir diagnostizieren defekte Verbindungen und stellen die Gesundheit Ihres Projekts wieder her.",
+  "how_it_works_feature_point_1": "Keine 404-Fehler mehr in Ihrer Dokumentation",
+  "how_it_works_feature_point_2": "Behalten Sie das Vertrauen Ihrer Benutzer durch funktionierende Referenzen",
+  "how_it_works_feature_point_3": "Professionelle Repository-Standards einhalten",
+  "scanner_page": {
+    "title": "Link-Scanner",
+    "description": "Testen Sie einzelne URLs oder scannen Sie ganze Repositories mit Lichtgeschwindigkeit",
+    "scan_links_card": {
+      "title": "Links scannen",
+      "toggle": { "single": "Einzelne URL", "repository": "Repository" },
+      "single": {
+        "input_label": "URL zum Prüfen eingeben",
+        "input_placeholder": "https://example.com/page",
+        "button_check": "Link prüfen"
+      },
+      "repository": {
+        "input_label": "GitHub Repository URL",
+        "input_placeholder": "https://github.com/nutzer/repo",
+        "textarea_label": "Oder mehrere URLs einfügen",
+        "textarea_placeholder": "https://example1.com\nhttps://example2.com",
+        "button_check": "Repository scannen"
+      }
+    },
+    "scan_results_card": {
+      "title": "Scan-Ergebnisse",
+      "empty_state": "Geben Sie oben eine URL ein, um mit dem Scannen zu beginnen",
+      "loading": "Wird gescannt...",
+      "response_time": "Antwortzeit: {{responseTime}}ms",
+      "total_response_time": "Gesamtantwortzeit: {{responseTime}}ms",
+      "summary": "{{working}} okay, {{broken}} defekt von {{total}}",
+      "errors": {
+        "url_required": "URL ist erforderlich",
+        "internal_server_error": "Interner Serverfehler",
+        "urls_array_required": "URL-Array ist erforderlich",
+        "one_url_required": "Mindestens eine URL ist erforderlich",
+        "maximum_urls_allowed": "Maximal {{max}} URLs pro Anfrage erlaubt"
+      }
+    }
+  }
 }

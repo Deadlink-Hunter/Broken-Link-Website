@@ -1,4 +1,160 @@
 {
-    "welcome_link_text": "esta guía",
-    "welcome_description_after_link": ". Para empezar, editen el archivo pages/Home.page.tsx."
+  "welcome_link_text": "esta guía",
+  "welcome_description_after_link": ". Para comenzar, edite el archivo pages/Home.page.tsx.",
+  "about_page":{
+    "title": {
+      "about": "Acerca de ",
+      "deadlink_hunter": "Deadlink-Hunter"
+    },
+    "description": "Una potente herramienta de código abierto diseñada para mantener la integridad de los enlaces dentro de sus repositorios de GitHub, identificando y eliminando enlaces rotos antes de que afecten a sus usuarios."
+  },
+  "about_feature_card": {
+    "card_one": {
+      "title": "Escaneo de Precisión",
+      "description": "Algoritmos avanzados que detectan enlaces rotos en archivos markdown, documentación y comentarios de código con total exactitud."
+    },
+    "card_two": {
+      "title": "Informes Automatizados",
+      "description": "Genere informes completos con desgloses detallados, sugerencias de corrección y clasificaciones de prioridad para un mantenimiento eficiente."
+    },
+    "card_three": {
+      "title": "Integración con GitHub",
+      "description": "Integre perfectamente con su flujo de trabajo de GitHub a través de Actions, webhooks y creación automatizada de pull requests."
+    },
+    "card_four": {
+      "title": "Código Abierto",
+      "description": "Completamente de código abierto y dirigido por la comunidad. Contribuya, personalice y extienda según las necesidades de su proyecto."
+    }
+  },
+  "hero": {
+    "title": {
+      "deadlink": "Deadlink",
+      "hunter": "Hunter"
+    },
+    "tagline": {
+      "openSource": "Código Abierto",
+      "lightningFast": "Ultrarrápido"
+    },
+    "description": {
+      "part1": "Elimine los enlaces rotos de sus repositorios de GitHub con",
+      "highlight": "escaneo de precisión",
+      "part2": "e informes detallados."
+    },
+    "buttons": {
+      "startScanning": "Iniciar Escaneo",
+      "viewOnGitHub": "Ver en GitHub"
+    },
+    "statistics": {
+      "linksScanned": "Enlaces Escaneados",
+      "reposAnalyzed": "Repositorios Analizados",
+      "accuracyRate": "Tasa de Precisión"
+    }
+  },
+  "statistics_page":{
+    "title": {
+      "performance": "Rendimiento",
+      "analytics": "Analítica"
+    },
+    "description": "Información en tiempo real sobre el rendimiento del escaneo de enlaces y métricas de salud del repositorio."
+  },
+  "charts":{
+    "scanActivity" : "Actividad de Escaneo en el Tiempo",
+    "linkTypesDistribustion": "Distribución de Tipos de Enlaces"
+  },
+  "footer": {
+    "header": "Deadlink-Hunter",
+    "about": "Herramienta de código abierto para encontrar y eliminar enlaces rotos en repositorios de GitHub. Creada con ❤️ para la comunidad de desarrolladores.",
+    "gitBtnTxt": "Dar estrella en GitHub",
+    "QuickLinks": "Enlaces Rápidos",
+    "About": "Acerca de",
+    "Scanner": "Escáner",
+    "Statistics": "Estadísticas",
+    "Documentation": "Documentación",
+    "Community": "Comunidad",
+    "Contribute": "Contribuir",
+    "Issues": "Problemas",
+    "FeatureRequests": "Petición de Funciones",
+    "rights": "© Deadlink-Hunter. Bajo licencia MIT.",
+    "madeWith": "Hecho con",
+    "byOpenSrc": "por la comunidad de código abierto"
+  },
+  "navbar": {
+    "header": "Deadlink-Hunter",
+    "github": "GitHub",
+    "githubMobile": "Ver en GitHub",
+    "home": "Inicio",
+    "scanner": "Escáner",
+    "statistics": "Estadísticas",
+    "about": "Acerca de"
+  },
+  "explore_toolkit_title_part1": "Explore el ",
+  "explore_toolkit_title_highlight": "Kit de Herramientas",
+  "explore_toolkit_title_part2": "",
+  "explore_toolkit_description": "Todo lo que necesita para mantener sus repositorios saludables y sus enlaces activos.",
+  "explore_toolkit_card1_title": "Escáner Instantáneo",
+  "explore_toolkit_card1_description": "Verifique rápidamente una sola URL o escanee un repositorio completo en busca de enlaces rotos con nuestro potente y fácil escáner.",
+  "explore_toolkit_card1_button": "Iniciar Escaneo",
+  "explore_toolkit_card2_title": "Analítica de Rendimiento",
+  "explore_toolkit_card2_description": "Sumérjase en estadísticas detalladas y visualizaciones sobre el historial de escaneo, la salud de los enlaces y el rendimiento del proyecto.",
+  "explore_toolkit_card2_button": "Ver Estadísticas",
+  "explore_toolkit_card3_title": "Acerca del Proyecto",
+  "explore_toolkit_card3_description": "Conozca más sobre la misión detrás de Deadlink-Hunter, su naturaleza de código abierto y cómo puede contribuir.",
+  "explore_toolkit_card3_button": "Saber Más",
+  "our_mission_card_title": "Nuestra Misión",
+  "our_mission_card_description": "Proporcionar a los desarrolladores una solución confiable, eficiente y fácil de usar para mantener la integridad de los enlaces; los enlaces rotos no deberían arruinar la experiencia del usuario.",
+  "how_it_works_card1_title": "Escanee su Repositorio",
+  "how_it_works_card1_description": "Ingrese la URL de su repositorio de GitHub o pegue una lista de enlaces para verificar las conexiones rotas.",
+  "how_it_works_card2_title": "Análisis Ultrarrápido",
+  "how_it_works_card2_description": "Nuestro escáner inteligente verifica cada enlace, siguiendo redirecciones y validando respuestas HTTP en segundos.",
+  "how_it_works_card3_title": "Obtenga un Informe Detallado",
+  "how_it_works_card3_description": "Reciba un desglose completo de los enlaces funcionales y rotos con información útil para corregirlos.",
+  "how_it_works_title_part1": "Cómo ",
+  "how_it_works_title_highlight": "Funciona",
+  "how_it_works_title_part2": "",
+  "how_it_works_subtitle": "Corrija enlaces rotos en tres sencillos pasos. Sin necesidad de instalación.",
+  "how_it_works_feature_title_prefix": "Sanando Enlaces Rotos,",
+  "how_it_works_feature_title_highlight": "Un",
+  "how_it_works_feature_title_suffix": "Repositorio a la Vez",
+  "how_it_works_feature_description": "Piense en Deadlink-Hunter como el proveedor de salud de su repositorio. Diagnosticamos conexiones rotas e identificamos los problemas para restaurar la salud de su proyecto.",
+  "how_it_works_feature_point_1": "No más errores 404 rompiendo su documentación",
+  "how_it_works_feature_point_2": "Mantenga la confianza de sus usuarios con referencias funcionales",
+  "how_it_works_feature_point_3": "Mantenga estándares profesionales en su repositorio",
+  "scanner_page": {
+    "title": "Escáner de Enlaces",
+    "description": "Pruebe URLs individuales o escanee repositorios completos en busca de enlaces rotos con velocidad ultrarrápida",
+    "scan_links_card": {
+      "title": "Escanear Enlaces",
+      "toggle": {
+        "single": "URL Única",
+        "repository": "Repositorio"
+      },
+      "single": {
+        "input_label": "Ingrese la URL a verificar",
+        "input_placeholder": "https://ejemplo.com/pagina",
+        "button_check": "Verificar Enlace"
+      },
+      "repository": {
+        "input_label": "URL del Repositorio de GitHub",
+        "input_placeholder": "https://github.com/usuario/repositorio",
+        "textarea_label": "O pegue varias URLs",
+        "textarea_placeholder": "https://ejemplo1.com\nhttps://ejemplo2.com\nhttps://ejemplo3.com",
+        "button_check": "Escanear Repositorio"
+      }
+    },
+    "scan_results_card": {
+      "title": "Resultados del Escaneo",
+      "empty_state": "Ingrese una URL o repositorio arriba para comenzar a escanear enlaces rotos",
+      "loading": "Escaneando...",
+      "response_time": "Tiempo de respuesta: {{responseTime}}ms",
+      "total_response_time": "Tiempo de respuesta total: {{responseTime}}ms",
+      "summary": "{{working}} funcionales, {{broken}} rotos de {{total}}",
+      "errors": {
+        "url_required": "La URL es obligatoria",
+        "internal_server_error": "Error interno del servidor",
+        "urls_array_required": "Se requiere un conjunto de URLs",
+        "one_url_required": "Se requiere al menos una URL",
+        "maximum_urls_allowed": "Se permite un máximo de {{max}} URLs por solicitud"
+      }
+    }
+  }
 }
