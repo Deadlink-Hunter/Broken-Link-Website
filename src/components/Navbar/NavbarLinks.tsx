@@ -23,7 +23,7 @@ function Links({ variant }: LinksProps) {
   return (
     <>
       {navigationLinks.map((link) => (
-        <NavbarLink key={link.href} href={link.href} label={t(link.labelKey)} variant={variant} />
+        <NavbarLink key={link.href} href={link.href} label={t(link.label)} variant={variant} />
       ))}
     </>
   );
