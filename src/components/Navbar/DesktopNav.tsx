@@ -12,7 +12,7 @@ export default function DesktopNav() {
   const { externalLinks } = useNavigationLinks();
   const { t } = useTranslation();
   return (
-    <div style={styles.container}>
+    <nav style={styles.container}>
       <div style={styles.headerContainer}>
         <img alt='Deadlink logo' style={styles.logoSize} src={logo} />
         <Link labelStyle={styles.header} href='/' label={t('navbar.header')} disableHover />
@@ -32,6 +32,6 @@ export default function DesktopNav() {
         </LinkButton>
         <ThemeToggle />
       </div>
-    </div>
+    </nav>
   );
 }

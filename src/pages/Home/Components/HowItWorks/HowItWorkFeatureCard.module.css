@@ -1,7 +1,7 @@
 .featureCard {
   width: 100%;
   max-width: 65rem;
-  margin: 0 auto 4rem auto;
+  margin: 0 auto 4rem;
   padding: 0;
   overflow: hidden;
 }
