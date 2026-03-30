@@ -16,6 +16,10 @@
     "prettier:write": "prettier --write \"**/*.{ts,tsx}\"",
     "vitest": "vitest run",
     "vitest:watch": "vitest",
+    "test:e2e": "playwright test",
+  "test:e2e:ui": "playwright test --ui",
+  "test:e2e:debug": "playwright test --debug",
+  "test:e2e:report": "playwright show-report",
     "test": "pnpm run typecheck && pnpm run prettier && pnpm run lint && pnpm run vitest && pnpm run build",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build",
@@ -41,6 +45,7 @@
   "devDependencies": {
     "@eslint/js": "^9.39.4",
     "@ianvs/prettier-plugin-sort-imports": "^4.7.1",
+    "@playwright/test": "^1.58.2",
     "@storybook/addon-a11y": "9.1.20",
     "@storybook/addon-storysource": "^8.6.14",
     "@storybook/addon-viewport": "^9.0.8",
