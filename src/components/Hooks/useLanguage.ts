@@ -1,5 +1,5 @@
 import i18n from 'i18next';
-import { SUPPORTED_LANGUAGES, DEFAULT_LANGUAGE_LABEL } from '@/constants/languages';
+import { DEFAULT_LANGUAGE_LABEL, SUPPORTED_LANGUAGES } from '@/constants/languages';
 
 export const useLanguage = () => {
   const currentLanguageLabel =
@@ -7,7 +7,9 @@ export const useLanguage = () => {
     DEFAULT_LANGUAGE_LABEL;
 
   const handleLanguageChange = (label: string | null) => {
-    if (!label) {return;}
+    if (!label) {
+      return;
+    }
 
     const selected = SUPPORTED_LANGUAGES.find((l) => l.label === label);
     if (selected) {
