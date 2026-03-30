@@ -2,16 +2,14 @@ import { useState } from 'react';
 import logo from '/logo.svg';
 import { useTranslation } from 'react-i18next';
 import { Burger } from '@mantine/core';
-import {
-  LANGUAGE_OPTIONS
-} from '@/constants/languages';
+import { LANGUAGE_OPTIONS } from '@/constants/languages';
+import { useLanguage } from '../Hooks/useLanguage';
 import { Divider } from '../UI/Divider/Divider';
 import { Link } from '../UI/Link/Link';
 import { Select } from '../UI/Select/Select';
 import NavbarLinks from './NavbarLinks';
-import { mobileStyles as styles, languageSelectStyle } from './styles';
+import { languageSelectStyle, mobileStyles as styles } from './styles';
 import { ThemeToggle } from './ThemeToggle';
-import { useLanguage } from '../Hooks/useLanguage';
 
 export default function MobileNav() {
   const { t } = useTranslation();
