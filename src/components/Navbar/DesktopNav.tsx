@@ -10,10 +10,10 @@ import {
 } from '@/constants/languages';
 import { LinkButton, LinkTarget } from '../UI/Button/LinkButton';
 import { Link } from '../UI/Link/Link';
+import { Select } from '../UI/Select/Select';
 import NavbarLinks from './NavbarLinks';
 import { desktopStyles as styles } from './styles';
 import { ThemeToggle } from './ThemeToggle';
-import { Select } from '../UI/Select/Select';
 
 export default function DesktopNav() {
   const { externalLinks } = useNavigationLinks();

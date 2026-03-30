@@ -1,5 +1,4 @@
 import { IconBrandGithub } from '@tabler/icons-react';
-import { t } from 'i18next';
 import { useTranslation } from 'react-i18next';
 import { Divider, useMantineColorScheme } from '@mantine/core';
 import { useNavigationLinks } from '@/components/Hooks/useNavigationLinks';
@@ -23,7 +22,11 @@ function Links({ variant }: LinksProps) {
   return (
     <>
       {navigationLinks.map((link) => (
-        <NavbarLink key={link.href} href={link.href} label={t(link.label)} variant={variant} />
+        <NavbarLink 
+        key={link.href} 
+        href={link.href} 
+        label={link.label} 
+        variant={variant} />
       ))}
     </>
   );
