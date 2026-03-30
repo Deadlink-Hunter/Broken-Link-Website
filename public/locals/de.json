@@ -47,7 +47,7 @@
   },
   "charts": {
     "scanActivity": "Scan-Aktivität im Zeitverlauf",
-    "linkTypesDistribustion": "Verteilung der Link-Typen"
+    "linkTypesDistribution": "Verteilung der Link-Typen"
   },
   "footer": {
     "header": "Deadlink-Hunter",

@@ -2,7 +2,6 @@ import { IconBrandGithub } from '@tabler/icons-react';
 import logo from '/logo.svg';
 import i18n from 'i18next';
 import { useTranslation } from 'react-i18next';
-import { Select } from '@mantine/core';
 import { useNavigationLinks } from '@/components/Hooks/useNavigationLinks';
 import {
   DEFAULT_LANGUAGE_LABEL,
@@ -14,6 +13,7 @@ import { Link } from '../UI/Link/Link';
 import NavbarLinks from './NavbarLinks';
 import { desktopStyles as styles } from './styles';
 import { ThemeToggle } from './ThemeToggle';
+import { Select } from '../UI/Select/Select';
 
 export default function DesktopNav() {
   const { externalLinks } = useNavigationLinks();
