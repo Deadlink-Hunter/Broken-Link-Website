@@ -29,6 +29,7 @@ export default function MobileNav() {
     }
     const selected = SUPPORTED_LANGUAGES.find((l) => l.label === label)!;
     i18n.changeLanguage(selected.value);
+    localStorage.setItem('lang', selected.value);
   };
 
   function handleDisplayLinks() {
@@ -53,11 +54,12 @@ export default function MobileNav() {
         <div style={styles.linksContainer}>
           <NavbarLinks displayLinks={displayLinks} variant='mobile' />
           <Select
+            aria-label='Language'
             data={LANGUAGE_OPTIONS}
             value={currentLanguageLabel}
             onChange={handleLanguageChange}
             allowDeselect={false}
-            className={styles.languageSelect.margin}
+            style={styles.languageSelect}
           />
           <ThemeToggle />
         </div>

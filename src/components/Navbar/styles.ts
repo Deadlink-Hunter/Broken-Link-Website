@@ -11,6 +11,7 @@ export const desktopStyles = {
   },
   languageSelect: {
     width: '130px',
+    margin: '0 0 0 1rem',
   },
   headerContainer: { display: 'flex', alignItems: 'center' },
   logoSize: { height: '1.75rem' },
@@ -45,8 +46,9 @@ export const mobileStyles = {
     padding: '1rem 1.5rem',
   },
   languageSelect: {
-    width: '130px',
-    margin: '10px 0',
+    width: '100%',
+    maxWidth: '120px',
+    margin: '0.5rem 0',
   },
   headerContainer: { display: 'flex', alignItems: 'center' },
   header: { fontWeight: '700', fontSize: theme.fontSizes.xl, marginLeft: '.2rem' },

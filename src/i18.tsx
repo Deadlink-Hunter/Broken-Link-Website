@@ -9,6 +9,8 @@ import nlTranslations from '../public/locals/nl.json';
 import ptBrTranslations from '../public/locals/ptbr.json';
 import turTranslations from '../public/locals/tur.json';
 
+const savedLang = localStorage.getItem('lang') || 'en';
+
 i18n.use(initReactI18next).init({
   resources: {
     en: {
@@ -36,7 +38,7 @@ i18n.use(initReactI18next).init({
       translation: nlTranslations,
     },
   },
-  lng: 'en',
+  lng: savedLang,
   fallbackLng: 'en',
   interpolation: {
     escapeValue: false,

@@ -59,7 +59,7 @@
   },
   "charts": {
     "scanActivity": "Zamana Göre Tarama Aktivitesi",
-    "linkTypesDistribustion": "Link Türleri Dağılımı"
+    "linkTypesDistribution": "Link Türleri Dağılımı"
   },
   "footer": {
     "header": "Kırık Link Avcısı",

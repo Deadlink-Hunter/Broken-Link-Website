@@ -29,6 +29,7 @@ export default function DesktopNav() {
     }
     const selected = SUPPORTED_LANGUAGES.find((l) => l.label === label)!;
     i18n.changeLanguage(selected.value);
+    localStorage.setItem('lang', selected.value);
   };
 
   return (
@@ -52,11 +53,12 @@ export default function DesktopNav() {
         </LinkButton>
 
         <Select
+          aria-label='Language'
           data={LANGUAGE_OPTIONS}
           value={currentLanguageLabel}
           onChange={handleLanguageChange}
           allowDeselect={false}
-          className={styles.languageSelect.width}
+          style={styles.languageSelect}
         />
         <ThemeToggle />
       </div>
