@@ -1,36 +1,22 @@
 import { useState } from 'react';
 import logo from '/logo.svg';
-import i18n from 'i18next';
 import { useTranslation } from 'react-i18next';
 import { Burger } from '@mantine/core';
 import {
-  DEFAULT_LANGUAGE_LABEL,
-  LANGUAGE_OPTIONS,
-  SUPPORTED_LANGUAGES,
+  LANGUAGE_OPTIONS
 } from '@/constants/languages';
 import { Divider } from '../UI/Divider/Divider';
 import { Link } from '../UI/Link/Link';
 import { Select } from '../UI/Select/Select';
 import NavbarLinks from './NavbarLinks';
-import { mobileStyles as styles } from './styles';
+import { mobileStyles as styles, languageSelectStyle } from './styles';
 import { ThemeToggle } from './ThemeToggle';
+import { useLanguage } from '../Hooks/useLanguage';
 
 export default function MobileNav() {
   const { t } = useTranslation();
   const [displayLinks, setDisplayLinks] = useState(false);
-
-  const currentLanguageLabel =
-    SUPPORTED_LANGUAGES.find((lang) => lang.value === i18n.language)?.label ||
-    DEFAULT_LANGUAGE_LABEL;
-
-  const handleLanguageChange = (label: string | null) => {
-    if (!label) {
-      return;
-    }
-    const selected = SUPPORTED_LANGUAGES.find((l) => l.label === label)!;
-    i18n.changeLanguage(selected.value);
-    localStorage.setItem('lang', selected.value);
-  };
+  const { currentLanguageLabel, handleLanguageChange } = useLanguage();
 
   function handleDisplayLinks() {
     setDisplayLinks((prev) => !prev);
@@ -59,7 +45,7 @@ export default function MobileNav() {
             value={currentLanguageLabel}
             onChange={handleLanguageChange}
             allowDeselect={false}
-            style={styles.languageSelect}
+            style={languageSelectStyle}
           />
           <ThemeToggle />
         </div>

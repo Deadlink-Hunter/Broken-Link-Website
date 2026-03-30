@@ -1,36 +1,22 @@
 import { IconBrandGithub } from '@tabler/icons-react';
 import logo from '/logo.svg';
-import i18n from 'i18next';
 import { useTranslation } from 'react-i18next';
 import { useNavigationLinks } from '@/components/Hooks/useNavigationLinks';
 import {
-  DEFAULT_LANGUAGE_LABEL,
   LANGUAGE_OPTIONS,
-  SUPPORTED_LANGUAGES,
 } from '@/constants/languages';
 import { LinkButton, LinkTarget } from '../UI/Button/LinkButton';
 import { Link } from '../UI/Link/Link';
 import { Select } from '../UI/Select/Select';
 import NavbarLinks from './NavbarLinks';
-import { desktopStyles as styles } from './styles';
+import { languageSelectStyle, desktopStyles as styles } from './styles';
 import { ThemeToggle } from './ThemeToggle';
+import { useLanguage } from '../Hooks/useLanguage';
 
 export default function DesktopNav() {
   const { externalLinks } = useNavigationLinks();
   const { t } = useTranslation();
-
-  const currentLanguageLabel =
-    SUPPORTED_LANGUAGES.find((lang) => lang.value === i18n.language)?.label ||
-    DEFAULT_LANGUAGE_LABEL;
-
-  const handleLanguageChange = (label: string | null) => {
-    if (!label) {
-      return;
-    }
-    const selected = SUPPORTED_LANGUAGES.find((l) => l.label === label)!;
-    i18n.changeLanguage(selected.value);
-    localStorage.setItem('lang', selected.value);
-  };
+  const { currentLanguageLabel, handleLanguageChange } = useLanguage();
 
   return (
     <div style={styles.container}>
@@ -58,7 +44,7 @@ export default function DesktopNav() {
           value={currentLanguageLabel}
           onChange={handleLanguageChange}
           allowDeselect={false}
-          style={styles.languageSelect}
+          style={languageSelectStyle}
         />
         <ThemeToggle />
       </div>

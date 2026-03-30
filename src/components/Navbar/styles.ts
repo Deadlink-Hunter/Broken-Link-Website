@@ -9,10 +9,6 @@ export const desktopStyles = {
     alignItems: 'center',
     marginTop: '.45rem',
   },
-  languageSelect: {
-    width: '130px',
-    margin: '0 0 0 1rem',
-  },
   headerContainer: { display: 'flex', alignItems: 'center' },
   logoSize: { height: '1.75rem' },
   header: { fontWeight: '700', fontSize: theme.fontSizes.xl, marginLeft: '.2rem' },
@@ -45,11 +41,6 @@ export const mobileStyles = {
     justifyContent: 'space-between',
     padding: '1rem 1.5rem',
   },
-  languageSelect: {
-    width: '100%',
-    maxWidth: '120px',
-    margin: '0.5rem 0',
-  },
   headerContainer: { display: 'flex', alignItems: 'center' },
   header: { fontWeight: '700', fontSize: theme.fontSizes.xl, marginLeft: '.2rem' },
   logoSize: { height: '1.75rem' },
@@ -67,7 +58,12 @@ export const mobileStyles = {
     padding: '.6rem',
   }),
   linksDivider: { marginLeft: 'calc(50% - 50vw)', marginRight: 'calc(50% - 50vw)' },
-  buttonContainer: { display: 'flex' },
+  buttonContainer: {
+    display: 'flex',
+    gap: '0.4rem',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   button: {
     margin: '.6rem',
     display: 'block',
@@ -85,4 +81,9 @@ export const mobileStyles = {
   themeToggle: {
     backround: 'red',
   },
+};
+
+export const languageSelectStyle = {
+  width: '6.5rem',
+  maxWidth: '100%',
 };
