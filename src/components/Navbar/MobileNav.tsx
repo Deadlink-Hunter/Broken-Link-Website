@@ -2,15 +2,21 @@ import { useState } from 'react';
 import logo from '/logo.svg';
 import { useTranslation } from 'react-i18next';
 import { Burger } from '@mantine/core';
+import {
+  LANGUAGE_OPTIONS
+} from '@/constants/languages';
 import { Divider } from '../UI/Divider/Divider';
 import { Link } from '../UI/Link/Link';
+import { Select } from '../UI/Select/Select';
 import NavbarLinks from './NavbarLinks';
-import { mobileStyles as styles } from './styles';
+import { mobileStyles as styles, languageSelectStyle } from './styles';
 import { ThemeToggle } from './ThemeToggle';
+import { useLanguage } from '../Hooks/useLanguage';
 
 export default function MobileNav() {
   const { t } = useTranslation();
   const [displayLinks, setDisplayLinks] = useState(false);
+  const { currentLanguageLabel, handleLanguageChange } = useLanguage();
 
   function handleDisplayLinks() {
     setDisplayLinks((prev) => !prev);
@@ -33,6 +39,14 @@ export default function MobileNav() {
       {displayLinks && (
         <div style={styles.linksContainer}>
           <NavbarLinks displayLinks={displayLinks} variant='mobile' />
+          <Select
+            aria-label='Language'
+            data={LANGUAGE_OPTIONS}
+            value={currentLanguageLabel}
+            onChange={handleLanguageChange}
+            allowDeselect={false}
+            style={languageSelectStyle}
+          />
           <ThemeToggle />
         </div>
       )}

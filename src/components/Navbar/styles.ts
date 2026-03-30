@@ -58,7 +58,12 @@ export const mobileStyles = {
     padding: '.6rem',
   }),
   linksDivider: { marginLeft: 'calc(50% - 50vw)', marginRight: 'calc(50% - 50vw)' },
-  buttonContainer: { display: 'flex' },
+  buttonContainer: {
+    display: 'flex',
+    gap: '0.4rem',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   button: {
     margin: '.6rem',
     display: 'block',
@@ -76,4 +81,9 @@ export const mobileStyles = {
   themeToggle: {
     backround: 'red',
   },
+};
+
+export const languageSelectStyle = {
+  width: '6.5rem',
+  maxWidth: '100%',
 };

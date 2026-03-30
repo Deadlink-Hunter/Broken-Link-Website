@@ -59,7 +59,7 @@
   },
   "charts": {
     "scanActivity": "Attività di Scansione nel Tempo",
-    "linkTypesDistribustion": "Distribuzione dei Tipi di Link"
+    "linkTypesDistribution": "Distribuzione dei Tipi di Link"
   },
   "footer": {
     "header": "Deadlink-Hunter",
@@ -81,7 +81,11 @@
   "navbar": {
     "header": "Deadlink-Hunter",
     "github": "GitHub",
-    "githubMobile": "Visualizza su GitHub"
+    "githubMobile": "Visualizza su GitHub",
+    "home": "Home",
+    "scanner": "Scanner",
+    "statistics": "Statistiche",
+    "about": "Informazioni"
   },
   "explore_toolkit_title_part1": "Esplora il ",
   "explore_toolkit_title_highlight": "Toolkit",

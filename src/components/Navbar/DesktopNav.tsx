@@ -2,15 +2,22 @@ import { IconBrandGithub } from '@tabler/icons-react';
 import logo from '/logo.svg';
 import { useTranslation } from 'react-i18next';
 import { useNavigationLinks } from '@/components/Hooks/useNavigationLinks';
+import {
+  LANGUAGE_OPTIONS,
+} from '@/constants/languages';
 import { LinkButton, LinkTarget } from '../UI/Button/LinkButton';
 import { Link } from '../UI/Link/Link';
+import { Select } from '../UI/Select/Select';
 import NavbarLinks from './NavbarLinks';
-import { desktopStyles as styles } from './styles';
+import { languageSelectStyle, desktopStyles as styles } from './styles';
 import { ThemeToggle } from './ThemeToggle';
+import { useLanguage } from '../Hooks/useLanguage';
 
 export default function DesktopNav() {
   const { externalLinks } = useNavigationLinks();
   const { t } = useTranslation();
+  const { currentLanguageLabel, handleLanguageChange } = useLanguage();
+
   return (
     <nav style={styles.container}>
       <div style={styles.headerContainer}>
@@ -20,7 +27,7 @@ export default function DesktopNav() {
       <div style={styles.linksContainer}>
         <NavbarLinks variant='desktop' />
       </div>
-      {/* TODO - add option for button hover effect */}
+
       <div style={styles.buttonContainers}>
         <LinkButton
           href={externalLinks.GITHUB.REPO}
@@ -30,6 +37,15 @@ export default function DesktopNav() {
         >
           <IconBrandGithub width={36} height={18} />
         </LinkButton>
+
+        <Select
+          aria-label='Language'
+          data={LANGUAGE_OPTIONS}
+          value={currentLanguageLabel}
+          onChange={handleLanguageChange}
+          allowDeselect={false}
+          style={languageSelectStyle}
+        />
         <ThemeToggle />
       </div>
     </nav>

@@ -1,4 +1,160 @@
 {
-    "welcome_link_text": "esta guia",
-    "welcome_description_after_link": ". Para começar, edite o arquivo pages/Home.page.tsx."
+  "welcome_link_text": "este guia",
+  "welcome_description_after_link": ". Para começar, edite o arquivo pages/Home.page.tsx.",
+  "about_page": {
+    "title": {
+      "about": "Sobre o ",
+      "deadlink_hunter": "Deadlink-Hunter"
+    },
+    "description": "Uma ferramenta poderosa e de código aberto projetada para manter a integridade dos links em seus repositórios do GitHub, identificando e eliminando links quebrados antes que eles impactem seus usuários."
+  },
+  "about_feature_card": {
+    "card_one": {
+      "title": "Escaneamento de Precisão",
+      "description": "Algoritmos avançados detectam links quebrados em arquivos markdown, documentação e comentários de código com precisão milimétrica."
+    },
+    "card_two": {
+      "title": "Relatórios Automatizados",
+      "description": "Gere relatórios abrangentes com detalhamentos, sugestões de correção e rankings de prioridade para uma manutenção eficiente."
+    },
+    "card_three": {
+      "title": "Integração com GitHub",
+      "description": "Integre-se perfeitamente ao seu fluxo de trabalho do GitHub através de Actions, webhooks e criação automatizada de pull requests."
+    },
+    "card_four": {
+      "title": "Código Aberto",
+      "description": "Totalmente de código aberto e impulsionado pela comunidade. Contribua, personalize e estenda para atender às necessidades do seu projeto."
+    }
+  },
+  "hero": {
+    "title": {
+      "deadlink": "Deadlink",
+      "hunter": "Hunter"
+    },
+    "tagline": {
+      "openSource": "Código Aberto",
+      "lightningFast": "Extremamente Rápido"
+    },
+    "description": {
+      "part1": "Elimine links quebrados dos seus repositórios do GitHub com",
+      "highlight": "escaneamento de precisão",
+      "part2": "e relatórios detalhados."
+    },
+    "buttons": {
+      "startScanning": "Iniciar Escaneamento",
+      "viewOnGitHub": "Ver no GitHub"
+    },
+    "statistics": {
+      "linksScanned": "Links Escaneados",
+      "reposAnalyzed": "Repos Analisados",
+      "accuracyRate": "Taxa de Precisão"
+    }
+  },
+  "statistics_page": {
+    "title": {
+      "performance": "Desempenho",
+      "analytics": "Análises"
+    },
+    "description": "Insights em tempo real sobre o desempenho do seu escaneamento de links e métricas de saúde do repositório."
+  },
+  "charts": {
+    "scanActivity": "Atividade de Escaneamento ao Longo do Tempo",
+    "linkTypesDistribustion": "Distribuição de Tipos de Link"
+  },
+  "footer": {
+    "header": "Deadlink-Hunter",
+    "about": "Ferramenta de código aberto para encontrar e eliminar links quebrados em repositórios do GitHub. Criada com ❤️ para a comunidade de desenvolvedores.",
+    "gitBtnTxt": "Dar Star no GitHub",
+    "QuickLinks": "Links Rápidos",
+    "About": "Sobre",
+    "Scanner": "Scanner",
+    "Statistics": "Estatísticas",
+    "Documentation": "Documentação",
+    "Community": "Comunidade",
+    "Contribute": "Contribuir",
+    "Issues": "Problemas (Issues)",
+    "FeatureRequests": "Sugestões de Recursos",
+    "rights": "© Deadlink-Hunter. Licenciado sob MIT.",
+    "madeWith": "Feito com",
+    "byOpenSrc": "pela comunidade de código aberto"
+  },
+  "navbar": {
+    "header": "Deadlink-Hunter",
+    "github": "GitHub",
+    "githubMobile": "Ver no GitHub",
+    "home": "Início",
+    "scanner": "Scanner",
+    "statistics": "Estatísticas",
+    "about": "Sobre"
+  },
+  "explore_toolkit_title_part1": "Explore o ",
+  "explore_toolkit_title_highlight": "Kit de Ferramentas",
+  "explore_toolkit_title_part2": "",
+  "explore_toolkit_description": "Tudo o que você precisa para manter seus repositórios saudáveis e seus links ativos.",
+  "explore_toolkit_card1_title": "Scanner de Links Instantâneo",
+  "explore_toolkit_card1_description": "Verifique rapidamente uma única URL ou escaneie um repositório inteiro em busca de links quebrados com nosso scanner poderoso e fácil de usar.",
+  "explore_toolkit_card1_button": "Iniciar Escaneamento",
+  "explore_toolkit_card2_title": "Análise de Desempenho",
+  "explore_toolkit_card2_description": "Mergulhe em estatísticas detalhadas e visualizações sobre o histórico de escaneamento, saúde dos links e desempenho do projeto ao longo do tempo.",
+  "explore_toolkit_card2_button": "Ver Estatísticas",
+  "explore_toolkit_card3_title": "Sobre o Projeto",
+  "explore_toolkit_card3_description": "Saiba mais sobre a missão por trás do Deadlink-Hunter, sua natureza de código aberto e como você pode contribuir.",
+  "explore_toolkit_card3_button": "Saiba Mais",
+  "our_mission_card_title": "Nossa Missão",
+  "our_mission_card_description": "Fornecer aos desenvolvedores uma solução confiável, eficiente e fácil de usar para manter a integridade dos links. Acreditamos que links quebrados não devem prejudicar a experiência do usuário e que todo repositório merece estar com seus links perfeitos.",
+  "how_it_works_card1_title": "Escaneie seu Repositório",
+  "how_it_works_card1_description": "Insira a URL do seu repositório GitHub ou cole uma lista de links para verificar conexões quebradas.",
+  "how_it_works_card2_title": "Análise Relâmpago",
+  "how_it_works_card2_description": "Nosso scanner inteligente verifica cada link, seguindo redirecionamentos e validando respostas HTTP em segundos.",
+  "how_it_works_card3_title": "Receba um Relatório Detalhado",
+  "how_it_works_card3_description": "Receba um detalhamento completo de links funcionando e quebrados com insights acionáveis para corrigi-los.",
+  "how_it_works_title_part1": "Como ",
+  "how_it_works_title_highlight": "Funciona",
+  "how_it_works_title_part2": "",
+  "how_it_works_subtitle": "Corrija links quebrados em três passos simples. Sem necessidade de instalação.",
+  "how_it_works_feature_title_prefix": "Recuperando Links Quebrados,",
+  "how_it_works_feature_title_highlight": "Um",
+  "how_it_works_feature_title_suffix": "Repositório por Vez",
+  "how_it_works_feature_description": "Pense no Deadlink-Hunter como o profissional de saúde do seu repositório. Nós diagnosticamos conexões quebradas, identificamos os problemas e fornecemos um plano de tratamento claro para restaurar a saúde do seu projeto.",
+  "how_it_works_feature_point_1": "Chega de erros 404 quebrando sua documentação",
+  "how_it_works_feature_point_2": "Mantenha a confiança dos usuários com referências funcionais",
+  "how_it_works_feature_point_3": "Mantenha padrões profissionais em seus repositórios",
+  "scanner_page": {
+    "title": "Scanner de Links",
+    "description": "Teste URLs individuais ou escaneie repositórios inteiros em busca de links quebrados com velocidade relâmpago",
+    "scan_links_card": {
+      "title": "Escanear Links",
+      "toggle": {
+        "single": "URL Única",
+        "repository": "Repositório"
+      },
+      "single": {
+        "input_label": "Insira a URL para verificar",
+        "input_placeholder": "https://exemplo.com/pagina",
+        "button_check": "Verificar Link"
+      },
+      "repository": {
+        "input_label": "URL do Repositório GitHub",
+        "input_placeholder": "https://github.com/usuario/repositorio",
+        "textarea_label": "Ou cole várias URLs",
+        "textarea_placeholder": "https://exemplo1.com\nhttps://exemplo2.com\nhttps://exemplo3.com",
+        "button_check": "Escanear Repositório"
+      }
+    },
+    "scan_results_card": {
+      "title": "Resultados do Escaneamento",
+      "empty_state": "Insira uma URL ou repositório acima para começar a procurar por links quebrados",
+      "loading": "Escaneando...",
+      "response_time": "Tempo de resposta: {{responseTime}}ms",
+      "total_response_time": "Tempo total de resposta: {{responseTime}}ms",
+      "summary": "{{working}} funcionando, {{broken}} quebrados de um total de {{total}}",
+      "errors": {
+        "url_required": "A URL é obrigatória",
+        "internal_server_error": "Erro interno do servidor",
+        "urls_array_required": "O array de URLs é obrigatório",
+        "one_url_required": "Pelo menos uma URL é obrigatória",
+        "maximum_urls_allowed": "Máximo de {{max}} URLs permitidas por solicitação"
+      }
+    }
+  }
 }

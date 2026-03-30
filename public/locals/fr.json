@@ -1,4 +1,160 @@
 {
-    "welcome_link_text": "ce guide",
-    "welcome_description_after_link": ". Pour commencer, modifiez le fichier pages/Home.page.tsx."
+  "welcome_link_text": "ce guide",
+  "welcome_description_after_link": ". Pour commencer, modifiez le fichier pages/Home.page.tsx.",
+  "about_page": {
+    "title": {
+      "about": "À propos de ",
+      "deadlink_hunter": "Deadlink-Hunter"
+    },
+    "description": "Un outil puissant et open-source conçu pour maintenir l'intégrité des liens dans vos dépôts GitHub en identifiant et en éliminant les liens brisés avant qu'ils n'affectent vos utilisateurs."
+  },
+  "about_feature_card": {
+    "card_one": {
+      "title": "Analyse de Précision",
+      "description": "Des algorithmes avancés détectent les liens brisés dans les fichiers markdown, la documentation et les commentaires de code avec une précision chirurgicale."
+    },
+    "card_two": {
+      "title": "Rapports Automatisés",
+      "description": "Générez des rapports complets avec des analyses détaillées, des suggestions de correction et des classements de priorité pour une maintenance efficace."
+    },
+    "card_three": {
+      "title": "Intégration GitHub",
+      "description": "S'intègre parfaitement à votre flux de travail GitHub via les Actions, les webhooks et la création automatisée de pull requests."
+    },
+    "card_four": {
+      "title": "Open Source",
+      "description": "Entièrement open-source et porté par la communauté. Contribuez, personnalisez et étendez l'outil selon vos besoins."
+    }
+  },
+  "hero": {
+    "title": {
+      "deadlink": "Deadlink",
+      "hunter": "Hunter"
+    },
+    "tagline": {
+      "openSource": "Open Source",
+      "lightningFast": "Ultra Rapide"
+    },
+    "description": {
+      "part1": "Éliminez les liens brisés de vos dépôts GitHub avec une",
+      "highlight": "analyse de précision",
+      "part2": "et des rapports complets."
+    },
+    "buttons": {
+      "startScanning": "Lancer l'analyse",
+      "viewOnGitHub": "Voir sur GitHub"
+    },
+    "statistics": {
+      "linksScanned": "Liens Analysés",
+      "reposAnalyzed": "Dépôts Analysés",
+      "accuracyRate": "Taux de Précision"
+    }
+  },
+  "statistics_page": {
+    "title": {
+      "performance": "Performance",
+      "analytics": "Analyses"
+    },
+    "description": "Aperçu en temps réel des performances d'analyse et des indicateurs de santé de vos dépôts."
+  },
+  "charts": {
+    "scanActivity": "Activité d'analyse au fil du temps",
+    "linkTypesDistribution": "Distribution des types de liens"
+  },
+  "footer": {
+    "header": "Deadlink-Hunter",
+    "about": "Outil open-source pour trouver et éliminer les liens brisés dans les dépôts GitHub. Créé avec ❤️ pour la communauté des développeurs.",
+    "gitBtnTxt": "Star sur GitHub",
+    "QuickLinks": "Liens Rapides",
+    "About": "À propos",
+    "Scanner": "Scanner",
+    "Statistics": "Statistiques",
+    "Documentation": "Documentation",
+    "Community": "Communauté",
+    "Contribute": "Contribuer",
+    "Issues": "Tickets (Issues)",
+    "FeatureRequests": "Suggestions",
+    "rights": "© Deadlink-Hunter. Sous licence MIT.",
+    "madeWith": "Fait avec",
+    "byOpenSrc": "par la communauté open source"
+  },
+  "navbar": {
+    "header": "Deadlink-Hunter",
+    "github": "GitHub",
+    "githubMobile": "Voir sur GitHub",
+    "home": "Accueil",
+    "scanner": "Scanner",
+    "statistics": "Statistiques",
+    "about": "À propos"
+  },
+  "explore_toolkit_title_part1": "Explorez la ",
+  "explore_toolkit_title_highlight": "Boîte à outils",
+  "explore_toolkit_title_part2": "",
+  "explore_toolkit_description": "Tout ce dont vous avez besoin pour garder vos dépôts en bonne santé et vos liens actifs.",
+  "explore_toolkit_card1_title": "Scanner de liens instantané",
+  "explore_toolkit_card1_description": "Vérifiez rapidement une URL unique ou analysez un dépôt entier pour trouver des liens brisés avec notre scanner puissant.",
+  "explore_toolkit_card1_button": "Lancer l'analyse",
+  "explore_toolkit_card2_title": "Analyses de performance",
+  "explore_toolkit_card2_description": "Plongez dans des statistiques détaillées sur l'historique des analyses, la santé des liens et la performance des projets.",
+  "explore_toolkit_card2_button": "Voir les statistiques",
+  "explore_toolkit_card3_title": "À propos du projet",
+  "explore_toolkit_card3_description": "En savoir plus sur la mission de Deadlink-Hunter, son aspect open-source et comment vous pouvez contribuer.",
+  "explore_toolkit_card3_button": "En savoir plus",
+  "our_mission_card_title": "Notre Mission",
+  "our_mission_card_description": "Fournir aux développeurs une solution fiable et efficace pour maintenir l'intégrité de leurs liens. Nous pensons que les liens brisés ne devraient pas gâcher l'expérience utilisateur.",
+  "how_it_works_card1_title": "Analysez votre dépôt",
+  "how_it_works_card1_description": "Entrez l'URL de votre dépôt GitHub ou collez une liste de liens pour vérifier les connexions rompues.",
+  "how_it_works_card2_title": "Analyse ultra rapide",
+  "how_it_works_card2_description": "Notre scanner intelligent vérifie chaque lien, suit les redirections et valide les réponses HTTP en quelques secondes.",
+  "how_it_works_card3_title": "Rapport détaillé",
+  "how_it_works_card3_description": "Recevez un bilan complet des liens fonctionnels et brisés avec des conseils concrets pour les réparer.",
+  "how_it_works_title_part1": "Comment ça ",
+  "how_it_works_title_highlight": "marche",
+  "how_it_works_title_part2": "",
+  "how_it_works_subtitle": "Réparez les liens brisés en trois étapes simples. Aucune installation requise.",
+  "how_it_works_feature_title_prefix": "Réparer les liens,",
+  "how_it_works_feature_title_highlight": "Un",
+  "how_it_works_feature_title_suffix": "Dépôt à la fois",
+  "how_it_works_feature_description": "Considérez Deadlink-Hunter como le médecin de votre dépôt. Nous diagnostiquons les connexions rompues et fournissons un plan de traitement clair.",
+  "how_it_works_feature_point_1": "Plus d'erreurs 404 dans votre documentation",
+  "how_it_works_feature_point_2": "Gardez la confiance des utilisateurs avec des liens valides",
+  "how_it_works_feature_point_3": "Maintenez des standards professionnels pour vos dépôts",
+  "scanner_page": {
+    "title": "Scanner de liens",
+    "description": "Testez des URLs individuelles ou analysez des dépôts entiers à la vitesse de l'éclair",
+    "scan_links_card": {
+      "title": "Scanner les liens",
+      "toggle": {
+        "single": "URL unique",
+        "repository": "Dépôt"
+      },
+      "single": {
+        "input_label": "Entrez l'URL à vérifier",
+        "input_placeholder": "https://exemple.com/page",
+        "button_check": "Vérifier le lien"
+      },
+      "repository": {
+        "input_label": "URL du dépôt GitHub",
+        "input_placeholder": "https://github.com/nom/depot",
+        "textarea_label": "Ou collez plusieurs URLs",
+        "textarea_placeholder": "https://exemple1.com\nhttps://exemple2.com",
+        "button_check": "Analyser le dépôt"
+      }
+    },
+    "scan_results_card": {
+      "title": "Résultats de l'analyse",
+      "empty_state": "Entrez une URL ou un dépôt ci-dessus pour commencer l'analyse",
+      "loading": "Analyse en cours...",
+      "response_time": "Temps de réponse : {{responseTime}}ms",
+      "total_response_time": "Temps de réponse total : {{responseTime}}ms",
+      "summary": "{{working}} valides, {{broken}} brisés sur {{total}}",
+      "errors": {
+        "url_required": "L'URL est requise",
+        "internal_server_error": "Erreur interne du serveur",
+        "urls_array_required": "La liste d'URLs est requise",
+        "one_url_required": "Au moins une URL est requise",
+        "maximum_urls_allowed": "Maximum {{max}} URLs autorisées par requête"
+      }
+    }
+  }
 }
