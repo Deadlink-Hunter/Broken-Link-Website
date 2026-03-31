@@ -9,7 +9,7 @@ import { Divider } from '../UI/Divider/Divider';
 import { Link } from '../UI/Link/Link';
 import { Select } from '../UI/Select/Select';
 import NavbarLinks from './NavbarLinks';
-import { languageSelectStyles, mobileStyles as styles } from './styles';
+import { languageSelectProps, mobileStyles as styles } from './styles';
 import { ThemeToggle } from './ThemeToggle';
 
 export default function MobileNav() {
@@ -43,12 +43,8 @@ export default function MobileNav() {
             data={LANGUAGE_OPTIONS}
             value={currentLanguageLabel}
             onChange={handleLanguageChange}
-            allowDeselect={false}
-            styles={languageSelectStyles}
             leftSection={<IconWorld size={14} />}
-            leftSectionPointerEvents='none'
-            checkIconPosition='right'
-            maxDropdownHeight={200}
+            {...languageSelectProps}
           />
           <ThemeToggle />
         </div>

@@ -8,7 +8,7 @@ import { LinkButton, LinkTarget } from '../UI/Button/LinkButton';
 import { Link } from '../UI/Link/Link';
 import { Select } from '../UI/Select/Select';
 import NavbarLinks from './NavbarLinks';
-import { languageSelectStyles, desktopStyles as styles } from './styles';
+import { languageSelectProps, desktopStyles as styles } from './styles';
 import { ThemeToggle } from './ThemeToggle';
 
 export default function DesktopNav() {
@@ -41,12 +41,8 @@ export default function DesktopNav() {
           data={LANGUAGE_OPTIONS}
           value={currentLanguageLabel}
           onChange={handleLanguageChange}
-          allowDeselect={false}
-          styles={languageSelectStyles}
           leftSection={<IconWorld size={14} />}
-          leftSectionPointerEvents='none'
-          checkIconPosition='right'
-          maxDropdownHeight={200}
+          {...languageSelectProps}
         />
         <ThemeToggle />
       </div>
