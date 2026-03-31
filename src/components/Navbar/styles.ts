@@ -87,14 +87,20 @@ export const mobileStyles = {
 
 export const languageSelectStyles = {
   root: {
-    width: '6.5rem',
+    width: '8rem',
     maxWidth: '100%',
   },
   input: {
     backgroundColor: theme.colors.primary[6],
     color: theme.colors.primary[0],
   },
+  section: {
+    color: theme.colors.primary[0],
+  },
   dropdown: {
     backgroundColor: theme.colors.primary[6],
-  }
+    borderColor: theme.colors.primary[5],
+    color: theme.colors.primary[0],
+  },
 };
+

@@ -1,4 +1,4 @@
-import { IconBrandGithub } from '@tabler/icons-react';
+import { IconBrandGithub, IconWorld } from '@tabler/icons-react';
 import logo from '/logo.svg';
 import { useTranslation } from 'react-i18next';
 import { useNavigationLinks } from '@/components/Hooks/useNavigationLinks';
@@ -43,6 +43,10 @@ export default function DesktopNav() {
           onChange={handleLanguageChange}
           allowDeselect={false}
           styles={languageSelectStyles}
+          leftSection={<IconWorld size={14} />}
+          leftSectionPointerEvents='none'
+          checkIconPosition='right'
+          maxDropdownHeight={200}
         />
         <ThemeToggle />
       </div>

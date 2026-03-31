@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { IconWorld } from '@tabler/icons-react';
 import logo from '/logo.svg';
 import { useTranslation } from 'react-i18next';
 import { Burger } from '@mantine/core';
@@ -44,6 +45,10 @@ export default function MobileNav() {
             onChange={handleLanguageChange}
             allowDeselect={false}
             styles={languageSelectStyles}
+            leftSection={<IconWorld size={14} />}
+            leftSectionPointerEvents='none'
+            checkIconPosition='right'
+            maxDropdownHeight={200}
           />
           <ThemeToggle />
         </div>
