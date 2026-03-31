@@ -8,7 +8,7 @@ import { Divider } from '../UI/Divider/Divider';
 import { Link } from '../UI/Link/Link';
 import { Select } from '../UI/Select/Select';
 import NavbarLinks from './NavbarLinks';
-import { languageSelectStyle, mobileStyles as styles } from './styles';
+import { languageSelectStyles, mobileStyles as styles } from './styles';
 import { ThemeToggle } from './ThemeToggle';
 
 export default function MobileNav() {
@@ -43,7 +43,7 @@ export default function MobileNav() {
             value={currentLanguageLabel}
             onChange={handleLanguageChange}
             allowDeselect={false}
-            style={languageSelectStyle}
+            styles={languageSelectStyles}
           />
           <ThemeToggle />
         </div>

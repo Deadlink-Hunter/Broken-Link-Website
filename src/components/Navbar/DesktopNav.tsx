@@ -8,7 +8,7 @@ import { LinkButton, LinkTarget } from '../UI/Button/LinkButton';
 import { Link } from '../UI/Link/Link';
 import { Select } from '../UI/Select/Select';
 import NavbarLinks from './NavbarLinks';
-import { languageSelectStyle, desktopStyles as styles } from './styles';
+import { languageSelectStyles, desktopStyles as styles } from './styles';
 import { ThemeToggle } from './ThemeToggle';
 
 export default function DesktopNav() {
@@ -42,7 +42,7 @@ export default function DesktopNav() {
           value={currentLanguageLabel}
           onChange={handleLanguageChange}
           allowDeselect={false}
-          style={languageSelectStyle}
+          styles={languageSelectStyles}
         />
         <ThemeToggle />
       </div>
