@@ -24,6 +24,7 @@ export const desktopStyles = {
   linkStyle: {
     fontWeight: 'bold',
     padding: '.77rem',
+    whiteSpace: 'nowrap',
   },
   button: {
     padding: '.6rem',
@@ -50,6 +51,7 @@ export const mobileStyles = {
   link: {
     fontWeight: '700',
     fontSize: '1rem',
+    whiteSpace: 'nowrap',
   },
   linkColor: (isPathMatch: boolean) => (isPathMatch ? theme.colors.cyan[4] : theme.colors.gray[7]),
   linkContainer: (isPathMatch: boolean) => ({
