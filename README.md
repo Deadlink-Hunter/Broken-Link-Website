@@ -50,6 +50,7 @@ To fully use the scanner features, you **MUST** run the Backend server locally (
 
 - [The Why](#the-why)
 - [Contributing](#contributing)
+- [Discussions](#discussions)
 - [Environment Variables](#environment-variables)
 - [Docker Setup](#docker-setup)
 - [API & Postman Collection](#api--postman-collection)
@@ -111,6 +112,12 @@ To contribute:
 ⚠️ Heads up: PRs that are fully AI generated and not checked by a human won’t be accepted.
 
 <p align="left"><a href="#top-btn">Go back to the top of the page</a></p>
+
+## Discussions
+
+We have a Discussions page where you can share ideas, ask questions, and connect with the community:
+
+[Discussions Page](https://github.com/Deadlink-Hunter/Broken-Link-Website/discussions)
 
 ## Environment Variables
 
