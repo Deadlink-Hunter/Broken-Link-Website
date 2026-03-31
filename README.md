@@ -119,6 +119,7 @@ We have a Discussions page where you can share ideas, ask questions, and connect
 
 [Discussions Page](https://github.com/Deadlink-Hunter/Broken-Link-Website/discussions)
 
+<p align="left"><a href="#top-btn">Go back to the top of the page</a></p>
 ## Environment Variables
 
 This project includes a `.env.example` file in the repository that lists the environment variables required to run the app.
