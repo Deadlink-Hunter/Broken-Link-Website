@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { IconWorld } from '@tabler/icons-react';
 import logo from '/logo.svg';
 import { useTranslation } from 'react-i18next';
 import { Burger } from '@mantine/core';
@@ -8,7 +9,7 @@ import { Divider } from '../UI/Divider/Divider';
 import { Link } from '../UI/Link/Link';
 import { Select } from '../UI/Select/Select';
 import NavbarLinks from './NavbarLinks';
-import { languageSelectStyle, mobileStyles as styles } from './styles';
+import { languageSelectProps, mobileStyles as styles } from './styles';
 import { ThemeToggle } from './ThemeToggle';
 
 export default function MobileNav() {
@@ -42,8 +43,8 @@ export default function MobileNav() {
             data={LANGUAGE_OPTIONS}
             value={currentLanguageLabel}
             onChange={handleLanguageChange}
-            allowDeselect={false}
-            style={languageSelectStyle}
+            leftSection={<IconWorld size={14} />}
+            {...languageSelectProps}
           />
           <ThemeToggle />
         </div>
