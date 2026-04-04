@@ -1,23 +1,36 @@
-import { theme } from '@/theme';
+import { CSSProperties } from 'react';
+import { sharedStyles, theme } from '@/theme';
 
 const colors = theme.colors;
+const getTextColor = (isDark: boolean) => (isDark ? theme.white : colors.gray[7]);
+
+export const pageWrapperStyle: CSSProperties = {
+  width: '100%',
+  maxWidth: '80rem',
+  minHeight: '100vh',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  padding: '6rem 1.5rem',
+  margin: '0 auto',
+};
 
 export const centerGrid = {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  minHeight: '100vh',
+  marginBottom: theme.spacing['2xl'],
 };
 
 export const smallContainerStyle = {
-  padding: theme.spacing.lg,
   display: 'grid',
   maxWidth: 'max-content',
   gap: theme.spacing.lg,
   gridTemplateColumns: '1fr',
 };
+
 export const bigContainerStyle = {
-  padding: theme.spacing.lg,
   display: 'grid',
   maxWidth: 'max-content',
   gap: theme.spacing.lg,
@@ -25,19 +38,30 @@ export const bigContainerStyle = {
 };
 
 export const featureCardStyles = {
-  backgroundColor: colors.primary[7],
+  backgroundColor: colors.primary[8],
+  border: `1px solid ${colors.primary[9]}`,
   boxShadow: `0 1px 3px ${colors.primary[1]}`,
   padding: theme.spacing.lg,
   borderRadius: '0.5rem',
   display: 'grid',
   gridTemplateColumns: 'auto auto',
   gap: theme.spacing.lg,
-  maxWidth: '40rem',
+};
+
+export const missionCardStyles: CSSProperties = {
+  backgroundColor: colors.primary[8],
+  border: `1px solid ${colors.primary[9]}`,
+  padding: theme.spacing.xl,
+  display: 'flex',
+  flexDirection: 'column',
+  textAlign: 'center',
+  gap: theme.spacing.lg,
 };
 
 export const titleStyle = {
   color: colors.primary[1],
 };
+
 export const paragraphStyle = {
   color: colors.primary[2],
   gridColumnStart: 2,
@@ -45,4 +69,39 @@ export const paragraphStyle = {
 
 export const iconStyle = {
   gridRowEnd: 'span 2',
+};
+
+export const aboutPageStyle = {
+  centerGrid: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: theme.spacing['2xl'],
+  } satisfies CSSProperties,
+
+  titleStyle: {
+    ...sharedStyles.sectionTitle,
+    display: 'inline-block',
+  } satisfies CSSProperties,
+
+  brandStyle: {
+    ...sharedStyles.gradientText,
+  } satisfies CSSProperties,
+
+  whiteText: {
+    color: theme.white,
+  } satisfies CSSProperties,
+
+  blackText: {
+    color: 'var(--mantine-color-black)',
+  } satisfies CSSProperties,
+
+  text: (isDark: boolean): CSSProperties => ({
+    color: getTextColor(isDark),
+    paddingBlock: theme.spacing.lg,
+    fontSize: '1.1rem',
+    textAlign: 'center',
+    maxWidth: '700px',
+  }),
 };

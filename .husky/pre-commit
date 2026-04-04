@@ -1,22 +1,15 @@
-#!/usr/bin/env sh
-. "$(dirname "$0")/_/husky.sh"
-
-pnpm run prettier:write
-pnpm run eslint
 echo "Running pre-commit hook"
 
-commands=("pnpm build"
-          "pnpm storybook:build"
-          )
+run_command() {
+  echo "Running: $1"
+  sh -c "$1" || {
+    echo "Command failed: $1"
+    exit 1
+  }
+  echo "Completed: $1"
+}
 
-for cmd in "${commands[@]}"; do
-    echo "Running: $cmd"
-    $cmd || {
-        echo "Command failed: $cmd"
-        exit 1
-    }
-done
+pnpm run prettier:write  
+run_command "pnpm run eslint"
 
-echo "All pre-commmit checks passed!"
-
-
+echo "Pre-commit passed!"

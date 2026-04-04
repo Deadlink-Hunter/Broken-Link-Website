@@ -1,7 +1,4 @@
 {
-  "welcome_title": "Ласкаво просимо до ",
-  "welcome_highlight": "Mantine",
-  "welcome_description_before_link": "Цей стартовий проект на Vite містить в собі мінімальні налаштування. Якщо ви бажаєте дізнатися більше про інтеграцію Mantine та Vite, перейдіть за посиланням",
   "welcome_link_text": "цей гайд",
   "welcome_description_after_link": ". Щоб почати, відредагуйте файл pages/Home.page.tsx"
 }

@@ -1,4 +1,4 @@
-import React, { CSSProperties, ReactNode } from 'react';
+import { CSSProperties, ReactNode } from 'react';
 import { CardProps, Card as MantineCard } from '@mantine/core';
 import { cardStyles } from './styles';
 
@@ -7,11 +7,14 @@ interface SharedCardProps extends Omit<CardProps, 'style'> {
   children: ReactNode;
 }
 
-export const Card = ({ style = {}, children, ...props }: SharedCardProps) => {
-  const defaultStyle = cardStyles.default;
+export const Card = ({ children, className, style, ...props }: SharedCardProps) => {
+  const mergedStyle: CSSProperties = {
+    ...cardStyles.default,
+    ...style,
+  };
 
   return (
-    <MantineCard data-testid='card' style={{ ...defaultStyle, ...style }} {...props}>
+    <MantineCard data-testid='card' className={className} style={mergedStyle} {...props}>
       {children}
     </MantineCard>
   );

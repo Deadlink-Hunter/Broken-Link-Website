@@ -1,7 +1,4 @@
 {
-  "welcome_title": "Selamat datang di ",
-  "welcome_highlight": "Mantine",
-  "welcome_description_before_link": "Proyek starter Vite ini sudah mencakup pengaturan minimal. Jika kamu ingin belajar lebih lanjut tentang integrasi Mantine + Vite, ikuti",
   "welcome_link_text": "panduan ini",
   "welcome_description_after_link": ". Untuk memulai, silakan edit file pages/Home.page.tsx."
 }

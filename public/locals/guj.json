@@ -1,7 +1,4 @@
 {
-  "welcome_title": "સ્વાગત છે ",
-  "welcome_highlight": "Mantine",
-  "welcome_description_before_link": "આ Vite પ્રોજેક્ટમાં લઘુત્તમ રૂપરેખાંકન છે. જો તમે Mantine અને Vite ના એકીકરણ વિશે વધુ જાણવા માંગતા હો, તો",
   "welcome_link_text": "આ માર્ગદર્શિકા",
   "welcome_description_after_link": "અનુસરો. શરૂ કરવા માટે pages/Home.page.tsx ફાઇલ સંપાદિત કરો."
 }

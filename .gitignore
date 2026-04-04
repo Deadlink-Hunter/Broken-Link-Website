@@ -133,3 +133,7 @@ dist
 
 /storybook-static
 .env
+
+test-results/
+playwright-report/
+blob-report/

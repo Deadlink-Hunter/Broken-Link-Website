@@ -1,13 +1,13 @@
-import { ColorSchemeToggle } from '@/components/ColorSchemeToggle/ColorSchemeToggle';
-import { Welcome } from '@/components/Welcome/Welcome';
+import { Hero } from '@/components/Hero/Hero';
 import { ExploreToolkit } from './Components/ExploreToolkit';
+import { HowItWork } from './Components/HowItWorks/HowItWork';
 
 export function HomePage() {
   return (
     <>
-      <Welcome />
+      <Hero />
       <ExploreToolkit />
-      <ColorSchemeToggle />
+      <HowItWork />
     </>
   );
 }

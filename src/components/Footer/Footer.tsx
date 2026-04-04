@@ -2,19 +2,21 @@ import { IconCode, IconHeart, IconStar } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
 import { Box, Container, SimpleGrid, Text } from '@mantine/core';
 import { useViewportSize } from '@mantine/hooks';
+import { useNavigationLinks } from '@/components/Hooks/useNavigationLinks';
 import { theme } from '@/theme';
-import { Button } from '../UI/Button/Button';
+import { useIsDark } from '../Hooks/useIsDark';
+import { LinkButton, LinkTarget } from '../UI/Button/LinkButton';
 import { Divider } from '../UI/Divider/Divider';
 import { Link } from '../UI/Link/Link';
 import { Typography } from '../UI/Typography/Typography';
-import { useFooterData } from './useFooterData';
 import { footerStyles } from './styles';
 
 export default function Footer() {
+  const { externalLinks, footerQuickLinks, footerCommunityLinks } = useNavigationLinks();
   const { t } = useTranslation();
   const { width } = useViewportSize();
   const isMobileView = width < 1024;
-  const { QUICK_LINKS, COMMUNITY_LINKS } = useFooterData();
+  const isDark = useIsDark();
 
   return (
     <>
@@ -36,41 +38,47 @@ export default function Footer() {
             >
               {t('footer.header')}
             </Text>
-            <Typography style={footerStyles.text}>{t('footer.about')}</Typography>
-            <Button
+            <Typography style={footerStyles.text(isDark)}>{t('footer.about')}</Typography>
+            <LinkButton
+              href={externalLinks.GITHUB.REPO}
+              target={LinkTarget.Blank}
               leftSection={
                 <IconStar style={{ marginRight: theme.spacing.lg }} size={footerStyles.iconSize} />
               }
               variant='primary'
             >
               {t('footer.gitBtnTxt')}
-            </Button>
+            </LinkButton>
           </Box>
 
           <Box>
-            <Typography style={footerStyles.header}>{t('footer.QuickLinks')}</Typography>
-            {QUICK_LINKS.map((link, i) => (
+            <Typography style={footerStyles.header(isDark)}>{t('footer.QuickLinks')}</Typography>
+            {footerQuickLinks.map((link, i) => (
               <Link key={i + link.label} href={link.href} label={link.label} />
             ))}
           </Box>
 
           <Box>
-            <Typography style={footerStyles.header}>{t('footer.Community')}</Typography>
-            {COMMUNITY_LINKS.map((link, i) => (
+            <Typography style={footerStyles.header(isDark)}>{t('footer.Community')}</Typography>
+            {footerCommunityLinks.map((link, i) => (
               <Link key={i + link.label} href={link.href} label={link.label} />
             ))}
           </Box>
         </SimpleGrid>
+      </Container>
 
-        <Divider />
+      <Divider />
 
+      <Container style={footerStyles.container}>
         <SimpleGrid style={footerStyles.bottomGrid} cols={footerStyles.bottomGridColLayout}>
-          <Typography style={footerStyles.openSrcTxt(isMobileView)}>
+          <Typography style={footerStyles.openSrcTxt(isMobileView, isDark)}>
             <IconCode size={footerStyles.iconSize} /> {t('footer.madeWith')}
             <IconHeart color={theme.colors.red[8]} size={footerStyles.iconSize} />
             {t('footer.byOpenSrc')}
           </Typography>
-          <Typography style={footerStyles.rightsTxt(isMobileView)}>{t('footer.rights')}</Typography>
+          <Typography style={footerStyles.rightsTxt(isMobileView, isDark)}>
+            {t('footer.rights')}
+          </Typography>
         </SimpleGrid>
       </Container>
     </>

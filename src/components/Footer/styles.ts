@@ -2,44 +2,44 @@ import { CSSProperties } from 'react';
 import { theme } from '@/theme';
 
 const colors = theme.colors;
+const getTextColor = (isDark: boolean) => (isDark ? theme.white : colors.gray[7]);
+const getSubTextColor = (isDark: boolean) => (isDark ? colors.gray[2] : colors.gray[7]);
 
 export const footerStyles = {
-  wrapper: {
-    color: colors.gray[2],
-    height: '41vh',
-  },
-
   container: {
-    marginTop: '3rem',
-    padding: '0 1.4rem',
-  },
+    maxWidth: '75rem',
+    margin: '3rem auto 0',
+    padding: '0 2.5rem',
+  } satisfies CSSProperties,
 
   gradientText: { fontWeight: 'bold', fontSize: '1.4em' },
 
-  text: {
-    color: theme.white,
+  text: (isDark: boolean): CSSProperties => ({
+    color: getTextColor(isDark),
     paddingBlock: theme.spacing.lg,
-  },
+  }),
 
-  header: {
+  header: (isDark: boolean): CSSProperties => ({
     fontWeight: 'bold',
-    color: theme.white,
-  },
+    color: isDark ? theme.white : theme.black,
+  }),
 
   linkBoxWrapper: {
-    paddingBottom: '2rem',
+    paddingBottom: '3rem',
   },
 
-  openSrcTxt: (isMobileView: boolean): CSSProperties => ({
+  openSrcTxt: (isMobileView: boolean, isDark: boolean): CSSProperties => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: isMobileView ? 'center' : 'flex-start',
     gap: '.4rem',
-    color: colors.gray[5],
+    fontSize: theme.fontSizes.sm,
+    color: getSubTextColor(isDark),
   }),
 
-  rightsTxt: (isMobileView: boolean): CSSProperties => ({
-    color: colors.gray[5],
+  rightsTxt: (isMobileView: boolean, isDark: boolean): CSSProperties => ({
+    fontSize: theme.fontSizes.sm,
+    color: getSubTextColor(isDark),
     textAlign: isMobileView ? 'center' : 'end',
   }),
 

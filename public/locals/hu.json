@@ -1,7 +1,4 @@
 {
-    "welcome_title": "Üdvözöljük a ",
-    "welcome_highlight": "Mantine",
-    "welcome_description_before_link": "Ez a Vite kezdőprojekt egy minimális beállítást tartalmaz. Ha többet szeretnél megtudni a Mantine + Vite integrációról, kövesd",
     "welcome_link_text": "ezt az útmutatót",
     "welcome_description_after_link": ". A kezdéshez szerkeszd a pages/Home.page.tsx fájlt."
 }

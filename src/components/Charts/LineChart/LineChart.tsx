@@ -1,0 +1,35 @@
+import { LineChart as MantineLineChart } from '@mantine/charts';
+import { useMediaQuery } from '@mantine/hooks';
+import { theme } from '@/theme';
+import { CurveType, LineProps } from '../chart.types';
+import { CHART_COLORS } from '../data';
+import { chartStyles } from './styles';
+
+export default function LineChart({ data, withTooltip = false }: LineProps) {
+  const isMobileView = useMediaQuery(`(max-width: ${theme.breakpoints.lg})`);
+  const { xAxisKeys, lineValues } = data;
+
+  const graphData = xAxisKeys.map((xAxisKey: string, index: number) => ({
+    xAxisKey,
+    ...lineValues[index].values,
+  }));
+  const seriesNames = Object.keys(lineValues[0].values);
+  const series = seriesNames.map((name, i) => ({
+    name,
+    color: CHART_COLORS[i % CHART_COLORS.length],
+    curveType: lineValues[0].curveType ?? ('linear' satisfies CurveType),
+  }));
+  return (
+    <MantineLineChart
+      h={isMobileView ? chartStyles.mobileView : chartStyles.desktopView}
+      w={chartStyles.width}
+      data={graphData}
+      dataKey='xAxisKey'
+      series={series}
+      gridProps={chartStyles.gridProps}
+      xAxisProps={chartStyles.xAxisProps}
+      yAxisProps={chartStyles.yAxisProps}
+      withTooltip={withTooltip}
+    />
+  );
+}

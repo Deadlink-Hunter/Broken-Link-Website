@@ -1,11 +1,18 @@
+import { AboutTitle } from './components/AboutTitle';
 import { FeaturesCards } from './components/FeaturesCards';
-import { centerGrid } from './components/styles';
+import { MissionCard } from './components/MissionCard';
+import { centerGrid, pageWrapperStyle } from './components/styles';
 
 const AboutPage = () => {
   return (
-    <div style={centerGrid}>
-      <FeaturesCards />
-    </div>
+    <main style={pageWrapperStyle}>
+      <AboutTitle />
+      <section style={centerGrid}>
+        <FeaturesCards />
+      </section>
+
+      <MissionCard />
+    </main>
   );
 };
 

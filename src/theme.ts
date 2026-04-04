@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react';
 import { createTheme, DEFAULT_THEME, MantineColorsTuple, mergeMantineTheme } from '@mantine/core';
 
 const primary: MantineColorsTuple = [
@@ -8,9 +9,9 @@ const primary: MantineColorsTuple = [
   '#475569',
   '#334155',
   '#1e293b',
-  '#0f172a',
-  '#0f172a',
-  '#0f172a',
+  '#111827',
+  '#1e293b80',
+  '#33415580',
 ];
 
 const accentCyan: MantineColorsTuple = [
@@ -109,6 +110,7 @@ const themeOverride = createTheme({
     lg: '1.125rem',
     xl: '1.25rem',
     '2xl': '1.5rem',
+    xxl: '2.1rem',
   },
   defaultRadius: 'md',
   spacing: {
@@ -123,3 +125,20 @@ const themeOverride = createTheme({
 });
 
 export const theme = mergeMantineTheme(DEFAULT_THEME, themeOverride);
+
+export const sharedStyles = {
+  sectionTitle: {
+    fontWeight: 900,
+    fontSize: '3.5rem',
+    textAlign: 'center',
+    lineHeight: 1.1,
+  } satisfies CSSProperties,
+
+  gradientText: {
+    background:
+      'linear-gradient(90deg, var(--mantine-color-cyan-4) 0%, var(--mantine-color-purple-5) 100%)',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    backgroundClip: 'text',
+  } satisfies CSSProperties,
+};

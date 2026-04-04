@@ -1,0 +1,15 @@
+echo "Running pre-push hook"
+
+run_command() {
+  echo "Running: $1"
+  sh -c "$1" || {
+    echo "Command failed: $1"
+    exit 1
+  }
+  echo "Completed: $1"
+}
+
+run_command "pnpm build"
+run_command "pnpm storybook:build"
+
+echo "Pre-push passed!"

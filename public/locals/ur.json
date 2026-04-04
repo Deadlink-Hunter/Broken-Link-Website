@@ -1,7 +1,4 @@
 {
-  "welcome_title": "خوش آمدید ",
-  "welcome_highlight": "Mantine",
-  "welcome_description_before_link": "یہ ابتدائی Vite پروجیکٹ ایک سادہ سیٹ اپ کے ساتھ آتا ہے۔ اگر آپ Mantine اور Vite کے انضمام کے بارے میں مزید جاننا چاہتے ہیں تو براہ کرم",
   "welcome_link_text": "یہ رہنمائی دیکھیں",
   "welcome_description_after_link": "۔ شروعات کرنے کے لیے pages/Home.page.tsx فائل میں ترمیم کریں۔"
 }

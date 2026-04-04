@@ -1,7 +1,4 @@
 {
-    "welcome_title": "Bun venit pe ",
-    "welcome_highlight": "Mantine",
-    "welcome_description_before_link": "Acest proiect de incepatori Vite include configuratie minimalista. Daca doresti sa afli mai multe despre integrarea Mantine + Vite, urmareste",
     "welcome_link_text": "acest ghid",
     "welcome_description_after_link": ". Pentru a incepe, editeaza fisierul pages/Home.page.tsx ."
 }
