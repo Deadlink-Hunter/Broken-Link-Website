@@ -4,10 +4,12 @@ import deTranslations from './locals/de.json';
 import enTranslations from './locals/en.json';
 import esTranslations from './locals/es.json';
 import frTranslations from './locals/fr.json';
+import heTranslations from './locals/he.json';
 import itTranslations from './locals/it.json';
 import nlTranslations from './locals/nl.json';
 import ptBrTranslations from './locals/ptbr.json';
 import turTranslations from './locals/tur.json';
+import { syncDocumentLanguage } from './syncDocumentLanguage';
 
 const savedLang = localStorage.getItem('lang') || 'en';
 
@@ -37,6 +39,9 @@ i18n.use(initReactI18next).init({
     nl: {
       translation: nlTranslations,
     },
+    he: {
+      translation: heTranslations,
+    },
   },
   lng: savedLang,
   fallbackLng: 'en',
@@ -44,5 +49,8 @@ i18n.use(initReactI18next).init({
     escapeValue: false,
   },
 });
+
+i18n.on('languageChanged', syncDocumentLanguage);
+syncDocumentLanguage(i18n.language);
 
 export default i18n;

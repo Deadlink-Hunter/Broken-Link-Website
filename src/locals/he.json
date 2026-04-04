@@ -1,4 +1,160 @@
 {
   "welcome_link_text": "המדריך הזה",
-  "welcome_description_after_link": ". כדי להתחיל ערכו את הקובץ pages/Home.page.tsx."
+  "welcome_description_after_link": ". כדי להתחיל ערכו את הקובץ pages/Home.page.tsx.",
+  "about_page": {
+    "title": {
+      "about": "אודות ",
+      "deadlink_hunter": "Deadlink-Hunter"
+    },
+    "description": "כלי עוצמתי בקוד פתוח, שמטרתו לשמור על תקינות הקישורים במאגרי GitHub שלכם על ידי זיהוי והסרה של קישורים שבורים לפני שהם משפיעים על המשתמשים."
+  },
+  "about_feature_card": {
+    "card_one": {
+      "title": "סריקה מדויקת",
+      "description": "אלגוריתמים מתקדמים לזיהוי קישורים שבורים בקבצי Markdown, תיעוד והערות קוד בדיוק מרבי."
+    },
+    "card_two": {
+      "title": "דוחות אוטומטיים",
+      "description": "יצירת דוחות מפורטים עם הצעות לתיקון, דירוגי עדיפות וכלים לניהול תחזוקה יעילה."
+    },
+    "card_three": {
+      "title": "אינטגרציה עם GitHub",
+      "description": "שילוב חלק עם זרימת העבודה שלכם ב-GitHub באמצעות Actions, Webhooks ויצירת Pull Requests אוטומטית."
+    },
+    "card_four": {
+      "title": "קוד פתוח",
+      "description": "כלי פתוח לחלוטין ומונע על ידי הקהילה. תוכלו לתרום, להתאים ולהרחיב אותו לפי הצרכים של הפרויקט שלכם."
+    }
+  },
+  "hero": {
+    "title": {
+      "deadlink": "Deadlink",
+      "hunter": "Hunter"
+    },
+    "tagline": {
+      "openSource": "קוד פתוח",
+      "lightningFast": "מהיר במיוחד"
+    },
+    "description": {
+      "part1": "הסירו קישורים שבורים ממאגרי ה-GitHub שלכם באמצעות",
+      "highlight": "סריקה מדויקת",
+      "part2": "ודוחות מפורטים."
+    },
+    "buttons": {
+      "startScanning": "התחל לסרוק",
+      "viewOnGitHub": "צפה ב-GitHub"
+    },
+    "statistics": {
+      "linksScanned": "קישורים סרוקים",
+      "reposAnalyzed": "מאגרים מנותחים",
+      "accuracyRate": "רמת דיוק"
+    }
+  },
+  "statistics_page": {
+    "title": {
+      "performance": "ביצועים",
+      "analytics": "ואנליטיקה"
+    },
+    "description": "תובנות בזמן אמת על מהירות הסריקה ובריאות המאגר שלכם"
+  },
+  "charts": {
+    "scanActivity": "פעילות סריקה לאורך זמן",
+    "linkTypesDistribution": "התפלגות סוגי קישורים"
+  },
+  "footer": {
+    "header": "Deadlink-Hunter",
+    "about": "כלי קוד פתוח לזיהוי והסרת קישורים שבורים במאגרים של GitHub. נבנה עם ❤️ עבור קהילת המפתחים.",
+    "gitBtnTxt": "כוכב ב-GitHub",
+    "QuickLinks": "קישורים מהירים",
+    "About": "אודות",
+    "Scanner": "סורק",
+    "Statistics": "סטטיסטיקות",
+    "Documentation": "תיעוד",
+    "Community": "קהילה",
+    "Contribute": "תרומה",
+    "Issues": "בעיות",
+    "FeatureRequests": " בקשות פיצ'רים",
+    "rights": "© Deadlink-Hunter. רשיון MIT.",
+    "madeWith": "נוצר",
+    "byOpenSrc": "על ידי קהילת הקוד הפתוח"
+  },
+  "navbar": {
+    "header": "Deadlink-Hunter",
+    "github": "GitHub",
+    "githubMobile": "צפה ב-GitHub",
+    "home": "בית",
+    "scanner": "סורק",
+    "statistics": "סטטיסטיקות",
+    "about": "אודות"
+  },
+  "explore_toolkit_title_part1": "גלו את ",
+  "explore_toolkit_title_highlight": "ערכת הכלים",
+  "explore_toolkit_title_part2": "",
+  "explore_toolkit_description": "כל מה שאתם צריכים כדי לשמור על תקינות המאגר שלכם והקישורים שלכם פעילים.",
+  "explore_toolkit_card1_title": "סריקת קישורים מיידית",
+  "explore_toolkit_card1_description": "בדקו URL בודד או סרקו מאגר שלם לקישורים שבורים במהירות ובקלות.",
+  "explore_toolkit_card1_button": "התחל לסרוק",
+  "explore_toolkit_card2_title": "אנליטיקת ביצועים",
+  "explore_toolkit_card2_description": "קבלו סטטיסטיקות ודוחות חזותיים על היסטוריית הסריקות, מצב הקישורים וביצועי הפרויקט לאורך זמן.",
+  "explore_toolkit_card2_button": "צפה בסטטיסטיקות",
+  "explore_toolkit_card3_title": "אודות הפרויקט",
+  "explore_toolkit_card3_description": "למדו עוד על המטרה של Deadlink-Hunter, על אופיו כקוד פתוח ואיך תוכלו לתרום.",
+  "explore_toolkit_card3_button": "למידע נוסף",
+  "our_mission_card_title": "המטרה שלנו",
+  "our_mission_card_description": "לספק למפתחים פתרון אמין, יעיל וקל לשימוש לשמירה על תקינות הקישורים. קישורים שבורים לא צריכים לשבור חוויות משתמש, וכל מאגר ראוי להיות מושלם מבחינת קישורים.",
+  "how_it_works_card1_title": "סרוק את המאגר שלך",
+  "how_it_works_card1_description": "הכנסו את כתובת המאגר ב-GitHub או הדביקו רשימת קישורים לבדיקה.",
+  "how_it_works_card2_title": "ניתוח מהיר במיוחד",
+  "how_it_works_card2_description": "הסורק החכם בודק כל קישור, עוקב אחרי הפניות ומוודא תגובות HTTP תוך שניות.",
+  "how_it_works_card3_title": "קבל דוח מפורט",
+  "how_it_works_card3_description": "קבלו פירוט מלא של הקישורים הפועלים והשבורים עם המלצות לתיקון.",
+  "how_it_works_title_part1": "איך זה ",
+  "how_it_works_title_highlight": "עובד",
+  "how_it_works_title_part2": "",
+  "how_it_works_subtitle": "תקנו קישורים שבורים בשלושה שלבים פשוטים. אין צורך בהתקנה.",
+  "how_it_works_feature_title_prefix": "תיקון קישורים שבורים,",
+  "how_it_works_feature_title_highlight": "מאגר",
+  "how_it_works_feature_title_suffix": "אחד בכל פעם",
+  "how_it_works_feature_description": "חשבו על Deadlink-Hunter כספק שירותי בריאות למאגר שלכם. אנו מאבחנים קישורים שבורים, מזהים את הבעיות ומספקים תוכנית פעולה ברורה לשיפור בריאות הפרויקט.",
+  "how_it_works_feature_point_1": "אין יותר שגיאות 404 בתיעוד שלכם",
+  "how_it_works_feature_point_2": "שמרו על אמון המשתמשים עם קישורים פועלים",
+  "how_it_works_feature_point_3": "שמרו על סטנדרטים מקצועיים במאגר",
+  "scanner_page": {
+    "title": "סורק קישורים",
+    "description": "בדקו URL בודד או סרקו מאגרים שלמים עבור קישורים שבורים במהירות ",
+    "scan_links_card": {
+      "title": "סריקת קישורים",
+      "toggle": {
+        "single": "URL בודד",
+        "repository": "מאגר"
+      },
+      "single": {
+        "input_label": "הכנס URL לבדיקה",
+        "input_placeholder": "https://example.com/page",
+        "button_check": "בדוק קישור"
+      },
+      "repository": {
+        "input_label": "כתובת מאגר GitHub",
+        "input_placeholder": "https://github.com/username/repository",
+        "textarea_label": "או הדבק מספר כתובות URL",
+        "textarea_placeholder": "https://example1.com\nhttps://example2.com\nhttps://example3.com",
+        "button_check": "סרוק מאגר"
+      }
+    },
+    "scan_results_card": {
+      "title": "תוצאות הסריקה",
+      "empty_state": "הכנסו URL או מאגר למעלה כדי להתחיל סריקה של קישורים שבורים",
+      "loading": "סורק...",
+      "response_time": "זמן תגובה: {{responseTime}}ms",
+      "total_response_time": "זמן תגובה כולל: {{responseTime}}ms",
+      "summary": "{{working}} פועלים, {{broken}} שבורים מתוך {{total}}",
+      "errors": {
+        "url_required": "נדרש URL",
+        "internal_server_error": "שגיאת שרת ",
+        "urls_array_required": "נדרש מערך של כתובות URL",
+        "one_url_required": "נדרש לפחות URL אחד",
+        "maximum_urls_allowed": "מקסימום {{max}} כתובות URL מותרות לכל בקשה"
+      }
+    }
+  }
 }
