@@ -73,7 +73,7 @@
     "Community": "קהילה",
     "Contribute": "תרומה",
     "Issues": "בעיות",
-    "FeatureRequests": " בקשות פיצ'רים",
+    "FeatureRequests": "בקשות פיצ'רים",
     "rights": "© Deadlink-Hunter. רשיון MIT.",
     "madeWith": "נוצר",
     "byOpenSrc": "על ידי קהילת הקוד הפתוח"
@@ -150,7 +150,7 @@
       "summary": "{{working}} פועלים, {{broken}} שבורים מתוך {{total}}",
       "errors": {
         "url_required": "נדרש URL",
-        "internal_server_error": "שגיאת שרת ",
+        "internal_server_error": "שגיאת שרת",
         "urls_array_required": "נדרש מערך של כתובות URL",
         "one_url_required": "נדרש לפחות URL אחד",
         "maximum_urls_allowed": "מקסימום {{max}} כתובות URL מותרות לכל בקשה"
