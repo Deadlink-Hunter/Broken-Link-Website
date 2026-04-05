@@ -38,9 +38,7 @@ export default function Charts() {
       </Card>
 
       <Card style={graphsStyles.cardStyles(isMobileView)}>
-        <Typography style={graphsStyles.cardHeader}>
-          {t('charts.linkTypesDistribustion')}
-        </Typography>
+        <Typography style={graphsStyles.cardHeader}>{t('charts.linkTypesDistribution')}</Typography>
         <Chart type={ChartType.Donut} data={donutData} />
       </Card>
     </div>

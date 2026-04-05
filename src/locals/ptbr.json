@@ -59,7 +59,7 @@
   },
   "charts": {
     "scanActivity": "Atividade de Escaneamento ao Longo do Tempo",
-    "linkTypesDistribustion": "Distribuição de Tipos de Link"
+    "linkTypesDistribution": "Distribuição de Tipos de Link"
   },
   "footer": {
     "header": "Deadlink-Hunter",
