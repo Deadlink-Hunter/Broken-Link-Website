@@ -1,6 +1,11 @@
 {
   "compilerOptions": {
-    "types": ["node", "@testing-library/jest-dom", "vitest/globals"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@test-utils/*": ["test-utils/*"],
+      "@test-utils": ["test-utils"]
+    },
     "target": "ESNext",
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
@@ -11,15 +16,12 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "moduleResolution": "Bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "paths": {
-      "@/*": ["./src/*"],
-      "@test-utils": ["./test-utils"]
-    }
+    "types": ["node", "@testing-library/jest-dom", "vitest/globals"]
   },
   "include": ["src", "test-utils", ".storybook"]
 }

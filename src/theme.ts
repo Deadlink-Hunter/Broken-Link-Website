@@ -102,7 +102,7 @@ const themeOverride = createTheme({
   colors: appColors,
   primaryColor: 'cyan',
   primaryShade: 5,
-  fontFamily: 'Open Sans, sans-serif',
+  fontFamily: 'Inter, sans-serif',
   fontSizes: {
     xs: '0.75rem',
     sm: '0.875rem',
