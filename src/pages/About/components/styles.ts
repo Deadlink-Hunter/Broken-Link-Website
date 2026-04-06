@@ -1,4 +1,5 @@
 import { CSSProperties } from 'react';
+import { rgba } from '@mantine/core';
 import { sharedStyles, theme } from '@/theme';
 
 const colors = theme.colors;
@@ -39,8 +40,7 @@ export const bigContainerStyle = {
 
 export const featureCardStyles = {
   backgroundColor: colors.primary[8],
-  border: `1px solid ${colors.primary[9]}`,
-  boxShadow: `0 1px 3px ${colors.primary[1]}`,
+  border: `1px solid ${rgba(colors.primary[2], 0.15)}`,
   padding: theme.spacing.lg,
   borderRadius: '0.5rem',
   display: 'grid',
@@ -69,6 +69,19 @@ export const paragraphStyle = {
 
 export const iconStyle = {
   gridRowEnd: 'span 2',
+  marginBottom: theme.spacing.lg,
+    padding: 8,
+    borderRadius: 14,
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+
+    background: `linear-gradient(
+      135deg,
+      ${rgba(colors.cyan[4], 0.25)},
+      ${rgba(colors.purple[5], 0.25)}
+    )`,
+    color: colors.cyan[4],
 };
 
 export const aboutPageStyle = {
