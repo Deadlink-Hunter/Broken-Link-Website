@@ -87,6 +87,7 @@ export const mobileStyles = {
 
 export const languageSelectProps = {
   allowDeselect: false,
+  variant: 'ghost' as const,
   leftSectionPointerEvents: 'none' as const,
   checkIconPosition: 'right' as const,
   maxDropdownHeight: 200,
@@ -95,8 +96,10 @@ export const languageSelectProps = {
       width: '8rem',
     },
     input: {
-      backgroundColor: theme.colors.primary[6],
+      backgroundColor: theme.colors.primary[5],
       color: theme.colors.primary[0],
+      border: 'none',
+      borderRadius: '6px',
     },
     section: {
       color: theme.colors.primary[0],
