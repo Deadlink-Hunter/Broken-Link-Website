@@ -6,7 +6,7 @@
       "about": "About ",
       "deadlink_hunter": "Deadlink-Hunter"
     },
-    "description": "A powerful, open-source tool designed to mantain the integrity of links within your GitHub repositories by identifying and eliminating broken links before they impact your users.",
+    "description": "A powerful, open-source tool designed to maintain the integrity of links within your GitHub repositories by identifying and eliminating broken links before they impact your users.",
     "community": {
       "title_part1": "Built With ",
       "title_gradient": "Community",

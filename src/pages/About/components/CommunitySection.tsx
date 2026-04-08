@@ -17,13 +17,15 @@ export const CommunitySection = () => {
   const isDark = useIsDark();
   const iconSize = 18;
 
-  const paragraphs = t('about_page.community.paragraphs', { returnObjects: true }) as string[];
+  const paragraphsRaw = t('about_page.community.paragraphs', { returnObjects: true });
+  const paragraphs = Array.isArray(paragraphsRaw) ? paragraphsRaw : [];
+
+  const titleColor = isDark ? aboutPageStyle.whiteText : aboutPageStyle.blackText;
 
   return (
     <section style={communitySectionStyle.container}>
-      {/* Main Page Title with Gradient on the second word */}
       <Typography variant='title' style={communitySectionStyle.mainTitle}>
-        <span>{t('about_page.community.title_part1')}</span>
+        <span style={titleColor}>{t('about_page.community.title_part1')}</span>
         <span style={aboutPageStyle.brandStyle}>{t('about_page.community.title_gradient')}</span>
       </Typography>
 
@@ -31,9 +33,7 @@ export const CommunitySection = () => {
         {t('about_page.community.subtitle')}
       </Typography>
 
-      {/* THE SINGLE LARGE CARD */}
       <Card style={communitySectionStyle.largeCard}>
-        {/* Header: Heart Icon + Why I Built This */}
         <div style={communitySectionStyle.cardHeader}>
           <IconHeart size={28} style={communitySectionStyle.heartIcon} />
           <Typography style={communitySectionStyle.cardTitle}>
@@ -41,14 +41,12 @@ export const CommunitySection = () => {
           </Typography>
         </div>
 
-        {/* Paragraphs mapped inside the card */}
         {paragraphs.map((text, index) => (
           <Typography key={index} style={communitySectionStyle.cardParagraph}>
             {text}
           </Typography>
         ))}
 
-        {/* Footer: Tech Stack (Left) and GitHub CTA (Right) */}
         <div style={communitySectionStyle.footer}>
           <div style={communitySectionStyle.techStackGroup}>
             <Typography style={communitySectionStyle.techLabel}>
@@ -83,11 +81,15 @@ export const CommunitySection = () => {
             </div>
           </div>
 
-          {/* View on GitHub Button */}
-          <button type="button" style={communitySectionStyle.ctaButton}>
+          <a
+            href="https://github.com/Deadlink-Hunter/Broken-Link-Website"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={communitySectionStyle.ctaButton}
+          >
             <IconBrandGithub size={20} />
             {t('about_page.community.cta')}
-          </button>
+          </a>
         </div>
       </Card>
     </section>

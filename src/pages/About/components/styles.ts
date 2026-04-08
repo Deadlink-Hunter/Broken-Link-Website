@@ -118,7 +118,6 @@ export const aboutPageStyle = {
   }),
 };
 
-// --- REWRITTEN COMMUNITY SECTION STYLES (#411 CORRECTED) ---
 export const communitySectionStyle = {
   container: {
     display: 'flex',
@@ -128,13 +127,10 @@ export const communitySectionStyle = {
     gap: theme.spacing.md,
   } satisfies CSSProperties,
 
-  // Title with the "Community" word having a gradient
   mainTitle: {
     ...aboutPageStyle.titleStyle,
-    color: theme.white,
   } satisfies CSSProperties,
 
-  // The single large card container
   largeCard: {
     backgroundColor: colors.primary[8],
     border: `1px solid ${rgba(colors.primary[2], 0.1)}`,
@@ -150,7 +146,6 @@ export const communitySectionStyle = {
     position: 'relative',
   } satisfies CSSProperties,
 
-  // Header group: Heart icon + "Why I Built This"
   cardHeader: {
     display: 'flex',
     alignItems: 'center',
@@ -168,14 +163,12 @@ export const communitySectionStyle = {
     fontWeight: 700,
   } satisfies CSSProperties,
 
-  // Paragraphs inside the card
   cardParagraph: {
     color: colors.primary[2],
     fontSize: '1.05rem',
     lineHeight: 1.7,
   } satisfies CSSProperties,
 
-  // Bottom row: Tech stack on left, CTA on right
   footer: {
     display: 'flex',
     justifyContent: 'space-between',
@@ -202,7 +195,6 @@ export const communitySectionStyle = {
     flexWrap: 'wrap',
   } satisfies CSSProperties,
 
-  // Individual Pill style
   pill: {
     backgroundColor: colors.primary[7],
     border: `1px solid ${rgba(colors.primary[3], 0.2)}`,
@@ -219,7 +211,6 @@ export const communitySectionStyle = {
     fontWeight: 500,
   } satisfies CSSProperties,
 
-  // The View on GitHub Button
   ctaButton: {
     background: `linear-gradient(90deg, ${colors.cyan[4]} 0%, ${colors.purple[5]} 100%)`,
     padding: '0.8rem 1.5rem',
@@ -231,5 +222,6 @@ export const communitySectionStyle = {
     fontWeight: 700,
     cursor: 'pointer',
     border: 'none',
+    textDecoration: 'none',
   } satisfies CSSProperties,
 };
