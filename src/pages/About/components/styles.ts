@@ -70,18 +70,17 @@ export const paragraphStyle = {
 export const iconStyle = {
   gridRowEnd: 'span 2',
   marginBottom: theme.spacing.lg,
-    padding: 8,
-    borderRadius: 14,
-    display: 'inline-flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-
-    background: `linear-gradient(
+  padding: 8,
+  borderRadius: 14,
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  background: `linear-gradient(
       135deg,
       ${rgba(colors.cyan[4], 0.25)},
       ${rgba(colors.purple[5], 0.25)}
     )`,
-    color: colors.cyan[4],
+  color: colors.cyan[4],
 };
 
 export const aboutPageStyle = {
@@ -117,4 +116,120 @@ export const aboutPageStyle = {
     textAlign: 'center',
     maxWidth: '700px',
   }),
+};
+
+// --- REWRITTEN COMMUNITY SECTION STYLES (#411 CORRECTED) ---
+export const communitySectionStyle = {
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    marginTop: theme.spacing['2xl'],
+    gap: theme.spacing.md,
+  } satisfies CSSProperties,
+
+  // Title with the "Community" word having a gradient
+  mainTitle: {
+    ...aboutPageStyle.titleStyle,
+    color: theme.white,
+  } satisfies CSSProperties,
+
+  // The single large card container
+  largeCard: {
+    backgroundColor: colors.primary[8],
+    border: `1px solid ${rgba(colors.primary[2], 0.1)}`,
+    padding: '3rem',
+    borderRadius: '1.25rem',
+    width: '100%',
+    maxWidth: '1050px',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: theme.spacing.lg,
+    marginTop: theme.spacing.xl,
+    textAlign: 'left',
+    position: 'relative',
+  } satisfies CSSProperties,
+
+  // Header group: Heart icon + "Why I Built This"
+  cardHeader: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: theme.spacing.md,
+    marginBottom: theme.spacing.sm,
+  } satisfies CSSProperties,
+
+  heartIcon: {
+    color: colors.cyan[4],
+  } satisfies CSSProperties,
+
+  cardTitle: {
+    color: theme.white,
+    fontSize: theme.fontSizes['2xl'],
+    fontWeight: 700,
+  } satisfies CSSProperties,
+
+  // Paragraphs inside the card
+  cardParagraph: {
+    color: colors.primary[2],
+    fontSize: '1.05rem',
+    lineHeight: 1.7,
+  } satisfies CSSProperties,
+
+  // Bottom row: Tech stack on left, CTA on right
+  footer: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'flex-end',
+    marginTop: theme.spacing.xl,
+    flexWrap: 'wrap',
+    gap: theme.spacing.lg,
+  } satisfies CSSProperties,
+
+  techStackGroup: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: theme.spacing.md,
+  } satisfies CSSProperties,
+
+  techLabel: {
+    color: colors.primary[3],
+    fontSize: theme.fontSizes.sm,
+  } satisfies CSSProperties,
+
+  pillsContainer: {
+    display: 'flex',
+    gap: theme.spacing.md,
+    flexWrap: 'wrap',
+  } satisfies CSSProperties,
+
+  // Individual Pill style
+  pill: {
+    backgroundColor: colors.primary[7],
+    border: `1px solid ${rgba(colors.primary[3], 0.2)}`,
+    padding: '0.4rem 1rem',
+    borderRadius: '2rem',
+    display: 'flex',
+    alignItems: 'center',
+    gap: theme.spacing.sm,
+  } satisfies CSSProperties,
+
+  pillText: {
+    color: colors.primary[1],
+    fontSize: theme.fontSizes.sm,
+    fontWeight: 500,
+  } satisfies CSSProperties,
+
+  // The View on GitHub Button
+  ctaButton: {
+    background: `linear-gradient(90deg, ${colors.cyan[4]} 0%, ${colors.purple[5]} 100%)`,
+    padding: '0.8rem 1.5rem',
+    borderRadius: '0.75rem',
+    display: 'flex',
+    alignItems: 'center',
+    gap: theme.spacing.sm,
+    color: theme.white,
+    fontWeight: 700,
+    cursor: 'pointer',
+    border: 'none',
+  } satisfies CSSProperties,
 };

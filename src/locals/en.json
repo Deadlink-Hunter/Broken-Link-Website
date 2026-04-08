@@ -1,12 +1,31 @@
 {
   "welcome_link_text": "this guide",
   "welcome_description_after_link": ". To get started edit pages/Home.page.tsx file.",
-  "about_page":{
+  "about_page": {
     "title": {
       "about": "About ",
       "deadlink_hunter": "Deadlink-Hunter"
     },
-    "description": "A powerful, open-source tool designed to mantain the integrity of links within your GitHub repositories by identifying and eliminating broken links before they impact your users."
+    "description": "A powerful, open-source tool designed to mantain the integrity of links within your GitHub repositories by identifying and eliminating broken links before they impact your users.",
+    "community": {
+      "title_part1": "Built With ",
+      "title_gradient": "Community",
+      "subtitle": "This project was born from a real problem and a desire to give back. Everyone is welcome — from first-time contributors to seasoned engineers.",
+      "card_title": "Why I Built This",
+      "paragraphs": [
+        "I started this project after repeatedly running into the same frustration: old, unmaintained repositories with outdated READMEs and broken links. After opening countless issues to report them, I realized it would be better to solve the problem at scale.",
+        "So I built an open source tool focused on fixing broken links, with a strong emphasis on community and contributors. The goal is to grow step by step and help others along the way through code reviews and guidance.",
+        "The open source community has given me a lot — including a job referral — and this is my way of giving back. I'm always open to feedback and new contributors. If you'd like to contribute but aren't sure where to start, feel free to DM me. I'll personally help you find a good first issue. 🙌"
+      ],
+      "tech_stack_label": "Tech Stack",
+      "tech_stack": {
+        "typescript": "TypeScript",
+        "react": "React",
+        "nodejs": "Node.js",
+        "base44": "Base44"
+      },
+      "cta": "View on GitHub"
+    }
   },
   "about_feature_card": {
     "card_one": {
@@ -50,15 +69,15 @@
       "accuracyRate": "Accuracy Rate"
     }
   },
-  "statistics_page":{
+  "statistics_page": {
     "title": {
       "performance": "Performance",
       "analytics": "Analytics"
     },
     "description": "Real time insights into your link scanning performance and repository health metrics."
   },
-  "charts":{
-    "scanActivity" : "Scan Activity Over Time",
+  "charts": {
+    "scanActivity": "Scan Activity Over Time",
     "linkTypesDistribution": "Link Types Distribution"
   },
   "footer": {
@@ -124,18 +143,15 @@
     "description": "Test individual URLs or scan entire repositories for broken links with lightning speed",
     "scan_links_card": {
       "title": "Scan Links",
-
       "toggle": {
         "single": "Single URL",
         "repository": "Repository"
       },
-
       "single": {
         "input_label": "Enter URL to check",
         "input_placeholder": "https://example.com/page",
         "button_check": "Check Link"
       },
-
       "repository": {
         "input_label": "GitHub Repository URL",
         "input_placeholder": "https://github.com/username/repository",
@@ -144,7 +160,6 @@
         "button_check": "Scan Repository"
       }
     },
-
     "scan_results_card": {
       "title": "Scan Results",
       "empty_state": "Enter a URL or repository above to start scanning for broken links",
