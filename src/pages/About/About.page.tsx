@@ -1,4 +1,5 @@
 import { AboutTitle } from './components/AboutTitle';
+import { CommunitySection } from './components/CommunitySection/CommunitySection';
 import { FeaturesCards } from './components/FeaturesCards';
 import { MissionCard } from './components/MissionCard';
 import { centerGrid, pageWrapperStyle } from './components/styles';
@@ -12,6 +13,7 @@ const AboutPage = () => {
       </section>
 
       <MissionCard />
+      <CommunitySection />
     </main>
   );
 };
