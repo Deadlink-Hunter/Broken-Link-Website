@@ -137,3 +137,6 @@ dist
 test-results/
 playwright-report/
 blob-report/
+
+# Local Claude Code settings
+.claude/settings.local.json

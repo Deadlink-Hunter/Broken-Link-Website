@@ -1,19 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { expect, within } from '@storybook/test';
+import { typographyVariants } from '../Typography/styles';
 import { ColoredTitle } from './ColoredTitle';
 
-const VARIANTS = [
-  'primary',
-  'secondary',
-  'tertiary',
-  'cyan',
-  'purple',
-  'success',
-  'warning',
-  'error',
-  'title',
-  'subtitle',
-] as const;
+const VARIANTS = Object.keys(typographyVariants) as Array<keyof typeof typographyVariants>;
 
 const meta: Meta<typeof ColoredTitle> = {
   title: 'Components/UI/ColoredTitle',

@@ -70,18 +70,18 @@ export const paragraphStyle = {
 export const iconStyle = {
   gridRowEnd: 'span 2',
   marginBottom: theme.spacing.lg,
-    padding: 8,
-    borderRadius: 14,
-    display: 'inline-flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+  padding: 8,
+  borderRadius: 14,
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
 
-    background: `linear-gradient(
+  background: `linear-gradient(
       135deg,
       ${rgba(colors.cyan[4], 0.25)},
       ${rgba(colors.purple[5], 0.25)}
     )`,
-    color: colors.cyan[4],
+  color: colors.cyan[4],
 };
 
 export const aboutPageStyle = {
@@ -96,10 +96,6 @@ export const aboutPageStyle = {
   titleStyle: {
     ...sharedStyles.sectionTitle,
     display: 'inline-block',
-  } satisfies CSSProperties,
-
-  brandStyle: {
-    ...sharedStyles.gradientText,
   } satisfies CSSProperties,
 
   whiteText: {

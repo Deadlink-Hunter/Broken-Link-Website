@@ -10,6 +10,8 @@ interface ColoredTitleProps {
   variant?: keyof typeof typographyVariants;
   style?: CSSProperties;
   size?: CustomSize;
+  beforeStyle?: CSSProperties;
+  afterStyle?: CSSProperties;
 }
 
 export const ColoredTitle = ({
@@ -17,16 +19,21 @@ export const ColoredTitle = ({
   highlight,
   variant = 'primary',
   style,
+  beforeStyle,
+  afterStyle,
 
   ...props
 }: ColoredTitleProps) => {
-  const [before, after] = text.split(highlight);
+  const highlightStart = highlight ? text.indexOf(highlight) : -1;
+  const hasHighlight = highlightStart >= 0;
+  const before = hasHighlight ? text.slice(0, highlightStart) : text;
+  const after = hasHighlight ? text.slice(highlightStart + highlight.length) : '';
 
   return (
     <Typography variant={variant} style={style} {...props}>
-      {before}
-      <span style={coloredTitleStyles.highlight}>{highlight}</span>
-      {after}
+      {before && beforeStyle ? <span style={beforeStyle}>{before}</span> : before}
+      {hasHighlight ? <span style={coloredTitleStyles.highlight}>{highlight}</span> : null}
+      {after && afterStyle ? <span style={afterStyle}>{after}</span> : after}
     </Typography>
   );
 };
