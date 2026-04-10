@@ -1,26 +1,25 @@
-import { Card } from '@/components/UI/Card/Card';
+import { useIsDark } from '@/components/Hooks/useIsDark';
 import { Typography } from '@/components/UI/Typography/Typography';
 import { Icon } from './Icon';
+import { IconType } from './IconTypes';
 import { featureCardStyles, paragraphStyle, titleStyle } from './styles';
 
-export const FeatureCard = ({
-  icon,
-  title,
-  description,
-}: {
-  icon: string;
+interface FeatureCardProps {
   title: string;
   description: string;
-}) => {
+  icon: IconType;
+}
+
+export const FeatureCard = ({ title, description, icon }: FeatureCardProps) => {
+  const isDark = useIsDark();
+
   return (
-    <Card style={featureCardStyles}>
+    <div style={featureCardStyles(isDark)}>
       <Icon icon={icon} />
       <Typography variant='title' style={titleStyle}>
         {title}
       </Typography>
-      <Typography variant='primary' style={paragraphStyle}>
-        {description}
-      </Typography>
-    </Card>
+      <Typography style={paragraphStyle}>{description}</Typography>
+    </div>
   );
 };

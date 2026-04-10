@@ -38,32 +38,39 @@ export const bigContainerStyle = {
   gridTemplateColumns: '1fr 1fr',
 };
 
-export const featureCardStyles = {
-  backgroundColor: colors.primary[8],
-  border: `1px solid ${rgba(colors.primary[2], 0.15)}`,
+export const featureCardStyles = (isDark: boolean): CSSProperties => ({
+  backgroundColor: isDark ? colors.primary[8] : theme.white,
+  border: `1px solid ${isDark ? rgba(colors.primary[2], 0.15) : colors.gray[3]}`,
   padding: theme.spacing.lg,
   borderRadius: '0.5rem',
   display: 'grid',
   gridTemplateColumns: 'auto auto',
   gap: theme.spacing.lg,
-};
+  width: '100%',
+  boxShadow: isDark ? 'none' : theme.shadows.sm,
+});
 
-export const missionCardStyles: CSSProperties = {
-  backgroundColor: colors.primary[8],
-  border: `1px solid ${colors.primary[9]}`,
-  padding: theme.spacing.xl,
+export const missionCardStyles = (isDark: boolean): CSSProperties => ({
+  backgroundColor: isDark ? colors.primary[8] : theme.white,
+  border: `1px solid ${isDark ? rgba(colors.primary[2], 0.1) : colors.gray[2]}`,
+  padding: '3.5rem 2.5rem',
   display: 'flex',
   flexDirection: 'column',
   textAlign: 'center',
-  gap: theme.spacing.lg,
-};
+  gap: '1.5rem',
+  width: '100%',
+  maxWidth: '65.625rem',
+  borderRadius: '1.25rem',
+  boxShadow: isDark ? 'none' : '0 10px 30px rgba(0, 0, 0, 0.04)',
+  boxSizing: 'border-box',
+});
 
 export const titleStyle = {
-  color: colors.primary[1],
+  fontSize: '1.25rem',
+  fontWeight: 600,
 };
 
 export const paragraphStyle = {
-  color: colors.primary[2],
   gridColumnStart: 2,
 };
 

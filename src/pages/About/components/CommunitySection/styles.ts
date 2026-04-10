@@ -18,9 +18,9 @@ export const communitySectionStyle = {
     ...aboutPageStyle.titleStyle,
   } satisfies CSSProperties,
 
-  largeCard: {
-    backgroundColor: colors.primary[8],
-    border: `1px solid ${rgba(colors.primary[2], 0.1)}`,
+  largeCard: (isDark: boolean): CSSProperties => ({
+    backgroundColor: isDark ? colors.primary[8] : theme.white,
+    border: `1px solid ${isDark ? rgba(colors.primary[2], 0.1) : colors.gray[3]}`,
     padding: '3rem',
     borderRadius: '1.25rem',
     width: '100%',
@@ -31,7 +31,8 @@ export const communitySectionStyle = {
     marginTop: '2rem',
     textAlign: 'left',
     position: 'relative',
-  } satisfies CSSProperties,
+    boxShadow: isDark ? 'none' : '0 4px 12px rgba(0,0,0,0.05)',
+  }),
 
   cardHeader: {
     display: 'flex',
@@ -45,13 +46,11 @@ export const communitySectionStyle = {
   } satisfies CSSProperties,
 
   cardTitle: {
-    color: theme.white,
     fontSize: '1.5rem',
     fontWeight: 700,
   } satisfies CSSProperties,
 
   cardParagraph: {
-    color: colors.primary[2],
     fontSize: '1.05rem',
     lineHeight: 1.7,
   } satisfies CSSProperties,
@@ -82,21 +81,21 @@ export const communitySectionStyle = {
     flexWrap: 'wrap',
   } satisfies CSSProperties,
 
-  pill: {
-    backgroundColor: colors.primary[7],
-    border: `1px solid ${rgba(colors.primary[3], 0.2)}`,
+  pill: (isDark: boolean): CSSProperties => ({
+    backgroundColor: isDark ? colors.primary[7] : colors.gray[1],
+    border: `1px solid ${isDark ? rgba(colors.primary[3], 0.2) : colors.gray[3]}`,
     padding: '0.4rem 1rem',
     borderRadius: '2rem',
     display: 'flex',
     alignItems: 'center',
     gap: '0.5rem',
-  } satisfies CSSProperties,
+  }),
 
-  pillText: {
-    color: colors.primary[1],
+  pillText: (isDark: boolean): CSSProperties => ({
+    color: isDark ? colors.primary[1] : colors.primary[8],
     fontSize: '0.875rem',
     fontWeight: 500,
-  } satisfies CSSProperties,
+  }),
 
   ctaButton: {
     fontWeight: 700,
