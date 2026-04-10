@@ -24,16 +24,16 @@ export const ColoredTitle = ({
 
   ...props
 }: ColoredTitleProps) => {
-  const highlightStart = highlight ? text.indexOf(highlight) : -1;
-  const hasHighlight = highlightStart >= 0;
-  const before = hasHighlight ? text.slice(0, highlightStart) : text;
-  const after = hasHighlight ? text.slice(highlightStart + highlight.length) : '';
+  const highlightIndex = text.indexOf(highlight);
+
+  const prefixText = text.slice(0, highlightIndex);
+  const suffixText = text.slice(highlightIndex + highlight.length);
 
   return (
     <Typography variant={variant} style={style} {...props}>
-      {before && beforeStyle ? <span style={beforeStyle}>{before}</span> : before}
-      {hasHighlight ? <span style={coloredTitleStyles.highlight}>{highlight}</span> : null}
-      {after && afterStyle ? <span style={afterStyle}>{after}</span> : after}
+      <span style={beforeStyle}>{prefixText}</span>
+      <span style={coloredTitleStyles.highlight}>{highlight}</span>
+      <span style={afterStyle}>{suffixText}</span>
     </Typography>
   );
 };

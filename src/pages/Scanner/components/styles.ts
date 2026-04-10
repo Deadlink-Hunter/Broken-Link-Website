@@ -1,5 +1,5 @@
 import { CSSProperties } from 'react';
-import { sharedStyles, theme } from '@/theme';
+import { theme } from '@/theme';
 
 const colors = theme.colors;
 const getTextColor = (isDark: boolean) => (isDark ? theme.white : colors.gray[7]);
@@ -38,11 +38,18 @@ export const scanPageStyle = {
   } satisfies CSSProperties,
 
   titleStyle: {
-    ...sharedStyles.gradientText,
     fontWeight: 900,
     fontSize: '4rem',
     lineHeight: 1.1,
     display: 'inline-block',
+  } satisfies CSSProperties,
+
+  whiteText: {
+    color: theme.white,
+  } satisfies CSSProperties,
+
+  blackText: {
+    color: 'var(--mantine-color-black)',
   } satisfies CSSProperties,
 
   text: (isDark: boolean): CSSProperties => ({

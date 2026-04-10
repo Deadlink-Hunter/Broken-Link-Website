@@ -3,7 +3,7 @@ import { expect, within } from '@storybook/test';
 import { typographyVariants } from '../Typography/styles';
 import { ColoredTitle } from './ColoredTitle';
 
-const VARIANTS = Object.keys(typographyVariants) as Array<keyof typeof typographyVariants>;
+const VARIANTS = Object.keys(typographyVariants);
 
 const meta: Meta<typeof ColoredTitle> = {
   title: 'Components/UI/ColoredTitle',
