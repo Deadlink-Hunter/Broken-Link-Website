@@ -136,7 +136,10 @@
   "how_it_works_feature_point_2": "Keep your users' trust with working references",
   "how_it_works_feature_point_3": "Maintain professional repository standards",
   "scanner_page": {
-    "title": "Link Scanner",
+    "title": {
+      "prefix": "Link ",
+      "highlight": "Scanner"
+    },
     "description": "Test individual URLs or scan entire repositories for broken links with lightning speed",
     "scan_links_card": {
       "title": "Scan Links",

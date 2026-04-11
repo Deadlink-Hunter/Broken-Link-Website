@@ -49,7 +49,7 @@ export const scanPageStyle = {
   } satisfies CSSProperties,
 
   blackText: {
-    color: 'var(--mantine-color-black)',
+    color: theme.black,
   } satisfies CSSProperties,
 
   text: (isDark: boolean): CSSProperties => ({

@@ -120,7 +120,11 @@
   "how_it_works_feature_point_2": "Mantieni la fiducia dei tuoi utenti con riferimenti funzionanti",
   "how_it_works_feature_point_3": "Rispetta gli standard professionali del repository",
   "scanner_page": {
-    "title": "Scanner di Link",
+    "title": {
+      "prefix": "Scanner di ",
+      "highlight": "Link"
+    },
+    "title_highlight": "Scanner",
     "description": "Testa singoli URL o scansiona interi repository alla ricerca di link non funzionanti a velocità fulminea",
     "scan_links_card": {
       "title": "Scansiona Link",

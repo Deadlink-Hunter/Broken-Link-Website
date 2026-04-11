@@ -120,7 +120,11 @@
   "how_it_works_feature_point_2": "Gardez la confiance des utilisateurs avec des liens valides",
   "how_it_works_feature_point_3": "Maintenez des standards professionnels pour vos dépôts",
   "scanner_page": {
-    "title": "Scanner de liens",
+    "title": {
+      "prefix": "Scanner de ",
+      "highlight": "liens"
+    },
+    "title_highlight": "Scanner",
     "description": "Testez des URLs individuelles ou analysez des dépôts entiers à la vitesse de l'éclair",
     "scan_links_card": {
       "title": "Scanner les liens",

@@ -14,8 +14,8 @@ export const ScanTitlePage = () => {
       <ColoredTitle
         variant='title'
         style={scanPageStyle.titleStyle}
-        text={t('scanner_page.title')}
-        highlight='Scanner'
+        text={`${t('scanner_page.title.prefix')}${t('scanner_page.title.highlight')}`}
+        highlight={t('scanner_page.title.highlight')}
         beforeStyle={titleColor}
       />
       <Typography style={scanPageStyle.text(isDark)}>{t('scanner_page.description')}</Typography>
