@@ -124,7 +124,6 @@
       "prefix": "Escáner de ",
       "highlight": "Enlaces"
     },
-    "title_highlight": "Scanner",
     "description": "Pruebe URLs individuales o escanee repositorios completos en busca de enlaces rotos con velocidad ultrarrápida",
     "scan_links_card": {
       "title": "Escanear Enlaces",

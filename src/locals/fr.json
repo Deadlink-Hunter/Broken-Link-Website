@@ -124,7 +124,6 @@
       "prefix": "Scanner de ",
       "highlight": "liens"
     },
-    "title_highlight": "Scanner",
     "description": "Testez des URLs individuelles ou analysez des dépôts entiers à la vitesse de l'éclair",
     "scan_links_card": {
       "title": "Scanner les liens",

@@ -124,7 +124,6 @@
       "prefix": "Link ",
       "highlight": "Scanner"
     },
-    "title_highlight": "Scanner",
     "description": "Test individuele URL's of scan hele repositories met lichtsnelheid",
     "scan_links_card": {
       "title": "Links scannen",

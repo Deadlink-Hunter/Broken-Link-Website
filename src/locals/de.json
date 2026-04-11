@@ -110,7 +110,6 @@
       "prefix": "Link-",
       "highlight": "Scanner"
     },
-    "title_highlight": "Scanner",
     "description": "Testen Sie einzelne URLs oder scannen Sie ganze Repositories mit Lichtgeschwindigkeit",
     "scan_links_card": {
       "title": "Links scannen",
