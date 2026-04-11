@@ -106,7 +106,10 @@
   "how_it_works_feature_point_2": "Behalten Sie das Vertrauen Ihrer Benutzer durch funktionierende Referenzen",
   "how_it_works_feature_point_3": "Professionelle Repository-Standards einhalten",
   "scanner_page": {
-    "title": "Link-Scanner",
+    "title": {
+      "prefix": "Link-",
+      "highlight": "Scanner"
+    },
     "description": "Testen Sie einzelne URLs oder scannen Sie ganze Repositories mit Lichtgeschwindigkeit",
     "scan_links_card": {
       "title": "Links scannen",

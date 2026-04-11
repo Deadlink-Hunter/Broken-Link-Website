@@ -59,12 +59,6 @@ export const howItWorksStyles = {
     marginBottom: theme.spacing.xl,
   } satisfies CSSProperties,
 
-  highlight: {
-    backgroundImage: `linear-gradient(90deg, ${colors.cyan[4]}, ${colors.purple[5]})`,
-    WebkitBackgroundClip: 'text',
-    WebkitTextFillColor: 'transparent',
-  } satisfies CSSProperties,
-
   highlightCyan: {
     color: colors.cyan[4],
   } satisfies CSSProperties,
