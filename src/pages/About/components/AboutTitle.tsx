@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { useIsDark } from '@/components/Hooks/useIsDark';
+import { ColoredTitle } from '@/components/UI/ColoredTitle/ColoredTitle';
 import { Typography } from '@/components/UI/Typography/Typography';
 import { aboutPageStyle } from './styles';
 
@@ -11,10 +12,13 @@ export const AboutTitle = () => {
 
   return (
     <div style={aboutPageStyle.centerGrid}>
-      <Typography variant='title' style={aboutPageStyle.titleStyle}>
-        <span style={aboutTextColor}>{t('about_page.title.about')}</span>
-        <span style={aboutPageStyle.brandStyle}>{t('about_page.title.deadlink_hunter')}</span>
-      </Typography>
+      <ColoredTitle
+        variant='title'
+        style={aboutPageStyle.titleStyle}
+        text={`${t('about_page.title.about')} ${t('about_page.title.deadlink_hunter')}`}
+        highlight={t('about_page.title.deadlink_hunter')}
+        beforeStyle={aboutTextColor}
+      />
 
       <Typography style={aboutPageStyle.text(isDark)}>{t('about_page.description')}</Typography>
     </div>

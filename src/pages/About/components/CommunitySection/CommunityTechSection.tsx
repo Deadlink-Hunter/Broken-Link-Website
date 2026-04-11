@@ -1,8 +1,8 @@
 import {
+  IconBrandGithub,
   IconBrandNodejs,
   IconBrandReact,
   IconBrandTypescript,
-  IconBrandGithub,
 } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
 import { LinkButton, LinkTarget } from '@/components/UI/Button/LinkButton';

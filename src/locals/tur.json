@@ -120,7 +120,10 @@
   "how_it_works_feature_point_2": "Kullanıcılarınızın güvenini çalışan referanslarla koruyun",
   "how_it_works_feature_point_3": "Profesyonel depo standartlarını sürdürün",
   "scanner_page": {
-    "title": "Link Tarayıcı",
+    "title": {
+      "prefix": "Link ",
+      "highlight": "Tarayıcı"
+    },
     "description": "Bireysel URL’leri test edin veya tüm depoları ışık hızıyla tarayın",
     "scan_links_card": {
       "title": "Linkleri Tara",

@@ -2,6 +2,7 @@ import { IconHeart } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
 import { useIsDark } from '@/components/Hooks/useIsDark';
 import { Card } from '@/components/UI/Card/Card';
+import { ColoredTitle } from '@/components/UI/ColoredTitle/ColoredTitle';
 import { Typography } from '@/components/UI/Typography/Typography';
 import { aboutPageStyle } from '../styles';
 import { CommunityTechSection } from './CommunityTechSection';
@@ -14,10 +15,13 @@ export const CommunitySection = () => {
 
   return (
     <section style={communitySectionStyle.container}>
-      <Typography variant='title' style={communitySectionStyle.mainTitle}>
-        <span style={titleColor}>{t('about_page.community.title_part1')}</span>
-        <span style={aboutPageStyle.brandStyle}>{t('about_page.community.title_gradient')}</span>
-      </Typography>
+      <ColoredTitle
+        variant='title'
+        style={communitySectionStyle.mainTitle}
+        text={`${t('about_page.community.title_part1')}${t('about_page.community.title_gradient')}`}
+        highlight={t('about_page.community.title_gradient')}
+        beforeStyle={titleColor}
+      />
 
       <Typography style={aboutPageStyle.text(isDark)}>
         {t('about_page.community.subtitle')}

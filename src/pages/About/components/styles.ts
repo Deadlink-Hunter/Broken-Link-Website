@@ -75,6 +75,7 @@ export const iconStyle = {
   display: 'inline-flex',
   alignItems: 'center',
   justifyContent: 'center',
+
   background: `linear-gradient(
       135deg,
       ${rgba(colors.cyan[4], 0.25)},
@@ -95,10 +96,6 @@ export const aboutPageStyle = {
   titleStyle: {
     ...sharedStyles.sectionTitle,
     display: 'inline-block',
-  } satisfies CSSProperties,
-
-  brandStyle: {
-    ...sharedStyles.gradientText,
   } satisfies CSSProperties,
 
   whiteText: {

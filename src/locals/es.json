@@ -120,7 +120,10 @@
   "how_it_works_feature_point_2": "Mantenga la confianza de sus usuarios con referencias funcionales",
   "how_it_works_feature_point_3": "Mantenga estándares profesionales en su repositorio",
   "scanner_page": {
-    "title": "Escáner de Enlaces",
+    "title": {
+      "prefix": "Escáner de ",
+      "highlight": "Enlaces"
+    },
     "description": "Pruebe URLs individuales o escanee repositorios completos en busca de enlaces rotos con velocidad ultrarrápida",
     "scan_links_card": {
       "title": "Escanear Enlaces",
