@@ -13,7 +13,6 @@ export const exploreToolkitStyles = {
 
   title: {
     ...sharedStyles.sectionTitle,
-    color: `light-dark(${theme.black}, ${theme.white})`,
     marginBottom: theme.spacing.xl,
   } satisfies CSSProperties,
 
@@ -42,17 +41,11 @@ export const exploreToolkitStyles = {
     display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
-
-    background: `linear-gradient(
-      135deg,
-      ${rgba(colors.cyan[4], 0.25)},
-      ${rgba(colors.purple[5], 0.25)}
-    )`,
+    background: `linear-gradient(135deg, ${rgba(colors.cyan[4], 0.25)}, ${rgba(colors.purple[5], 0.25)})`,
     color: colors.cyan[4],
   } satisfies CSSProperties,
 
   cardTitle: {
-    color: theme.white,
     fontWeight: 900,
     fontSize: '1.25rem',
     marginBottom: theme.spacing.sm,
@@ -60,7 +53,6 @@ export const exploreToolkitStyles = {
 
   cardDescription: {
     marginBottom: theme.spacing.xl,
-    color: rgba(theme.white, 0.72),
     fontSize: '0.95rem',
     lineHeight: 1.6,
   } satisfies CSSProperties,
@@ -70,7 +62,6 @@ export const exploreToolkitStyles = {
     padding: 0,
     backgroundColor: 'transparent',
     border: 'none',
-
     color: colors.cyan[4],
     fontWeight: 600,
     display: 'inline-flex',

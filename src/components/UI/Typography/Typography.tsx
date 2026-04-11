@@ -1,7 +1,7 @@
 import { CSSProperties } from 'react';
 import { Text as MantineText, TextProps } from '@mantine/core';
-import { useIsDark } from '@/components/Hooks/useIsDark';
-import { theme } from '@/theme';
+import { useIsDark } from '@/components/Hooks/useIsDark'; 
+import { theme } from '@/theme'; 
 import { typographyVariants } from './styles';
 import { CustomSize } from './types';
 
@@ -17,7 +17,7 @@ interface SharedTypographyProps extends Omit<TextProps, 'variant' | 'style' | 's
   children?: React.ReactNode;
   style?: CSSProperties;
   size?: CustomSize;
-  color?: string;
+  color?: string; 
 }
 
 export const Typography = ({
@@ -30,7 +30,7 @@ export const Typography = ({
 }: SharedTypographyProps) => {
   const isDark = useIsDark();
   const variantStyle = typographyVariants[variant] ?? {};
-
+  
   const getAutoVisibilityColor = () => {
     if (isDark) {
       return variantStyle.color;
@@ -38,11 +38,15 @@ export const Typography = ({
 
     switch (variant) {
       case 'title':
+      case 'h1': 
+      case 'h2': 
+      case 'h3': 
       case 'primary':
-        return theme.colors.primary[9];
+        return theme.colors.primary[9]; 
+      case 'body':    
       case 'secondary':
       case 'tertiary':
-        return theme.colors.gray[8];
+        return theme.colors.gray[8]; 
       default:
         return variantStyle.color;
     }
@@ -55,10 +59,10 @@ export const Typography = ({
   return (
     <MantineText
       size={mappedSize}
-      style={{
-        ...variantStyle,
-        ...style,
-        color: finalColor,
+      style={{ 
+        ...variantStyle, 
+        ...style, 
+        color: finalColor, 
       }}
       data-testid='typography-component'
       {...props}

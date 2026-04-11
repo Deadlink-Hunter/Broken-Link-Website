@@ -3,7 +3,6 @@ import { rgba } from '@mantine/core';
 import { sharedStyles, theme } from '@/theme';
 
 const colors = theme.colors;
-const getTextColor = (isDark: boolean) => (isDark ? theme.white : colors.gray[7]);
 
 export const pageWrapperStyle: CSSProperties = {
   width: '100%',
@@ -38,32 +37,48 @@ export const bigContainerStyle = {
   gridTemplateColumns: '1fr 1fr',
 };
 
-export const featureCardStyles = (isDark: boolean): CSSProperties => ({
-  backgroundColor: isDark ? colors.primary[8] : theme.white,
-  border: `1px solid ${isDark ? rgba(colors.primary[2], 0.15) : colors.gray[3]}`,
+export const featureCardStyles: CSSProperties = {
   padding: theme.spacing.lg,
-  borderRadius: '0.5rem',
   display: 'grid',
   gridTemplateColumns: 'auto auto',
   gap: theme.spacing.lg,
   width: '100%',
-  boxShadow: isDark ? 'none' : theme.shadows.sm,
-});
+};
+
 
 export const missionCardStyles = (isDark: boolean): CSSProperties => ({
-  backgroundColor: isDark ? colors.primary[8] : theme.white,
-  border: `1px solid ${isDark ? rgba(colors.primary[2], 0.1) : colors.gray[2]}`,
-  padding: '3.5rem 2.5rem',
+ 
+  backgroundColor: isDark ? colors.primary[8] : colors.gray[1], 
+  border: `1px solid ${isDark ? colors.primary[9] : colors.gray[3]}`, 
+  padding: '3rem 2.5rem',
   display: 'flex',
   flexDirection: 'column',
   textAlign: 'center',
-  gap: '1.5rem',
+  gap: '1rem',
   width: '100%',
-  maxWidth: '65.625rem',
-  borderRadius: '1.25rem',
-  boxShadow: isDark ? 'none' : '0 10px 30px rgba(0, 0, 0, 0.04)',
+  maxWidth: '65.625rem', 
+  borderRadius: '1.25rem', 
+  margin: '2rem auto', 
+  boxShadow: isDark ? 'none' : '0 10px 15px -3px rgba(0, 0, 0, 0.04)',
   boxSizing: 'border-box',
 });
+
+
+const getMediumTextColor = (isDark: boolean) => (isDark ? theme.white : colors.gray[7]);
+
+export const missionTitleStyle = (isDark: boolean): CSSProperties => ({
+  color: getMediumTextColor(isDark), 
+  fontSize: '1.5rem',
+  fontWeight: 400, 
+  marginBottom: '0.5rem',
+});
+
+export const missionDescriptionStyle = (isDark: boolean): CSSProperties => ({
+  color: getMediumTextColor(isDark), 
+  fontSize: '1rem',
+  lineHeight: 1.6,
+});
+
 
 export const titleStyle = {
   fontSize: '1.25rem',
@@ -82,11 +97,7 @@ export const iconStyle = {
   display: 'inline-flex',
   alignItems: 'center',
   justifyContent: 'center',
-  background: `linear-gradient(
-      135deg,
-      ${rgba(colors.cyan[4], 0.25)},
-      ${rgba(colors.purple[5], 0.25)}
-    )`,
+  background: `linear-gradient(135deg, ${rgba(colors.cyan[4], 0.25)}, ${rgba(colors.purple[5], 0.25)})`,
   color: colors.cyan[4],
 };
 
@@ -117,7 +128,7 @@ export const aboutPageStyle = {
   } satisfies CSSProperties,
 
   text: (isDark: boolean): CSSProperties => ({
-    color: getTextColor(isDark),
+    color: isDark ? theme.white : theme.colors.gray[7],
     paddingBlock: theme.spacing.lg,
     fontSize: '1.1rem',
     textAlign: 'center',

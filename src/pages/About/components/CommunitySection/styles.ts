@@ -18,11 +18,8 @@ export const communitySectionStyle = {
     ...aboutPageStyle.titleStyle,
   } satisfies CSSProperties,
 
-  largeCard: (isDark: boolean): CSSProperties => ({
-    backgroundColor: isDark ? colors.primary[8] : theme.white,
-    border: `1px solid ${isDark ? rgba(colors.primary[2], 0.1) : colors.gray[3]}`,
+  largeCard: {
     padding: '3rem',
-    borderRadius: '1.25rem',
     width: '100%',
     maxWidth: '65.625rem',
     display: 'flex',
@@ -31,8 +28,7 @@ export const communitySectionStyle = {
     marginTop: '2rem',
     textAlign: 'left',
     position: 'relative',
-    boxShadow: isDark ? 'none' : '0 4px 12px rgba(0,0,0,0.05)',
-  }),
+  } satisfies CSSProperties,
 
   cardHeader: {
     display: 'flex',
