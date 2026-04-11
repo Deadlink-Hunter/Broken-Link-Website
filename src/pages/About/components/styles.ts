@@ -4,6 +4,8 @@ import { sharedStyles, theme } from '@/theme';
 
 const colors = theme.colors;
 
+export const ABOUT_CARD_MAX_WIDTH = '65.625rem';
+
 export const pageWrapperStyle: CSSProperties = {
   width: '100%',
   maxWidth: '80rem',
@@ -45,9 +47,7 @@ export const featureCardStyles: CSSProperties = {
   width: '100%',
 };
 
-
 export const missionCardStyles = (isDark: boolean): CSSProperties => ({
- 
   backgroundColor: isDark ? colors.primary[8] : colors.gray[1], 
   border: `1px solid ${isDark ? colors.primary[9] : colors.gray[3]}`, 
   padding: '3rem 2.5rem',
@@ -56,13 +56,11 @@ export const missionCardStyles = (isDark: boolean): CSSProperties => ({
   textAlign: 'center',
   gap: '1rem',
   width: '100%',
-  maxWidth: '65.625rem', 
+  maxWidth: ABOUT_CARD_MAX_WIDTH, 
   borderRadius: '1.25rem', 
   margin: '2rem auto', 
-  boxShadow: isDark ? 'none' : '0 10px 15px -3px rgba(0, 0, 0, 0.04)',
   boxSizing: 'border-box',
 });
-
 
 const getMediumTextColor = (isDark: boolean) => (isDark ? theme.white : colors.gray[7]);
 
@@ -78,7 +76,6 @@ export const missionDescriptionStyle = (isDark: boolean): CSSProperties => ({
   fontSize: '1rem',
   lineHeight: 1.6,
 });
-
 
 export const titleStyle = {
   fontSize: '1.25rem',

@@ -26,7 +26,7 @@ export const CommunitySection = () => {
       <Card style={communitySectionStyle.largeCard}>
         <div style={communitySectionStyle.cardHeader}>
           <IconHeart size={28} style={communitySectionStyle.heartIcon} />
-          <Typography variant="title" style={communitySectionStyle.cardTitle}>
+          <Typography variant='title' style={communitySectionStyle.cardTitle}>
             {t('about_page.community.card_title')}
           </Typography>
         </div>

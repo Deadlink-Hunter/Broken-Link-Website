@@ -28,12 +28,7 @@ export const Card = ({ children, className, style, ...props }: SharedCardProps) 
   };
 
   return (
-    <MantineCard 
-      data-testid='card' 
-      className={className} 
-      style={mergedStyle} 
-      {...props}
-    >
+    <MantineCard data-testid='card' className={className} style={mergedStyle} {...props}>
       {children}
     </MantineCard>
   );

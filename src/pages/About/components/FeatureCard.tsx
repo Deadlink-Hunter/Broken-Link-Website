@@ -1,8 +1,8 @@
-import { Icon } from './Icon';
 import { Card } from '@/components/UI/Card/Card';
 import { Typography } from '@/components/UI/Typography/Typography';
-import { featureCardStyles, titleStyle, paragraphStyle } from './styles';
+import { Icon } from './Icon';
 import { IconType } from './IconTypes';
+import { featureCardStyles, paragraphStyle, titleStyle } from './styles';
 
 interface FeatureCardProps {
   title: string;
@@ -14,12 +14,10 @@ export const FeatureCard = ({ title, description, icon }: FeatureCardProps) => {
   return (
     <Card style={featureCardStyles}>
       <Icon icon={icon} />
-      <Typography variant="title" style={titleStyle}>
+      <Typography variant='title' style={titleStyle}>
         {title}
       </Typography>
-      <Typography style={paragraphStyle}>
-        {description}
-      </Typography>
+      <Typography style={paragraphStyle}>{description}</Typography>
     </Card>
   );
 };
