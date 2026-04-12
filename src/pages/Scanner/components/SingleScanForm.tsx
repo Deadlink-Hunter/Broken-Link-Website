@@ -7,9 +7,10 @@ interface SingleScanFormProps {
   url: string;
   setUrl: (value: string) => void;
   onSubmit: () => void;
+  isDark: boolean;
 }
 
-export const SingleScanForm = ({ url, setUrl, onSubmit }: SingleScanFormProps) => {
+export const SingleScanForm = ({ url, setUrl, onSubmit, isDark }: SingleScanFormProps) => {
   const { t } = useTranslation();
   const baseTranslationKey = 'scanner_page.scan_links_card.single';
 
@@ -25,7 +26,7 @@ export const SingleScanForm = ({ url, setUrl, onSubmit }: SingleScanFormProps) =
   return (
     <form onSubmit={handleSubmit}>
       <div style={scanPageStyle.formFieldGroup}>
-        <label htmlFor='single-scan-url' style={scanPageStyle.fieldLabel}>
+        <label htmlFor='single-scan-url' style={scanPageStyle.fieldLabel(isDark)}>
           {t(`${baseTranslationKey}.input_label`)}
         </label>
         <input
@@ -34,7 +35,7 @@ export const SingleScanForm = ({ url, setUrl, onSubmit }: SingleScanFormProps) =
           placeholder={t(`${baseTranslationKey}.input_placeholder`)}
           value={url}
           onChange={handleUrlChange}
-          style={scanPageStyle.textInputStyle}
+          style={scanPageStyle.textInputStyle(isDark)}
         />
       </div>
 

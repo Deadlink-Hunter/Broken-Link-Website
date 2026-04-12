@@ -23,10 +23,12 @@ export const ScanLinksCard = ({
 
   const isSingleTabActive = scanType === ScanMode.SINGLE;
 
-  const singleButtonStyle = isSingleTabActive ? scanPageStyle.activeTab : scanPageStyle.passiveTab;
+  const singleButtonStyle = isSingleTabActive
+    ? scanPageStyle.activeTab(isDark)
+    : scanPageStyle.passiveTab(isDark);
   const repositoryButtonStyle = isSingleTabActive
-    ? scanPageStyle.passiveTab
-    : scanPageStyle.activeTab;
+    ? scanPageStyle.passiveTab(isDark)
+    : scanPageStyle.activeTab(isDark);
 
   const submitScanRequest = () => {
     onScan({ scanType, url, multipleUrl });
@@ -36,13 +38,13 @@ export const ScanLinksCard = ({
     <Card withBorder shadow='0' style={scanPageStyle.scanCardStyle}>
       <header style={scanPageStyle.cardHeader}>
         <IconSearch style={scanPageStyle.searchIcon} />
-        <Typography style={scanPageStyle.cardTitle(isDark)}>
+        <Typography style={scanPageStyle.cardTitle}>
           {t('scanner_page.scan_links_card.title')}
         </Typography>
       </header>
 
       <div style={scanPageStyle.inputSection}>
-        <div style={scanPageStyle.segmentedWrapper}>
+        <div style={scanPageStyle.segmentedWrapper(isDark)}>
           <Button onClick={() => setScanType(ScanMode.SINGLE)} style={singleButtonStyle}>
             {t('scanner_page.scan_links_card.toggle.single')}
           </Button>
@@ -52,7 +54,7 @@ export const ScanLinksCard = ({
         </div>
 
         {isSingleTabActive ? (
-          <SingleScanForm url={url} setUrl={setUrl} onSubmit={submitScanRequest} />
+          <SingleScanForm url={url} setUrl={setUrl} onSubmit={submitScanRequest} isDark={isDark} />
         ) : (
           <RepositoryScanForm
             url={url}
@@ -60,6 +62,7 @@ export const ScanLinksCard = ({
             multipleUrl={multipleUrl}
             setMultipleUrl={setMultipleUrl}
             onSubmit={submitScanRequest}
+            isDark={isDark}
           />
         )}
       </div>
