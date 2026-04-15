@@ -38,6 +38,7 @@ export const bigContainerStyle = {
   gridTemplateColumns: '1fr 1fr',
 };
 
+
 export const featureCardStyles = {
   backgroundColor: colors.primary[8],
   border: `1px solid ${rgba(colors.primary[2], 0.15)}`,
@@ -98,6 +99,10 @@ export const aboutPageStyle = {
     display: 'inline-block',
   } satisfies CSSProperties,
 
+  brandStyle: {
+    ...sharedStyles.gradientText,
+  } satisfies CSSProperties,
+  
   whiteText: {
     color: theme.white,
   } satisfies CSSProperties,

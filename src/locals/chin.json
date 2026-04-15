@@ -1,4 +1,177 @@
 {
   "welcome_link_text": "本指南",
-  "welcome_description_after_link": "。要開始，請編輯 pages/Home.page.tsx 檔案。"
+  "welcome_description_after_link": "。要開始，請編輯 pages/Home.page.tsx 檔案。",
+  "about_page": {
+    "title": {
+      "about": "關於 ",
+      "deadlink_hunter": "Deadlink-Hunter"
+    },
+    "description": "一款功能強大的開源工具，旨在透過識別和消除失效連結來維護 GitHub 儲存庫中連結的完整性，防止其影響使用者。",
+    "community": {
+      "title_part1": "由",
+      "title_gradient": "社群",
+      "title_part2": "共同打造",
+      "subtitle": "這個計畫源自於一個實際問題和回饋社會的願望。我們歡迎所有人參與，無論您是初次貢獻者還是經驗豐富的工程師。",
+      "card_title": "我為什麼要建造它",
+      "paragraph1": "我之所以發起這個項目，是因為我反覆遇到同樣的難題：老舊且無人維護的儲存庫，裡面充斥著過時的 README 文件和失效的連結。在提交了無數個 issue 來報告這些問題之後，我意識到最好是規模化地解決這個問題。",
+      "paragraph2": "所以我開發了一個開源工具，專注於修復失效鏈接，非常重視社區和貢獻者。目標是穩步發展，並透過程式碼審查和指導幫助其他人成長。",
+      "paragraph3": "開源社群給了我很多幫助（包括一份工作推薦)，這是我回饋社群的方式。我始終歡迎反饋和新的貢獻者。如果你想貢獻程式碼但不知道從何入手，歡迎私訊我。我會親自幫你找一個合適的入門問題。🙌",
+      "tech_stack_label": "技術架構",
+      "tech_stack": {
+        "typescript": "TypeScript",
+        "react": "React",
+        "nodejs": "Node.js"
+      },
+      "cta": "在 GitHub 上查看"
+    }
+  },
+  "about_feature_card": {
+    "card_one": {
+      "title": "精密掃描",
+      "description": "先進的演算法能夠精準地偵測 Markdown 文件、文件和程式碼註解中的失效連結。"
+    },
+    "card_two": {
+      "title": "自動化報告",
+      "description": "產生全面報告，提供詳細分析、修復建議及優先順序，以實現高效維護。"
+    },
+    "card_three": {
+      "title": "GitHub 整合",
+      "description": "透過 Actions、Webhooks 以及自動建立拉取請求，無縫融入你的 GitHub 工作流程。"
+    },
+    "card_four": {
+      "title": "開源",
+      "description": "完全開源，社群驅動。您可以貢獻程式碼、進行自訂和擴展，以滿足你專案的需求。"
+    }
+  },
+  "hero": {
+    "title": {
+      "deadlink": "Deadlink",
+      "hunter": "Hunter"
+    },
+    "tagline": {
+      "openSource": "開源",
+      "lightningFast": "极速"
+    },
+    "description": {
+      "part1": "透過",
+      "highlight": "精準掃描",
+      "part2": "和全面報告，消除 GitHub 儲存庫中的失效連結。"
+    },
+    "buttons": {
+      "startScanning": "開始掃描",
+      "viewOnGitHub": "在 GitHub 上查看"
+    },
+    "statistics": {
+      "linksScanned": "已掃描連結",
+      "reposAnalyzed": "已分析儲存庫",
+      "accuracyRate": "準確率"
+    }
+  },
+  "statistics_page": {
+    "title": {
+      "performance": "性能",
+      "analytics": "分析"
+    },
+    "description": "即時了解連結掃描效能和儲存庫健康狀況指標。"
+  },
+  "charts": {
+    "scanActivity": "掃描活動趨勢",
+    "linkTypesDistribution": "連結類型分布"
+  },
+  "footer": {
+    "header": "Deadlink-Hunter",
+    "about": "用於尋找和清理 GitHub 儲存庫中失效連結的開源工具。 用❤️ 打造，獻給開發者社群。",
+    "gitBtnTxt": "在 GitHub 上按讚",
+    "QuickLinks": "快速連結",
+    "About": "關於",
+    "Scanner": "掃描器",
+    "Statistics": "統計數據",
+    "Documentation": "文件",
+    "Community": "社群",
+    "Contribute": "貢獻",
+    "Issues": "問題",
+    "FeatureRequests": "功能請求",
+    "rights": "© Deadlink-Hunter. 採用 MIT 許可證。",
+    "madeWith": "由開源社群用",
+    "byOpenSrc": "打造"
+  },
+  "navbar": {
+    "header": "Deadlink-Hunter",
+    "github": "GitHub",
+    "githubMobile": "在 GitHub 上查看",
+    "home": "首頁",
+    "scanner": "掃描工具",
+    "statistics": "統計數據",
+    "about": "關於"
+  },
+  "explore_toolkit_title_part1": "探索 ",
+  "explore_toolkit_title_highlight": "工具庫",
+  "explore_toolkit_title_part2": "",
+  "explore_toolkit_description": "讓你的儲存庫保持健康、連結持續有效所需的一切。.",
+  "explore_toolkit_card1_title": "即時連結掃描器",
+  "explore_toolkit_card1_description": "使用我們功能強大、易於使用的掃描器，快速檢查單一 URL 或掃描整個儲存庫中的失效連結。",
+  "explore_toolkit_card1_button": "開始掃描",
+  "explore_toolkit_card2_title": "性能分析",
+  "explore_toolkit_card2_description": "深入研究關於掃描歷史、連結健康狀況和項目性能的詳細統計數據與視覺化報告。",
+  "explore_toolkit_card2_button": "查看統計數據",
+  "explore_toolkit_card3_title": "關於這個項目",
+  "explore_toolkit_card3_description": "了解 Deadlink-Hunter 的使命、開源理念，並了解你如何參與其中。",
+  "explore_toolkit_card3_button": "了解更多",
+  "our_mission_card_title": "我們的使命",
+  "our_mission_card_description": "為開發者提供可靠、高效且易於使用的解決方案,幫助維護連結完整性。失效連結不應影響使用者體驗。每一個儲存庫都值得擁有完美的連結質量。",
+  "how_it_works_card1_title": "掃描您的儲存庫",
+  "how_it_works_card1_description": "輸入 GitHub 儲存庫 URL 或連結列表，檢查是否存在失效鏈接",
+  "how_it_works_card2_title": "極速分析",
+  "how_it_works_card2_description": "我們的智慧掃描器會檢查每個鏈接，追蹤重定向並在幾秒鐘內驗證 HTTP 回應。",
+  "how_it_works_card3_title": "取得詳細報告",
+  "how_it_works_card3_description": "取得一份全面的連結分析報告，其中包含有效連結和失效連結的詳細信息，以及修復這些連結的可操作建議。",
+  "how_it_works_title_part1": "工作 ",
+  "how_it_works_title_highlight": "原理",
+  "how_it_works_title_part2": "",
+  "how_it_works_subtitle": "三個簡單步驟即可修復失效鏈接，無需安裝。",
+  "how_it_works_feature_title_prefix": "修復失效連結,",
+  "how_it_works_feature_title_highlight": "一次",
+  "how_it_works_feature_title_suffix": "一个儲存庫",
+  "how_it_works_feature_description": "Deadlink-Hunter 就像你一个儲存庫的“健康醫生”，負責診斷失效連接、定位問題，並提供明確的修復方案，讓你的專案恢復最佳狀態。",
+  "how_it_works_feature_point_1": "告別 404 錯誤對文件的干擾。",
+  "how_it_works_feature_point_2": "用有效的引用連結維護用戶信任。",
+  "how_it_works_feature_point_3": "讓你的倉庫始終保持專業級標準。",
+  "scanner_page": {
+    "title": "連結掃描器",
+    "description": "快速測試單一 URL,或掃描整個倉庫中的失效連結。",
+    "scan_links_card": {
+      "title": "掃描連結",
+      "toggle": {
+        "single": "單個URL",
+        "repository": "儲存庫"
+      },
+      "single": {
+        "input_label": "輸入URL進行檢查",
+        "input_placeholder": "https://example.com/page",
+        "button_check": "檢查連結"
+      },
+      "repository": {
+        "input_label": "GitHub 儲存庫 URL",
+        "input_placeholder": "https://github.com/username/repository",
+        "textarea_label": "或貼上多個URL。",
+        "textarea_placeholder": "https://example1.com\nhttps://example2.com\nhttps://example3.com",
+        "button_check": "掃描儲存庫"
+      }
+    },
+    "scan_results_card": {
+      "title": "掃描結果",
+      "empty_state": "輸入一個 URL 或儲存庫以開始掃描失效連結",
+      "loading": "掃描中...",
+      "response_time": "回應時間: {{responseTime}}ms",
+      "total_response_time": "總回應時間: {{responseTime}}ms",
+      "summary": "{{working}} 個有效, {{broken}} 個失效，共 {{total}} 個",
+      "errors": {
+        "url_required": "必須提供 URL",
+        "internal_server_error": "內部伺服器錯誤",
+        "urls_array_required": "必須提供 URL 陣列",
+        "one_url_required": "至少需要一個 URL",
+        "maximum_urls_allowed": "每個請求最多允許 {{max}} 個 URL"
+      }
+    }
+  }
 }

@@ -9,19 +9,19 @@ import { CommunityTechSection } from './CommunityTechSection';
 import { communitySectionStyle } from './styles';
 
 export const CommunitySection = () => {
-  const { t } = useTranslation();
+  const { t , i18n} = useTranslation();
   const isDark = useIsDark();
   const titleColor = isDark ? aboutPageStyle.whiteText : aboutPageStyle.blackText;
 
   return (
     <section style={communitySectionStyle.container}>
-      <ColoredTitle
-        variant='title'
-        style={communitySectionStyle.mainTitle}
-        text={`${t('about_page.community.title_part1')}${t('about_page.community.title_gradient')}`}
-        highlight={t('about_page.community.title_gradient')}
-        beforeStyle={titleColor}
-      />
+      <Typography variant='title' style={communitySectionStyle.mainTitle}>
+        <span style={titleColor}>{t('about_page.community.title_part1')}</span>
+        <span style={aboutPageStyle.brandStyle}>{t('about_page.community.title_gradient')}</span>
+        {i18n.exists('about_page.community.title_part2') && (
+          <span style={titleColor}>{t('about_page.community.title_part2')}</span>
+        )}
+      </Typography>
 
       <Typography style={aboutPageStyle.text(isDark)}>
         {t('about_page.community.subtitle')}
