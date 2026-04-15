@@ -22,12 +22,6 @@ export const exploreToolkitStyles = {
     gap: theme.spacing.xl,
   } satisfies CSSProperties,
 
-  highlight: {
-    backgroundImage: `linear-gradient(90deg, ${colors.cyan[4]}, ${colors.purple[5]})`,
-    WebkitBackgroundClip: 'text',
-    WebkitTextFillColor: 'transparent',
-  } satisfies CSSProperties,
-
   description: {
     maxWidth: 520,
     margin: `0 auto ${theme.spacing['2xl']}`,

@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/UI/Button/Button';
 import { Card } from '@/components/UI/Card/Card';
+import { ColoredTitle } from '@/components/UI/ColoredTitle/ColoredTitle';
 import { Typography } from '@/components/UI/Typography/Typography';
 import { exploreToolkitStyles } from './styles';
 import { useExploreToolkitCardsData } from './useExploreToolkitCardsData';
@@ -14,11 +15,12 @@ export const ExploreToolkit = () => {
 
   return (
     <div style={exploreToolkitStyles.container}>
-      <Typography variant='h1' style={exploreToolkitStyles.title}>
-        {t('explore_toolkit_title_part1')}
-        <span style={exploreToolkitStyles.highlight}>{t('explore_toolkit_title_highlight')}</span>
-        {t('explore_toolkit_title_part2')}
-      </Typography>
+      <ColoredTitle
+        text={`${t('explore_toolkit_title_part1')}${t('explore_toolkit_title_highlight')}${t('explore_toolkit_title_part2')}`}
+        highlight={t('explore_toolkit_title_highlight')}
+        variant='h1'
+        style={exploreToolkitStyles.title}
+      />
 
       <Typography variant='body' style={exploreToolkitStyles.description}>
         {t('explore_toolkit_description')}

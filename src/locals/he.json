@@ -120,7 +120,10 @@
   "how_it_works_feature_point_2": "שמרו על אמון המשתמשים עם קישורים פועלים",
   "how_it_works_feature_point_3": "שמרו על סטנדרטים מקצועיים במאגר",
   "scanner_page": {
-    "title": "סורק קישורים",
+    "title": {
+      "prefix": "סורק ",
+      "highlight": "קישורים"
+    },
     "description": "בדקו URL בודד או סרקו מאגרים שלמים עבור קישורים שבורים במהירות ",
     "scan_links_card": {
       "title": "סריקת קישורים",

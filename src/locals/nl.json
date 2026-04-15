@@ -120,7 +120,10 @@
   "how_it_works_feature_point_2": "Behoud het vertrouwen van gebruikers met werkende referenties",
   "how_it_works_feature_point_3": "Behoud professionele repository-standaarden",
   "scanner_page": {
-    "title": "Link Scanner",
+    "title": {
+      "prefix": "Link ",
+      "highlight": "Scanner"
+    },
     "description": "Test individuele URL's of scan hele repositories met lichtsnelheid",
     "scan_links_card": {
       "title": "Links scannen",
