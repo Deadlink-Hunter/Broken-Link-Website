@@ -10,6 +10,7 @@ export const SUPPORTED_LANGUAGES = [
   { value: 'it', label: 'Italiana' },
   { value: 'nl', label: 'Nederlands' },
   { value: 'tur', label: 'Türkçe' },
+  { value: 'ptbr', label: 'Português' },
 ];
 
 export const DEFAULT_LANGUAGE_LABEL = 'English';
