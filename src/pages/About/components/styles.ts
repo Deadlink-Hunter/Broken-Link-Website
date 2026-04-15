@@ -48,31 +48,31 @@ export const featureCardStyles: CSSProperties = {
 };
 
 export const missionCardStyles = (isDark: boolean): CSSProperties => ({
-  backgroundColor: isDark ? colors.primary[8] : colors.gray[1], 
-  border: `1px solid ${isDark ? colors.primary[9] : colors.gray[3]}`, 
+  backgroundColor: isDark ? colors.primary[8] : colors.gray[1],
+  border: `1px solid ${isDark ? colors.primary[9] : colors.gray[3]}`,
   padding: '3rem 2.5rem',
   display: 'flex',
   flexDirection: 'column',
   textAlign: 'center',
   gap: '1rem',
   width: '100%',
-  maxWidth: ABOUT_CARD_MAX_WIDTH, 
-  borderRadius: '1.25rem', 
-  margin: '2rem auto', 
+  maxWidth: ABOUT_CARD_MAX_WIDTH,
+  borderRadius: '1.25rem',
+  margin: '2rem auto',
   boxSizing: 'border-box',
 });
 
 const getMediumTextColor = (isDark: boolean) => (isDark ? theme.white : colors.gray[7]);
 
 export const missionTitleStyle = (isDark: boolean): CSSProperties => ({
-  color: getMediumTextColor(isDark), 
+  color: getMediumTextColor(isDark),
   fontSize: '1.5rem',
-  fontWeight: 400, 
+  fontWeight: 400,
   marginBottom: '0.5rem',
 });
 
 export const missionDescriptionStyle = (isDark: boolean): CSSProperties => ({
-  color: getMediumTextColor(isDark), 
+  color: getMediumTextColor(isDark),
   fontSize: '1rem',
   lineHeight: 1.6,
 });
