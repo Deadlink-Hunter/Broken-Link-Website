@@ -18,10 +18,9 @@ export const CommunitySection = () => {
       <ColoredTitle
         variant='title'
         style={communitySectionStyle.mainTitle}
-        text={`${t('about_page.community.title_part1')}${t('about_page.community.title_gradient')}${t('about_page.community.title_part2')}`}
+        text={`${t('about_page.community.title_part1')}${t('about_page.community.title_gradient')}`}
         highlight={t('about_page.community.title_gradient')}
         beforeStyle={titleColor}
-        afterStyle={titleColor}
       />
       <Typography style={aboutPageStyle.text(isDark)}>
         {t('about_page.community.subtitle')}
