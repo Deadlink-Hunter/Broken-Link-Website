@@ -22,7 +22,6 @@ export const CommunitySection = () => {
         highlight={t('about_page.community.title_gradient')}
         beforeStyle={titleColor}
       />
-
       <Typography style={aboutPageStyle.text(isDark)}>
         {t('about_page.community.subtitle')}
       </Typography>

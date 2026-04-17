@@ -98,6 +98,10 @@ export const aboutPageStyle = {
     display: 'inline-block',
   } satisfies CSSProperties,
 
+  brandStyle: {
+    ...sharedStyles.gradientText,
+  } satisfies CSSProperties,
+
   whiteText: {
     color: theme.white,
   } satisfies CSSProperties,
