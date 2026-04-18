@@ -1,8 +1,9 @@
 import { CSSProperties } from 'react';
+import { rgba } from '@mantine/core';
 import { theme } from '@/theme';
 
 const colors = theme.colors;
-const getTextColor = (isDark: boolean) => (isDark ? theme.white : colors.gray[7]);
+const getTextColor = (isDark: boolean) => (isDark ? theme.white : theme.black);
 
 const flexColumnCenter: CSSProperties = {
   display: 'flex',
@@ -77,8 +78,8 @@ export const scanPageStyle = {
     flexDirection: 'column',
     gap: theme.spacing.md,
     width: '100%',
-    backgroundColor: colors.primary[6],
-    borderColor: colors.primary[5],
+    backgroundColor: rgba(colors.primary[6], 0.5),
+    border: `1px solid ${rgba(colors.primary[2], 0.15)}`,
     borderRadius: theme.radius.lg,
     boxShadow: 'none',
   } satisfies CSSProperties,
@@ -96,41 +97,16 @@ export const scanPageStyle = {
     marginBottom: theme.spacing.sm,
   } satisfies CSSProperties,
 
-  cardTitle: (isDark: boolean): CSSProperties => ({
-    color: getTextColor(isDark),
+  cardTitle: {
+    color: theme.white,
     fontSize: theme.fontSizes['2xl'],
     fontWeight: 'bold',
     paddingBlock: theme.spacing.sm,
-  }),
-
-  segmentedControl: {
-    borderRadius: theme.radius.md,
-    root: {
-      backgroundColor: colors.primary[7],
-    },
-    label: {
-      color: colors.gray[4],
-    },
-    indicator: {
-      backgroundColor: colors.primary[5],
-    },
-  },
-
-  textInput: {
-    input: {
-      fontSize: theme.fontSizes.md,
-      backgroundColor: colors.primary[7],
-      borderColor: colors.primary[5],
-      color: colors.gray[0],
-      '&::placeholder': {
-        color: colors.gray[4],
-      },
-    },
-  },
+  } satisfies CSSProperties,
 
   scanSubmitButtonIcon: {
     marginRight: '10px',
-  },
+  } satisfies CSSProperties,
 
   alertIcon: {
     width: '24px',
@@ -138,11 +114,11 @@ export const scanPageStyle = {
     color: colors.yellow[5],
   } satisfies CSSProperties,
 
-  fieldLabel: {
-    color: colors.gray[0],
+  fieldLabel: (isDark: boolean): CSSProperties => ({
+    color: isDark ? colors.gray[0] : rgba(theme.white, 0.72),
     fontSize: theme.fontSizes.sm,
     width: '500px',
-  } satisfies CSSProperties,
+  }),
 
   scanSubmitButton: {
     height: '50px',
@@ -158,7 +134,7 @@ export const scanPageStyle = {
   } satisfies CSSProperties,
 
   resultDescription: {
-    color: colors.gray[6],
+    color: rgba(theme.white, 0.72),
     maxWidth: '300px',
     width: '100%',
     textAlign: 'center',
@@ -173,12 +149,12 @@ export const scanPageStyle = {
     gap: theme.spacing.md,
   } satisfies CSSProperties,
 
-  emptyStateIcon: {
+  emptyStateIcon: (isDark: boolean): CSSProperties => ({
     width: '80px',
     height: '80px',
     opacity: 0.2,
-    color: 'white',
-  } satisfies CSSProperties,
+    color: getTextColor(isDark),
+  }),
 
   errorIcon: {
     width: '5rem',
@@ -202,11 +178,10 @@ export const scanPageStyle = {
     maxWidth: '100%',
   } satisfies CSSProperties,
 
-  statusIcon: (isBroken: boolean) =>
-    ({
-      color: isBroken ? colors.error[5] : colors.success[5],
-      flexShrink: 0,
-    }) satisfies CSSProperties,
+  statusIcon: (isBroken: boolean): CSSProperties => ({
+    color: isBroken ? colors.error[5] : colors.success[5],
+    flexShrink: 0,
+  }),
 
   resultsColumn: {
     display: 'flex',
@@ -236,39 +211,45 @@ export const scanPageStyle = {
     gap: theme.spacing.xs,
   } satisfies CSSProperties,
 
-  textInputStyle: {
+  textInputStyle: (isDark: boolean): CSSProperties => ({
     ...baseInputStyle,
-  } satisfies CSSProperties,
+    color: isDark ? colors.gray[0] : colors.gray[7],
+    backgroundColor: isDark ? colors.primary[7] : colors.primary[1],
+    border: `1px solid ${isDark ? colors.primary[5] : colors.primary[3]}`,
+  }),
 
-  textareaStyle: {
+  textareaStyle: (isDark: boolean): CSSProperties => ({
     ...baseInputStyle,
     resize: 'vertical',
     minHeight: '100px',
-  } satisfies CSSProperties,
+    color: isDark ? colors.gray[0] : colors.gray[7],
+    backgroundColor: isDark ? colors.primary[7] : colors.primary[1],
+    border: `1px solid ${isDark ? colors.primary[5] : colors.primary[3]}`,
+  }),
 
-  segmentedWrapper: {
+  segmentedWrapper: (isDark: boolean): CSSProperties => ({
     display: 'flex',
-    backgroundColor: colors.primary[7],
+    backgroundColor: isDark ? colors.primary[7] : colors.primary[1],
     padding: '4px',
     borderRadius: theme.radius.md,
-  } satisfies CSSProperties,
+  }),
 
-  activeTab: {
+  activeTab: (isDark: boolean): CSSProperties => ({
     flex: 1,
-    backgroundColor: colors.primary[5],
-    color: 'white',
+    backgroundColor: isDark ? colors.primary[5] : colors.primary[2],
+    color: isDark ? colors.gray[0] : colors.gray[8],
     border: 'none',
     borderRadius: theme.radius.sm,
     padding: '8px',
     cursor: 'pointer',
-  } satisfies CSSProperties,
+  }),
 
-  passiveTab: {
+  passiveTab: (isDark: boolean): CSSProperties => ({
     flex: 1,
     backgroundColor: 'transparent',
-    color: colors.gray[4],
+    color: isDark ? colors.gray[4] : colors.gray[6],
     border: 'none',
     padding: '8px',
     cursor: 'pointer',
-  } satisfies CSSProperties,
+  }),
 };
