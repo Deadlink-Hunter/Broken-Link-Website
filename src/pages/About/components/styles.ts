@@ -4,8 +4,6 @@ import { sharedStyles, theme } from '@/theme';
 
 const colors = theme.colors;
 
-export const ABOUT_CARD_MAX_WIDTH = '65.625rem';
-
 export const pageWrapperStyle: CSSProperties = {
   width: '100%',
   maxWidth: '80rem',
@@ -18,11 +16,16 @@ export const pageWrapperStyle: CSSProperties = {
   margin: '0 auto',
 };
 
-export const centerGrid = {
+export const centerGrid: CSSProperties = {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
   marginBottom: theme.spacing['2xl'],
+};
+
+export const missionSectionStyle: CSSProperties = {
+  ...centerGrid,
+  width: '100%',
 };
 
 export const smallContainerStyle = {
@@ -56,7 +59,7 @@ export const missionCardStyles = (isDark: boolean): CSSProperties => ({
   textAlign: 'center',
   gap: '1rem',
   width: '100%',
-  maxWidth: ABOUT_CARD_MAX_WIDTH,
+  maxWidth: '65.625rem',
   borderRadius: '1.25rem',
   margin: '2rem auto',
   boxSizing: 'border-box',
@@ -120,11 +123,10 @@ export const aboutPageStyle = {
     color: 'var(--mantine-color-black)',
   } satisfies CSSProperties,
 
-  text: (isDark: boolean): CSSProperties => ({
-    color: isDark ? theme.white : theme.colors.gray[7],
+  text: {
     paddingBlock: theme.spacing.lg,
     fontSize: '1.1rem',
     textAlign: 'center',
     maxWidth: '700px',
-  }),
+  } satisfies CSSProperties,
 };

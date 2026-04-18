@@ -12,9 +12,9 @@ export const HowItWorkTitles = () => {
         text={`${t('how_it_works_title_part1')}${t('how_it_works_title_highlight')}${t('how_it_works_title_part2')}`}
         highlight={t('how_it_works_title_highlight')}
         variant='h1'
-        style={howItWorksStyles.title}
+        style={{ ...howItWorksStyles.title, color: undefined }}
       />
-      <Typography variant='body' style={howItWorksStyles.description}>
+      <Typography variant='body' style={{ ...howItWorksStyles.description, color: undefined }}>
         {t('how_it_works_subtitle')}
       </Typography>
     </>

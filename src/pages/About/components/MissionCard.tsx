@@ -1,5 +1,4 @@
 import { useIsDark } from '@/components/Hooks/useIsDark';
-import { Card } from '@/components/UI/Card/Card';
 import { Typography } from '@/components/UI/Typography/Typography';
 import { missionCardStyles, missionDescriptionStyle, missionTitleStyle } from './styles';
 
@@ -12,9 +11,14 @@ export const MissionCard = ({ title, description }: MissionCardProps) => {
   const isDark = useIsDark();
 
   return (
-    <Card style={missionCardStyles(isDark)}>
-      <Typography style={missionTitleStyle(isDark)}>{title}</Typography>
-      <Typography style={missionDescriptionStyle(isDark)}>{description}</Typography>
-    </Card>
+    <div style={missionCardStyles(isDark)}>
+      <Typography variant="title" style={{ ...missionTitleStyle(isDark), color: undefined }}>
+        {title}
+      </Typography>
+      
+      <Typography variant="primary" style={{ ...missionDescriptionStyle(isDark), color: undefined }}>
+        {description}
+      </Typography>
+    </div>
   );
 };

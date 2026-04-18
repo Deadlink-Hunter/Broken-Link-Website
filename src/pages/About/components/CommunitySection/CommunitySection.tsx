@@ -23,7 +23,7 @@ export const CommunitySection = () => {
         beforeStyle={titleColor}
       />
 
-      <Typography style={aboutPageStyle.text(isDark)}>
+      <Typography variant="primary" style={aboutPageStyle.text}>
         {t('about_page.community.subtitle')}
       </Typography>
 

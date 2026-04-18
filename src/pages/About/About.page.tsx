@@ -3,7 +3,7 @@ import { AboutTitle } from './components/AboutTitle';
 import { CommunitySection } from './components/CommunitySection/CommunitySection';
 import { FeaturesCards } from './components/FeaturesCards';
 import { MissionCard } from './components/MissionCard';
-import { centerGrid, pageWrapperStyle } from './components/styles';
+import { centerGrid, missionSectionStyle, pageWrapperStyle } from './components/styles';
 
 const AboutPage = () => {
   const { t } = useTranslation();
@@ -16,7 +16,7 @@ const AboutPage = () => {
         <FeaturesCards />
       </section>
 
-      <section style={{ ...centerGrid, width: '100%' }}>
+      <section style={missionSectionStyle}>
         <MissionCard
           title={t('about_page.mission.title')}
           description={t('about_page.mission.description')}

@@ -17,7 +17,9 @@ export const FeatureCard = ({ title, description, icon }: FeatureCardProps) => {
       <Typography variant='title' style={titleStyle}>
         {title}
       </Typography>
-      <Typography style={paragraphStyle}>{description}</Typography>
+      <Typography variant='secondary' style={paragraphStyle}>
+        {description}
+      </Typography>
     </Card>
   );
 };
