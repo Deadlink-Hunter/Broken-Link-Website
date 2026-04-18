@@ -72,7 +72,7 @@
     "husky": "^9.1.7",
     "identity-obj-proxy": "^3.0.0",
     "jsdom": "^26.1.0",
-    "postcss": "^8.5.9",
+    "postcss": "^8.5.10",
     "postcss-preset-mantine": "1.18.0",
     "postcss-simple-vars": "^7.0.1",
     "prettier": "^3.8.2",
