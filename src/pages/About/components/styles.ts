@@ -59,11 +59,11 @@ export const missionCardStyles: CSSProperties = {
 };
 
 export const titleStyle = {
-  color: colors.primary[1],
+  color: colors.primary[5],
 };
 
 export const paragraphStyle = {
-  color: colors.primary[2],
+  color: colors.primary[4],
   gridColumnStart: 2,
 };
 
@@ -96,6 +96,10 @@ export const aboutPageStyle = {
   titleStyle: {
     ...sharedStyles.sectionTitle,
     display: 'inline-block',
+  } satisfies CSSProperties,
+
+  brandStyle: {
+    ...sharedStyles.gradientText,
   } satisfies CSSProperties,
 
   whiteText: {
