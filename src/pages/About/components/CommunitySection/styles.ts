@@ -51,7 +51,7 @@ export const communitySectionStyle = {
   } satisfies CSSProperties,
 
   cardParagraph: {
-    color: colors.primary[2],
+    color: colors.primary[4],
     fontSize: '1.05rem',
     lineHeight: 1.7,
   } satisfies CSSProperties,
@@ -72,7 +72,7 @@ export const communitySectionStyle = {
   } satisfies CSSProperties,
 
   techLabel: {
-    color: colors.primary[3],
+    color: colors.primary[4],
     fontSize: '0.875rem',
   } satisfies CSSProperties,
 
