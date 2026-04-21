@@ -4,82 +4,119 @@
   justify-content: center;
   align-items: center;
   gap: var(--mantine-spacing-xl);
-  margin-top: var(--mantine-spacing-md);
+  margin-top: var(--mantine-spacing-xl);
+  width: 100%;
 }
 
 .startButton,
 .githubButton {
+  display: flex;
+  justify-content: center;
   align-items: center;
   border: none;
-  font-weight: 600;
-  font-size: var(--mantine-font-size-md);
-  width: 13.75rem;
-  height: 2.5rem;
-  padding: var(--mantine-spacing-md) var(--mantine-spacing-lg);
-  border-radius: 0.75rem;
+  font-family: "Share Tech Mono", monospace !important;
+  font-weight: bold !important;
+  font-size: var(--mantine-font-size-lg) !important;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  width: 250px;
+  height: 60px;
+  border-radius: 0px !important;
+  cursor: pointer;
+  transition: all 0.1s ease;
 }
 
 .startButton {
-  background: linear-gradient(90deg, var(--mantine-color-cyan-4) 0%, var(--mantine-color-purple-5) 100%);
-  background-color: transparent;
-  color: var(--mantine-color-white);
-  box-shadow: 0 var(--mantine-spacing-sm)
-                var(--mantine-spacing-lg) 
-                color-mix(in srgb, var(--mantine-color-cyan-4) 30%, transparent);
+  background-color: var(--mantine-color-orange-6) !important;
+  color: var(--mantine-color-dark-9) !important;
+  border: 2px solid var(--mantine-color-orange-6) !important;
+  box-shadow: 6px 6px 0px var(--mantine-color-dark-4) !important;
+}
+
+[data-mantine-color-scheme='light'] .startButton {
+  box-shadow: 6px 6px 0px var(--mantine-color-dark-2) !important;
 }
 
 .startButton:hover {
-  background: linear-gradient(90deg, var(--mantine-color-cyan-5) 0%, var(--mantine-color-purple-7) 100%);
+  background-color: var(--mantine-color-orange-5) !important;
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0px var(--mantine-color-dark-4) !important;
+}
+
+[data-mantine-color-scheme='light'] .startButton:hover {
+  box-shadow: 8px 8px 0px var(--mantine-color-dark-2) !important;
+}
+
+.startButton:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0px var(--mantine-color-dark-4) !important;
+}
+
+[data-mantine-color-scheme='light'] .startButton:active {
+  box-shadow: 0px 0px 0px var(--mantine-color-dark-2) !important;
+}
+
+.githubButton {
+  background-color: var(--mantine-color-dark-8) !important;
+  color: var(--mantine-color-white) !important;
+  border: 2px solid var(--mantine-color-dark-4) !important;
+  box-shadow: 6px 6px 0px var(--mantine-color-dark-9) !important;
+}
+
+[data-mantine-color-scheme='light'] .githubButton {
+  background-color: var(--mantine-color-white) !important;
+  color: var(--mantine-color-dark-9) !important;
+  border: 2px solid var(--mantine-color-dark-2) !important;
+  box-shadow: 6px 6px 0px var(--mantine-color-dark-2) !important;
+}
+
+.githubButton:hover {
+  background-color: var(--mantine-color-dark-7) !important;
+  border-color: var(--mantine-color-white) !important;
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0px var(--mantine-color-dark-9) !important;
+}
+
+[data-mantine-color-scheme='light'] .githubButton:hover {
+  background-color: var(--mantine-color-dark-0) !important;
+  border-color: var(--mantine-color-dark-9) !important;
+  box-shadow: 8px 8px 0px var(--mantine-color-dark-2) !important;
+}
+
+.githubButton:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0px var(--mantine-color-dark-9) !important;
+}
+
+[data-mantine-color-scheme='light'] .githubButton:active {
+  box-shadow: 0px 0px 0px var(--mantine-color-dark-2) !important;
 }
 
 .githubButton a {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--mantine-spacing-sm);
-  color: var(--mantine-color-black); 
+  gap: var(--mantine-spacing-md);
+  color: inherit;
   text-decoration: none;
-  
-}
-
-.githubButton {
-  background: var(--mantine-color-white);
-  color: var(--mantine-color-primary-7);
-  text-decoration: none;
-  box-shadow: 0 var(--mantine-spacing-sm)
-                var(--mantine-spacing-lg) 
-                color-mix(in srgb, var(--mantine-color-primary-8) 20%, transparent);
-}
-
-.githubButton:hover {
-  background: var(--mantine-color-primary-7);
-  color: var(--mantine-color-white);
-}
-
-.githubButton:hover a {
-  color: var(--mantine-color-white);
+  width: 100%;
+  height: 100%;
 }
 
 .buttonIcon {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 @media (max-width: 64em) {
   .buttons {
     flex-direction: column;
     gap: var(--mantine-spacing-lg);
-    margin-top: var(--mantine-spacing-lg);
-    margin-bottom: var(--mantine-spacing-md);
   }
 
   .startButton,
   .githubButton {
-    font-size: var(--mantine-font-size-lg);
-  }
-
-  .githubButton {
-    margin-bottom: var(--mantine-spacing-xl);
+    width: 100%;
+    max-width: 300px;
   }
 }
-
