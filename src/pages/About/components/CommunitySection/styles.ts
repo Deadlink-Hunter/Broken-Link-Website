@@ -67,7 +67,7 @@ export const communitySectionStyle = {
   } satisfies CSSProperties,
 
   techLabel: {
-    color: colors.primary[3],
+    color: colors.primary[4],
     fontSize: '0.875rem',
   } satisfies CSSProperties,
 
