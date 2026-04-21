@@ -7,7 +7,7 @@ const getTextColor = (isDark: boolean) => (isDark ? theme.colors.primary[1] : co
 
 export const pageWrapperStyle: CSSProperties = {
   width: '100%',
-  maxWidth: '80rem',
+  maxWidth: '85rem',
   minHeight: '100vh',
   display: 'flex',
   flexDirection: 'column',
@@ -26,16 +26,18 @@ export const centerGrid = {
 
 export const smallContainerStyle = {
   display: 'grid',
-  maxWidth: 'max-content',
+  width: '100%',
   gap: theme.spacing.lg,
   gridTemplateColumns: '1fr',
 };
 
 export const bigContainerStyle = {
   display: 'grid',
-  maxWidth: 'max-content',
+  width: '100%',
+  justifyItems: 'stretch',
+  alignItems: 'stretch',
   gap: theme.spacing.xl,
-  gridTemplateColumns: '2fr 2fr',
+  gridTemplateColumns: 'repeat(2, 1fr)',
 };
 
 export const featureCardStyles = {
@@ -43,22 +45,26 @@ export const featureCardStyles = {
   border: `1px solid ${rgba(colors.primary[2], 0.15)}`,
   borderRadius: '24px',
   padding: theme.spacing.xl,
-  width: '640px',
+  width: '100%',
   display: 'grid',
-  gridTemplateColumns: 'auto auto',
+  gridTemplateColumns: 'auto 1fr',
   alignItems: 'start',
   gap: theme.spacing.lg,
+  height: '100%',
+  minHeight: '180px',
 };
 
 export const missionCardStyles: CSSProperties = {
   backgroundColor: colors.primary[8],
   border: `1px solid ${colors.primary[9]}`,
   borderRadius: '24px',
-  height: '241px',
-  width: '1312px',
+  minHeight: '241px',
+  width: '100%',
   display: 'flex',
   flexDirection: 'column',
-  justifyContent: 'space-evenly',
+  justifyContent: 'center',
+  gap: theme.spacing.lg,
+  padding: theme.spacing.xl,
   textAlign: 'center',
 };
 
@@ -66,7 +72,7 @@ export const titleStyle = {
   color: 'white',
   fontWeight: 700,
   fontSize: theme.fontSizes.xl,
-  gridColumnStart: 2, // to start in the same line
+  gridColumnStart: 2,
 };
 export const LargeTitleStyle = {
   ...titleStyle,

@@ -33,12 +33,12 @@ export const desktopStyles = {
     borderRadius: theme.radius.sm,
     gap: theme.spacing.sm,
     backgroundColor: theme.colors.primary[0],
-    color: theme.colors.primary[2],
+    color: theme.colors.primary[1],
     fontWeight: 400,
   },
-  buttonIcon: { marginRight: theme.spacing.lg },
+  buttonIcon: { marginRight: theme.spacing.md },
   divider: { transform: 'scaleY(.1)' },
-  buttonContainers: { display: 'flex', gap: '1.2rem', alignItems: 'center' },
+  buttonContainers: { display: 'flex', gap: theme.spacing.lg, alignItems: 'center' },
 };
 
 export const mobileStyles = {

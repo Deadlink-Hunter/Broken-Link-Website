@@ -41,8 +41,8 @@ export default function DesktopNav() {
           target={LinkTarget.Blank}
           style={styles.button}
         >
-          <IconBrandGithub size={18} color='currentColor' style={{ marginRight: 7 }} />
-          <span>GitHub</span>
+          <IconBrandGithub size={18} color='currentColor' style={styles.buttonIcon} />
+          <span>{t('navbar.github')}</span>
         </LinkButton>
       </div>
     </nav>
