@@ -14,7 +14,7 @@ export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <DirectionProvider detectDirection>
-        <MantineProvider theme={theme}>
+        <MantineProvider theme={theme} defaultColorScheme='dark'>
           <Router />
         </MantineProvider>
       </DirectionProvider>
