@@ -16,7 +16,7 @@ export const typographyVariants: Record<string, TypographyVariant> = {
   title: { color: colors.primary[1], size: CUSTOM_SIZES.EXTRA_LARGE },
   subtitle: { color: colors.primary[6], size: CUSTOM_SIZES.LARGE },
   white: { color: theme.white },
-  black: { color: 'var(--mantine-color-black)' },
+  black: { color: theme.black },
 };
 
 export const getTypographyAutoColor = (
@@ -28,20 +28,20 @@ export const getTypographyAutoColor = (
   if (isDark) {
     const darkModeMapping: Record<string, string> = {
       title: themeContext.white,
-      primary: themeContext.colors.gray[0], 
-      secondary: themeContext.colors.gray[3], 
+      primary: themeContext.colors.gray[0],
+      secondary: themeContext.colors.gray[3],
       tertiary: themeContext.colors.gray[4],
     };
     return darkModeMapping[variant] || defaultVariantColor;
   }
 
   const lightModeMapping: Record<string, string> = {
-  title: themeContext.colors.primary[9], // Deep dark blue
-  primary: '#1A1A1A', // Almost pure black for best readability
-  body: '#1A1A1A',
-  secondary: '#2C2E33', // Dark gray
-  tertiary: '#1A1A1A',
-};
+    title: themeContext.colors.primary[9],
+    primary: themeContext.colors.primary[9],
+    body: themeContext.colors.gray[8],
+    secondary: themeContext.colors.gray[8],
+    tertiary: themeContext.colors.gray[8],
+  };
 
   return lightModeMapping[variant] || defaultVariantColor;
 };

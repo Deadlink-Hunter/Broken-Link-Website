@@ -12,11 +12,14 @@ export const MissionCard = ({ title, description }: MissionCardProps) => {
 
   return (
     <div style={missionCardStyles(isDark)}>
-      <Typography variant="title" style={{ ...missionTitleStyle(isDark), color: undefined }}>
+      <Typography variant='title' style={{ ...missionTitleStyle(isDark), color: undefined }}>
         {title}
       </Typography>
-      
-      <Typography variant="primary" style={{ ...missionDescriptionStyle(isDark), color: undefined }}>
+
+      <Typography
+        variant='primary'
+        style={{ ...missionDescriptionStyle(isDark), color: undefined }}
+      >
         {description}
       </Typography>
     </div>
