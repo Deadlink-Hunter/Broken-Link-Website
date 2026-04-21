@@ -15,6 +15,7 @@ export const CommunitySection = () => {
 
   return (
     <section style={communitySectionStyle.container}>
+      <Typography style={communitySectionStyle.badge}>⭐ 80+ GitHub Stars</Typography>
       <ColoredTitle
         variant='title'
         style={communitySectionStyle.mainTitle}

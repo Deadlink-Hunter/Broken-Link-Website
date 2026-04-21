@@ -6,6 +6,14 @@ import { aboutPageStyle } from '../styles';
 const colors = theme.colors;
 
 export const communitySectionStyle = {
+  badge: {
+    color: theme.colors.warning[3],
+    backgroundColor: rgba(theme.colors.error[4], 0.1),
+    border: `1px solid ${rgba(colors.warning[3], 0.3)}`,
+    borderRadius: '20px',
+    padding: theme.spacing.md,
+    fontSize: theme.fontSizes.sm,
+  },
   container: {
     display: 'flex',
     flexDirection: 'column',
