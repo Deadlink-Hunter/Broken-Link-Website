@@ -1,12 +1,9 @@
 import { CSSProperties } from 'react';
-import { theme } from '@/theme';
-
-const colors = theme.colors;
 
 export const coloredTitleStyles = {
   highlight: {
-    backgroundImage: `linear-gradient(90deg, ${colors.cyan[4]}, ${colors.purple[5]})`,
-    WebkitBackgroundClip: 'text',
-    WebkitTextFillColor: 'transparent',
+    color: 'light-dark(var(--mantine-color-orange-6), var(--mantine-color-orange-5))',
+    textShadow: '4px 4px 0px light-dark(var(--mantine-color-dark-2), var(--mantine-color-dark-4))',
+    display: 'inline-block',
   } satisfies CSSProperties,
 };
