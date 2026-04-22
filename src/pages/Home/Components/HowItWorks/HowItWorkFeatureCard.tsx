@@ -34,7 +34,7 @@ export const HowItWorkFeatureCard = () => {
             </Typography>
           </div>
 
-          <Typography variant='description' style={howItWorksStyles.featureDescriptionText}>
+          <Typography variant='primary' style={howItWorksStyles.featureDescriptionText}>
             {t('how_it_works_feature_description')}
           </Typography>
 
@@ -42,7 +42,7 @@ export const HowItWorkFeatureCard = () => {
             {featurePoints.map((point, index) => (
               <li key={index} style={howItWorksStyles.featureListItem}>
                 <div style={point.dotStyle} />
-                <Typography variant='body' style={howItWorksStyles.featureListText}>
+                <Typography variant='primary' style={howItWorksStyles.featureListText}>
                   {point.text}
                 </Typography>
               </li>
