@@ -3,7 +3,6 @@ import { rgba } from '@mantine/core';
 import { sharedStyles, theme } from '@/theme';
 
 const colors = theme.colors;
-const getTextColor = (isDark: boolean) => (isDark ? theme.white : colors.gray[7]);
 
 export const pageWrapperStyle: CSSProperties = {
   width: '100%',
@@ -17,11 +16,16 @@ export const pageWrapperStyle: CSSProperties = {
   margin: '0 auto',
 };
 
-export const centerGrid = {
+export const centerGrid: CSSProperties = {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
   marginBottom: theme.spacing['2xl'],
+};
+
+export const missionSectionStyle: CSSProperties = {
+  ...centerGrid,
+  width: '100%',
 };
 
 export const smallContainerStyle = {
@@ -38,32 +42,50 @@ export const bigContainerStyle = {
   gridTemplateColumns: '1fr 1fr',
 };
 
-export const featureCardStyles = {
-  backgroundColor: colors.primary[8],
-  border: `1px solid ${rgba(colors.primary[2], 0.15)}`,
+export const featureCardStyles: CSSProperties = {
   padding: theme.spacing.lg,
-  borderRadius: '0.5rem',
   display: 'grid',
   gridTemplateColumns: 'auto auto',
   gap: theme.spacing.lg,
+  width: '100%',
 };
 
-export const missionCardStyles: CSSProperties = {
-  backgroundColor: colors.primary[8],
-  border: `1px solid ${colors.primary[9]}`,
-  padding: theme.spacing.xl,
+export const missionCardStyles = (isDark: boolean): CSSProperties => ({
+  backgroundColor: isDark ? colors.primary[8] : colors.gray[1],
+  border: `1px solid ${isDark ? colors.primary[9] : colors.gray[3]}`,
+  padding: '3rem 2.5rem',
   display: 'flex',
   flexDirection: 'column',
   textAlign: 'center',
-  gap: theme.spacing.lg,
-};
+  gap: '1rem',
+  width: '100%',
+  maxWidth: '65.625rem',
+  borderRadius: '1.25rem',
+  margin: '2rem auto',
+  boxSizing: 'border-box',
+});
+
+const getMediumTextColor = (isDark: boolean) => (isDark ? theme.white : colors.gray[7]);
+
+export const missionTitleStyle = (isDark: boolean): CSSProperties => ({
+  color: getMediumTextColor(isDark),
+  fontSize: '1.5rem',
+  fontWeight: 400,
+  marginBottom: '0.5rem',
+});
+
+export const missionDescriptionStyle = (isDark: boolean): CSSProperties => ({
+  color: getMediumTextColor(isDark),
+  fontSize: '1rem',
+  lineHeight: 1.6,
+});
 
 export const titleStyle = {
-  color: colors.primary[5],
+  fontSize: '1.25rem',
+  fontWeight: 600,
 };
 
 export const paragraphStyle = {
-  color: colors.primary[4],
   gridColumnStart: 2,
 };
 
@@ -75,12 +97,7 @@ export const iconStyle = {
   display: 'inline-flex',
   alignItems: 'center',
   justifyContent: 'center',
-
-  background: `linear-gradient(
-      135deg,
-      ${rgba(colors.cyan[4], 0.25)},
-      ${rgba(colors.purple[5], 0.25)}
-    )`,
+  background: `linear-gradient(135deg, ${rgba(colors.cyan[4], 0.25)}, ${rgba(colors.purple[5], 0.25)})`,
   color: colors.cyan[4],
 };
 
@@ -110,11 +127,10 @@ export const aboutPageStyle = {
     color: 'var(--mantine-color-black)',
   } satisfies CSSProperties,
 
-  text: (isDark: boolean): CSSProperties => ({
-    color: getTextColor(isDark),
+  text: {
     paddingBlock: theme.spacing.lg,
     fontSize: '1.1rem',
     textAlign: 'center',
     maxWidth: '700px',
-  }),
+  } satisfies CSSProperties,
 };

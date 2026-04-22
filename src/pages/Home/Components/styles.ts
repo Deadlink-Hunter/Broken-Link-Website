@@ -13,7 +13,6 @@ export const exploreToolkitStyles = {
 
   title: {
     ...sharedStyles.sectionTitle,
-    color: `light-dark(${theme.black}, ${theme.white})`,
     marginBottom: theme.spacing.xl,
   } satisfies CSSProperties,
 

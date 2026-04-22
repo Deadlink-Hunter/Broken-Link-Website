@@ -239,6 +239,8 @@ export const howItWorksStyles = {
     letterSpacing: '1px',
     lineHeight: 1.2,
     color: 'light-dark(var(--mantine-color-dark-9), var(--mantine-color-white))',
+    overflowWrap: 'break-word',
+    wordWrap: 'break-word',
   } satisfies CSSProperties,
 
   featureTitleGradient: {
