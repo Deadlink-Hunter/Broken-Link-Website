@@ -1,24 +1,23 @@
 import { Card } from '@/components/UI/Card/Card';
 import { Typography } from '@/components/UI/Typography/Typography';
 import { Icon } from './Icon';
+import { IconType } from './IconTypes';
 import { featureCardStyles, paragraphStyle, titleStyle } from './styles';
 
-export const FeatureCard = ({
-  icon,
-  title,
-  description,
-}: {
-  icon: string;
+interface FeatureCardProps {
   title: string;
   description: string;
-}) => {
+  icon: IconType;
+}
+
+export const FeatureCard = ({ title, description, icon }: FeatureCardProps) => {
   return (
     <Card style={featureCardStyles}>
       <Icon icon={icon} />
       <Typography variant='title' style={titleStyle}>
         {title}
       </Typography>
-      <Typography variant='primary' style={paragraphStyle}>
+      <Typography variant='secondary' style={paragraphStyle}>
         {description}
       </Typography>
     </Card>
