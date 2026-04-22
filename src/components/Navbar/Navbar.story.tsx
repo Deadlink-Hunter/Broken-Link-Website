@@ -27,15 +27,12 @@ const meta: Meta<typeof Navbar> = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Desktop: Story = {
-  parameters: {
-    viewport: {
-      defaultViewport: 'responsive',
-    },
-  },
-};
+export const Desktop: Story = {};
 
 export const Mobile: Story = {
+  args: {
+    variant: 'mobile',
+  },
   parameters: {
     viewport: {
       defaultViewport: 'mobile1',
