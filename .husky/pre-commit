@@ -10,6 +10,6 @@ run_command() {
 }
 
 pnpm run prettier:write  
-run_command "pnpm run eslint"
+run_command "HUSKY_I18N=1 pnpm run eslint"
 
 echo "Pre-commit passed!"
