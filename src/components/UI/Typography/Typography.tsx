@@ -31,7 +31,7 @@ export const Typography = ({
   const isDark = useIsDark();
   const variantStyle = typographyVariants[variant] ?? {};
 
-  const autoColor = getTypographyAutoColor(variant as string, isDark, theme, variantStyle.color);
+  const autoColor = getTypographyAutoColor(variant, isDark, theme, variantStyle.color);
 
   const finalColor = color || style?.color || autoColor;
   const resolvedSize = variantStyle.size ?? size;

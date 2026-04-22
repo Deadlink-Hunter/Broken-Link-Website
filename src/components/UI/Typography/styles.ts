@@ -23,7 +23,7 @@ export const getTypographyAutoColor = (
   variant: string,
   isDark: boolean,
   themeContext: MantineTheme,
-  defaultVariantColor: string | undefined
+  defaultVariantColor: string
 ) => {
   if (isDark) {
     const darkModeMapping: Record<string, string> = {
