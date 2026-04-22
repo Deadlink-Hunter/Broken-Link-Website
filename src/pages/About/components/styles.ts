@@ -51,7 +51,7 @@ export const featureCardStyles = {
   alignItems: 'start',
   gap: theme.spacing.lg,
   height: '100%',
-  minHeight: '180px',
+
 };
 
 export const missionCardStyles: CSSProperties = {

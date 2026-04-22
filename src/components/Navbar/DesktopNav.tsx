@@ -39,10 +39,9 @@ export default function DesktopNav() {
         <LinkButton
           href={externalLinks.GITHUB.REPO}
           target={LinkTarget.Blank}
-          style={styles.button}
+          style={styles.buttonIcon}
         >
-          <IconBrandGithub size={18} color='currentColor' style={styles.buttonIcon} />
-          <span>{t('navbar.github')}</span>
+          <IconBrandGithub width={30} size={18}  />
         </LinkButton>
       </div>
     </nav>

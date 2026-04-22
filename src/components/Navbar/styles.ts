@@ -1,5 +1,6 @@
 import { theme } from '@/theme';
 
+
 export const desktopStyles = {
   container: {
     width: '100%',
@@ -32,11 +33,12 @@ export const desktopStyles = {
     height: '30px',
     borderRadius: theme.radius.sm,
     gap: theme.spacing.sm,
-    backgroundColor: theme.colors.primary[0],
+    backgroundColor: 'transparent',
     color: theme.colors.primary[1],
     fontWeight: 400,
+    border: `1px solid ${theme.colors.primary[6]}`,
   },
-  buttonIcon: { marginRight: theme.spacing.md },
+  buttonIcon: { borderRadius: '6px'},
   divider: { transform: 'scaleY(.1)' },
   buttonContainers: { display: 'flex', gap: theme.spacing.lg, alignItems: 'center' },
 };
@@ -74,10 +76,11 @@ export const mobileStyles = {
   },
   button: {
     margin: '.6rem',
+    borderRadius: '4px',
     display: 'block',
     flex: 1,
-    borderRadius: '4px',
   },
+  buttonIcon: { borderRadius: '6px' },
   buttonIconColor: (isDark: boolean) => (isDark ? theme.colors.gray[2] : theme.colors.gray[7]),
   buttonText: { margin: '0 .8rem', fontWeight: '700' },
 
