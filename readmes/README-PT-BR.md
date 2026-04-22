@@ -28,10 +28,6 @@ Este é o design geral desejado para o site, gerado pelo Lovable, apenas para se
 
 Você pode conferir a [interface mais elaborada](https://link-guard-191fc128.base44.app) que foi criada com base44 como inspiração inicial.
 
-<img width="434" height="667" alt="image" src="https://github.com/user-attachments/assets/6ae53712-a40a-4e33-bbb5-fd6445c3aec2" />
-
-Para ver a interface, faça login.
-
 <p align="left"><a href="#top-btn">Voltar ao topo da página</a></p>
 
 -----
