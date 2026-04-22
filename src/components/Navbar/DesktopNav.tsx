@@ -39,9 +39,9 @@ export default function DesktopNav() {
         <LinkButton
           href={externalLinks.GITHUB.REPO}
           target={LinkTarget.Blank}
-          style={styles.buttonIcon}
+          style={styles.button}
         >
-          <IconBrandGithub width={30} size={18}  />
+          <IconBrandGithub width={30} size={18} />
         </LinkButton>
       </div>
     </nav>
