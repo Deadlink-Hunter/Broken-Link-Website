@@ -2,8 +2,8 @@ import { CSSProperties } from 'react';
 import { rgba } from '@mantine/core';
 import { sharedStyles, theme } from '@/theme';
 
+
 const colors = theme.colors;
-const getTextColor = (isDark: boolean) => (isDark ? theme.colors.primary[1] : colors.gray[7]);
 
 export const pageWrapperStyle: CSSProperties = {
   width: '100%',
@@ -44,12 +44,21 @@ export const bigContainerStyle = {
   gap: theme.spacing.xl,
   gridTemplateColumns: 'repeat(2, 1fr)',
 };
+export const titleStyle: CSSProperties = {
+  color: 'white',
+  fontWeight: 700,
+  fontSize: theme.fontSizes.xl,
+};
+
+export const paragraphStyle: CSSProperties = {
+  color: theme.colors.primary[1],
+};
 export const featureCardStyles: CSSProperties = {
    backgroundColor: colors.primary[8],
   border: `1px solid ${rgba(colors.primary[2], 0.15)}`,
   borderRadius: '24px',
   width: '100%',
-  padding: theme.spacing.lg,
+  padding: theme.spacing.xl,
   display: 'grid',
   gridTemplateColumns: 'auto 1fr',
   alignItems: 'start',
@@ -57,37 +66,34 @@ export const featureCardStyles: CSSProperties = {
   height: '100%',
 };
 
-export const missionCardStyles: CSSProperties = {
-  backgroundColor: colors.primary[8],
-  border: `1px solid ${colors.primary[9]}`,
-  borderRadius: '24px',
-  minHeight: '241px',
-  width: '100%',
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  gap: theme.spacing.lg,
-  padding: theme.spacing.xl,
-  textAlign: 'center',
-};
+export const missionCardStyles = (isDark: boolean) => {
+  return {
+    card: {
+      backgroundColor: isDark ? colors.primary[8] : theme.colors.primary[8],
+      border: `1px solid ${isDark ? colors.primary[9] : colors.gray[3]}`,
+      borderRadius: '24px',
+      minHeight: '241px',
+      width: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      gap: theme.spacing.lg,
+      padding: theme.spacing.xl,
+      textAlign: 'center',
+    } as CSSProperties,
 
-export const titleStyle = {
-  color: 'white',
-  fontWeight: 700,
-  fontSize: theme.fontSizes.xl,
-  gridColumnStart: 2,
-};
-export const LargeTitleStyle = {
-  ...titleStyle,
-  fontSize: '24px',
-};
-export const paragraphStyle = {
-  color: colors.primary[1],
-  gridColumnStart: 2,
-};
-export const largeParagraphStyle = {
-  ...paragraphStyle,
-  fontSize: theme.fontSizes.lg,
+    title: {
+      color: isDark ? theme.white : colors.gray[9],
+      fontWeight: 700,
+      fontSize: '24px',
+    } as CSSProperties,
+
+    paragraph: {
+      color: isDark ? colors.primary[1] : colors.gray[7],
+      fontSize: theme.fontSizes.lg,
+      lineHeight: 1.6,
+    } as CSSProperties,
+  };
 };
 
 export const iconStyle = {
