@@ -4,7 +4,6 @@ import { useIsDark } from '@/components/Hooks/useIsDark';
 import { Typography } from '@/components/UI/Typography/Typography';
 import { missionCardStyles } from './styles';
 
-
 interface MissionCardProps {
   title: string;
   description: string;

@@ -2,7 +2,6 @@ import { CSSProperties } from 'react';
 import { rgba } from '@mantine/core';
 import { sharedStyles, theme } from '@/theme';
 
-
 const colors = theme.colors;
 
 export const pageWrapperStyle: CSSProperties = {
@@ -54,7 +53,7 @@ export const paragraphStyle: CSSProperties = {
   color: theme.colors.primary[1],
 };
 export const featureCardStyles: CSSProperties = {
-   backgroundColor: colors.primary[8],
+  backgroundColor: colors.primary[8],
   border: `1px solid ${rgba(colors.primary[2], 0.15)}`,
   borderRadius: '24px',
   width: '100%',
@@ -83,13 +82,13 @@ export const missionCardStyles = (isDark: boolean) => {
     } as CSSProperties,
 
     title: {
-      color: isDark ? theme.white : colors.gray[9],
+      color: theme.colors.primary[0],
       fontWeight: 700,
-      fontSize: '24px',
+      fontSize: '26px',
     } as CSSProperties,
 
     paragraph: {
-      color: isDark ? colors.primary[1] : colors.gray[7],
+      color: colors.primary[1],
       fontSize: theme.fontSizes.lg,
       lineHeight: 1.6,
     } as CSSProperties,
