@@ -2,17 +2,17 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { MemoryRouter } from 'react-router-dom';
 import { MantineProvider } from '@mantine/core';
 import { theme } from '@/theme';
-import Navbar from './Navbar';
+import DesktopNav from './DesktopNav';
+import MobileNav from './MobileNav';
 
 import '@/i18';
 
-const meta: Meta<typeof Navbar> = {
+const meta: Meta = {
   title: 'Components/Navbar',
-  component: Navbar,
+  tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
   },
-  tags: ['autodocs'],
   decorators: [
     (Story) => (
       <MantineProvider theme={theme}>
@@ -25,17 +25,14 @@ const meta: Meta<typeof Navbar> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof meta>;
 
-export const Desktop: Story = {};
+export const Desktop: StoryObj<typeof DesktopNav> = {
+  render: () => <DesktopNav />,
+};
 
-export const Mobile: Story = {
-  args: {
-    variant: 'mobile',
-  },
+export const Mobile: StoryObj<typeof MobileNav> = {
+  render: () => <MobileNav />,
   parameters: {
-    viewport: {
-      defaultViewport: 'mobile1',
-    },
+    viewport: { defaultViewport: 'mobile1' },
   },
 };
