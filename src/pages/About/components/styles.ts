@@ -70,8 +70,8 @@ export const missionCardStyles = (isDark: boolean) => {
     card: {
       backgroundColor: isDark ? colors.primary[8] : theme.colors.primary[8],
       border: `1px solid ${isDark ? colors.primary[9] : colors.gray[3]}`,
-      borderRadius: '24px',
-      minHeight: '241px',
+      borderRadius: '1.5rem',
+      minHeight: '15rem',
       width: '100%',
       display: 'flex',
       flexDirection: 'column',

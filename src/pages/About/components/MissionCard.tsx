@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { Card } from '@mantine/core';
+import { Card } from '@/components/UI/Card/Card';
 import { useIsDark } from '@/components/Hooks/useIsDark';
 import { Typography } from '@/components/UI/Typography/Typography';
 import { missionCardStyles } from './styles';
