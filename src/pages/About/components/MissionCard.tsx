@@ -1,11 +1,17 @@
-import { useTranslation } from 'react-i18next';
-import { Card } from '@/components/UI/Card/Card';
+import { useIsDark } from '@/components/Hooks/useIsDark';
 import { Typography } from '@/components/UI/Typography/Typography';
 import { largeParagraphStyle, LargeTitleStyle, missionCardStyles } from './styles';
+import { useTranslation } from 'react-i18next';
+import { Card } from '@mantine/core'; 
 
-export const MissionCard = () => {
-  const { t } = useTranslation();
+interface MissionCardProps {
+  title: string;
+  description: string;
+}
 
+export const MissionCard = ({ title, description }: MissionCardProps) => {
+  const isDark = useIsDark();
+const { t } = useTranslation();
   return (
     <Card style={missionCardStyles}>
       <Typography variant='title' style={LargeTitleStyle}>
@@ -16,4 +22,3 @@ export const MissionCard = () => {
       </Typography>
     </Card>
   );
-};

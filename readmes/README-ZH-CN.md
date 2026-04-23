@@ -18,10 +18,6 @@ Deadlink Hunter Website 是该网站的前端部分。
 
 您可以查看使用 base44 创建的[更精细的界面](https://link-guard-191fc128.base44.app)作为初始灵感来源。
 
-<img width="434" height="667" alt="image" src="https://github.com/user-attachments/assets/6ae53712-a40a-4e33-bbb5-fd6445c3aec2" />
-
-要查看界面请先登录。
-
 ## 目录
 - [为什么做这个项目](#为什么做这个项目)
 - [如何贡献](#如何贡献)

@@ -17,11 +17,16 @@ export const pageWrapperStyle: CSSProperties = {
   margin: '0 auto',
 };
 
-export const centerGrid = {
+export const centerGrid: CSSProperties = {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
   marginBottom: theme.spacing['2xl'],
+};
+
+export const missionSectionStyle: CSSProperties = {
+  ...centerGrid,
+  width: '100%',
 };
 
 export const smallContainerStyle = {
@@ -39,13 +44,12 @@ export const bigContainerStyle = {
   gap: theme.spacing.xl,
   gridTemplateColumns: 'repeat(2, 1fr)',
 };
-
-export const featureCardStyles = {
-  backgroundColor: colors.primary[8],
+export const featureCardStyles: CSSProperties = {
+   backgroundColor: colors.primary[8],
   border: `1px solid ${rgba(colors.primary[2], 0.15)}`,
   borderRadius: '24px',
-  padding: theme.spacing.xl,
   width: '100%',
+  padding: theme.spacing.lg,
   display: 'grid',
   gridTemplateColumns: 'auto 1fr',
   alignItems: 'start',
@@ -129,11 +133,10 @@ export const aboutPageStyle = {
     color: 'var(--mantine-color-black)',
   } satisfies CSSProperties,
 
-  text: (isDark: boolean): CSSProperties => ({
-    color: getTextColor(isDark),
+  text: {
     paddingBlock: theme.spacing.lg,
     fontSize: theme.fontSizes.lg,
     textAlign: 'center',
     maxWidth: '700px',
-  }),
+  } satisfies CSSProperties,
 };
