@@ -22,14 +22,15 @@ export const CommunitySection = () => {
         highlight={t('about_page.community.title_gradient')}
         beforeStyle={titleColor}
       />
-      <Typography style={aboutPageStyle.text(isDark)}>
+
+      <Typography variant='primary' style={aboutPageStyle.text}>
         {t('about_page.community.subtitle')}
       </Typography>
 
       <Card style={communitySectionStyle.largeCard}>
         <div style={communitySectionStyle.cardHeader}>
           <IconHeart size={28} style={communitySectionStyle.heartIcon} />
-          <Typography style={communitySectionStyle.cardTitle}>
+          <Typography variant='title' style={communitySectionStyle.cardTitle}>
             {t('about_page.community.card_title')}
           </Typography>
         </div>

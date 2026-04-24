@@ -19,10 +19,7 @@ export const communitySectionStyle = {
   } satisfies CSSProperties,
 
   largeCard: {
-    backgroundColor: colors.primary[8],
-    border: `1px solid ${rgba(colors.primary[2], 0.1)}`,
     padding: '3rem',
-    borderRadius: '1.25rem',
     width: '100%',
     maxWidth: '65.625rem',
     display: 'flex',
@@ -45,13 +42,11 @@ export const communitySectionStyle = {
   } satisfies CSSProperties,
 
   cardTitle: {
-    color: theme.white,
     fontSize: '1.5rem',
     fontWeight: 700,
   } satisfies CSSProperties,
 
   cardParagraph: {
-    color: colors.primary[4],
     fontSize: '1.05rem',
     lineHeight: 1.7,
   } satisfies CSSProperties,
@@ -82,21 +77,21 @@ export const communitySectionStyle = {
     flexWrap: 'wrap',
   } satisfies CSSProperties,
 
-  pill: {
-    backgroundColor: colors.primary[7],
-    border: `1px solid ${rgba(colors.primary[3], 0.2)}`,
+  pill: (isDark: boolean): CSSProperties => ({
+    backgroundColor: isDark ? colors.primary[7] : colors.gray[1],
+    border: `1px solid ${isDark ? rgba(colors.primary[3], 0.2) : colors.gray[3]}`,
     padding: '0.4rem 1rem',
     borderRadius: '2rem',
     display: 'flex',
     alignItems: 'center',
     gap: '0.5rem',
-  } satisfies CSSProperties,
+  }),
 
-  pillText: {
-    color: colors.primary[1],
+  pillText: (isDark: boolean): CSSProperties => ({
+    color: isDark ? colors.primary[1] : colors.primary[8],
     fontSize: '0.875rem',
     fontWeight: 500,
-  } satisfies CSSProperties,
+  }),
 
   ctaButton: {
     fontWeight: 700,

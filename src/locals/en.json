@@ -7,6 +7,10 @@
       "deadlink_hunter": "Deadlink-Hunter"
     },
     "description": "A powerful, open-source tool designed to maintain the integrity of links within your GitHub repositories by identifying and eliminating broken links before they impact your users.",
+    "mission": {
+      "title": "Our Mission",
+      "description": "To provide developers with a reliable, efficient, and easy-to-use solution for maintaining link integrity across their projects. Broken links shouldn't break user experiences, and every repository deserves to be link-perfect."
+    },
     "community": {
       "title_part1": "Built With ",
       "title_gradient": "Community",
@@ -116,8 +120,6 @@
   "explore_toolkit_card3_title": "About The Project",
   "explore_toolkit_card3_description": "Learn more about the mission behind Deadlink-Hunter, its open-source nature, and how you can contribute.",
   "explore_toolkit_card3_button": "Learn More",
-  "our_mission_card_title": "Our Mission",
-  "our_mission_card_description": "To provide developers with a reliable, efficient, and easy-to-use solution for maintaining link integrity across their broken links shouldn't break user experiences, and every repository deserves to be link-perfect.",
   "how_it_works_card1_title": "Scan Your Repository",
   "how_it_works_card1_description": "Enter your GitHub repository URL or paste a list of links to check for broken connections.",
   "how_it_works_card2_title": "Lightning Fast Analysis",
