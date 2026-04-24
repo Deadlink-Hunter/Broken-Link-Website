@@ -5,6 +5,12 @@ import { theme } from '@/theme';
 const colors = theme.colors;
 const getTextColor = (isDark: boolean) => (isDark ? theme.white : theme.black);
 
+const getUrlStatusColor = (isError: boolean, isDark: boolean, lightShade: number): string => {
+  const palette = isError ? colors.error : colors.success;
+  const shade = isDark ? 4 : lightShade;
+  return palette[shade];
+};
+
 const flexColumnCenter: CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
@@ -253,14 +259,12 @@ export const scanPageStyle = {
     cursor: 'pointer',
   }),
 
-  // Two side-by-side stat cards showing working/broken link counts
   statCardsRow: {
     display: 'flex',
     gap: theme.spacing.md,
     width: '100%',
   } satisfies CSSProperties,
 
-  // Individual stat card — background adapts to light/dark mode
   statCard: (isDark: boolean): CSSProperties => ({
     flex: 1,
     display: 'flex',
@@ -273,27 +277,18 @@ export const scanPageStyle = {
     gap: theme.spacing.sm,
   }),
 
-  // Large stat number — error/success color uses darker shades in light mode for contrast
   statNumber: (isError: boolean, isDark: boolean): CSSProperties => ({
     fontSize: '1.9rem',
     fontWeight: 'bold',
-    color: isError
-      ? isDark
-        ? colors.error[4]
-        : colors.error[5]
-      : isDark
-        ? colors.success[4]
-        : colors.success[5],
+    color: getUrlStatusColor(isError, isDark, 5),
     lineHeight: 1,
   }),
 
-  // Label under the stat number — color adapts to light/dark mode
   statLabel: (isDark: boolean): CSSProperties => ({
     fontSize: theme.fontSizes.sm,
     color: isDark ? rgba(theme.white, 0.7) : colors.gray[7],
   }),
 
-  // Section header displayed above the URL results list
   linkStatusHeader: {
     color: theme.white,
     fontSize: theme.fontSizes.md,
@@ -301,7 +296,6 @@ export const scanPageStyle = {
     marginBottom: theme.spacing.sm,
   } satisfies CSSProperties,
 
-  // Background for each URL result row — adapts to light/dark mode
   urlRowCard: (isDark: boolean): CSSProperties => ({
     display: 'flex',
     alignItems: 'center',
@@ -311,10 +305,9 @@ export const scanPageStyle = {
     padding: `${theme.spacing.md} ${theme.spacing.lg}`,
     gap: theme.spacing.md,
     width: '100%',
-    boxSizing: 'border-box' as const,
+    boxSizing: 'border-box',
   }),
 
-  // Left side of URL row — icon + truncated URL text
   urlRowLeft: {
     display: 'flex',
     alignItems: 'center',
@@ -323,61 +316,43 @@ export const scanPageStyle = {
     flex: 1,
   } satisfies CSSProperties,
 
-  // URL text — color adapts to light/dark mode
   urlText: (isDark: boolean): CSSProperties => ({
     color: isDark ? rgba(theme.white, 0.85) : colors.gray[7],
     fontSize: theme.fontSizes.sm,
     overflow: 'hidden',
     textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap' as const,
+    whiteSpace: 'nowrap',
   }),
 
-  // HTTP status text (e.g. "200 OK") — error/success color uses darker shades in light mode
   urlStatusText: (isBroken: boolean, isDark: boolean): CSSProperties => ({
     fontSize: theme.fontSizes.sm,
-    color: isBroken
-      ? isDark
-        ? colors.error[4]
-        : colors.error[6]
-      : isDark
-        ? colors.success[4]
-        : colors.success[6],
+    color: getUrlStatusColor(isBroken, isDark, 6),
     flexShrink: 0,
   }),
 
-  // Status icon color — error/success, uses darker shades in light mode for contrast
   circleIcon: (isBroken: boolean, isDark: boolean): CSSProperties => ({
     width: '20px',
     height: '20px',
-    color: isBroken
-      ? isDark
-        ? colors.error[4]
-        : colors.error[6]
-      : isDark
-        ? colors.success[4]
-        : colors.success[6],
+    color: getUrlStatusColor(isBroken, isDark, 6),
     flexShrink: 0,
   }),
 
-  // Summary bar — background and text color adapt to light/dark mode
   summaryBar: (isDark: boolean): CSSProperties => ({
     backgroundColor: isDark ? colors.primary[5] : colors.primary[1],
     borderRadius: theme.radius.md,
     padding: `${theme.spacing.md} ${theme.spacing.lg}`,
     marginTop: theme.spacing.sm,
     width: '100%',
-    boxSizing: 'border-box' as const,
+    boxSizing: 'border-box',
     fontSize: theme.fontSizes.sm,
     color: isDark ? rgba(theme.white, 0.85) : colors.gray[7],
   }),
 
-  // Scan time value — cyan color, darker shade in light mode for contrast
   summaryTime: (isDark: boolean): CSSProperties => ({
     color: isDark ? colors.cyan[4] : colors.cyan[5],
     fontWeight: 'bold',
   }),
 
-  // Bold values in the summary bar — color adapts to light/dark mode
   summaryBold: (isDark: boolean): CSSProperties => ({
     color: isDark ? theme.white : colors.gray[8],
     fontWeight: 'bold',

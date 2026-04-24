@@ -139,5 +139,3 @@ playwright-report/
 blob-report/
 
 .claude/settings.local.json
-
-__notes/
