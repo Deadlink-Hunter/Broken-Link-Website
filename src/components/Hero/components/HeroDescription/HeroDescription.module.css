@@ -1,23 +1,36 @@
 .description {
-  font-family: var(--mantine-font-family);
-  font-weight: 500;
-  font-size: var(--mantine-font-size-xl);
-  line-height: 1.75;
-  letter-spacing: 0.02em;
+  font-family: "IBM Plex Mono", monospace !important;
+  font-weight: 400 !important;
+  font-size: var(--mantine-font-size-lg) !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.05em !important;
   padding-inline: var(--mantine-spacing-xl);
+  color: var(--mantine-color-dark-2);
+  max-width: 800px;
+  border-left: 4px solid var(--mantine-color-orange-6);
+  text-align: left;
+  padding-left: 24px;
+}
+
+[data-mantine-color-scheme='light'] .description {
+  color: var(--mantine-color-dark-8);
 }
 
 .highlight {
-  color: var(--mantine-color-cyan-4);
-  font-weight: 600;
+  color: var(--mantine-color-green-4);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+[data-mantine-color-scheme='light'] .highlight {
+  color: var(--mantine-color-green-6);
 }
 
 @media (max-width: 64em) {
   .description {
-    font-size: var(--mantine-font-size-xl);
-    line-height: 1.5;
-    letter-spacing: 0.01em;
-    padding-inline: var(--mantine-spacing-sm);
+    font-size: var(--mantine-font-size-md) !important;
+    padding-inline: 0;
+    padding-left: 16px;
+    text-align: left;
   }
 }
-

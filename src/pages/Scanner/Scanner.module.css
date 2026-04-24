@@ -1,0 +1,38 @@
+.main {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--mantine-color-dark-9);
+  background-image: 
+    linear-gradient(rgba(255, 61, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 61, 0, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+[data-mantine-color-scheme='light'] .main {
+  background-color: var(--mantine-color-white);
+  background-image: 
+    linear-gradient(rgba(255, 61, 0, 0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 61, 0, 0.2) 1px, transparent 1px);
+}
+
+.main::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, transparent 0%, rgba(9, 9, 11, 0.8) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+[data-mantine-color-scheme='light'] .main::after {
+  background: radial-gradient(circle at center, transparent 0%, rgba(255, 255, 255, 0.8) 100%);
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+}

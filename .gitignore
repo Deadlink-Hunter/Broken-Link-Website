@@ -139,3 +139,74 @@ playwright-report/
 blob-report/
 
 .claude/settings.local.json
+
+# ──────────────────────────────────────────────
+# Vite
+# ──────────────────────────────────────────────
+dist-ssr/
+*.local
+
+# ──────────────────────────────────────────────
+# pnpm
+# ──────────────────────────────────────────────
+.pnpm-store/
+# Keep pnpm-lock.yaml committed – do NOT ignore it
+
+# ──────────────────────────────────────────────
+# TypeScript
+# ──────────────────────────────────────────────
+*.tsbuildinfo
+
+# ──────────────────────────────────────────────
+# Vitest / Jest coverage
+# ──────────────────────────────────────────────
+coverage/
+*.lcov
+.vitest-cache/
+
+# ──────────────────────────────────────────────
+# Playwright
+# ──────────────────────────────────────────────
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+/e2e-results/
+
+# ──────────────────────────────────────────────
+# Storybook
+# ──────────────────────────────────────────────
+/storybook-static/
+.storybook-out/
+
+# ──────────────────────────────────────────────
+# Docker
+# ──────────────────────────────────────────────
+.docker/
+docker-compose.override.yml
+
+# ──────────────────────────────────────────────
+# OS artefacts
+# ──────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ──────────────────────────────────────────────
+# Editor / IDE
+# ──────────────────────────────────────────────
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+.idea/
+*.swp
+*.swo
+*~
+
+# ──────────────────────────────────────────────
+# Claude Code / AI agent config
+# ──────────────────────────────────────────────
+.agents/
+.claude/
+skills-lock.json

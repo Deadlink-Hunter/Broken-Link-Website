@@ -10,6 +10,7 @@ import { ScanTitlePage } from './components/ScanTitle';
 import { scanPageStyle } from './components/styles';
 import { ScanMode, type ScanMutationVariables, type ScanResult } from './types/scan';
 import { runScan } from './utils/scanMutation';
+import classes from './Scanner.module.css';
 
 const ScannerPage = () => {
   const [scanType, setScanType] = useState<ScanMode>(ScanMode.SINGLE);
@@ -36,28 +37,30 @@ const ScannerPage = () => {
   };
 
   return (
-    <main style={scanPageStyle.container}>
-      <header>
-        <ScanTitlePage />
-      </header>
+    <div className={classes.main}>
+      <main style={scanPageStyle.container} className={classes.content}>
+        <header>
+          <ScanTitlePage />
+        </header>
 
-      <section style={cardsContainerStyle} aria-label='Scanner tools'>
-        <ScanLinksCard
-          scanType={scanType}
-          setScanType={setScanType}
-          url={url}
-          setUrl={setUrl}
-          multipleUrl={multipleUrl}
-          setMultipleUrl={setMultipleUrl}
-          onScan={handleScan}
-        />
-        <ScanResultsCard results={data ?? null} loading={isPending} error={error ?? null} />
-        {/* TODO - Remove this when we have a deployed server */}
-        <Typography variant='title'>
-          *Right now we don&apos;t have deployed server, the above will not work
-        </Typography>
-      </section>
-    </main>
+        <section style={cardsContainerStyle} aria-label='Scanner tools'>
+          <ScanLinksCard
+            scanType={scanType}
+            setScanType={setScanType}
+            url={url}
+            setUrl={setUrl}
+            multipleUrl={multipleUrl}
+            setMultipleUrl={setMultipleUrl}
+            onScan={handleScan}
+          />
+          <ScanResultsCard results={data ?? null} loading={isPending} error={error ?? null} />
+          {/* TODO - Remove this when we have a deployed server */}
+          <Typography variant='title'>
+            *Right now we don&apos;t have deployed server, the above will not work
+          </Typography>
+        </section>
+      </main>
+    </div>
   );
 };
 

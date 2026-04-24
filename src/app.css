@@ -1,16 +1,19 @@
 body {
-  background-color: var(--mantine-color-primary-0);
+  margin: 0;
+  padding: 0;
+  background-color: var(--mantine-color-white);
+  color: var(--mantine-color-dark-9);
+  font-family: "IBM Plex Mono", monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 [data-mantine-color-scheme='dark'] body {
-  background-color: var(--mantine-color-primary-7);
+  background-color: var(--mantine-color-dark-9);
+  color: var(--mantine-color-white);
 }
 
 .app {
-  background: linear-gradient(
-    135deg,
-    var(--mantine-color-primary-9) 0%,
-    var(--mantine-color-primary-8) 50%,
-    var(--mantine-color-primary-7) 100%
-  );
+  background-color: transparent;
+  min-height: 100vh;
 }

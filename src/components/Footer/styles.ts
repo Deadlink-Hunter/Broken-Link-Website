@@ -2,17 +2,25 @@ import { CSSProperties } from 'react';
 import { theme } from '@/theme';
 
 const colors = theme.colors;
-const getTextColor = (isDark: boolean) => (isDark ? theme.white : colors.gray[7]);
-const getSubTextColor = (isDark: boolean) => (isDark ? colors.gray[2] : colors.gray[7]);
+const getTextColor = (isDark: boolean) => (isDark ? colors.dark[2] : colors.dark[8]);
+const getSubTextColor = (isDark: boolean) => (isDark ? colors.dark[2] : colors.dark[8]);
 
 export const footerStyles = {
   container: {
     maxWidth: '75rem',
-    margin: '3rem auto 0',
-    padding: '0 2.5rem',
+    margin: '0 auto',
+    padding: '3rem 2.5rem 0',
+    fontFamily: '"IBM Plex Mono", monospace',
+    backgroundColor: 'transparent',
   } satisfies CSSProperties,
 
-  gradientText: { fontWeight: 'bold', fontSize: '1.4em' },
+  gradientText: {
+    fontFamily: '"Share Tech Mono", monospace',
+    fontWeight: 'bold',
+    fontSize: '1.4em',
+    color: colors.orange[6],
+    textTransform: 'uppercase',
+  },
 
   text: (isDark: boolean): CSSProperties => ({
     color: getTextColor(isDark),
@@ -20,8 +28,12 @@ export const footerStyles = {
   }),
 
   header: (isDark: boolean): CSSProperties => ({
+    fontFamily: '"Share Tech Mono", monospace',
     fontWeight: 'bold',
-    color: isDark ? theme.white : theme.black,
+    color: isDark ? theme.white : colors.dark[9],
+    textTransform: 'uppercase',
+    letterSpacing: '1px',
+    marginBottom: theme.spacing.md,
   }),
 
   linkBoxWrapper: {
@@ -35,17 +47,19 @@ export const footerStyles = {
     gap: '.4rem',
     fontSize: theme.fontSizes.sm,
     color: getSubTextColor(isDark),
+    textTransform: 'uppercase',
   }),
 
   rightsTxt: (isMobileView: boolean, isDark: boolean): CSSProperties => ({
     fontSize: theme.fontSizes.sm,
     color: getSubTextColor(isDark),
     textAlign: isMobileView ? 'center' : 'end',
+    textTransform: 'uppercase',
   }),
 
   gradientConfig: {
-    from: colors.cyan[4],
-    to: colors.blue[6],
+    from: colors.orange[5],
+    to: colors.orange[7],
   },
 
   iconSize: 16,
