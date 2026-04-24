@@ -10,7 +10,7 @@ interface StatCardProps {
 
 const StatCard = ({ count, isError, isDark, label }: StatCardProps) => (
   <div style={scanPageStyle.statCard(isDark)}>
-    <span style={scanPageStyle.statNumber(isError, isDark)}>{count}</span>
+    <span style={scanPageStyle.statNumber(isError ?? false, isDark)}>{count}</span>
     <span style={scanPageStyle.statLabel(isDark)}>{label}</span>
   </div>
 );
