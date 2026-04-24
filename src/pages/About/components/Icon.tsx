@@ -5,7 +5,7 @@ import { iconStyle } from './styles';
 
 export const Icon = ({ icon }: { icon: string }) => {
   const color = theme.colors.cyan[4];
-  const size = 50;
+  const size = 55;
 
   switch (icon) {
     case IconType.Target:

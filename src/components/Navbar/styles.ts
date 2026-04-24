@@ -5,34 +5,39 @@ export const desktopStyles = {
     width: '100%',
     display: 'flex',
     minHeight: '74px',
-    justifyContent: 'space-around',
+    justifyContent: 'space-evenly',
     alignItems: 'center',
     marginTop: '.45rem',
+    boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
+    borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
   },
   headerContainer: { display: 'flex', alignItems: 'center' },
   logoSize: { height: '1.75rem' },
-  header: { fontWeight: '700', fontSize: theme.fontSizes.xl, marginLeft: '.2rem' },
+  header: { fontWeight: '700', fontSize: theme.fontSizes.lg, marginLeft: '.2rem' },
   linksContainer: {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
   },
   linkHoverColor: (isPathMatch: boolean) =>
-    isPathMatch ? theme.colors.cyan[5] : theme.colors.gray[7],
+    isPathMatch ? theme.colors.cyan[4] : theme.colors.gray[1],
 
-  linkColor: (isPathMatch: boolean) => (isPathMatch ? theme.colors.cyan[4] : theme.colors.gray[7]),
+  linkColor: (isPathMatch: boolean) => (isPathMatch ? theme.colors.cyan[4] : theme.colors.gray[4]),
   linkStyle: {
-    fontWeight: 'bold',
+    fontWeight: 400,
     padding: '.77rem',
     whiteSpace: 'nowrap',
   },
   button: {
-    padding: '.6rem',
-    borderRadius: '6px',
+    height: '30px',
+    borderRadius: theme.radius.sm,
+    gap: theme.spacing.sm,
+    color: theme.colors.primary[1],
+    fontWeight: 400,
+    border: `1px solid ${theme.colors.primary[6]}`,
   },
-  buttonIcon: { marginRight: '1rem' },
   divider: { transform: 'scaleY(.1)' },
-  buttonContainers: { display: 'flex', gap: '1rem' },
+  buttonContainers: { display: 'flex', gap: theme.spacing.lg, alignItems: 'center' },
 };
 
 export const mobileStyles = {
@@ -68,9 +73,9 @@ export const mobileStyles = {
   },
   button: {
     margin: '.6rem',
+    borderRadius: '4px',
     display: 'block',
     flex: 1,
-    borderRadius: '4px',
   },
   buttonIconColor: (isDark: boolean) => (isDark ? theme.colors.gray[2] : theme.colors.gray[7]),
   buttonText: { margin: '0 .8rem', fontWeight: '700' },
@@ -91,18 +96,19 @@ export const languageSelectProps = {
   leftSectionPointerEvents: 'none' as const,
   checkIconPosition: 'right' as const,
   maxDropdownHeight: 200,
+  rightSection: null,
   styles: {
     root: {
-      width: '8rem',
+      width: '6rem',
     },
     input: {
-      backgroundColor: theme.colors.primary[5],
-      color: theme.colors.primary[0],
+      backgroundColor: 'transparent',
+      color: theme.colors.primary[1],
       border: 'none',
-      borderRadius: '6px',
+      height: '30px',
     },
     section: {
-      color: theme.colors.primary[0],
+      color: theme.colors.primary[1],
     },
     dropdown: {
       backgroundColor: theme.colors.primary[6],

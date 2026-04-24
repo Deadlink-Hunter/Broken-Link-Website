@@ -6,7 +6,7 @@ const colors = theme.colors;
 
 export const pageWrapperStyle: CSSProperties = {
   width: '100%',
-  maxWidth: '80rem',
+  maxWidth: '85rem',
   minHeight: '100vh',
   display: 'flex',
   flexDirection: 'column',
@@ -30,74 +30,83 @@ export const missionSectionStyle: CSSProperties = {
 
 export const smallContainerStyle = {
   display: 'grid',
-  maxWidth: 'max-content',
+  width: '100%',
   gap: theme.spacing.lg,
   gridTemplateColumns: '1fr',
 };
 
 export const bigContainerStyle = {
   display: 'grid',
-  maxWidth: 'max-content',
-  gap: theme.spacing.lg,
-  gridTemplateColumns: '1fr 1fr',
+  width: '100%',
+  justifyItems: 'stretch',
+  alignItems: 'stretch',
+  gap: theme.spacing.xl,
+  gridTemplateColumns: 'repeat(2, 1fr)',
+};
+export const titleStyle: CSSProperties = {
+  color: 'white',
+  fontWeight: 700,
+  fontSize: theme.fontSizes.xl,
 };
 
+export const paragraphStyle: CSSProperties = {
+  color: theme.colors.primary[1],
+};
 export const featureCardStyles: CSSProperties = {
-  padding: theme.spacing.lg,
+  backgroundColor: colors.primary[8],
+  border: `1px solid ${rgba(colors.primary[2], 0.15)}`,
+  borderRadius: '24px',
+  width: '100%',
+  padding: theme.spacing.xl,
   display: 'grid',
-  gridTemplateColumns: 'auto auto',
+  gridTemplateColumns: 'auto 1fr',
+  alignItems: 'start',
   gap: theme.spacing.lg,
-  width: '100%',
+  height: '100%',
 };
 
-export const missionCardStyles = (isDark: boolean): CSSProperties => ({
-  backgroundColor: isDark ? colors.primary[8] : colors.gray[1],
-  border: `1px solid ${isDark ? colors.primary[9] : colors.gray[3]}`,
-  padding: '3rem 2.5rem',
-  display: 'flex',
-  flexDirection: 'column',
-  textAlign: 'center',
-  gap: '1rem',
-  width: '100%',
-  maxWidth: '65.625rem',
-  borderRadius: '1.25rem',
-  margin: '2rem auto',
-  boxSizing: 'border-box',
-});
+export const missionCardStyles = (isDark: boolean) => {
+  return {
+    card: {
+      backgroundColor: isDark ? colors.primary[8] : theme.colors.primary[8],
+      border: `1px solid ${isDark ? colors.primary[9] : colors.gray[3]}`,
+      borderRadius: '1.5rem',
+      minHeight: '15rem',
+      width: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      gap: theme.spacing.lg,
+      padding: theme.spacing.xl,
+      textAlign: 'center',
+    } as CSSProperties,
 
-const getMediumTextColor = (isDark: boolean) => (isDark ? theme.white : colors.gray[7]);
+    title: {
+      color: theme.colors.primary[0],
+      fontWeight: 700,
+      fontSize: '26px',
+    } as CSSProperties,
 
-export const missionTitleStyle = (isDark: boolean): CSSProperties => ({
-  color: getMediumTextColor(isDark),
-  fontSize: '1.5rem',
-  fontWeight: 400,
-  marginBottom: '0.5rem',
-});
-
-export const missionDescriptionStyle = (isDark: boolean): CSSProperties => ({
-  color: getMediumTextColor(isDark),
-  fontSize: '1rem',
-  lineHeight: 1.6,
-});
-
-export const titleStyle = {
-  fontSize: '1.25rem',
-  fontWeight: 600,
-};
-
-export const paragraphStyle = {
-  gridColumnStart: 2,
+    paragraph: {
+      color: colors.primary[1],
+      fontSize: theme.fontSizes.lg,
+      lineHeight: 1.6,
+    } as CSSProperties,
+  };
 };
 
 export const iconStyle = {
   gridRowEnd: 'span 2',
-  marginBottom: theme.spacing.lg,
-  padding: 8,
-  borderRadius: 14,
+  padding: 10,
+  borderRadius: 13,
   display: 'inline-flex',
   alignItems: 'center',
   justifyContent: 'center',
-  background: `linear-gradient(135deg, ${rgba(colors.cyan[4], 0.25)}, ${rgba(colors.purple[5], 0.25)})`,
+  background: `linear-gradient(
+      135deg,
+      ${rgba(colors.cyan[4], 0.25)},
+      ${rgba(colors.purple[5], 0.25)}
+    )`,
   color: colors.cyan[4],
 };
 
@@ -107,12 +116,14 @@ export const aboutPageStyle = {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: theme.spacing['2xl'],
+    marginBottom: theme.spacing.xl,
   } satisfies CSSProperties,
 
   titleStyle: {
     ...sharedStyles.sectionTitle,
     display: 'inline-block',
+    fontSize: '3rem',
+    fontWeight: 700,
   } satisfies CSSProperties,
 
   brandStyle: {
@@ -129,7 +140,7 @@ export const aboutPageStyle = {
 
   text: {
     paddingBlock: theme.spacing.lg,
-    fontSize: '1.1rem',
+    fontSize: theme.fontSizes.lg,
     textAlign: 'center',
     maxWidth: '700px',
   } satisfies CSSProperties,

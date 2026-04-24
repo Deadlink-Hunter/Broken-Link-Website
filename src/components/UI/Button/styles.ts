@@ -30,4 +30,10 @@ export const buttonVariants = {
     backgroundColor: 'transparent',
     color: colors.cyan[5],
   },
+  icon: {
+    backgroundColor: 'transparent',
+    border: 'none',
+    padding: '4px',
+    color: theme.colors.primary[1],
+  },
 };

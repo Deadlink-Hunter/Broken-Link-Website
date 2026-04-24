@@ -1,6 +1,8 @@
+import { useTranslation } from 'react-i18next';
+import { Card } from '@/components/UI/Card/Card';
 import { useIsDark } from '@/components/Hooks/useIsDark';
 import { Typography } from '@/components/UI/Typography/Typography';
-import { missionCardStyles, missionDescriptionStyle, missionTitleStyle } from './styles';
+import { missionCardStyles } from './styles';
 
 interface MissionCardProps {
   title: string;
@@ -9,19 +11,16 @@ interface MissionCardProps {
 
 export const MissionCard = ({ title, description }: MissionCardProps) => {
   const isDark = useIsDark();
-
+  const { t } = useTranslation();
+  const styles = missionCardStyles(isDark);
   return (
-    <div style={missionCardStyles(isDark)}>
-      <Typography variant='title' style={{ ...missionTitleStyle(isDark), color: undefined }}>
-        {title}
+    <Card style={styles.card}>
+      <Typography variant='title' style={styles.title}>
+        {t(title)}
       </Typography>
-
-      <Typography
-        variant='primary'
-        style={{ ...missionDescriptionStyle(isDark), color: undefined }}
-      >
-        {description}
+      <Typography variant='primary' style={styles.paragraph}>
+        {t(description)}
       </Typography>
-    </div>
+    </Card>
   );
 };
