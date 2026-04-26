@@ -67,6 +67,7 @@
     "eslint": "^9.39.4",
     "eslint-config-mantine": "^4.0.3",
     "eslint-define-config": "^2.1.0",
+    "eslint-plugin-i18next": "^6.1.4",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
     "husky": "^9.1.7",

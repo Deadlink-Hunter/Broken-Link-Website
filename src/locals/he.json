@@ -158,6 +158,18 @@
         "one_url_required": "נדרש לפחות URL אחד",
         "maximum_urls_allowed": "מקסימום {{max}} כתובות URL מותרות לכל בקשה"
       }
-    }
+    },
+    "server_notice": "*כרגע אין לנו שרת פעיל, ולכן מה שמופיע למעלה לא יעבוד"
+  },
+  "error_boundary": {
+    "title": "משהו השתבש!",
+    "description": "אנחנו מצטערים, אבל אירעה שגיאה לא צפויה.",
+    "what_you_can_try": "מה אפשר לנסות:",
+    "suggestions": {
+      "refresh": "רעננו את הדף",
+      "clear_cache": "נקו את מטמון הדפדפן",
+      "try_again": "נסו שוב בעוד כמה דקות"
+    },
+    "go_home": "חזרה לדף הבית"
   }
 }
