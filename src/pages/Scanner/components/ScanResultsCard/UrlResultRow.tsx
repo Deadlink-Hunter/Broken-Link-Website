@@ -4,16 +4,13 @@ import { scanPageStyle } from '../styles';
 
 const getStatusText = (isBroken: boolean, statusCode?: number, errorText?: string): string => {
   if (!statusCode) {
-    if (!isBroken) {
-      return '';
-    }
-    return errorText ?? '';
+    return isBroken ? (errorText ?? '') : '';
   }
 
   try {
     return `${statusCode} ${getReasonPhrase(statusCode)}`;
   } catch {
-    return `${statusCode}`;
+    return String(statusCode);
   }
 };
 

@@ -3,11 +3,12 @@ import { rgba } from '@mantine/core';
 import { theme } from '@/theme';
 
 const colors = theme.colors;
+const DARK_STATUS_SHADE = 4;
 const getTextColor = (isDark: boolean) => (isDark ? theme.white : theme.black);
 
 const getUrlStatusColor = (isError: boolean, isDark: boolean, lightShade: number): string => {
   const palette = isError ? colors.error : colors.success;
-  const shade = isDark ? 4 : lightShade;
+  const shade = isDark ? DARK_STATUS_SHADE : lightShade;
   return palette[shade];
 };
 
@@ -338,6 +339,9 @@ export const scanPageStyle = {
   }),
 
   summaryBar: (isDark: boolean): CSSProperties => ({
+    display: 'flex',
+    alignItems: 'center',
+    gap: theme.spacing.xs,
     backgroundColor: isDark ? colors.primary[5] : colors.primary[1],
     borderRadius: theme.radius.md,
     padding: `${theme.spacing.md} ${theme.spacing.lg}`,
