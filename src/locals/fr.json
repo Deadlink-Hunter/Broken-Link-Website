@@ -153,7 +153,9 @@
       "broken_links": "Liens brisés",
       "link_status_header": "Statut des liens",
       "status_error": "Erreur",
-      "scanned_summary": "<bold>{{total}} liens</bold> analysés en <cyan>{{time}}s</cyan>",
+      "scanned_label": "Analysés:",
+      "link_one": "{{count}} lien",
+      "link_other": "{{count}} liens",
       "errors": {
         "url_required": "L'URL est requise",
         "internal_server_error": "Erreur interne du serveur",

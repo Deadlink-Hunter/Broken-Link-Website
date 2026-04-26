@@ -153,7 +153,9 @@
       "broken_links": "Enlaces rotos",
       "link_status_header": "Estado de enlaces",
       "status_error": "Error",
-      "scanned_summary": "Escaneados <bold>{{total}} enlaces</bold> en <cyan>{{time}}s</cyan>",
+      "scanned_label": "Escaneados:",
+      "link_one": "{{count}} enlace",
+      "link_other": "{{count}} enlaces",
       "errors": {
         "url_required": "La URL es obligatoria",
         "internal_server_error": "Error interno del servidor",

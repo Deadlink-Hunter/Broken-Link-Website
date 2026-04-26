@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import type { SingleResultData } from '../../types/scan';
+import type { SingleResultData } from '@/pages/Scanner/types/scan';
+import { msToSeconds } from '@/util/timeutils';
 import { scanPageStyle } from '../styles';
 import { CardShell } from './CardShell';
 import { StatCards } from './StatCards';
@@ -13,7 +14,7 @@ export const SingleResult = ({ data, isDark }: { data: SingleResultData; isDark:
   const { url, isBroken, statusCode, responseTime } = data;
   const working = isBroken ? 0 : 1;
   const broken = isBroken ? 1 : 0;
-  const timeInSeconds = responseTime ? (responseTime / 1000).toFixed(1) : '0.0';
+  const timeInSeconds = responseTime ? msToSeconds(responseTime) : '0.0';
   const statusErrorText = t('scanner_page.scan_results_card.status_error');
 
   return (

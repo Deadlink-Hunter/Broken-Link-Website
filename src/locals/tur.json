@@ -153,7 +153,9 @@
       "broken_links": "Kırık bağlantılar",
       "link_status_header": "Bağlantı durumu",
       "status_error": "Hata",
-      "scanned_summary": "<bold>{{total}} bağlantı</bold> <cyan>{{time}}s</cyan> içinde tarandı",
+      "scanned_label": "Tarandı:",
+      "link_one": "{{count}} bağlantı",
+      "link_other": "{{count}} bağlantı",
       "errors": {
         "url_required": "URL gereklidir",
         "internal_server_error": "Sunucu hatası",

@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
-import type { MultipleResultData } from '../../types/scan';
-import { sumResponseTimes } from '../../utils/scan';
+import type { MultipleResultData } from '@/pages/Scanner/types/scan';
+import { sumResponseTimes } from '@/pages/Scanner/utils/scan';
+import { msToSeconds } from '@/util/timeutils';
 import { scanPageStyle } from '../styles';
 import { CardShell } from './CardShell';
 import { LinkStatusList } from './LinkStatusList';
@@ -19,7 +20,7 @@ export const MultipleResults = ({
   const { t } = useTranslation();
   const { results: resultsList, summary } = data;
   const { total, working, broken } = summary;
-  const timeInSeconds = (sumResponseTimes(resultsList) / 1000).toFixed(1);
+  const timeInSeconds = msToSeconds(sumResponseTimes(resultsList));
   const statusErrorText = t('scanner_page.scan_results_card.status_error');
 
   return (

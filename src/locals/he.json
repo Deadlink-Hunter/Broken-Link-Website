@@ -153,7 +153,9 @@
       "broken_links": "קישורים שבורים",
       "link_status_header": "סטטוס קישורים",
       "status_error": "שגיאה",
-      "scanned_summary": "נסרקו <bold>{{total}} קישורים</bold> ב-<cyan>{{time}}s</cyan>",
+      "scanned_label": "נסרקו:",
+      "link_one": "{{count}} קישור",
+      "link_other": "{{count}} קישורים",
       "errors": {
         "url_required": "נדרש URL",
         "internal_server_error": "שגיאת שרת",

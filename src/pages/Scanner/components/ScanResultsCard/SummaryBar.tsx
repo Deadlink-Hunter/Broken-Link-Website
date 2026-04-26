@@ -1,4 +1,4 @@
-import { Trans } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import { scanPageStyle } from '../styles';
 
 interface SummaryBarProps {
@@ -7,15 +7,16 @@ interface SummaryBarProps {
   isDark: boolean;
 }
 
-export const SummaryBar = ({ total, timeInSeconds, isDark }: SummaryBarProps) => (
-  <div style={scanPageStyle.summaryBar(isDark)}>
-    <Trans
-      i18nKey='scanner_page.scan_results_card.scanned_summary'
-      values={{ total, time: timeInSeconds }}
-      components={{
-        bold: <strong style={scanPageStyle.summaryBold(isDark)} />,
-        cyan: <span style={scanPageStyle.summaryTime(isDark)} />,
-      }}
-    />
-  </div>
-);
+export const SummaryBar = ({ total, timeInSeconds, isDark }: SummaryBarProps) => {
+  const { t } = useTranslation();
+  return (
+    <div style={scanPageStyle.summaryBar(isDark)}>
+      {t('scanner_page.scan_results_card.scanned_label')}{' '}
+      <strong style={scanPageStyle.summaryBold(isDark)}>
+        {t('scanner_page.scan_results_card.link', { count: total })}
+      </strong>
+      {' · '}
+      <span style={scanPageStyle.summaryTime(isDark)}>{timeInSeconds}s</span>
+    </div>
+  );
+};

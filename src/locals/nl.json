@@ -153,7 +153,9 @@
       "broken_links": "Kapotte links",
       "link_status_header": "Linkstatus",
       "status_error": "Fout",
-      "scanned_summary": "<bold>{{total}} links</bold> gescand in <cyan>{{time}}s</cyan>",
+      "scanned_label": "Gescand:",
+      "link_one": "{{count}} link",
+      "link_other": "{{count}} links",
       "errors": {
         "url_required": "URL is vereist",
         "internal_server_error": "Interne serverfout",

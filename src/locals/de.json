@@ -136,7 +136,9 @@
       "broken_links": "Defekte Links",
       "link_status_header": "Link-Status",
       "status_error": "Fehler",
-      "scanned_summary": "<bold>{{total}} Links</bold> in <cyan>{{time}}s</cyan> gescannt",
+      "scanned_label": "Gescannt:",
+      "link_one": "{{count}} Link",
+      "link_other": "{{count}} Links",
       "errors": {
         "url_required": "URL ist erforderlich",
         "internal_server_error": "Interner Serverfehler",
