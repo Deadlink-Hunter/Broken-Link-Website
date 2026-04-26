@@ -29,10 +29,10 @@ export const ScanResultsCard = ({ results, loading, error }: ScanResultsCardProp
   }
 
   if (resolved.kind === ResolvedKind.SINGLE) {
-    return <SingleResult data={resolved as SingleResultData} />;
+    return <SingleResult data={resolved as SingleResultData} isDark={isDark} />;
   }
   if (resolved.kind === ResolvedKind.MULTIPLE) {
-    return <MultipleResults data={resolved as MultipleResultData} />;
+    return <MultipleResults data={resolved as MultipleResultData} isDark={isDark} />;
   }
 
   return null;

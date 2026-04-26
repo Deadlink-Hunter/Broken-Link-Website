@@ -1,52 +1,36 @@
-import { IconCheck, IconX } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
-import { Typography } from '@/components/UI/Typography/Typography';
-import type { UrlCheckData } from '@/services/LinkChecker/types';
-import type { MultipleResultData } from '../../types/scan';
-import { sumResponseTimes } from '../../utils/scan';
+import type { MultipleResultData } from '@/pages/Scanner/types/scan';
+import { sumResponseTimes } from '@/pages/Scanner/utils/scan';
+import { msToSeconds } from '@/util/timeutils';
 import { scanPageStyle } from '../styles';
 import { CardShell } from './CardShell';
+import { LinkStatusList } from './LinkStatusList';
+import { StatCards } from './StatCards';
+import { SummaryBar } from './SummaryBar';
 
 const TITLE_KEY = 'scanner_page.scan_results_card.title';
 
-export const UrlResultRow = ({ url, isBroken }: { url: string; isBroken: boolean }) => {
-  const StatusIcon = isBroken ? IconX : IconCheck;
-
-  return (
-    <div style={scanPageStyle.urlRowContainer}>
-      <StatusIcon style={scanPageStyle.statusIcon(isBroken)} />
-      <span style={scanPageStyle.resultDescription}>{url}</span>
-    </div>
-  );
-};
-
-export const MultipleResults = ({ data }: { data: MultipleResultData }) => {
+export const MultipleResults = ({
+  data,
+  isDark,
+}: {
+  data: MultipleResultData;
+  isDark: boolean;
+}) => {
   const { t } = useTranslation();
   const { results: resultsList, summary } = data;
   const { total, working, broken } = summary;
-  const totalResponseTime = sumResponseTimes(resultsList);
+  const timeInSeconds = msToSeconds(sumResponseTimes(resultsList));
+  const statusErrorText = t('scanner_page.scan_results_card.status_error');
 
   return (
     <CardShell title={TITLE_KEY} contentStyle={scanPageStyle.resultsColumn}>
-      <div style={scanPageStyle.resultsListContainer}>
-        {resultsList.map(({ url, isBroken }: UrlCheckData, index: number) => (
-          <UrlResultRow key={`${url}-${index}`} url={url} isBroken={isBroken} />
-        ))}
-      </div>
-      <Typography style={scanPageStyle.resultDescription}>
-        {t('scanner_page.scan_results_card.summary', {
-          total,
-          working,
-          broken,
-        })}
-      </Typography>
-      {totalResponseTime > 0 && (
-        <Typography style={scanPageStyle.resultDescription}>
-          {t('scanner_page.scan_results_card.total_response_time', {
-            responseTime: totalResponseTime,
-          })}
-        </Typography>
-      )}
+      <StatCards working={working} broken={broken} isDark={isDark} />
+      <span style={scanPageStyle.linkStatusHeader}>
+        {t('scanner_page.scan_results_card.link_status_header')}
+      </span>
+      <LinkStatusList resultsList={resultsList} statusErrorText={statusErrorText} isDark={isDark} />
+      <SummaryBar total={total} timeInSeconds={timeInSeconds} isDark={isDark} />
     </CardShell>
   );
 };

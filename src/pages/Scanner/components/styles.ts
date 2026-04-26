@@ -3,7 +3,14 @@ import { rgba } from '@mantine/core';
 import { theme } from '@/theme';
 
 const colors = theme.colors;
+const DARK_STATUS_SHADE = 4;
 const getTextColor = (isDark: boolean) => (isDark ? theme.white : theme.black);
+
+const getUrlStatusColor = (isError: boolean, isDark: boolean, lightShade: number): string => {
+  const palette = isError ? colors.error : colors.success;
+  const shade = isDark ? DARK_STATUS_SHADE : lightShade;
+  return palette[shade];
+};
 
 const flexColumnCenter: CSSProperties = {
   display: 'flex',
@@ -251,5 +258,107 @@ export const scanPageStyle = {
     border: 'none',
     padding: '8px',
     cursor: 'pointer',
+  }),
+
+  statCardsRow: {
+    display: 'flex',
+    gap: theme.spacing.md,
+    width: '100%',
+  } satisfies CSSProperties,
+
+  statCard: (isDark: boolean): CSSProperties => ({
+    flex: 1,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: isDark ? colors.primary[5] : colors.primary[1],
+    borderRadius: theme.radius.md,
+    padding: theme.spacing.lg,
+    gap: theme.spacing.sm,
+  }),
+
+  statNumber: (isError: boolean, isDark: boolean): CSSProperties => ({
+    fontSize: '1.9rem',
+    fontWeight: 'bold',
+    color: getUrlStatusColor(isError, isDark, 5),
+    lineHeight: 1,
+  }),
+
+  statLabel: (isDark: boolean): CSSProperties => ({
+    fontSize: theme.fontSizes.sm,
+    color: isDark ? rgba(theme.white, 0.7) : colors.gray[7],
+  }),
+
+  linkStatusHeader: {
+    color: theme.white,
+    fontSize: theme.fontSizes.md,
+    marginTop: theme.spacing.lg,
+    marginBottom: theme.spacing.sm,
+  } satisfies CSSProperties,
+
+  urlRowCard: (isDark: boolean): CSSProperties => ({
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    backgroundColor: isDark ? colors.primary[6] : rgba(colors.primary[1], 0.7),
+    borderRadius: theme.radius.md,
+    padding: `${theme.spacing.md} ${theme.spacing.lg}`,
+    gap: theme.spacing.md,
+    width: '100%',
+    boxSizing: 'border-box',
+  }),
+
+  urlRowLeft: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: theme.spacing.md,
+    overflow: 'hidden',
+    flex: 1,
+  } satisfies CSSProperties,
+
+  urlText: (isDark: boolean): CSSProperties => ({
+    color: isDark ? rgba(theme.white, 0.85) : colors.gray[7],
+    fontSize: theme.fontSizes.sm,
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+  }),
+
+  urlStatusText: (isBroken: boolean, isDark: boolean): CSSProperties => ({
+    fontSize: theme.fontSizes.sm,
+    color: getUrlStatusColor(isBroken, isDark, 6),
+    flexShrink: 0,
+  }),
+
+  circleIcon: (isBroken: boolean, isDark: boolean): CSSProperties => ({
+    width: '20px',
+    height: '20px',
+    color: getUrlStatusColor(isBroken, isDark, 6),
+    flexShrink: 0,
+  }),
+
+  summaryBar: (isDark: boolean): CSSProperties => ({
+    display: 'flex',
+    alignItems: 'center',
+    gap: theme.spacing.sm,
+    backgroundColor: isDark ? colors.primary[5] : colors.primary[1],
+    borderRadius: theme.radius.md,
+    padding: `${theme.spacing.md} ${theme.spacing.lg}`,
+    marginTop: theme.spacing.sm,
+    width: '100%',
+    boxSizing: 'border-box',
+    fontSize: theme.fontSizes.sm,
+    color: isDark ? rgba(theme.white, 0.85) : colors.gray[7],
+  }),
+
+  summaryTime: (isDark: boolean): CSSProperties => ({
+    color: isDark ? colors.cyan[4] : colors.cyan[5],
+    fontWeight: 'bold',
+  }),
+
+  summaryBold: (isDark: boolean): CSSProperties => ({
+    color: isDark ? theme.white : colors.gray[8],
+    fontWeight: 'bold',
   }),
 };
