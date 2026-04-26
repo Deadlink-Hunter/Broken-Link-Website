@@ -341,7 +341,7 @@ export const scanPageStyle = {
   summaryBar: (isDark: boolean): CSSProperties => ({
     display: 'flex',
     alignItems: 'center',
-    gap: theme.spacing.xs,
+    gap: theme.spacing.sm,
     backgroundColor: isDark ? colors.primary[5] : colors.primary[1],
     borderRadius: theme.radius.md,
     padding: `${theme.spacing.md} ${theme.spacing.lg}`,
