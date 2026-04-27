@@ -11,6 +11,8 @@ import { Select } from '../UI/Select/Select';
 import NavbarLinks from './NavbarLinks';
 import { languageSelectProps, mobileStyles as styles } from './styles';
 import { ThemeToggle } from './ThemeToggle';
+import { useMediaQuery } from '@mantine/hooks';
+import { theme } from '@/theme';
 
 export default function MobileNav() {
   const { t } = useTranslation();
@@ -21,12 +23,14 @@ export default function MobileNav() {
     setDisplayLinks((prev) => !prev);
   }
 
+  const isScreenXS = useMediaQuery(`(max-width: ${theme.breakpoints.xs})`);
+
   return (
     <div>
       <div style={styles.container}>
         <div style={styles.headerContainer}>
           <img alt='Deadlink logo' style={styles.logoSize} src={logo} />
-          <Link labelStyle={styles.header} href='/' label={t('navbar.header')} />
+          <Link labelStyle={styles.header(isScreenXS)} href='/' label={t('navbar.header')} />
         </div>
         <div style={styles.buttonContainer}>
           <Select

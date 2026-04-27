@@ -48,7 +48,11 @@ export const mobileStyles = {
     padding: '1rem 1.5rem',
   },
   headerContainer: { display: 'flex', alignItems: 'center' },
-  header: { fontWeight: '700', fontSize: theme.fontSizes.xl, marginLeft: '.2rem' },
+  header: (isScreenXS: boolean) => ({
+    fontWeight: '700',
+    fontSize: isScreenXS ? theme.fontSizes.sm : theme.fontSizes.xl,
+    marginLeft: '.2rem'
+  }),
   logoSize: { height: '1.75rem' },
   burger: { width: 18, height: 18, marginLeft: '0.5rem' },
 
