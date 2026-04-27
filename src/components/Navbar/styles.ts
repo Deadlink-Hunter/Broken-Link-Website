@@ -50,7 +50,7 @@ export const mobileStyles = {
   headerContainer: { display: 'flex', alignItems: 'center' },
   header: { fontWeight: '700', fontSize: theme.fontSizes.xl, marginLeft: '.2rem' },
   logoSize: { height: '1.75rem' },
-  burger: { paddingRight: '1.8rem', width: 18, height: 18 },
+  burger: { width: 18, height: 18, marginLeft: '0.5rem' },
 
   linksContainer: { padding: '.6rem' },
   link: {
@@ -68,9 +68,9 @@ export const mobileStyles = {
   linksDivider: { marginLeft: 'calc(50% - 50vw)', marginRight: 'calc(50% - 50vw)' },
   buttonContainer: {
     display: 'flex',
-    gap: '0.4rem',
+    gap: '0.5rem',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-end',
   },
   button: {
     margin: '.6rem',
