@@ -51,7 +51,7 @@ export const mobileStyles = {
   header: (isScreenXS: boolean) => ({
     fontWeight: '700',
     fontSize: isScreenXS ? theme.fontSizes.sm : theme.fontSizes.xl,
-    marginLeft: '.2rem'
+    marginLeft: '.2rem',
   }),
   logoSize: { height: '1.75rem' },
   burger: { width: 18, height: 18, marginLeft: '0.5rem' },

@@ -3,7 +3,9 @@ import { IconWorld } from '@tabler/icons-react';
 import logo from '/logo.svg';
 import { useTranslation } from 'react-i18next';
 import { Burger } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
 import { LANGUAGE_OPTIONS } from '@/constants/languages';
+import { theme } from '@/theme';
 import { useLanguage } from '../Hooks/useLanguage';
 import { Divider } from '../UI/Divider/Divider';
 import { Link } from '../UI/Link/Link';
@@ -11,8 +13,6 @@ import { Select } from '../UI/Select/Select';
 import NavbarLinks from './NavbarLinks';
 import { languageSelectProps, mobileStyles as styles } from './styles';
 import { ThemeToggle } from './ThemeToggle';
-import { useMediaQuery } from '@mantine/hooks';
-import { theme } from '@/theme';
 
 export default function MobileNav() {
   const { t } = useTranslation();
