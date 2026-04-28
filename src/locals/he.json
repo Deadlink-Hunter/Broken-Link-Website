@@ -164,8 +164,7 @@
         "one_url_required": "נדרש לפחות URL אחד",
         "maximum_urls_allowed": "מקסימום {{max}} כתובות URL מותרות לכל בקשה"
       }
-    },
-    "server_notice": "*כרגע אין לנו שרת פעיל, ולכן מה שמופיע למעלה לא יעבוד"
+    }
   },
   "error_boundary": {
     "title": "משהו השתבש!",

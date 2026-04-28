@@ -182,8 +182,7 @@
         "one_url_required": "At least one URL is required",
         "maximum_urls_allowed": "Maximum {{max}} URLs allowed per request"
       }
-    },
-    "server_notice": "*Right now we don't have a deployed server, the above will not work"
+    }
   },
   "error_boundary": {
     "title": "Something went wrong!",
