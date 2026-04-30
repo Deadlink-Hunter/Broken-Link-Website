@@ -1,8 +1,4 @@
-import type {
-  MultipleUrlsResponse,
-  UrlCheckData,
-  UrlCheckResult,
-} from '@/services/LinkChecker/types';
+import type { MultipleUrlsResponse, UrlCheckResult } from '@/services/LinkChecker/types';
 import { ResolvedKind, type ResolvedScanResults, type ScanResult } from '../types/scan';
 
 type BatchScanPayload = NonNullable<MultipleUrlsResponse['data']>;
@@ -47,8 +43,4 @@ export function resolveScanResults(result: ScanResult | null): ResolvedScanResul
     };
   }
   return null;
-}
-
-export function sumResponseTimes(items: UrlCheckData[]): number {
-  return items.reduce((sum, item) => sum + (item.responseTime ?? 0), 0);
 }

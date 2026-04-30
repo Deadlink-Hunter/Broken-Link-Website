@@ -31,7 +31,7 @@ export interface MultipleUrlsResponse {
   status: number;
   data?: {
     results: UrlCheckData[];
-    summary: { total: number; broken: number; working: number };
+    summary: { total: number; broken: number; working: number; scanDuration: number };
   };
   error?: ApiErrorTypes;
 }

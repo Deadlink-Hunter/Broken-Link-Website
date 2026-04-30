@@ -21,6 +21,7 @@ export interface ScanSummary {
   total: number;
   broken: number;
   working: number;
+  scanDuration: number;
 }
 
 export interface SingleResultData extends UrlCheckData {
