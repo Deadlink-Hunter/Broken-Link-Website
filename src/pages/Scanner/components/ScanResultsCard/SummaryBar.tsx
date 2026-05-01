@@ -18,7 +18,7 @@ export const SummaryBar = ({ total, timeInSeconds, isDark }: SummaryBarProps) =>
       </div>
       <div>{DOT}</div>
       <div style={scanPageStyle.summaryTime(isDark)}>
-        {timeInSeconds} {t('scanner_page.scan_results_card.seconds')}
+        {timeInSeconds}{t('scanner_page.scan_results_card.seconds')}
       </div>
     </div>
   );
