@@ -61,7 +61,12 @@ export default function Footer() {
           <Box>
             <Typography style={footerStyles.header(isDark)}>{t('footer.Community')}</Typography>
             {footerCommunityLinks.map((link, i) => (
-              <Link key={i + link.label} href={link.href} label={link.label} />
+              <Link
+                key={i + link.label}
+                href={link.href}
+                label={link.label}
+                target={LinkTarget.Blank}
+              />
             ))}
           </Box>
         </SimpleGrid>
