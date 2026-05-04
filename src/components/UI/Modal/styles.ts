@@ -1,4 +1,3 @@
-// src/components/UI/Modal/styles.ts
 import type { CSSProperties } from 'react';
 import { rgba } from '@mantine/core';
 import { theme } from '@/theme';

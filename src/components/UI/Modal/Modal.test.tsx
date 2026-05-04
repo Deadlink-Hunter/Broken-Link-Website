@@ -1,9 +1,14 @@
 import { render, screen } from '@test-utils';
 import { describe, expect, it } from 'vitest';
+import { theme } from '@/theme';
 import { Modal } from './Modal';
 
 describe('Modal', () => {
   it('lets contentStyle override styles.content for overlapping content styles', () => {
+    const slotBackgroundColor = theme.colors.error[5];
+    const slotTextColor = theme.colors.success[5];
+    const contentBackgroundColor = theme.colors.cyan[5];
+
     render(
       <Modal
         opened
@@ -12,12 +17,12 @@ describe('Modal', () => {
         fullScreen={false}
         styles={{
           content: {
-            backgroundColor: '#ff0000',
-            color: '#00ff00',
+            backgroundColor: slotBackgroundColor,
+            color: slotTextColor,
           },
         }}
         contentStyle={{
-          backgroundColor: '#0000ff',
+          backgroundColor: contentBackgroundColor,
         }}
       >
         Modal body
@@ -27,8 +32,8 @@ describe('Modal', () => {
     const dialog = screen.getByRole('dialog', { name: 'Styled modal' });
 
     expect(dialog).toHaveStyle({
-      backgroundColor: 'rgb(0, 0, 255)',
-      color: 'rgb(0, 255, 0)',
+      backgroundColor: contentBackgroundColor,
+      color: slotTextColor,
     });
   });
 });
