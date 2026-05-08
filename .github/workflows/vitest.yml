@@ -1,0 +1,23 @@
+name: Run Vitest
+
+on: 
+  pull_request:
+    branches: main
+
+jobs:
+  build: 
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v6
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run tests
+        run: pnpm vitest
+    
