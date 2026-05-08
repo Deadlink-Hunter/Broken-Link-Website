@@ -22,7 +22,6 @@ export default function Footer() {
     <>
       <Divider />
       <Container style={footerStyles.container}>
-        {/* TODO: Replace mantine grid with styling from styles.ts or create a new grid component thats based on simple grid */}
         <SimpleGrid
           spacing={theme.spacing.xl}
           cols={footerStyles.topGridColLayout}
@@ -61,10 +60,10 @@ export default function Footer() {
           <Box>
             <Typography style={footerStyles.header(isDark)}>{t('footer.Community')}</Typography>
             {footerCommunityLinks.map((link, i) => (
-              <Link
-                key={i + link.label}
-                href={link.href}
-                label={link.label}
+              <Link 
+                key={i + link.label} 
+                href={link.href} 
+                label={link.label} 
                 target={LinkTarget.Blank}
               />
             ))}
