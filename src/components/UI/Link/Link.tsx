@@ -38,18 +38,25 @@ export const Link = ({
     root: { ...linkStyles.root, ...rootStyle },
     label: { ...linkStyles.label(applyHover, isDark, hoverColor, labelColor), ...labelStyle },
   };
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const linkProps: any = isExternal
+    ? {
+        component: 'a',
+        href,
+        target: '_blank',
+        rel: 'noopener noreferrer',
+      }
+    : {
+        component: RouterLink,
+        to: href,
+      };
 
   return (
     <NavLink
       ref={ref}
       label={label}
       styles={sharedStyles}
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      component={(isExternal ? 'a' : RouterLink) as any}
-      href={isExternal ? href : undefined}
-      to={!isExternal ? href : undefined}
-      target={isExternal ? '_blank' : undefined}
-      rel={isExternal ? 'noopener noreferrer' : undefined}
+      {...linkProps}
       {...props}
     />
   );
