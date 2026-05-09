@@ -1,10 +1,22 @@
-import { CSSProperties } from 'react';
+import { CSSProperties, ComponentProps } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { NavLink } from '@mantine/core';
 import { useHover } from '@mantine/hooks';
 import { useIsDark } from '@/components/Hooks/useIsDark';
 import { LinkTarget } from '../Button/LinkButton';
 import { defaultHoverColor, linkStyles } from './styles';
+
+type DynamicNavLinkProps =
+  | {
+      component: 'a';
+      href: string;
+      target: '_blank';
+      rel: string;
+    }
+  | {
+      component: typeof RouterLink;
+      to: string;
+    };
 
 interface LinkProps {
   label: string;
@@ -38,8 +50,8 @@ export const Link = ({
     root: { ...linkStyles.root, ...rootStyle },
     label: { ...linkStyles.label(applyHover, isDark, hoverColor, labelColor), ...labelStyle },
   };
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const linkProps: any = isExternal
+
+  const linkProps: DynamicNavLinkProps = isExternal
     ? {
         component: 'a',
         href,
@@ -56,7 +68,7 @@ export const Link = ({
       ref={ref}
       label={label}
       styles={sharedStyles}
-      {...linkProps}
+      {...(linkProps as ComponentProps<typeof NavLink>)}
       {...props}
     />
   );
