@@ -22,6 +22,7 @@ export default function Footer() {
     <>
       <Divider />
       <Container style={footerStyles.container}>
+        {/* TODO: Replace mantine grid with styling from styles.ts or create a new grid component thats based on simple grid */}
         <SimpleGrid
           spacing={theme.spacing.xl}
           cols={footerStyles.topGridColLayout}

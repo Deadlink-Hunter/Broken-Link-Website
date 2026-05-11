@@ -1,4 +1,4 @@
-import { CSSProperties, ComponentProps } from 'react';
+import { ComponentProps, CSSProperties } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { NavLink } from '@mantine/core';
 import { useHover } from '@mantine/hooks';
