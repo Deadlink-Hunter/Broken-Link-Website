@@ -3,18 +3,20 @@ import { createHashRouter, RouterProvider } from 'react-router-dom';
 import { AppLayout } from './AppLayout';
 import { ErrorComponent } from './components/ErrorBoundary/components/ErrorComponent';
 import { ErrorBoundary } from './components/ErrorBoundary/ErrorBoundary';
-import { ROUTES } from './constants/routes.consts';
 import { Loader } from './components/UI/Loader/Loader';
+import { ROUTES } from './constants/routes.consts';
 import { routerStyles } from './router.styles';
 
-const HomePage = lazy(() => import('./pages/Home/Home.page').then(module => ({ default: module.HomePage })));
+const HomePage = lazy(() =>
+  import('./pages/Home/Home.page').then((module) => ({ default: module.HomePage }))
+);
 const AboutPage = lazy(() => import('./pages/About/About.page'));
 const ScannerPage = lazy(() => import('./pages/Scanner/Scanner.page'));
 const StatisticsPage = lazy(() => import('./pages/Statistics/Statistics.page'));
 
 const withErrorBoundary = (element: React.ReactNode) => (
   <ErrorBoundary>
-    <Suspense 
+    <Suspense
       fallback={
         <div style={routerStyles.suspenseFallback}>
           <Loader />

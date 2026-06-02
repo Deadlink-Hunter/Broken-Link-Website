@@ -49,7 +49,7 @@ export const footerStyles = {
   },
 
   iconSize: 16,
-  
+
   bottomGrid: {
     paddingTop: '1rem',
     paddingBottom: '4rem',

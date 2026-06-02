@@ -2,9 +2,9 @@ import { DonutChart as MantineDonutChart } from '@mantine/charts';
 import { Box } from '@mantine/core';
 import { Typography } from '@/components/UI/Typography/Typography';
 import { DonutProps } from '../chart.types';
+import { CHART_ANIMATION_DURATION, DONUT_ANIMATION_BEGIN } from '../constants';
 import { CHART_COLORS } from '../data';
 import { chartStyles } from './styles';
-import { CHART_ANIMATION_DURATION, DONUT_ANIMATION_BEGIN } from '../constants';
 
 export default function DonutChart({ data, withToolTip = false }: DonutProps) {
   const graphData = data.map((item, i) => ({

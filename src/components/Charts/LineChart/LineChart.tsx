@@ -2,9 +2,9 @@ import { LineChart as MantineLineChart } from '@mantine/charts';
 import { useMediaQuery } from '@mantine/hooks';
 import { theme } from '@/theme';
 import { CurveType, LineProps } from '../chart.types';
+import { CHART_ANIMATION_DURATION } from '../constants';
 import { CHART_COLORS } from '../data';
 import { chartStyles } from './styles';
-import { CHART_ANIMATION_DURATION } from '../constants';
 
 export default function LineChart({ data, withTooltip = false }: LineProps) {
   const isMobileView = useMediaQuery(`(max-width: ${theme.breakpoints.lg})`);

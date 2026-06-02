@@ -1,7 +1,7 @@
 import { IconCode, IconHeart, IconStar } from '@tabler/icons-react';
 import { useQuery } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
-import { Box, Container, Text } from '@mantine/core'; 
+import { Box, Container, Text } from '@mantine/core';
 import { useViewportSize } from '@mantine/hooks';
 import { useNavigationLinks } from '@/components/Hooks/useNavigationLinks';
 import { GITHUB_QUERY_KEY, GITHUB_STALE_TIME } from '@/constants/api.consts';
@@ -10,9 +10,9 @@ import { theme } from '@/theme';
 import { useIsDark } from '../Hooks/useIsDark';
 import { LinkButton, LinkTarget } from '../UI/Button/LinkButton';
 import { Divider } from '../UI/Divider/Divider';
+import { Grid } from '../UI/Grid/Grid';
 import { Link } from '../UI/Link/Link';
 import { Typography } from '../UI/Typography/Typography';
-import { Grid } from '../UI/Grid/Grid'; 
 import { footerStyles } from './styles';
 
 export default function Footer() {
@@ -86,12 +86,7 @@ export default function Footer() {
       <Divider />
 
       <Container style={footerStyles.container}>
-        <Grid
-          spacing={theme.spacing.xl}
-          cols={2}
-          mobileCols={1}
-          style={footerStyles.bottomGrid}
-        >
+        <Grid spacing={theme.spacing.xl} cols={2} mobileCols={1} style={footerStyles.bottomGrid}>
           <Typography style={footerStyles.openSrcTxt(isMobileView, isDark)}>
             <IconCode size={footerStyles.iconSize} /> {t('footer.madeWith')}
             <IconHeart color={theme.colors.red[8]} size={footerStyles.iconSize} />

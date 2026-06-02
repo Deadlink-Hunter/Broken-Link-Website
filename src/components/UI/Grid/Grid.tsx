@@ -1,4 +1,4 @@
-import { ReactNode, CSSProperties } from 'react';
+import { CSSProperties, ReactNode } from 'react';
 import { useMediaQuery } from '@mantine/hooks';
 import { gridStyles } from './styles';
 
