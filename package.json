@@ -85,7 +85,7 @@
     "typescript-eslint": "^8.60.1",
     "vite": "^6.4.3",
     "vite-tsconfig-paths": "^5.1.4",
-    "vitest": "^3.2.6"
+    "vitest": "^4.1.0"
   },
   "packageManager": "pnpm@9.0.0"
 }
