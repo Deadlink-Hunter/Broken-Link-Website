@@ -3,7 +3,7 @@
 # Deadlink-Hunter-Website🕵️
 [![GitHub Stars](https://img.shields.io/github/stars/Deadlink-Hunter/Broken-Link-Website?style=social)](https://github.com/Deadlink-Hunter/Broken-Link-Website/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
+[![Deployment](https://github.com/Deadlink-Hunter/Broken-Link-Website/actions/workflows/deploy.yml/badge.svg)](https://github.com/Deadlink-Hunter/Broken-Link-Website/actions/workflows/deploy.yml)
 ## Prefere um idioma diferente?
 
 Este README está disponível em múltiplos idiomas.
@@ -27,10 +27,6 @@ Este é o design geral desejado para o site, gerado pelo Lovable, apenas para se
 <img style="object-fit: contain;" width="1600" height="650" alt="image" src="https://github.com/user-attachments/assets/6cd143f2-40ec-4b9f-8f99-92d82d1e05c2" />
 
 Você pode conferir a [interface mais elaborada](https://link-guard-191fc128.base44.app) que foi criada com base44 como inspiração inicial.
-
-<img width="434" height="667" alt="image" src="https://github.com/user-attachments/assets/6ae53712-a40a-4e33-bbb5-fd6445c3aec2" />
-
-Para ver a interface, faça login.
 
 <p align="left"><a href="#top-btn">Voltar ao topo da página</a></p>
 

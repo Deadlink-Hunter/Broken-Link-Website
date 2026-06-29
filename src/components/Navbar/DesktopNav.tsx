@@ -27,15 +27,6 @@ export default function DesktopNav() {
       </div>
 
       <div style={styles.buttonContainers}>
-        <LinkButton
-          href={externalLinks.GITHUB.REPO}
-          target={LinkTarget.Blank}
-          style={styles.button}
-          variant='primary'
-        >
-          <IconBrandGithub width={36} height={18} />
-        </LinkButton>
-
         <Select
           aria-label='Language'
           data={LANGUAGE_OPTIONS}
@@ -45,6 +36,13 @@ export default function DesktopNav() {
           {...languageSelectProps}
         />
         <ThemeToggle />
+        <LinkButton
+          href={externalLinks.GITHUB.REPO}
+          target={LinkTarget.Blank}
+          style={styles.button}
+        >
+          <IconBrandGithub width={30} size={18} />
+        </LinkButton>
       </div>
     </nav>
   );

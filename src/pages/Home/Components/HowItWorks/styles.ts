@@ -54,15 +54,8 @@ export const howItWorksStyles = {
 
   title: {
     ...sharedStyles.sectionTitle,
-    color: `light-dark(${theme.black}, ${theme.white})`,
     fontFamily: theme.fontFamily,
     marginBottom: theme.spacing.xl,
-  } satisfies CSSProperties,
-
-  highlight: {
-    backgroundImage: `linear-gradient(90deg, ${colors.cyan[4]}, ${colors.purple[5]})`,
-    WebkitBackgroundClip: 'text',
-    WebkitTextFillColor: 'transparent',
   } satisfies CSSProperties,
 
   highlightCyan: {
@@ -136,7 +129,6 @@ export const howItWorksStyles = {
   } satisfies CSSProperties,
 
   cardTitle: {
-    color: theme.white,
     fontFamily: theme.fontFamily,
     fontWeight: 900,
     fontSize: theme.fontSizes.xl,
@@ -145,7 +137,6 @@ export const howItWorksStyles = {
 
   cardDescription: {
     marginBottom: theme.spacing.xl,
-    color: rgba(theme.white, 0.72),
     fontFamily: theme.fontFamily,
     fontSize: theme.fontSizes.md,
     lineHeight: 1.6,
@@ -232,7 +223,6 @@ export const howItWorksStyles = {
     fontSize: theme.fontSizes.xxl,
     fontWeight: 900,
     lineHeight: 1.2,
-    color: theme.white,
     overflowWrap: 'break-word',
     wordWrap: 'break-word',
   } satisfies CSSProperties,
@@ -248,7 +238,6 @@ export const howItWorksStyles = {
     fontFamily: theme.fontFamily,
     fontSize: theme.fontSizes.md,
     lineHeight: 1.6,
-    color: rgba(theme.white, 0.75),
   } satisfies CSSProperties,
 
   featureList: {
@@ -269,7 +258,6 @@ export const howItWorksStyles = {
   featureListText: {
     fontFamily: theme.fontFamily,
     fontSize: theme.fontSizes.sm,
-    color: theme.white,
   } satisfies CSSProperties,
 
   listDotCyan: {

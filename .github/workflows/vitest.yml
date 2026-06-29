@@ -1,0 +1,30 @@
+name: Run Vitest
+
+on: 
+  pull_request_target:
+    branches: main
+    types: [opened]
+
+jobs:
+  build: 
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          version: 24.3.0
+
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v6
+        with:
+          version: 9.0.0
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run tests
+        run: pnpm vitest

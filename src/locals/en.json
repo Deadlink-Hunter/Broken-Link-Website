@@ -1,12 +1,32 @@
 {
   "welcome_link_text": "this guide",
   "welcome_description_after_link": ". To get started edit pages/Home.page.tsx file.",
-  "about_page":{
+  "about_page": {
     "title": {
       "about": "About ",
       "deadlink_hunter": "Deadlink-Hunter"
     },
-    "description": "A powerful, open-source tool designed to mantain the integrity of links within your GitHub repositories by identifying and eliminating broken links before they impact your users."
+    "description": "A powerful, open-source tool designed to maintain the integrity of links within your GitHub repositories by identifying and eliminating broken links before they impact your users.",
+    "mission": {
+      "title": "Our Mission",
+      "description": "To provide developers with a reliable, efficient, and easy-to-use solution for maintaining link integrity across their projects. Broken links shouldn't break user experiences, and every repository deserves to be link-perfect."
+    },
+    "community": {
+      "title_part1": "Built With ",
+      "title_gradient": "Community",
+      "subtitle": "This project was born from a real problem and a desire to give back. Everyone is welcome, from first time contributors to seasoned engineers.",
+      "card_title": "Why I Built This",
+      "paragraph1": "I started this project after repeatedly running into the same frustration: old, unmaintained repositories with outdated READMEs and broken links. After opening countless issues to report them, I realized it would be better to solve the problem at scale.",
+      "paragraph2": "So I built an open source tool focused on fixing broken links, with a strong emphasis on community and contributors. The goal is to grow step by step and help others along the way through code reviews and guidance.",
+      "paragraph3": "The open source community has given me a lot (including a job referral) and this is my way of giving back. I'm always open to feedback and new contributors. If you'd like to contribute but aren't sure where to start, feel free to DM me. I'll personally help you find a good first issue. 🙌",
+      "tech_stack_label": "Tech Stack",
+      "tech_stack": {
+        "typescript": "TypeScript",
+        "react": "React",
+        "nodejs": "Node.js"
+      },
+      "cta": "View on GitHub"
+    }
   },
   "about_feature_card": {
     "card_one": {
@@ -50,15 +70,15 @@
       "accuracyRate": "Accuracy Rate"
     }
   },
-  "statistics_page":{
+  "statistics_page": {
     "title": {
       "performance": "Performance",
       "analytics": "Analytics"
     },
     "description": "Real time insights into your link scanning performance and repository health metrics."
   },
-  "charts":{
-    "scanActivity" : "Scan Activity Over Time",
+  "charts": {
+    "scanActivity": "Scan Activity Over Time",
     "linkTypesDistribution": "Link Types Distribution"
   },
   "footer": {
@@ -100,8 +120,6 @@
   "explore_toolkit_card3_title": "About The Project",
   "explore_toolkit_card3_description": "Learn more about the mission behind Deadlink-Hunter, its open-source nature, and how you can contribute.",
   "explore_toolkit_card3_button": "Learn More",
-  "our_mission_card_title": "Our Mission",
-  "our_mission_card_description": "To provide developers with a reliable, efficient, and easy-to-use solution for maintaining link integrity across their broken links shouldn't break user experiences, and every repository deserves to be link-perfect.",
   "how_it_works_card1_title": "Scan Your Repository",
   "how_it_works_card1_description": "Enter your GitHub repository URL or paste a list of links to check for broken connections.",
   "how_it_works_card2_title": "Lightning Fast Analysis",
@@ -120,22 +138,22 @@
   "how_it_works_feature_point_2": "Keep your users' trust with working references",
   "how_it_works_feature_point_3": "Maintain professional repository standards",
   "scanner_page": {
-    "title": "Link Scanner",
+    "title": {
+      "prefix": "Link ",
+      "highlight": "Scanner"
+    },
     "description": "Test individual URLs or scan entire repositories for broken links with lightning speed",
     "scan_links_card": {
       "title": "Scan Links",
-
       "toggle": {
         "single": "Single URL",
         "repository": "Repository"
       },
-
       "single": {
         "input_label": "Enter URL to check",
         "input_placeholder": "https://example.com/page",
         "button_check": "Check Link"
       },
-
       "repository": {
         "input_label": "GitHub Repository URL",
         "input_placeholder": "https://github.com/username/repository",
@@ -144,14 +162,19 @@
         "button_check": "Scan Repository"
       }
     },
-
     "scan_results_card": {
       "title": "Scan Results",
       "empty_state": "Enter a URL or repository above to start scanning for broken links",
       "loading": "Scanning...",
       "response_time": "Response time: {{responseTime}}ms",
-      "total_response_time": "Total response time: {{responseTime}}ms",
-      "summary": "{{working}} working, {{broken}} broken out of {{total}}",
+      "seconds": "s",
+      "working_links": "Working Links",
+      "broken_links": "Broken Links",
+      "link_status_header": "Link Status",
+      "status_error": "Error",
+      "scanned_label": "Scanned:",
+      "link_one": "{{count}} link",
+      "link_other": "{{count}} links",
       "errors": {
         "url_required": "URL is required",
         "internal_server_error": "Internal server error",
@@ -160,5 +183,16 @@
         "maximum_urls_allowed": "Maximum {{max}} URLs allowed per request"
       }
     }
+  },
+  "error_boundary": {
+    "title": "Something went wrong!",
+    "description": "We're sorry, but something unexpected happened.",
+    "what_you_can_try": "What you can try:",
+    "suggestions": {
+      "refresh": "Refresh the page",
+      "clear_cache": "Clear your browser cache",
+      "try_again": "Try again in a few minutes"
+    },
+    "go_home": "Go to Home Page"
   }
 }

@@ -4,35 +4,40 @@ export const desktopStyles = {
   container: {
     width: '100%',
     display: 'flex',
-    minHeight: '74px',
-    justifyContent: 'space-around',
+    minHeight: '4.625rem',
+    justifyContent: 'space-evenly',
     alignItems: 'center',
     marginTop: '.45rem',
+    borderBottom: '1px solid light-dark(transparent, var(--mantine-color-primary-6))',
   },
   headerContainer: { display: 'flex', alignItems: 'center' },
   logoSize: { height: '1.75rem' },
-  header: { fontWeight: '700', fontSize: theme.fontSizes.xl, marginLeft: '.2rem' },
+  header: { fontWeight: '700', fontSize: theme.fontSizes.lg, marginLeft: '.2rem' },
   linksContainer: {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
   },
   linkHoverColor: (isPathMatch: boolean) =>
-    isPathMatch ? theme.colors.cyan[5] : theme.colors.gray[7],
+    isPathMatch ? theme.colors.cyan[4] : theme.colors.primary[3],
 
-  linkColor: (isPathMatch: boolean) => (isPathMatch ? theme.colors.cyan[4] : theme.colors.gray[7]),
+  linkColor: (isPathMatch: boolean) =>
+    isPathMatch ? 'var(--mantine-color-cyan-filled)' : 'var(--mantine-color-gray-text)',
   linkStyle: {
-    fontWeight: 'bold',
+    fontWeight: 700,
     padding: '.77rem',
     whiteSpace: 'nowrap',
   },
   button: {
-    padding: '.6rem',
-    borderRadius: '6px',
+    height: '1.875rem',
+    borderRadius: theme.radius.sm,
+    gap: theme.spacing.sm,
+    color: theme.colors.primary[1],
+    fontWeight: 400,
+    border: `1px solid ${theme.colors.primary[6]}`,
   },
-  buttonIcon: { marginRight: '1rem' },
   divider: { transform: 'scaleY(.1)' },
-  buttonContainers: { display: 'flex', gap: '1rem' },
+  buttonContainers: { display: 'flex', gap: theme.spacing.lg, alignItems: 'center' },
 };
 
 export const mobileStyles = {
@@ -43,9 +48,13 @@ export const mobileStyles = {
     padding: '1rem 1.5rem',
   },
   headerContainer: { display: 'flex', alignItems: 'center' },
-  header: { fontWeight: '700', fontSize: theme.fontSizes.xl, marginLeft: '.2rem' },
+  header: (isScreenXS: boolean) => ({
+    fontWeight: '700',
+    fontSize: isScreenXS ? theme.fontSizes.sm : theme.fontSizes.xl,
+    marginLeft: '.2rem',
+  }),
   logoSize: { height: '1.75rem' },
-  burger: { paddingRight: '1.8rem', width: 18, height: 18 },
+  burger: { width: 18, height: 18, marginLeft: '0.5rem' },
 
   linksContainer: { padding: '.6rem' },
   link: {
@@ -53,24 +62,25 @@ export const mobileStyles = {
     fontSize: '1rem',
     whiteSpace: 'nowrap',
   },
-  linkColor: (isPathMatch: boolean) => (isPathMatch ? theme.colors.cyan[4] : theme.colors.gray[7]),
+  linkColor: (isPathMatch: boolean) =>
+    isPathMatch ? 'var(--mantine-color-cyan-filled)' : 'var(--mantine-color-gray-text)',
   linkContainer: (isPathMatch: boolean) => ({
-    backgroundColor: isPathMatch ? '#1e293b' : 'transparent',
-    borderRadius: '8px',
+    backgroundColor: isPathMatch ? theme.colors.primary[6] : 'transparent',
+    borderRadius: '0.5rem',
     padding: '.6rem',
   }),
   linksDivider: { marginLeft: 'calc(50% - 50vw)', marginRight: 'calc(50% - 50vw)' },
   buttonContainer: {
     display: 'flex',
-    gap: '0.4rem',
+    gap: '0.5rem',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-end',
   },
   button: {
     margin: '.6rem',
+    borderRadius: '0.25rem',
     display: 'block',
     flex: 1,
-    borderRadius: '4px',
   },
   buttonIconColor: (isDark: boolean) => (isDark ? theme.colors.gray[2] : theme.colors.gray[7]),
   buttonText: { margin: '0 .8rem', fontWeight: '700' },
@@ -87,19 +97,23 @@ export const mobileStyles = {
 
 export const languageSelectProps = {
   allowDeselect: false,
+  variant: 'ghost' as const,
   leftSectionPointerEvents: 'none' as const,
   checkIconPosition: 'right' as const,
   maxDropdownHeight: 200,
+  rightSection: null,
   styles: {
     root: {
-      width: '8rem',
+      width: '6rem',
     },
     input: {
-      backgroundColor: theme.colors.primary[6],
-      color: theme.colors.primary[0],
+      backgroundColor: 'transparent',
+      color: theme.colors.primary[1],
+      border: 'none',
+      height: '1.875rem',
     },
     section: {
-      color: theme.colors.primary[0],
+      color: theme.colors.primary[1],
     },
     dropdown: {
       backgroundColor: theme.colors.primary[6],
@@ -108,4 +122,3 @@ export const languageSelectProps = {
     },
   },
 };
-

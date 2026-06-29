@@ -6,12 +6,12 @@ import { CardShell } from './CardShell';
 
 const TITLE_KEY = 'scanner_page.scan_results_card.title';
 
-export const EmptyState = () => {
+export const EmptyState = ({ isDark }: { isDark: boolean }) => {
   const { t } = useTranslation();
 
   return (
     <CardShell title={TITLE_KEY} contentStyle={scanPageStyle.resultsStack}>
-      <IconSearch style={scanPageStyle.emptyStateIcon} />
+      <IconSearch style={scanPageStyle.emptyStateIcon(isDark)} />
       <Typography style={scanPageStyle.resultDescription}>
         {t('scanner_page.scan_results_card.empty_state')}
       </Typography>

@@ -43,6 +43,8 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Build
         run: pnpm run build
+        env:
+          VITE_API_BASE_URL: ${{ vars.VITE_API_BASE_URL }}
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

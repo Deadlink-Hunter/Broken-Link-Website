@@ -10,6 +10,7 @@ interface RepositoryScanFormProps {
   multipleUrl: string;
   setMultipleUrl: (value: string) => void;
   onSubmit: () => void;
+  isDark: boolean;
 }
 
 export const RepositoryScanForm = ({
@@ -18,6 +19,7 @@ export const RepositoryScanForm = ({
   multipleUrl,
   setMultipleUrl,
   onSubmit,
+  isDark,
 }: RepositoryScanFormProps) => {
   const { t } = useTranslation();
   const baseTranslationKey = 'scanner_page.scan_links_card.repository';
@@ -38,7 +40,7 @@ export const RepositoryScanForm = ({
   return (
     <form onSubmit={handleSubmit}>
       <div style={scanPageStyle.formFieldGroup}>
-        <label htmlFor='repository-url' style={scanPageStyle.fieldLabel}>
+        <label htmlFor='repository-url' style={scanPageStyle.fieldLabel(isDark)}>
           {t(`${baseTranslationKey}.input_label`)}
         </label>
         <input
@@ -47,12 +49,12 @@ export const RepositoryScanForm = ({
           value={url}
           onChange={handleUrlChange}
           placeholder={t(`${baseTranslationKey}.input_placeholder`)}
-          style={scanPageStyle.textInputStyle}
+          style={scanPageStyle.textInputStyle(isDark)}
         />
       </div>
 
       <div style={scanPageStyle.formFieldGroup}>
-        <label htmlFor='multiple-urls' style={scanPageStyle.fieldLabel}>
+        <label htmlFor='multiple-urls' style={scanPageStyle.fieldLabel(isDark)}>
           {t(`${baseTranslationKey}.textarea_label`)}
         </label>
         {/* TODO - replace this with future shared text component */}
@@ -61,7 +63,7 @@ export const RepositoryScanForm = ({
           value={multipleUrl}
           onChange={handleMultipleUrlChange}
           placeholder={t(`${baseTranslationKey}.textarea_placeholder`)}
-          style={scanPageStyle.textareaStyle}
+          style={scanPageStyle.textareaStyle(isDark)}
           rows={4}
         />
       </div>

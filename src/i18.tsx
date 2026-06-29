@@ -1,13 +1,16 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import deTranslations from '../public/locals/de.json';
-import enTranslations from '../public/locals/en.json';
-import esTranslations from '../public/locals/es.json';
-import frTranslations from '../public/locals/fr.json';
-import itTranslations from '../public/locals/it.json';
-import nlTranslations from '../public/locals/nl.json';
-import ptBrTranslations from '../public/locals/ptbr.json';
-import turTranslations from '../public/locals/tur.json';
+import chinTranslations from './locals/chin.json';
+import deTranslations from './locals/de.json';
+import enTranslations from './locals/en.json';
+import esTranslations from './locals/es.json';
+import frTranslations from './locals/fr.json';
+import heTranslations from './locals/he.json';
+import itTranslations from './locals/it.json';
+import nlTranslations from './locals/nl.json';
+import ptBrTranslations from './locals/ptbr.json';
+import turTranslations from './locals/tur.json';
+import { syncDocumentLanguage } from './syncDocumentLanguage';
 
 const savedLang = localStorage.getItem('lang') || 'en';
 
@@ -15,6 +18,9 @@ i18n.use(initReactI18next).init({
   resources: {
     en: {
       translation: enTranslations,
+    },
+    chin: {
+      translation: chinTranslations,
     },
     es: {
       translation: esTranslations,
@@ -37,6 +43,9 @@ i18n.use(initReactI18next).init({
     nl: {
       translation: nlTranslations,
     },
+    he: {
+      translation: heTranslations,
+    },
   },
   lng: savedLang,
   fallbackLng: 'en',
@@ -44,5 +53,8 @@ i18n.use(initReactI18next).init({
     escapeValue: false,
   },
 });
+
+i18n.on('languageChanged', syncDocumentLanguage);
+syncDocumentLanguage(i18n.language);
 
 export default i18n;

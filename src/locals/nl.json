@@ -120,7 +120,10 @@
   "how_it_works_feature_point_2": "Behoud het vertrouwen van gebruikers met werkende referenties",
   "how_it_works_feature_point_3": "Behoud professionele repository-standaarden",
   "scanner_page": {
-    "title": "Link Scanner",
+    "title": {
+      "prefix": "Link ",
+      "highlight": "Scanner"
+    },
     "description": "Test individuele URL's of scan hele repositories met lichtsnelheid",
     "scan_links_card": {
       "title": "Links scannen",
@@ -146,8 +149,13 @@
       "empty_state": "Voer hierboven een URL of repository in om te beginnen met scannen",
       "loading": "Scannen...",
       "response_time": "Responstijd: {{responseTime}}ms",
-      "total_response_time": "Totale responstijd: {{responseTime}}ms",
-      "summary": "{{working}} werkend, {{broken}} kapot van de {{total}}",
+      "working_links": "Werkende links",
+      "broken_links": "Kapotte links",
+      "link_status_header": "Linkstatus",
+      "status_error": "Fout",
+      "scanned_label": "Gescand:",
+      "link_one": "{{count}} link",
+      "link_other": "{{count}} links",
       "errors": {
         "url_required": "URL is vereist",
         "internal_server_error": "Interne serverfout",

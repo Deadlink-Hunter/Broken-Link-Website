@@ -24,8 +24,12 @@ export const HowItWorkCard = ({
     <Card style={cardStyle}>
       <div style={howItWorksStyles.stepBadge}>{stepNumber}</div>
       <div style={iconStyle}>{icon}</div>
-      <Typography variant='title'>{title}</Typography>
-      <Typography variant='description'>{description}</Typography>
+      <Typography variant='title' style={howItWorksStyles.cardTitle}>
+        {title}
+      </Typography>
+      <Typography variant='primary' style={howItWorksStyles.cardDescription}>
+        {description}
+      </Typography>
     </Card>
   );
 };

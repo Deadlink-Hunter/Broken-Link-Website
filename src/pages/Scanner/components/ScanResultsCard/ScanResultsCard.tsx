@@ -1,3 +1,4 @@
+import { useIsDark } from '@/components/Hooks/useIsDark';
 import {
   MultipleResultData,
   ResolvedKind,
@@ -12,6 +13,7 @@ import { MultipleResults } from './MultipleResults';
 import { SingleResult } from './SingleResult';
 
 export const ScanResultsCard = ({ results, loading, error }: ScanResultsCardProps) => {
+  const isDark = useIsDark();
   const resolved = resolveScanResults(results);
 
   if (loading) {
@@ -23,14 +25,14 @@ export const ScanResultsCard = ({ results, loading, error }: ScanResultsCardProp
   }
 
   if (!resolved) {
-    return <EmptyState />;
+    return <EmptyState isDark={isDark} />;
   }
 
   if (resolved.kind === ResolvedKind.SINGLE) {
-    return <SingleResult data={resolved as SingleResultData} />;
+    return <SingleResult data={resolved as SingleResultData} isDark={isDark} />;
   }
   if (resolved.kind === ResolvedKind.MULTIPLE) {
-    return <MultipleResults data={resolved as MultipleResultData} />;
+    return <MultipleResults data={resolved as MultipleResultData} isDark={isDark} />;
   }
 
   return null;

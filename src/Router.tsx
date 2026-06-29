@@ -1,14 +1,32 @@
+import { lazy, Suspense } from 'react';
 import { createHashRouter, RouterProvider } from 'react-router-dom';
 import { AppLayout } from './AppLayout';
 import { ErrorComponent } from './components/ErrorBoundary/components/ErrorComponent';
 import { ErrorBoundary } from './components/ErrorBoundary/ErrorBoundary';
+import { Loader } from './components/UI/Loader/Loader';
 import { ROUTES } from './constants/routes.consts';
-import AboutPage from './pages/About/About.page';
-import { HomePage } from './pages/Home/Home.page';
-import ScannerPage from './pages/Scanner/Scanner.page';
-import StatisticsPage from './pages/Statistics/Statistics.page';
+import { routerStyles } from './router.styles';
 
-const withErrorBoundary = (element: React.ReactNode) => <ErrorBoundary>{element}</ErrorBoundary>;
+const HomePage = lazy(() =>
+  import('./pages/Home/Home.page').then((module) => ({ default: module.HomePage }))
+);
+const AboutPage = lazy(() => import('./pages/About/About.page'));
+const ScannerPage = lazy(() => import('./pages/Scanner/Scanner.page'));
+const StatisticsPage = lazy(() => import('./pages/Statistics/Statistics.page'));
+
+const withErrorBoundary = (element: React.ReactNode) => (
+  <ErrorBoundary>
+    <Suspense
+      fallback={
+        <div style={routerStyles.suspenseFallback}>
+          <Loader />
+        </div>
+      }
+    >
+      {element}
+    </Suspense>
+  </ErrorBoundary>
+);
 
 const router = createHashRouter([
   {

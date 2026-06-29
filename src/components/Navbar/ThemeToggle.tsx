@@ -27,8 +27,9 @@ export function ThemeToggle() {
           );
           handleThemeButtonClicked();
         }}
+        variant='icon'
       >
-        {theme ? <IconMoon /> : <IconSun />}
+        {theme ? <IconMoon size={16} /> : <IconSun size={16} />}
       </Button>
     </div>
   );

@@ -33,10 +33,6 @@ Dağıtıma çıkmış websitesini burdan görebilirsiniz: [Deadlink-Hunter Webs
 
 Kontrol edebilirsiniz [more elaborated ui](https://link-guard-191fc128.base44.app) ilk ilham kaynağı olarak base44 ile oluşturuldu.
 
-<img width="434" height="667" alt="image" src="https://github.com/user-attachments/assets/6ae53712-a40a-4e33-bbb5-fd6445c3aec2" />
-
-UI'ı görmek için giriş yapın.
-
 <p align="left"><a href="#top-btn">Sayfanın başına dön</a></p>
 
 ---

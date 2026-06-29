@@ -1,7 +1,7 @@
 # Deadlink-Hunter-Website🕵️
 [![GitHub Stars](https://img.shields.io/github/stars/Deadlink-Hunter/Broken-Link-Website?style=social&label=星标)](https://github.com/Deadlink-Hunter/Broken-Link-Website/stargazers)
 [![许可证: MIT](https://img.shields.io/badge/许可证-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
+[![Deployment](https://github.com/Deadlink-Hunter/Broken-Link-Website/actions/workflows/deploy.yml/badge.svg)](https://github.com/Deadlink-Hunter/Broken-Link-Website/actions/workflows/deploy.yml)
 Deadlink-Hunter 是一个开源项目，旨在查找 GitHub 仓库中的失效链接（未来将支持其他平台）。
 本项目的目标是帮助维护者保持文档的整洁、可靠，为读者提供无挫折的阅读体验。
 
@@ -17,10 +17,6 @@ Deadlink Hunter Website 是该网站的前端部分。
 <img width="1600" height="650" alt="image" src="https://github.com/user-attachments/assets/6cd143f2-40ec-4b9f-8f99-92d82d1e05c2" />
 
 您可以查看使用 base44 创建的[更精细的界面](https://link-guard-191fc128.base44.app)作为初始灵感来源。
-
-<img width="434" height="667" alt="image" src="https://github.com/user-attachments/assets/6ae53712-a40a-4e33-bbb5-fd6445c3aec2" />
-
-要查看界面请先登录。
 
 ## 目录
 - [为什么做这个项目](#为什么做这个项目)

@@ -1,0 +1,2 @@
+export const CHART_ANIMATION_DURATION = 900;
+export const DONUT_ANIMATION_BEGIN = 100;

@@ -49,10 +49,10 @@ export const footerStyles = {
   },
 
   iconSize: 16,
-  topGridColLayout: { base: 1, sm: 1, md: 3 },
-  bottomGridColLayout: { base: 1, sm: 2 },
+
   bottomGrid: {
     paddingTop: '1rem',
     paddingBottom: '4rem',
+    alignItems: 'center',
   },
 };
