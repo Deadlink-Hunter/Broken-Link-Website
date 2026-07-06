@@ -50,7 +50,17 @@ export const RepositoryScanForm = ({
           onChange={handleUrlChange}
           placeholder={t(`${baseTranslationKey}.input_placeholder`)}
           style={scanPageStyle.textInputStyle(isDark)}
+          disabled
         />
+        <div
+          style={{
+            fontSize: '0.875rem',
+            color: isDark ? '#a6a6a6' : '#666',
+            marginTop: '0.5rem',
+          }}
+        >
+          {t(`${baseTranslationKey}.repository_not_supported`)}
+        </div>
       </div>
 
       <div style={scanPageStyle.formFieldGroup}>

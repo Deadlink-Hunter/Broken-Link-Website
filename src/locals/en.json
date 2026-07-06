@@ -157,6 +157,7 @@
       "repository": {
         "input_label": "GitHub Repository URL",
         "input_placeholder": "https://github.com/username/repository",
+        "repository_not_supported": "Scanning a full GitHub repository is not supported right now.",
         "textarea_label": "Or paste multiple URLs",
         "textarea_placeholder": "https://example1.com\nhttps://example2.com\nhttps://example3.com",
         "button_check": "Scan Repository"
