@@ -2,6 +2,7 @@ import { ChangeEvent, FormEvent } from 'react';
 import { IconUpload } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/UI/Button/Button';
+import { Typography } from '@/components/UI/Typography/Typography';
 import { scanPageStyle } from './styles';
 
 interface RepositoryScanFormProps {
@@ -52,15 +53,9 @@ export const RepositoryScanForm = ({
           style={scanPageStyle.textInputStyle(isDark)}
           disabled
         />
-        <div
-          style={{
-            fontSize: '0.875rem',
-            color: isDark ? '#a6a6a6' : '#666',
-            marginTop: '0.5rem',
-          }}
-        >
+        <Typography style={scanPageStyle.unsupportedMessage(isDark)}>
           {t(`${baseTranslationKey}.repository_not_supported`)}
-        </div>
+        </Typography>
       </div>
 
       <div style={scanPageStyle.formFieldGroup}>

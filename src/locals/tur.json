@@ -139,6 +139,7 @@
       "repository": {
         "input_label": "GitHub Depo URL",
         "input_placeholder": "https://github.com/kullaniciadi/depo",
+        "repository_not_supported": "Tam bir GitHub deposunun taranması şu an desteklenmemektedir.",
         "textarea_label": "Ya da birden fazla URL yapıştırın",
         "textarea_placeholder": "https://example1.com\nhttps://example2.com\nhttps://example3.com",
         "button_check": "Depoyu Tara"

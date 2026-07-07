@@ -152,6 +152,7 @@
       "repository": {
         "input_label": "GitHub 儲存庫 URL",
         "input_placeholder": "https://github.com/username/repository",
+        "repository_not_supported": "目前不支援掃描完整的 GitHub 儲存庫。",
         "textarea_label": "或貼上多個URL。",
         "textarea_placeholder": "https://example1.com\nhttps://example2.com\nhttps://example3.com",
         "button_check": "掃描儲存庫"

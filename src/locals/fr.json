@@ -139,6 +139,7 @@
       "repository": {
         "input_label": "URL du dépôt GitHub",
         "input_placeholder": "https://github.com/nom/depot",
+        "repository_not_supported": "L'analyse d'un dépôt GitHub complet n'est pas prise en charge pour le moment.",
         "textarea_label": "Ou collez plusieurs URLs",
         "textarea_placeholder": "https://exemple1.com\nhttps://exemple2.com",
         "button_check": "Analyser le dépôt"

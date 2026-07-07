@@ -142,6 +142,7 @@
       "repository": {
         "input_label": "URL del Repository GitHub",
         "input_placeholder": "https://github.com/user/repository",
+        "repository_not_supported": "La scansione di un intero repository GitHub non è supportata al momento.",
         "textarea_label": "Oppure incolla più URL",
         "textarea_placeholder": "https://example1.com\nhttps://example2.com\nhttps://example3.com",
         "button_check": "Scansiona Repository"

@@ -139,6 +139,7 @@
       "repository": {
         "input_label": "כתובת מאגר GitHub",
         "input_placeholder": "https://github.com/username/repository",
+        "repository_not_supported": "סריקת מאגר GitHub שלם אינה נתמכת כרגע.",
         "textarea_label": "או הדבק מספר כתובות URL",
         "textarea_placeholder": "https://example1.com\nhttps://example2.com\nhttps://example3.com",
         "button_check": "סרוק מאגר"
