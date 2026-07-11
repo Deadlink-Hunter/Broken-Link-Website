@@ -1,6 +1,4 @@
-To maintain a consistent codebase, we ask that all contributors follow these stylistic guidelines.
-
-> Using an AI agent? Shared rules live in [AGENTS.md](./AGENTS.md). Tool-specific configs (like `.cursor/rules`) should only point there, never duplicate rules.
+To maintain a consistent codebase, we ask that all contributors follow these stylistic guidelines. 
 
 ## 1. TypeScript First
 
