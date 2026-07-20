@@ -22,8 +22,8 @@ export const desktopStyles = {
     isPathMatch ? theme.colors.cyan[4] : theme.colors.primary[3],
 
   linkColor: (isPathMatch: boolean) =>
-    isPathMatch ? 'var(--mantine-color-cyan-filled)' : 'var(--mantine-color-gray-text)',
-  linkStyle: {
+  isPathMatch ? 'var(--mantine-color-cyan-filled)': 'var(--mantine-color-text)',
+   linkStyle: {
     fontWeight: 700,
     padding: '.77rem',
     whiteSpace: 'nowrap',
@@ -63,7 +63,7 @@ export const mobileStyles = {
     whiteSpace: 'nowrap',
   },
   linkColor: (isPathMatch: boolean) =>
-    isPathMatch ? 'var(--mantine-color-cyan-filled)' : 'var(--mantine-color-gray-text)',
+  isPathMatch ? 'var(--mantine-color-cyan-filled)' : 'var(--mantine-color-text)',
   linkContainer: (isPathMatch: boolean) => ({
     backgroundColor: isPathMatch ? theme.colors.primary[6] : 'transparent',
     borderRadius: '0.5rem',
@@ -108,12 +108,12 @@ export const languageSelectProps = {
     },
     input: {
       backgroundColor: 'transparent',
-      color: theme.colors.primary[1],
+      color: 'var(--mantine-color-text)',
       border: 'none',
       height: '1.875rem',
     },
     section: {
-      color: theme.colors.primary[1],
+      color: 'var(--mantine-color-text)',
     },
     dropdown: {
       backgroundColor: theme.colors.primary[6],

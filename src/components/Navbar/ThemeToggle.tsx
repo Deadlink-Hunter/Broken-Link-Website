@@ -29,7 +29,11 @@ export function ThemeToggle() {
         }}
         variant='icon'
       >
-        {theme ? <IconMoon size={16} /> : <IconSun size={16} />}
+    {theme ? (
+  <IconMoon size={16} color="var(--mantine-color-text)" />
+) : (
+  <IconSun size={16} color="var(--mantine-color-text)" />
+)}
       </Button>
     </div>
   );
