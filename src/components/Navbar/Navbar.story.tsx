@@ -2,12 +2,11 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { MemoryRouter } from 'react-router-dom';
 import { expect, userEvent, within } from 'storybook/test';
 import { MantineProvider } from '@mantine/core';
-import { EXTERNAL_LINKS } from '@/constants/links.consts';
+import { EXTERNAL_LINKS, NAVIGATION_LINKS } from '@/constants/links.consts';
 import { theme } from '@/theme';
+import i18n from '@/i18';
 import DesktopNav from './DesktopNav';
 import MobileNav from './MobileNav';
-
-import '@/i18';
 
 const meta: Meta<typeof DesktopNav> = {
   title: 'Components/Navbar',
@@ -30,10 +29,9 @@ const meta: Meta<typeof DesktopNav> = {
 export default meta;
 
 const expectNavLinksToBeVisible = async (canvas: ReturnType<typeof within>) => {
-  await expect(canvas.getByRole('link', { name: /home/i })).toBeInTheDocument();
-  await expect(canvas.getByRole('link', { name: /scanner/i })).toBeInTheDocument();
-  await expect(canvas.getByRole('link', { name: /statistics/i })).toBeInTheDocument();
-  await expect(canvas.getByRole('link', { name: /about/i })).toBeInTheDocument();
+  for (const link of NAVIGATION_LINKS) {
+    await expect(canvas.getByRole('link', { name: i18n.t(link.label) })).toBeInTheDocument();
+  }
 };
 
 export const Desktop: StoryObj<typeof DesktopNav> = {
@@ -58,19 +56,26 @@ export const Mobile: StoryObj<typeof MobileNav> = {
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
+    const homeLink = NAVIGATION_LINKS[0];
 
     await expect(canvas.getByAltText('Deadlink logo')).toBeInTheDocument();
-    await expect(canvas.queryByRole('link', { name: /home/i })).not.toBeInTheDocument();
+    await expect(
+      canvas.queryByRole('link', { name: i18n.t(homeLink.label) })
+    ).not.toBeInTheDocument();
 
     const buttons = canvas.getAllByRole('button');
     const burger = buttons[buttons.length - 1];
 
     await userEvent.click(burger);
     await expectNavLinksToBeVisible(canvas);
-    await expect(canvas.getByRole('link', { name: /view on github/i })).toBeInTheDocument();
+    await expect(
+      canvas.getByRole('link', { name: i18n.t('navbar.githubMobile') })
+    ).toBeInTheDocument();
 
     await userEvent.click(burger);
-    await expect(canvas.queryByRole('link', { name: /home/i })).not.toBeInTheDocument();
+    await expect(
+      canvas.queryByRole('link', { name: i18n.t(homeLink.label) })
+    ).not.toBeInTheDocument();
 
     await userEvent.click(burger);
     await expectNavLinksToBeVisible(canvas);
