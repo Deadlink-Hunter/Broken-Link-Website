@@ -66,9 +66,6 @@ importers:
       '@storybook/addon-docs':
         specifier: 9.1.20
         version: 9.1.20(@types/react@19.2.17)(storybook@9.1.20(@testing-library/dom@10.4.1)(prettier@3.9.5)(vite@6.4.3(@types/node@22.20.1)(sugarss@5.0.1(postcss@8.5.20))))
-      '@storybook/addon-storysource':
-        specifier: ^8.6.14
-        version: 8.6.14(storybook@9.1.20(@testing-library/dom@10.4.1)(prettier@3.9.5)(vite@6.4.3(@types/node@22.20.1)(sugarss@5.0.1(postcss@8.5.20))))
       '@storybook/addon-viewport':
         specifier: ^9.0.8
         version: 9.0.8
@@ -879,11 +876,6 @@ packages:
     peerDependencies:
       storybook: ^9.1.20
 
-  '@storybook/addon-storysource@8.6.14':
-    resolution: {integrity: sha512-/eDCNUHPdsVDF53B+Ebi9gHSNcRrA3puo1UCDio8wMN+jBMoWh6E5wSjXDsxWaOyp0Zwuq8XUx8AdgTlg/rcrw==}
-    peerDependencies:
-      storybook: ^8.6.14
-
   '@storybook/addon-viewport@9.0.8':
     resolution: {integrity: sha512-HgIFDzNXvMx0zQBM5mhwBoAJlrF9KRlxNCZnJbqrFLCJO4Ps2PMtB0HRGHcg0gm3RLcqyps0DpiF7wll3udb7Q==}
 
@@ -972,11 +964,6 @@ packages:
 
   '@storybook/router@7.6.17':
     resolution: {integrity: sha512-GnyC0j6Wi5hT4qRhSyT8NPtJfGmf82uZw97LQRWeyYu5gWEshUdM7aj40XlNiScd5cZDp0owO1idduVF2k2l2A==}
-
-  '@storybook/source-loader@8.6.14':
-    resolution: {integrity: sha512-aFUqrkWh4XSXDmkrK0Nm8q4K94bfgnixFMmql8lBAFuEllFek9Rd3i2RwGOhLUtwzpM89f74nzEgR1kd/ijJ+g==}
-    peerDependencies:
-      storybook: ^8.6.14
 
   '@storybook/test@8.6.15':
     resolution: {integrity: sha512-EwquDRUDVvWcZds3T2abmB5wSN/Vattal4YtZ6fpBlIUqONV4o/cOBX39cFfQSUCBrIXIjQ6RmapQCHK/PvBYw==}
@@ -4252,13 +4239,6 @@ snapshots:
     transitivePeerDependencies:
       - '@types/react'
 
-  '@storybook/addon-storysource@8.6.14(storybook@9.1.20(@testing-library/dom@10.4.1)(prettier@3.9.5)(vite@6.4.3(@types/node@22.20.1)(sugarss@5.0.1(postcss@8.5.20))))':
-    dependencies:
-      '@storybook/source-loader': 8.6.14(storybook@9.1.20(@testing-library/dom@10.4.1)(prettier@3.9.5)(vite@6.4.3(@types/node@22.20.1)(sugarss@5.0.1(postcss@8.5.20))))
-      estraverse: 5.3.0
-      storybook: 9.1.20(@testing-library/dom@10.4.1)(prettier@3.9.5)(vite@6.4.3(@types/node@22.20.1)(sugarss@5.0.1(postcss@8.5.20)))
-      tiny-invariant: 1.3.3
-
   '@storybook/addon-viewport@9.0.8': {}
 
   '@storybook/addons@7.6.17(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
@@ -4405,13 +4385,6 @@ snapshots:
       '@storybook/client-logger': 7.6.17
       memoizerific: 1.11.3
       qs: 6.15.3
-
-  '@storybook/source-loader@8.6.14(storybook@9.1.20(@testing-library/dom@10.4.1)(prettier@3.9.5)(vite@6.4.3(@types/node@22.20.1)(sugarss@5.0.1(postcss@8.5.20))))':
-    dependencies:
-      es-toolkit: 1.49.0
-      estraverse: 5.3.0
-      prettier: 3.9.5
-      storybook: 9.1.20(@testing-library/dom@10.4.1)(prettier@3.9.5)(vite@6.4.3(@types/node@22.20.1)(sugarss@5.0.1(postcss@8.5.20)))
 
   '@storybook/test@8.6.15(storybook@9.1.20(@testing-library/dom@10.4.1)(prettier@3.9.5)(vite@6.4.3(@types/node@22.20.1)(sugarss@5.0.1(postcss@8.5.20))))':
     dependencies:
