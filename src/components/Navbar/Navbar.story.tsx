@@ -2,8 +2,8 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { expect, userEvent, within } from '@storybook/test';
 import { MemoryRouter } from 'react-router-dom';
 import { MantineProvider } from '@mantine/core';
-import { theme } from '@/theme';
 import { EXTERNAL_LINKS } from '@/constants/links.consts';
+import { theme } from '@/theme';
 import DesktopNav from './DesktopNav';
 import MobileNav from './MobileNav';
 
