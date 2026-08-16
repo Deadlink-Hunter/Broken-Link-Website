@@ -3,8 +3,8 @@ import { MemoryRouter } from 'react-router-dom';
 import { expect, userEvent, within } from 'storybook/test';
 import { MantineProvider } from '@mantine/core';
 import { EXTERNAL_LINKS, NAVIGATION_LINKS } from '@/constants/links.consts';
-import { theme } from '@/theme';
 import i18n from '@/i18';
+import { theme } from '@/theme';
 import DesktopNav from './DesktopNav';
 import MobileNav from './MobileNav';
 
