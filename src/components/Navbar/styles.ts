@@ -95,6 +95,10 @@ export const mobileStyles = {
   },
 };
 
+export const themeToggleStyles = {
+  color: `light-dark(${theme.colors.primary[7]}, ${theme.colors.primary[0]})`,
+};
+
 export const languageSelectProps = {
   allowDeselect: false,
   variant: 'ghost' as const,
@@ -108,12 +112,12 @@ export const languageSelectProps = {
     },
     input: {
       backgroundColor: 'transparent',
-      color: 'var(--mantine-color-text)',
+      color: `light-dark(${theme.colors.primary[7]}, ${theme.colors.primary[0]})`,
       border: 'none',
       height: '1.875rem',
     },
     section: {
-      color: 'var(--mantine-color-text)',
+      color: `light-dark(${theme.colors.primary[7]}, ${theme.colors.primary[0]})`,
     },
     dropdown: {
       backgroundColor: theme.colors.primary[6],

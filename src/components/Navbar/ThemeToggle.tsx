@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { IconMoon, IconSun } from '@tabler/icons-react';
 import { useComputedColorScheme, useMantineColorScheme } from '@mantine/core';
 import { Button } from '../UI/Button/Button';
+import { themeToggleStyles } from './styles';
 
 export function ThemeToggle() {
   const enum colorSchemes {
@@ -30,9 +31,9 @@ export function ThemeToggle() {
         variant='icon'
       >
     {theme ? (
-  <IconMoon size={16} color="var(--mantine-color-text)" />
+  <IconMoon size={16} style={themeToggleStyles} />
 ) : (
-  <IconSun size={16} color="var(--mantine-color-text)" />
+  <IconSun size={16} style={themeToggleStyles} />
 )}
       </Button>
     </div>
