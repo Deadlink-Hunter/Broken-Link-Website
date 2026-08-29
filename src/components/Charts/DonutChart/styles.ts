@@ -3,8 +3,7 @@ import { theme } from '@/theme';
 import { CHART_COLORS } from '../data';
 
 type StyleFunction =
-  | ((...args: number[]) => CSSProperties)
-  | ((...args: string[]) => CSSProperties);
+  ((...args: number[]) => CSSProperties) | ((...args: string[]) => CSSProperties);
 
 interface StylesObject {
   [key: string]: CSSProperties | string | number | StyleFunction;
