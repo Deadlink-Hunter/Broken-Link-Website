@@ -361,4 +361,10 @@ export const scanPageStyle = {
     color: isDark ? theme.white : colors.gray[8],
     fontWeight: 'bold',
   }),
+
+  unsupportedMessage: (isDark: boolean): CSSProperties => ({
+    fontSize: theme.fontSizes.sm,
+    color: isDark ? colors.gray[4] : colors.gray[6],
+    marginTop: theme.spacing.xs,
+  }),
 };

@@ -139,6 +139,7 @@
       "repository": {
         "input_label": "URL do Repositório GitHub",
         "input_placeholder": "https://github.com/usuario/repositorio",
+        "repository_not_supported": "A varredura de um repositório GitHub completo não é suportada no momento.",
         "textarea_label": "Ou cole várias URLs",
         "textarea_placeholder": "https://exemplo1.com\nhttps://exemplo2.com\nhttps://exemplo3.com",
         "button_check": "Escanear Repositório"

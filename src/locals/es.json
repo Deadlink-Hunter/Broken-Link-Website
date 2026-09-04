@@ -139,6 +139,7 @@
       "repository": {
         "input_label": "URL del Repositorio de GitHub",
         "input_placeholder": "https://github.com/usuario/repositorio",
+        "repository_not_supported": "El escaneo de un repositorio completo de GitHub no está disponible en este momento.",
         "textarea_label": "O pegue varias URLs",
         "textarea_placeholder": "https://ejemplo1.com\nhttps://ejemplo2.com\nhttps://ejemplo3.com",
         "button_check": "Escanear Repositorio"

@@ -1,4 +1,4 @@
-To maintain a consistent codebase, we ask that all contributors follow these stylistic guidelines.
+To maintain a consistent codebase, we ask that all contributors follow these stylistic guidelines. 
 
 ## 1. TypeScript First
 
