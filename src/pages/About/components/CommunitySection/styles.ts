@@ -26,7 +26,6 @@ export const communitySectionStyle = {
     flexDirection: 'column',
     gap: '1.5rem',
     marginTop: '2rem',
-    textAlign: 'left',
     position: 'relative',
   } satisfies CSSProperties,
 
