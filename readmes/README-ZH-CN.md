@@ -28,12 +28,27 @@ Deadlink Hunter Website 是该网站的前端部分。
 
 您可以查看使用 base44 创建的[更精细的界面](https://link-guard-191fc128.base44.app)作为初始灵感来源。
 
+---
+
+## ⚠️️ 重要前提条件
+
+**请注意：** 此仓库包含 Deadlink-Hunter 项目的**前端**（用户界面）。
+
+为了完全使用扫描器功能，您**必须**在本地运行后端服务器（或连接到已部署的实例）。前端与后端通信以执行实际的链接检查。
+
+**在此获取后端：** [Broken-Link-Checker 仓库](https://github.com/Deadlink-Hunter/Broken-Link-Checker)
+
+---
+
 ## 目录
 
 - [为什么做这个项目](#为什么做这个项目)
 - [如何贡献](#如何贡献)
 - [贡献者](#贡献者)
+- [讨论区](#讨论区)
+- [环境变量](#环境变量)
 - [Docker 配置](#docker-配置)
+- [API & Postman Collection (API 与 Postman 集合)](<#API-&-Postman-Collection-(API-与-Postman-集合)>)
 - [Mantine Vite 模板](#mantine-vite-模板)
 - [功能特性](#功能特性)
 - [pnpm 脚本](#pnpm-脚本)
@@ -62,8 +77,9 @@ Deadlink Hunter Website 是该网站的前端部分。
 1.  **Fork** 此仓库到您自己的 GitHub 账户。
 2.  在本地**克隆**您的 fork：
     ```bash
-    git clone https://github.com/<your-username>/Deadlink-Hunter.git
-    cd Deadlink-Hunter
+    git clone https://github.com/<your-username>/Broken-Link-Website.git
+    cd Broken-Link-Website
+
     ```
 3.  （可选）从此[链接](https://pnpm.io/installation)安装 pnpm 包管理器。
 4.  使用 **pnpm** 安装依赖（请勿使用 npm 或 yarn）：
@@ -88,6 +104,37 @@ Deadlink Hunter Website 是该网站的前端部分。
 ⚠️ 注意：完全由 AI 生成且未经人工审核的 PR 将不被接受。
 
 ---
+
+## 讨论区
+
+我们有一个讨论（Discussions）页面，您可以在这里分享想法、提出问题并与社区交流：
+
+[讨论区页面 (Discussions Page)](https://github.com/Deadlink-Hunter/Broken-Link-Website/discussions)
+
+<p align="left"><a href="#top-btn">回到页面顶部</a></p>
+
+## 环境变量
+
+本项目在仓库中包含一个 `.env.example` 文件，列出了运行应用程序所需的环境变量。
+
+**在运行项目之前**，请基于示例文件在本地创建一个 `.env` 文件。
+您可以使用以下命令快速复制：
+
+```bash
+# macOS / Linux
+cp .env.example .env
+
+# PowerShell
+Copy-Item .env.example .env
+```
+
+配置后端连接
+.env 文件包含以下变量：
+
+VITE_API_BASE_URL — 后端 API 的基础 URL。
+默认值： http://localhost:3000
+
+确保您的后端服务器运行在此端口上，或更新该值以匹配您的后端配置。
 
 ## Docker 配置
 
@@ -134,7 +181,23 @@ docker run -p 80:6006 deadlink-hunter
 - **构建流程**：多阶段构建，安装依赖、构建应用并使用 nginx 提供服务
 - **基础镜像**：构建阶段基于 `node:20-alpine`，运行时基于 `nginx:1.27-alpine`
 
----
+## API & Postman Collection (API 与 Postman 集合)
+
+后端提供了一个用于检查失效链接的 REST API。
+
+我们根据内部的 Swagger 文档生成了一个 Postman 集合，以帮助您在本地测试 API。
+
+### 🔗 如何使用 Postman 集合
+
+1. 打开 [Postman](https://www.postman.com/)
+2. 点击 **Import** (导入)
+3. 选择 **File** (文件) 并上传：
+
+   `./postman/broken-link-checker.postman_collection.json`
+
+> [点击此处直接下载文件](./postman/brokenlink-checker.postman_collection.json)
+
+确保您的后端服务器运行在 `http://localhost:3000`（如有需要，请在 Postman 中调整基础 URL）。
 
 ## Mantine Vite 模板
 
