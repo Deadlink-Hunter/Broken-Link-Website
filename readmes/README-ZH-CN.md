@@ -1,9 +1,19 @@
 # Deadlink-Hunter-Website🕵️
+
 [![GitHub Stars](https://img.shields.io/github/stars/Deadlink-Hunter/Broken-Link-Website?style=social&label=星标)](https://github.com/Deadlink-Hunter/Broken-Link-Website/stargazers)
 [![许可证: MIT](https://img.shields.io/badge/许可证-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Deployment](https://github.com/Deadlink-Hunter/Broken-Link-Website/actions/workflows/deploy.yml/badge.svg)](https://github.com/Deadlink-Hunter/Broken-Link-Website/actions/workflows/deploy.yml)
-Deadlink-Hunter 是一个开源项目，旨在查找 GitHub 仓库中的失效链接（未来将支持其他平台）。
-本项目的目标是帮助维护者保持文档的整洁、可靠，为读者提供无挫折的阅读体验。
+
+## 偏好其他语言？
+
+本 README 提供多种语言版本。
+请点击下方链接进行切换：
+
+- 🇧🇷 [Português Brasileiro](README-PT-BR.md)
+- 🇬🇧 [English](../README.md)
+
+  Deadlink-Hunter 是一个开源项目，旨在查找 GitHub 仓库中的失效链接（未来将支持其他平台）。
+  本项目的目标是帮助维护者保持文档的整洁、可靠，为读者提供无挫折的阅读体验。
 
 Deadlink Hunter Website 是该网站的前端部分。
 
@@ -19,6 +29,7 @@ Deadlink Hunter Website 是该网站的前端部分。
 您可以查看使用 base44 创建的[更精细的界面](https://link-guard-191fc128.base44.app)作为初始灵感来源。
 
 ## 目录
+
 - [为什么做这个项目](#为什么做这个项目)
 - [如何贡献](#如何贡献)
 - [贡献者](#贡献者)
@@ -29,6 +40,7 @@ Deadlink Hunter Website 是该网站的前端部分。
 - [构建和开发脚本](#构建和开发脚本)
   - [测试脚本](#测试脚本)
   - [其他脚本](#其他脚本)
+
 ---
 
 ## 为什么做这个项目
@@ -53,12 +65,12 @@ Deadlink Hunter Website 是该网站的前端部分。
     git clone https://github.com/<your-username>/Deadlink-Hunter.git
     cd Deadlink-Hunter
     ```
-3. （可选）从此[链接](https://pnpm.io/installation)安装 pnpm 包管理器。
+3.  （可选）从此[链接](https://pnpm.io/installation)安装 pnpm 包管理器。
 4.  使用 **pnpm** 安装依赖（请勿使用 npm 或 yarn）：
     ```bash
     pnpm install
     ```
-5. 运行此项目：
+5.  运行此项目：
     ```bash
     pnpm run dev
     ```
@@ -76,7 +88,6 @@ Deadlink Hunter Website 是该网站的前端部分。
 ⚠️ 注意：完全由 AI 生成且未经人工审核的 PR 将不被接受。
 
 ---
-
 
 ## Docker 配置
 
@@ -97,6 +108,7 @@ docker-compose up --build -d
 应用程序将在 `http://localhost` 上运行
 
 停止应用程序：
+
 ```bash
 docker-compose down
 ```
@@ -162,7 +174,6 @@ docker run -p 80:6006 deadlink-hunter
 - `storybook` – 启动 storybook 开发服务器
 - `storybook:build` – 将生产版 storybook 构建到 `storybook-static`
 - `prettier:write` – 使用 Prettier 格式化所有文件
-
 
 ## 贡献者
 
