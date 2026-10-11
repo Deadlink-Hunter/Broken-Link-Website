@@ -68,7 +68,7 @@ export const RepositoryScanForm = ({
           value={multipleUrl}
           onChange={handleMultipleUrlChange}
           placeholder={t(`${baseTranslationKey}.textarea_placeholder`)}
-          style={scanPageStyle.textareaStyle(isDark)}
+          style={scanPageStyle.textareaStyle}
           rows={4}
         />
       </div>

@@ -225,14 +225,15 @@ export const scanPageStyle = {
     border: `1px solid ${isDark ? colors.primary[5] : colors.primary[3]}`,
   }),
 
-  textareaStyle: (isDark: boolean): CSSProperties => ({
-    ...baseInputStyle,
+  textareaStyle: {
+    width: '100%',
+    boxSizing: 'border-box',
+    fontSize: theme.fontSizes.md,
+    padding: `${theme.spacing.md} ${theme.spacing.lg}`,
+    outline: 'none',
     resize: 'vertical',
     minHeight: '100px',
-    color: isDark ? colors.gray[0] : colors.gray[7],
-    backgroundColor: isDark ? colors.primary[7] : colors.primary[1],
-    border: `1px solid ${isDark ? colors.primary[5] : colors.primary[3]}`,
-  }),
+  } satisfies CSSProperties,
 
   segmentedWrapper: (isDark: boolean): CSSProperties => ({
     display: 'flex',
