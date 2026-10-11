@@ -3,7 +3,8 @@ import { Textarea as MantineTextarea, TextareaProps } from '@mantine/core';
 import { useIsDark } from '@/components/Hooks/useIsDark';
 import { getTextAreaInputStyles } from './styles';
 
-interface SharedTextAreaProps extends Omit<TextareaProps, 'style'> {
+interface SharedTextAreaProps
+  extends Omit<TextareaProps, 'style' | 'styles'> {
   style?: CSSProperties;
 }
 
