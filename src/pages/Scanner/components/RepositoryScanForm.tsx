@@ -2,6 +2,7 @@ import { ChangeEvent, FormEvent } from 'react';
 import { IconUpload } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/UI/Button/Button';
+import { TextArea } from '@/components/UI/TextArea/TextArea';
 import { Typography } from '@/components/UI/Typography/Typography';
 import { scanPageStyle } from './styles';
 
@@ -62,13 +63,12 @@ export const RepositoryScanForm = ({
         <label htmlFor='multiple-urls' style={scanPageStyle.fieldLabel(isDark)}>
           {t(`${baseTranslationKey}.textarea_label`)}
         </label>
-        {/* TODO - replace this with future shared text component */}
-        <textarea
+        <TextArea
           id='multiple-urls'
           value={multipleUrl}
           onChange={handleMultipleUrlChange}
           placeholder={t(`${baseTranslationKey}.textarea_placeholder`)}
-          style={scanPageStyle.textareaStyle(isDark)}
+          style={scanPageStyle.textareaStyle}
           rows={4}
         />
       </div>
